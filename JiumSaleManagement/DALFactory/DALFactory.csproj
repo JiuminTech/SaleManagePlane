@@ -95,6 +95,10 @@
     <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
   <ItemGroup>
+    <ProjectReference Include="..\MySQLDAL\MySQLDAL.csproj">
+      <Project>{d9b58dcc-97b3-4f7d-a23c-830f82dcbac9}</Project>
+      <Name>MySQLDAL</Name>
+    </ProjectReference>
     <Reference Include="System">
       <Name>System</Name>
     </Reference>
@@ -117,10 +121,6 @@
       <Name>Model</Name>
       <Project>{53995DBB-9836-4647-AD22-865884FDEB9E}</Project>
       <Package>{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</Package>
-    </ProjectReference>
-    <ProjectReference Include="..\OracleDAL\OracleDAL.csproj">
-      <Project>{9FE00521-3A8B-42B1-814E-585E99407B2E}</Project>
-      <Name>OracleDAL</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

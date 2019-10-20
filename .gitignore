@@ -24,3 +24,5 @@
 /JiumSaleManagement/OracleDAL/obj/Debug
 /JiumSaleManagement/SQLServerDAL/obj/Debug
 /JiumSaleManagement/MySQLDAL/obj/Debug
+/lib
+/JiumSaleManagement/Web/obj/Debug

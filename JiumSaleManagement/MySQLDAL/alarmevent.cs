@@ -24,7 +24,7 @@ namespace Jium.MySQLDAL
 			strSql.Append("select count(1) from alarmevent");
 			strSql.Append(" where id=@id");
 			MySqlParameter[] parameters = {
-					new MySqlParameter("@id", MySqlDbType.bigint)
+					new MySqlParameter("@id", MySqlDbType.Int64)
 			};
 			parameters[0].Value = id;
 
@@ -79,7 +79,7 @@ namespace Jium.MySQLDAL
 					new MySqlParameter("@alarmdesc", MySqlDbType.VarChar,40),
 					new MySqlParameter("@createtime", MySqlDbType.VarChar,20),
 					new MySqlParameter("@updatetime", MySqlDbType.VarChar,20),
-					new MySqlParameter("@id", MySqlDbType.bigint,20)};
+					new MySqlParameter("@id", MySqlDbType.Int64,20)};
 			parameters[0].Value = model.alarmname;
 			parameters[1].Value = model.alarmdesc;
 			parameters[2].Value = model.createtime;
@@ -107,7 +107,7 @@ namespace Jium.MySQLDAL
 			strSql.Append("delete from alarmevent ");
 			strSql.Append(" where id=@id");
 			MySqlParameter[] parameters = {
-					new MySqlParameter("@id", MySqlDbType.bigint)
+					new MySqlParameter("@id", MySqlDbType.Int64)
 			};
 			parameters[0].Value = id;
 
@@ -151,7 +151,7 @@ namespace Jium.MySQLDAL
 			strSql.Append("select id,alarmname,alarmdesc,createtime,updatetime from alarmevent ");
 			strSql.Append(" where id=@id");
 			MySqlParameter[] parameters = {
-					new MySqlParameter("@id", MySqlDbType.bigint)
+					new MySqlParameter("@id", MySqlDbType.Int64)
 			};
 			parameters[0].Value = id;
 

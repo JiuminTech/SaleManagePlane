@@ -24,7 +24,7 @@ namespace Jium.MySQLDAL
 			strSql.Append("select count(1) from pgroup");
 			strSql.Append(" where id=@id ");
 			MySqlParameter[] parameters = {
-					new MySqlParameter("@id", MySqlDbType.bigint,20)			};
+					new MySqlParameter("@id", MySqlDbType.Int64,20)			};
 			parameters[0].Value = id;
 
 			return DbHelperMySQL.Exists(strSql.ToString(),parameters);
@@ -42,7 +42,7 @@ namespace Jium.MySQLDAL
 			strSql.Append(" values (");
 			strSql.Append("@id,@gid,@gindex,@gpid,@gpcnt,@gdesc,@gs1,@gs2,@gs3,@gs4,@gs5,@gd1,@gd2,@gd3,@gd4,@gd5,@gdc1,@gdc2,@gdc3,@gdc4,@gdc5)");
 			MySqlParameter[] parameters = {
-					new MySqlParameter("@id", MySqlDbType.bigint,20),
+					new MySqlParameter("@id", MySqlDbType.Int64,20),
 					new MySqlParameter("@gid", MySqlDbType.Int32,11),
 					new MySqlParameter("@gindex", MySqlDbType.Int32,11),
 					new MySqlParameter("@gpid", MySqlDbType.Int32,11),
@@ -144,7 +144,7 @@ namespace Jium.MySQLDAL
 					new MySqlParameter("@gdc3", MySqlDbType.Decimal,20),
 					new MySqlParameter("@gdc4", MySqlDbType.Decimal,20),
 					new MySqlParameter("@gdc5", MySqlDbType.Decimal,20),
-					new MySqlParameter("@id", MySqlDbType.bigint,20)};
+					new MySqlParameter("@id", MySqlDbType.Int64,20)};
 			parameters[0].Value = model.gid;
 			parameters[1].Value = model.gindex;
 			parameters[2].Value = model.gpid;
@@ -188,7 +188,7 @@ namespace Jium.MySQLDAL
 			strSql.Append("delete from pgroup ");
 			strSql.Append(" where id=@id ");
 			MySqlParameter[] parameters = {
-					new MySqlParameter("@id", MySqlDbType.bigint,20)			};
+					new MySqlParameter("@id", MySqlDbType.Int64,20)			};
 			parameters[0].Value = id;
 
 			int rows=DbHelperMySQL.ExecuteSql(strSql.ToString(),parameters);
@@ -231,7 +231,7 @@ namespace Jium.MySQLDAL
 			strSql.Append("select id,gid,gindex,gpid,gpcnt,gdesc,gs1,gs2,gs3,gs4,gs5,gd1,gd2,gd3,gd4,gd5,gdc1,gdc2,gdc3,gdc4,gdc5 from pgroup ");
 			strSql.Append(" where id=@id ");
 			MySqlParameter[] parameters = {
-					new MySqlParameter("@id", MySqlDbType.bigint,20)			};
+					new MySqlParameter("@id", MySqlDbType.Int64,20)			};
 			parameters[0].Value = id;
 
 			Jium.Model.pgroup model=new Jium.Model.pgroup();

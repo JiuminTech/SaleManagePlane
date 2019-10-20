@@ -137,7 +137,7 @@ namespace Jium.Web.pgroup
 			decimal gdc5=decimal.Parse(this.txtgdc5.Text);
 
 			Jium.Model.pgroup model=new Jium.Model.pgroup();
-			model.id=id;
+			model.id= long.Parse(id);
 			model.gid=gid;
 			model.gindex=gindex;
 			model.gpid=gpid;

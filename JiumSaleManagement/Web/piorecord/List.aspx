@@ -25,6 +25,8 @@
                     </asp:Button>                    
                         
                     </td>
+                    <td><asp:LinkButton ID="LinkButtonAdd" runat="server"   Text="新增" PostBackUrl="Add.aspx"></asp:LinkButton>
+                        </td>
                     <td class="tdbg">
                     </td>
                 </tr>
@@ -41,19 +43,19 @@
                                 </ItemTemplate>
                             </asp:TemplateField> 
                             
-		<asp:BoundField DataField="ptime" HeaderText="ptime" SortExpression="ptime" ItemStyle-HorizontalAlign="Center"  /> 
-		<asp:BoundField DataField="pcode" HeaderText="pcode" SortExpression="pcode" ItemStyle-HorizontalAlign="Center"  /> 
-		<asp:BoundField DataField="pcnt" HeaderText="pcnt" SortExpression="pcnt" ItemStyle-HorizontalAlign="Center"  /> 
-		<asp:BoundField DataField="psaleprice" HeaderText="psaleprice" SortExpression="psaleprice" ItemStyle-HorizontalAlign="Center"  /> 
-		<asp:BoundField DataField="prealprice" HeaderText="prealprice" SortExpression="prealprice" ItemStyle-HorizontalAlign="Center"  /> 
-		<asp:BoundField DataField="ptype" HeaderText="ptype" SortExpression="ptype" ItemStyle-HorizontalAlign="Center"  /> 
-		<asp:BoundField DataField="pzekou" HeaderText="pzekou" SortExpression="pzekou" ItemStyle-HorizontalAlign="Center"  /> 
-		<asp:BoundField DataField="premark" HeaderText="premark" SortExpression="premark" ItemStyle-HorizontalAlign="Center"  /> 
-		<asp:BoundField DataField="pguestid" HeaderText="pguestid" SortExpression="pguestid" ItemStyle-HorizontalAlign="Center"  /> 
-		<asp:BoundField DataField="psalerid" HeaderText="psalerid" SortExpression="psalerid" ItemStyle-HorizontalAlign="Center"  /> 
-		<asp:BoundField DataField="pios1" HeaderText="pios1" SortExpression="pios1" ItemStyle-HorizontalAlign="Center"  /> 
-		<asp:BoundField DataField="pios2" HeaderText="pios2" SortExpression="pios2" ItemStyle-HorizontalAlign="Center"  /> 
-		<asp:BoundField DataField="pios3" HeaderText="pios3" SortExpression="pios3" ItemStyle-HorizontalAlign="Center"  /> 
+		<asp:BoundField DataField="ptime" HeaderText="日期" SortExpression="ptime" ItemStyle-HorizontalAlign="Center"  /> 
+		<asp:BoundField DataField="pcode" HeaderText="货号" SortExpression="pcode" ItemStyle-HorizontalAlign="Center"  /> 
+		<asp:BoundField DataField="pcnt" HeaderText="数量" SortExpression="pcnt" ItemStyle-HorizontalAlign="Center"  /> 
+		<asp:BoundField DataField="psaleprice" HeaderText="标价" SortExpression="psaleprice" ItemStyle-HorizontalAlign="Center"  /> 
+		<asp:BoundField DataField="prealprice" HeaderText="售价" SortExpression="prealprice" ItemStyle-HorizontalAlign="Center"  /> 
+		<asp:BoundField DataField="ptype" HeaderText="分类" SortExpression="ptype" ItemStyle-HorizontalAlign="Center"  /> 
+		<asp:BoundField DataField="pzekou" HeaderText="折扣系数" SortExpression="pzekou" ItemStyle-HorizontalAlign="Center"  /> 
+		<asp:BoundField DataField="premark" HeaderText="备注" SortExpression="premark" ItemStyle-HorizontalAlign="Center"  /> 
+		<asp:BoundField DataField="pguestid" HeaderText="贵客ID" SortExpression="pguestid" ItemStyle-HorizontalAlign="Center"  /> 
+		<asp:BoundField DataField="psalerid" HeaderText="售货员ID" SortExpression="psalerid" ItemStyle-HorizontalAlign="Center"  /> 
+		<asp:BoundField DataField="pios1" HeaderText="来源" SortExpression="pios1" ItemStyle-HorizontalAlign="Center"  /> 
+		<asp:BoundField DataField="pios2" HeaderText="存放点" SortExpression="pios2" ItemStyle-HorizontalAlign="Center"  /> 
+<%--		<asp:BoundField DataField="pios3" HeaderText="pios3" SortExpression="pios3" ItemStyle-HorizontalAlign="Center"  /> 
 		<asp:BoundField DataField="pios4" HeaderText="pios4" SortExpression="pios4" ItemStyle-HorizontalAlign="Center"  /> 
 		<asp:BoundField DataField="pios5" HeaderText="pios5" SortExpression="pios5" ItemStyle-HorizontalAlign="Center"  /> 
 		<asp:BoundField DataField="piod1" HeaderText="piod1" SortExpression="piod1" ItemStyle-HorizontalAlign="Center"  /> 
@@ -65,7 +67,7 @@
 		<asp:BoundField DataField="piodc2" HeaderText="piodc2" SortExpression="piodc2" ItemStyle-HorizontalAlign="Center"  /> 
 		<asp:BoundField DataField="piodc3" HeaderText="piodc3" SortExpression="piodc3" ItemStyle-HorizontalAlign="Center"  /> 
 		<asp:BoundField DataField="piodc4" HeaderText="piodc4" SortExpression="piodc4" ItemStyle-HorizontalAlign="Center"  /> 
-		<asp:BoundField DataField="piodc5" HeaderText="piodc5" SortExpression="piodc5" ItemStyle-HorizontalAlign="Center"  /> 
+		<asp:BoundField DataField="piodc5" HeaderText="piodc5" SortExpression="piodc5" ItemStyle-HorizontalAlign="Center"  /> --%>
                             
                             <asp:HyperLinkField HeaderText="详细" ControlStyle-Width="50" DataNavigateUrlFields="id" DataNavigateUrlFormatString="Show.aspx?id={0}"
                                 Text="详细"  />
@@ -84,7 +86,8 @@
                     <td style="width: 1px;">                        
                     </td>
                     <td align="left">
-                        <asp:Button ID="btnDelete" runat="server" Text="删除" OnClick="btnDelete_Click"/>                       
+                        <asp:Button ID="btnDelete" runat="server" Text="删除" OnClick="btnDelete_Click"/>  
+                                        
                     </td>
                 </tr>
             </table>

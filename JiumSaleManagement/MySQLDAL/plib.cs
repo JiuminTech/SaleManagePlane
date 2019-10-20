@@ -24,7 +24,7 @@ namespace Jium.MySQLDAL
 			strSql.Append("select count(1) from plib");
 			strSql.Append(" where id=@id and pcode=@pcode ");
 			MySqlParameter[] parameters = {
-					new MySqlParameter("@id", MySqlDbType.bigint,20),
+					new MySqlParameter("@id", MySqlDbType.Int64,20),
 					new MySqlParameter("@pcode", MySqlDbType.VarChar,20)			};
 			parameters[0].Value = id;
 			parameters[1].Value = pcode;
@@ -44,7 +44,7 @@ namespace Jium.MySQLDAL
 			strSql.Append(" values (");
 			strSql.Append("@id,@pcode,@pname,@pdesc,@pleftcnt,@plupdatetime,@psumcnt,@psalecnt,@pls1,@pls2,@pls3,@pls4,@pls5,@pld1,@pld2,@pld3,@pld4,@pld5)");
 			MySqlParameter[] parameters = {
-					new MySqlParameter("@id", MySqlDbType.bigint,20),
+					new MySqlParameter("@id", MySqlDbType.Int64,20),
 					new MySqlParameter("@pcode", MySqlDbType.VarChar,20),
 					new MySqlParameter("@pname", MySqlDbType.VarChar,50),
 					new MySqlParameter("@pdesc", MySqlDbType.VarChar,200),
@@ -132,7 +132,7 @@ namespace Jium.MySQLDAL
 					new MySqlParameter("@pld3", MySqlDbType.Int32,11),
 					new MySqlParameter("@pld4", MySqlDbType.Int32,11),
 					new MySqlParameter("@pld5", MySqlDbType.Int32,11),
-					new MySqlParameter("@id", MySqlDbType.bigint,20),
+					new MySqlParameter("@id", MySqlDbType.Int64,20),
 					new MySqlParameter("@pcode", MySqlDbType.VarChar,20)};
 			parameters[0].Value = model.pname;
 			parameters[1].Value = model.pdesc;
@@ -174,7 +174,7 @@ namespace Jium.MySQLDAL
 			strSql.Append("delete from plib ");
 			strSql.Append(" where id=@id and pcode=@pcode ");
 			MySqlParameter[] parameters = {
-					new MySqlParameter("@id", MySqlDbType.bigint,20),
+					new MySqlParameter("@id", MySqlDbType.Int64,20),
 					new MySqlParameter("@pcode", MySqlDbType.VarChar,20)			};
 			parameters[0].Value = id;
 			parameters[1].Value = pcode;
@@ -201,7 +201,7 @@ namespace Jium.MySQLDAL
 			strSql.Append("select id,pcode,pname,pdesc,pleftcnt,plupdatetime,psumcnt,psalecnt,pls1,pls2,pls3,pls4,pls5,pld1,pld2,pld3,pld4,pld5 from plib ");
 			strSql.Append(" where id=@id and pcode=@pcode ");
 			MySqlParameter[] parameters = {
-					new MySqlParameter("@id", MySqlDbType.bigint,20),
+					new MySqlParameter("@id", MySqlDbType.Int64,20),
 					new MySqlParameter("@pcode", MySqlDbType.VarChar,20)			};
 			parameters[0].Value = id;
 			parameters[1].Value = pcode;

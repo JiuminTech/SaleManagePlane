@@ -25,6 +25,8 @@
                     </asp:Button>                    
                         
                     </td>
+                    <td><asp:LinkButton ID="LinkButtonAdd" runat="server"   Text="新增" PostBackUrl="Add.aspx"></asp:LinkButton>
+                        </td>
                     <td class="tdbg">
                     </td>
                 </tr>

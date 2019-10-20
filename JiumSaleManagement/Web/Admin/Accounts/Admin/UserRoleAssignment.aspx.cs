@@ -10,13 +10,13 @@ using System.Web.UI.WebControls.WebParts;
 using System.Web.UI.HtmlControls;
 using LTP.Accounts.Bus;
 
-namespace Maticsoft.Web.Accounts.Admin
+namespace Jium.Web.Accounts.Admin
 {
     public partial class UserRoleAssignment : System.Web.UI.Page//Maticsoft.Web.Accounts.MoviePage
     {
 
         #region 初始化
-        Maticsoft.BLL.Accounts_Users bll = new Maticsoft.BLL.Accounts_Users();
+        Jium.BLL.Accounts_Users bll = new Maticsoft.BLL.Accounts_Users();
 
         protected void Page_Load(object sender, EventArgs e)
         {

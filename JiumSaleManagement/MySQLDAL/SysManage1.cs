@@ -2,9 +2,9 @@
 using System.Text;
 using System.Data;
 using System.Data.SqlClient;
-using Xwsw.IDAL;
+using Jium.IDAL;
 using Maticsoft.DBUtility;
-namespace Xwsw.MySQLDAL
+namespace Jium.MySQLDAL
 {
 	/// <summary>
 	/// 用参数方式实现数据层示例。
@@ -23,7 +23,7 @@ namespace Xwsw.MySQLDAL
 			return DbHelperSQL.GetMaxID("NodeID", "S_Tree");           
 		}
         
-        public int AddTreeNode(Xwsw.Model.SysNode model)
+        public int AddTreeNode(Jium.Model.SysNode model)
 		{
 			model.NodeID=GetMaxId();
 
@@ -59,7 +59,7 @@ namespace Xwsw.MySQLDAL
 		}
 
 
-        public void UpdateNode(Xwsw.Model.SysNode model)
+        public void UpdateNode(Jium.Model.SysNode model)
 		{
 			StringBuilder strSql=new StringBuilder();
 			strSql.Append("update S_Tree set ");
@@ -131,7 +131,7 @@ namespace Xwsw.MySQLDAL
 		/// </summary>
 		/// <param name="NodeID"></param>
 		/// <returns></returns>
-        public Xwsw.Model.SysNode GetNode(int NodeID)
+        public Jium.Model.SysNode GetNode(int NodeID)
 		{
 			StringBuilder strSql=new StringBuilder();
 			strSql.Append("select * from S_Tree ");	
@@ -142,7 +142,7 @@ namespace Xwsw.MySQLDAL
 										};
 			parameters[0].Value = NodeID;
 
-            Xwsw.Model.SysNode node = new Xwsw.Model.SysNode();
+            Jium.Model.SysNode node = new Jium.Model.SysNode();
 			DataSet ds=DbHelperSQL.Query(strSql.ToString(),parameters);
 			if(ds.Tables[0].Rows.Count>0)
 			{

@@ -24,7 +24,7 @@ namespace Jium.MySQLDAL
 			strSql.Append("select count(1) from piorecord");
 			strSql.Append(" where id=@id");
 			MySqlParameter[] parameters = {
-					new MySqlParameter("@id", MySqlDbType.bigint)
+					new MySqlParameter("@id", MySqlDbType.Int64)
 			};
 			parameters[0].Value = id;
 
@@ -163,7 +163,7 @@ namespace Jium.MySQLDAL
 					new MySqlParameter("@piodc3", MySqlDbType.Decimal,20),
 					new MySqlParameter("@piodc4", MySqlDbType.Decimal,20),
 					new MySqlParameter("@piodc5", MySqlDbType.Decimal,20),
-					new MySqlParameter("@id", MySqlDbType.bigint,20)};
+					new MySqlParameter("@id", MySqlDbType.Int64,20)};
 			parameters[0].Value = model.ptime;
 			parameters[1].Value = model.pcode;
 			parameters[2].Value = model.pcnt;
@@ -212,7 +212,7 @@ namespace Jium.MySQLDAL
 			strSql.Append("delete from piorecord ");
 			strSql.Append(" where id=@id");
 			MySqlParameter[] parameters = {
-					new MySqlParameter("@id", MySqlDbType.bigint)
+					new MySqlParameter("@id", MySqlDbType.Int64)
 			};
 			parameters[0].Value = id;
 
@@ -256,7 +256,7 @@ namespace Jium.MySQLDAL
 			strSql.Append("select id,ptime,pcode,pcnt,psaleprice,prealprice,ptype,pzekou,premark,pguestid,psalerid,pios1,pios2,pios3,pios4,pios5,piod1,piod2,piod3,piod5,piod4,piodc1,piodc2,piodc3,piodc4,piodc5 from piorecord ");
 			strSql.Append(" where id=@id");
 			MySqlParameter[] parameters = {
-					new MySqlParameter("@id", MySqlDbType.bigint)
+					new MySqlParameter("@id", MySqlDbType.Int64)
 			};
 			parameters[0].Value = id;
 

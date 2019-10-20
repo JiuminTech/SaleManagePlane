@@ -1,4 +1,4 @@
-﻿<%@ Page language="c#" Codebehind="Add.aspx.cs" AutoEventWireup="True" Inherits="Maticsoft.Web.Accounts.Add" %>
+﻿<%@ Page language="c#" Codebehind="Add.aspx.cs" AutoEventWireup="True" Inherits="Jium.Web.Accounts.Add" %>
 
 <%@ Register Src="../../Controls/checkright.ascx" TagName="checkright" TagPrefix="uc2" %>
 

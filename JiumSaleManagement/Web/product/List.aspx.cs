@@ -41,9 +41,18 @@ namespace Jium.Web.product
             bll.DeleteList(idlist);
             BindData();
         }
-        
+        protected void btnAddClick(object sender, EventArgs e)
+        {
+            string idlist = GetSelIDlist();
+            if (idlist.Trim().Length == 0)
+                return;
+            bll.DeleteList(idlist);
+            BindData();
+        }
+
+
         #region gridView
-                        
+
         public void BindData()
         {
             #region

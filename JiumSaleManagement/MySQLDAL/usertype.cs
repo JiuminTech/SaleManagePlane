@@ -32,7 +32,7 @@ namespace Jium.MySQLDAL
 			strSql.Append("select count(1) from usertype");
 			strSql.Append(" where level=@level");
 			MySqlParameter[] parameters = {
-					new MySqlParameter("@level", MySqlDbType.smallint)
+					new MySqlParameter("@level", MySqlDbType.Int16)
 			};
 			parameters[0].Value = level;
 
@@ -52,7 +52,7 @@ namespace Jium.MySQLDAL
 			strSql.Append("@tagname,@authvalue)");
 			MySqlParameter[] parameters = {
 					new MySqlParameter("@tagname", MySqlDbType.VarChar,20),
-					new MySqlParameter("@authvalue", MySqlDbType.smallint,8)};
+					new MySqlParameter("@authvalue", MySqlDbType.Int16,8)};
 			parameters[0].Value = model.tagname;
 			parameters[1].Value = model.authvalue;
 
@@ -78,8 +78,8 @@ namespace Jium.MySQLDAL
 			strSql.Append(" where level=@level");
 			MySqlParameter[] parameters = {
 					new MySqlParameter("@tagname", MySqlDbType.VarChar,20),
-					new MySqlParameter("@authvalue", MySqlDbType.smallint,8),
-					new MySqlParameter("@level", MySqlDbType.smallint,8)};
+					new MySqlParameter("@authvalue", MySqlDbType.Int16,8),
+					new MySqlParameter("@level", MySqlDbType.Int16,8)};
 			parameters[0].Value = model.tagname;
 			parameters[1].Value = model.authvalue;
 			parameters[2].Value = model.level;
@@ -105,7 +105,7 @@ namespace Jium.MySQLDAL
 			strSql.Append("delete from usertype ");
 			strSql.Append(" where level=@level");
 			MySqlParameter[] parameters = {
-					new MySqlParameter("@level", MySqlDbType.smallint)
+					new MySqlParameter("@level", MySqlDbType.Int16)
 			};
 			parameters[0].Value = level;
 
@@ -149,7 +149,7 @@ namespace Jium.MySQLDAL
 			strSql.Append("select tagname,level,authvalue from usertype ");
 			strSql.Append(" where level=@level");
 			MySqlParameter[] parameters = {
-					new MySqlParameter("@level", MySqlDbType.smallint)
+					new MySqlParameter("@level", MySqlDbType.Int16)
 			};
 			parameters[0].Value = level;
 

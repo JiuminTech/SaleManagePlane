@@ -1,8 +1,8 @@
 ﻿using System.Text;
 using System.Data;
-using Xwsw.IDAL;
+using Jium.IDAL;
 using Maticsoft.DBUtility;
-namespace Xwsw.MySQLDAL
+namespace Jium.MySQLDAL
 {
 	/// <summary>
 	/// 系统菜单管理类。(普通SQL实现方式)
@@ -29,7 +29,7 @@ namespace Xwsw.MySQLDAL
 			}
 		}
 
-        public int AddTreeNode(Xwsw.Model.SysNode node)
+        public int AddTreeNode(Jium.Model.SysNode node)
 		{
 			node.NodeID=GetMaxId();
 
@@ -52,7 +52,7 @@ namespace Xwsw.MySQLDAL
 
 		}
 
-        public void UpdateNode(Xwsw.Model.SysNode node)
+        public void UpdateNode(Jium.Model.SysNode node)
 		{
 			StringBuilder strSql=new StringBuilder();
 			strSql.Append("update S_Tree set ");
@@ -97,12 +97,12 @@ namespace Xwsw.MySQLDAL
 		/// </summary>
 		/// <param name="NodeID"></param>
 		/// <returns></returns>
-        public Xwsw.Model.SysNode GetNode(int NodeID)
+        public Jium.Model.SysNode GetNode(int NodeID)
 		{
 			StringBuilder strSql=new StringBuilder();
 			strSql.Append("select * from S_Tree ");	
 			strSql.Append(" where NodeID="+NodeID);
-            Xwsw.Model.SysNode node = new Xwsw.Model.SysNode();
+            Jium.Model.SysNode node = new Jium.Model.SysNode();
             DataSet ds=DbHelperSQL.Query(strSql.ToString());
 			if(ds.Tables[0].Rows.Count>0)
 			{

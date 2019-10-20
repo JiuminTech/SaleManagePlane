@@ -45,7 +45,7 @@
 		<asp:TextBox id="txtremark" runat="server" Width="200px"></asp:TextBox>
 	</td></tr>
 	<tr>
-	<td height="25" width="30%" align="right">
+	<!--<td height="25" width="30%" align="right">
 		createtime
 	：</td>
 	<td height="25" width="*" align="left">
@@ -71,7 +71,7 @@
 	：</td>
 	<td height="25" width="*" align="left">
 		<asp:TextBox id="txtstatus" runat="server" Width="200px"></asp:TextBox>
-	</td></tr>
+	</td></tr>-->
 </table>
 
             </td>

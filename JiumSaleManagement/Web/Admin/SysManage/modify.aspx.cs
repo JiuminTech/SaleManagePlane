@@ -2,7 +2,7 @@
 using System.Data;
 using System.Web.UI.WebControls;
 using System.IO;
-using Maticsoft.Model;
+using Jium.Model;
 namespace Maticsoft.Web.SysManage
 {
 	/// <summary>
@@ -51,7 +51,7 @@ namespace Maticsoft.Web.SysManage
 		{
 			
 			Navigation011.Para_Str="id="+id;
-			Maticsoft.BLL.SysManage sm=new Maticsoft.BLL.SysManage();
+            Jium.BLL.SysManage sm=new Jium.BLL.SysManage();
 			SysNode node=sm.GetNode(int.Parse(id));		
 			
 			this.lblID.Text=id;
@@ -122,31 +122,31 @@ namespace Maticsoft.Web.SysManage
 		//菜单
 		private void BiudTree()
 		{
-//			Maticsoft.BLL.SysManage sm=new Maticsoft.BLL.SysManage();			
-//			DataTable dt=sm.GetTreeList("").Tables[0];
-//
-//
-//			this.listTarget.Items.Clear();
-//			//加载树
-//			this.listTarget.Items.Add(new ListItem("根目录","0"));
-//			DataRow [] drs = dt.Select("ParentID= " + 0);			
-//			foreach( DataRow r in drs )
-//			{
-//				string nodeid=r["NodeID"].ToString();				
-//				string text=r["Text"].ToString();					
-//				string parentid=r["ParentID"].ToString();
-//				string permissionid=r["PermissionID"].ToString();
-//				text="╋"+text;				
-//				this.listTarget.Items.Add(new ListItem(text,nodeid));
-//				int sonparentid=int.Parse(nodeid);
-//				BindNode( sonparentid, dt);
-//
-//			}	
-//			this.listTarget.DataBind();	
-//		
+            //			Maticsoft.BLL.SysManage sm=new Maticsoft.BLL.SysManage();			
+            //			DataTable dt=sm.GetTreeList("").Tables[0];
+            //
+            //
+            //			this.listTarget.Items.Clear();
+            //			//加载树
+            //			this.listTarget.Items.Add(new ListItem("根目录","0"));
+            //			DataRow [] drs = dt.Select("ParentID= " + 0);			
+            //			foreach( DataRow r in drs )
+            //			{
+            //				string nodeid=r["NodeID"].ToString();				
+            //				string text=r["Text"].ToString();					
+            //				string parentid=r["ParentID"].ToString();
+            //				string permissionid=r["PermissionID"].ToString();
+            //				text="╋"+text;				
+            //				this.listTarget.Items.Add(new ListItem(text,nodeid));
+            //				int sonparentid=int.Parse(nodeid);
+            //				BindNode( sonparentid, dt);
+            //
+            //			}	
+            //			this.listTarget.DataBind();	
+            //		
 
 
-			Maticsoft.BLL.SysManage sm=new Maticsoft.BLL.SysManage();			
+            Jium.BLL.SysManage sm=new Jium.BLL.SysManage();			
 			DataTable dt=sm.GetTreeList("").Tables[0];
 
 
@@ -409,7 +409,7 @@ namespace Maticsoft.Web.SysManage
 			node.KeShiDM=keshidm;
 			node.KeshiPublic=keshipublic;
 
-			Maticsoft.BLL.SysManage sm=new Maticsoft.BLL.SysManage();
+            Jium.BLL.SysManage sm=new Jium.BLL.SysManage();
 			sm.UpdateNode(node);
 			Response.Redirect("show.aspx?id="+id);
 

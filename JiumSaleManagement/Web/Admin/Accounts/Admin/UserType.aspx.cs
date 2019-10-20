@@ -9,7 +9,7 @@ using System.Web.UI.WebControls;
 using System.Web.UI.WebControls.WebParts;
 using System.Web.UI.HtmlControls;
 using System.Drawing;
-namespace Maticsoft.Web.Accounts.Admin
+namespace Jium.Web.Accounts.Admin
 {
     public partial class UserType : System.Web.UI.Page
     {

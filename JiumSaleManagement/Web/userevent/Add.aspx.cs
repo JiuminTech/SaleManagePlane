@@ -53,7 +53,7 @@ namespace Jium.Web.userevent
 
 			Jium.Model.userevent model=new Jium.Model.userevent();
 			model.userid=userid;
-			model.eventid=eventid;
+			model.eventid=long.Parse(eventid);
 			model.eventtime=eventtime;
 			model.remark=remark;
 

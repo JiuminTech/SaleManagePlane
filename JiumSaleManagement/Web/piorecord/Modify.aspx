@@ -9,96 +9,96 @@
 <table cellSpacing="0" cellPadding="0" width="100%" border="0">
 	<tr>
 	<td height="25" width="30%" align="right">
-		auto_increment
+		序号
 	：</td>
 	<td height="25" width="*" align="left">
 		<asp:label id="lblid" runat="server"></asp:label>
 	</td></tr>
-	<tr>
+	<!--<tr>
 	<td height="25" width="30%" align="right">
 		ptime
 	：</td>
 	<td height="25" width="*" align="left">
 		<asp:TextBox id="txtptime" runat="server" Width="200px"></asp:TextBox>
-	</td></tr>
+	</td></tr>-->
 	<tr>
 	<td height="25" width="30%" align="right">
-		pcode
+		货号
 	：</td>
 	<td height="25" width="*" align="left">
 		<asp:TextBox id="txtpcode" runat="server" Width="200px"></asp:TextBox>
 	</td></tr>
 	<tr>
 	<td height="25" width="30%" align="right">
-		pcnt
+		数量
 	：</td>
 	<td height="25" width="*" align="left">
 		<asp:TextBox id="txtpcnt" runat="server" Width="200px"></asp:TextBox>
 	</td></tr>
 	<tr>
 	<td height="25" width="30%" align="right">
-		psaleprice
+		标价
 	：</td>
 	<td height="25" width="*" align="left">
 		<asp:TextBox id="txtpsaleprice" runat="server" Width="200px"></asp:TextBox>
 	</td></tr>
 	<tr>
 	<td height="25" width="30%" align="right">
-		prealprice
+		售价
 	：</td>
 	<td height="25" width="*" align="left">
 		<asp:TextBox id="txtprealprice" runat="server" Width="200px"></asp:TextBox>
 	</td></tr>
 	<tr>
 	<td height="25" width="30%" align="right">
-		ptype
+		类型
 	：</td>
 	<td height="25" width="*" align="left">
 		<asp:TextBox id="txtptype" runat="server" Width="200px"></asp:TextBox>
 	</td></tr>
 	<tr>
 	<td height="25" width="30%" align="right">
-		pzekou
+		折扣
 	：</td>
 	<td height="25" width="*" align="left">
 		<asp:TextBox id="txtpzekou" runat="server" Width="200px"></asp:TextBox>
 	</td></tr>
 	<tr>
 	<td height="25" width="30%" align="right">
-		premark
+		备注
 	：</td>
 	<td height="25" width="*" align="left">
 		<asp:TextBox id="txtpremark" runat="server" Width="200px"></asp:TextBox>
 	</td></tr>
 	<tr>
 	<td height="25" width="30%" align="right">
-		pguestid
+		顾客ID
 	：</td>
 	<td height="25" width="*" align="left">
 		<asp:TextBox id="txtpguestid" runat="server" Width="200px"></asp:TextBox>
 	</td></tr>
 	<tr>
 	<td height="25" width="30%" align="right">
-		psalerid
+		售货员ID
 	：</td>
 	<td height="25" width="*" align="left">
 		<asp:TextBox id="txtpsalerid" runat="server" Width="200px"></asp:TextBox>
 	</td></tr>
 	<tr>
 	<td height="25" width="30%" align="right">
-		pios1
+		来源
 	：</td>
 	<td height="25" width="*" align="left">
 		<asp:TextBox id="txtpios1" runat="server" Width="200px"></asp:TextBox>
 	</td></tr>
 	<tr>
 	<td height="25" width="30%" align="right">
-		pios2
+		存放点
 	：</td>
 	<td height="25" width="*" align="left">
 		<asp:TextBox id="txtpios2" runat="server" Width="200px"></asp:TextBox>
 	</td></tr>
-	<tr>
+	<!--<tr>
 	<td height="25" width="30%" align="right">
 		pios3
 	：</td>
@@ -188,7 +188,7 @@
 	：</td>
 	<td height="25" width="*" align="left">
 		<asp:TextBox id="txtpiodc5" runat="server" Width="200px"></asp:TextBox>
-	</td></tr>
+	</td></tr>-->
 </table>
 
             </td>

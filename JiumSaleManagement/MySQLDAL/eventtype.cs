@@ -24,7 +24,7 @@ namespace Jium.MySQLDAL
 			strSql.Append("select count(1) from eventtype");
 			strSql.Append(" where id=@id");
 			MySqlParameter[] parameters = {
-					new MySqlParameter("@id", MySqlDbType.bigint)
+					new MySqlParameter("@id", MySqlDbType.Int64)
 			};
 			parameters[0].Value = id;
 
@@ -79,7 +79,7 @@ namespace Jium.MySQLDAL
 					new MySqlParameter("@remark", MySqlDbType.VarChar,256),
 					new MySqlParameter("@isnotify", MySqlDbType.Bit),
 					new MySqlParameter("@udatetime", MySqlDbType.VarChar,20),
-					new MySqlParameter("@id", MySqlDbType.bigint,20)};
+					new MySqlParameter("@id", MySqlDbType.Int64,20)};
 			parameters[0].Value = model.eventname;
 			parameters[1].Value = model.remark;
 			parameters[2].Value = model.isnotify;
@@ -107,7 +107,7 @@ namespace Jium.MySQLDAL
 			strSql.Append("delete from eventtype ");
 			strSql.Append(" where id=@id");
 			MySqlParameter[] parameters = {
-					new MySqlParameter("@id", MySqlDbType.bigint)
+					new MySqlParameter("@id", MySqlDbType.Int64)
 			};
 			parameters[0].Value = id;
 
@@ -151,7 +151,7 @@ namespace Jium.MySQLDAL
 			strSql.Append("select id,eventname,remark,isnotify,udatetime from eventtype ");
 			strSql.Append(" where id=@id");
 			MySqlParameter[] parameters = {
-					new MySqlParameter("@id", MySqlDbType.bigint)
+					new MySqlParameter("@id", MySqlDbType.Int64)
 			};
 			parameters[0].Value = id;
 

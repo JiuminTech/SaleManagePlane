@@ -9,61 +9,61 @@
 <table cellSpacing="0" cellPadding="0" width="100%" border="0">
 	<tr>
 	<td height="25" width="30%" align="right">
-		auto_increment
+		序号
 	：</td>
 	<td height="25" width="*" align="left">
 		<asp:Label id="lblid" runat="server"></asp:Label>
 	</td></tr>
 	<tr>
 	<td height="25" width="30%" align="right">
-		pcode
+		货号
 	：</td>
 	<td height="25" width="*" align="left">
 		<asp:Label id="lblpcode" runat="server"></asp:Label>
 	</td></tr>
 	<tr>
 	<td height="25" width="30%" align="right">
-		pname
+		名称
 	：</td>
 	<td height="25" width="*" align="left">
 		<asp:Label id="lblpname" runat="server"></asp:Label>
 	</td></tr>
 	<tr>
 	<td height="25" width="30%" align="right">
-		psaleprice
+		标价
 	：</td>
 	<td height="25" width="*" align="left">
 		<asp:Label id="lblpsaleprice" runat="server"></asp:Label>
 	</td></tr>
 	<tr>
 	<td height="25" width="30%" align="right">
-		prealprice
+		售价
 	：</td>
 	<td height="25" width="*" align="left">
 		<asp:Label id="lblprealprice" runat="server"></asp:Label>
 	</td></tr>
 	<tr>
 	<td height="25" width="30%" align="right">
-		ptype
+		分类
 	：</td>
 	<td height="25" width="*" align="left">
 		<asp:Label id="lblptype" runat="server"></asp:Label>
 	</td></tr>
 	<tr>
 	<td height="25" width="30%" align="right">
-		pisgroup
+		是否组合
 	：</td>
 	<td height="25" width="*" align="left">
 		<asp:Label id="lblpisgroup" runat="server"></asp:Label>
 	</td></tr>
 	<tr>
 	<td height="25" width="30%" align="right">
-		pdesc
+		描述
 	：</td>
 	<td height="25" width="*" align="left">
 		<asp:Label id="lblpdesc" runat="server"></asp:Label>
 	</td></tr>
-	<tr>
+	<!--<tr>
 	<td height="25" width="30%" align="right">
 		ps1
 	：</td>
@@ -153,7 +153,7 @@
 	：</td>
 	<td height="25" width="*" align="left">
 		<asp:Label id="lblpdc3" runat="server"></asp:Label>
-	</td></tr>
+	</td></tr>-->
 </table>
 
                     </td>

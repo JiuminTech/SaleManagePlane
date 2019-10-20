@@ -44,19 +44,19 @@ namespace Jium.Web.piorecord
 		this.lblpsalerid.Text=model.psalerid.ToString();
 		this.lblpios1.Text=model.pios1;
 		this.lblpios2.Text=model.pios2;
-		this.lblpios3.Text=model.pios3;
-		this.lblpios4.Text=model.pios4;
-		this.lblpios5.Text=model.pios5;
-		this.lblpiod1.Text=model.piod1.ToString();
-		this.lblpiod2.Text=model.piod2.ToString();
-		this.lblpiod3.Text=model.piod3.ToString();
-		this.lblpiod5.Text=model.piod5.ToString();
-		this.lblpiod4.Text=model.piod4.ToString();
-		this.lblpiodc1.Text=model.piodc1.ToString();
-		this.lblpiodc2.Text=model.piodc2.ToString();
-		this.lblpiodc3.Text=model.piodc3.ToString();
-		this.lblpiodc4.Text=model.piodc4.ToString();
-		this.lblpiodc5.Text=model.piodc5.ToString();
+		//this.lblpios3.Text=model.pios3;
+		//this.lblpios4.Text=model.pios4;
+		//this.lblpios5.Text=model.pios5;
+		//this.lblpiod1.Text=model.piod1.ToString();
+		//this.lblpiod2.Text=model.piod2.ToString();
+		//this.lblpiod3.Text=model.piod3.ToString();
+		//this.lblpiod5.Text=model.piod5.ToString();
+		//this.lblpiod4.Text=model.piod4.ToString();
+		//this.lblpiodc1.Text=model.piodc1.ToString();
+		//this.lblpiodc2.Text=model.piodc2.ToString();
+		//this.lblpiodc3.Text=model.piodc3.ToString();
+		//this.lblpiodc4.Text=model.piodc4.ToString();
+		//this.lblpiodc5.Text=model.piodc5.ToString();
 
 	}
 

@@ -53,7 +53,7 @@ namespace Jium.MySQLDAL
 			MySqlParameter[] parameters = {
 					new MySqlParameter("@tagname", MySqlDbType.VarChar,40),
 					new MySqlParameter("@email", MySqlDbType.VarChar,40),
-					new MySqlParameter("@level", MySqlDbType.smallint,8),
+					new MySqlParameter("@level", MySqlDbType.Int16,8),
 					new MySqlParameter("@pwd", MySqlDbType.VarChar,40),
 					new MySqlParameter("@remark", MySqlDbType.VarChar,256),
 					new MySqlParameter("@createtime", MySqlDbType.VarChar,20),
@@ -100,7 +100,7 @@ namespace Jium.MySQLDAL
 			MySqlParameter[] parameters = {
 					new MySqlParameter("@tagname", MySqlDbType.VarChar,40),
 					new MySqlParameter("@email", MySqlDbType.VarChar,40),
-					new MySqlParameter("@level", MySqlDbType.smallint,8),
+					new MySqlParameter("@level", MySqlDbType.Int16,8),
 					new MySqlParameter("@pwd", MySqlDbType.VarChar,40),
 					new MySqlParameter("@remark", MySqlDbType.VarChar,256),
 					new MySqlParameter("@createtime", MySqlDbType.VarChar,20),

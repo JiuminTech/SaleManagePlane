@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Maticsoft.Web.Accounts.Admin {
+namespace Jium.Web.Accounts.Admin {
     
     
     /// <summary>
@@ -71,7 +71,7 @@ namespace Maticsoft.Web.Accounts.Admin {
         /// 自动生成的字段。
         /// 要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::Maticsoft.Web.Controls.CheckRight CheckRight1;
+        protected global::Jium.Web.Controls.CheckRight CheckRight1;
         
         /// <summary>
         /// Copyright1 控件。
@@ -80,6 +80,6 @@ namespace Maticsoft.Web.Accounts.Admin {
         /// 自动生成的字段。
         /// 要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::Maticsoft.Web.Controls.CopyRight1 Copyright1;
+        protected global::Jium.Web.Controls.CopyRight1 Copyright1;
     }
 }

@@ -94,7 +94,7 @@ namespace Jium.Web.historyalarm
 			model.ownerid=ownerid;
 			model.handlerid=handlerid;
 			model.alarmtype=alarmtype;
-			model.operateid=operateid;
+			model.operateid= long.Parse(operateid);
 			model.handlestatus=handlestatus;
 			model.confirmtime=confirmtime;
 			model.handledetail=handledetail;

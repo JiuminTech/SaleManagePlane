@@ -24,7 +24,7 @@ namespace Jium.MySQLDAL
 			strSql.Append("select count(1) from currentalarm");
 			strSql.Append(" where id=@id");
 			MySqlParameter[] parameters = {
-					new MySqlParameter("@id", MySqlDbType.bigint)
+					new MySqlParameter("@id", MySqlDbType.Int64)
 			};
 			parameters[0].Value = id;
 
@@ -50,7 +50,7 @@ namespace Jium.MySQLDAL
 					new MySqlParameter("@ownerid", MySqlDbType.Int32,11),
 					new MySqlParameter("@handlerid", MySqlDbType.Int32,11),
 					new MySqlParameter("@alarmtype", MySqlDbType.Int32,11),
-					new MySqlParameter("@operateid", MySqlDbType.bigint,20),
+					new MySqlParameter("@operateid", MySqlDbType.Int64,20),
 					new MySqlParameter("@handlestatus", MySqlDbType.Int32,11),
 					new MySqlParameter("@confirmtime", MySqlDbType.VarChar,20),
 					new MySqlParameter("@handledetail", MySqlDbType.VarChar,100)};
@@ -103,11 +103,11 @@ namespace Jium.MySQLDAL
 					new MySqlParameter("@ownerid", MySqlDbType.Int32,11),
 					new MySqlParameter("@handlerid", MySqlDbType.Int32,11),
 					new MySqlParameter("@alarmtype", MySqlDbType.Int32,11),
-					new MySqlParameter("@operateid", MySqlDbType.bigint,20),
+					new MySqlParameter("@operateid", MySqlDbType.Int64,20),
 					new MySqlParameter("@handlestatus", MySqlDbType.Int32,11),
 					new MySqlParameter("@confirmtime", MySqlDbType.VarChar,20),
 					new MySqlParameter("@handledetail", MySqlDbType.VarChar,100),
-					new MySqlParameter("@id", MySqlDbType.bigint,20)};
+					new MySqlParameter("@id", MySqlDbType.Int64,20)};
 			parameters[0].Value = model.alarmname;
 			parameters[1].Value = model.alarmdesc;
 			parameters[2].Value = model.createtime;
@@ -142,7 +142,7 @@ namespace Jium.MySQLDAL
 			strSql.Append("delete from currentalarm ");
 			strSql.Append(" where id=@id");
 			MySqlParameter[] parameters = {
-					new MySqlParameter("@id", MySqlDbType.bigint)
+					new MySqlParameter("@id", MySqlDbType.Int64)
 			};
 			parameters[0].Value = id;
 
@@ -186,7 +186,7 @@ namespace Jium.MySQLDAL
 			strSql.Append("select id,alarmname,alarmdesc,createtime,updatetime,ownerid,handlerid,alarmtype,operateid,handlestatus,confirmtime,handledetail from currentalarm ");
 			strSql.Append(" where id=@id");
 			MySqlParameter[] parameters = {
-					new MySqlParameter("@id", MySqlDbType.bigint)
+					new MySqlParameter("@id", MySqlDbType.Int64)
 			};
 			parameters[0].Value = id;
 

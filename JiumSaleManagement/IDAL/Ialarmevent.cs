@@ -34,13 +34,22 @@ namespace Jium.IDAL
 		/// 获得数据列表
 		/// </summary>
 		DataSet GetList(string strWhere);
-		/// <summary>
-		/// 根据分页获得数据列表
-		/// </summary>
-		//DataSet GetList(int PageSize,int PageIndex,string strWhere);
-		#endregion  成员方法
-		#region  MethodEx
+        /// <summary>
+        /// 根据分页获得数据列表
+        /// </summary>
+        //DataSet GetList(int PageSize,int PageIndex,string strWhere);
 
-		#endregion  MethodEx
-	} 
+        /// <summary>
+        /// 分页获取数据数量
+        /// </summary>
+        int GetRecordCount(string strWhere);
+        /// <summary>
+        /// 分页获取数据列表
+        /// </summary> 
+        DataSet GetListByPage(string strWhere, string orderby, int startIndex, int endIndex);
+        #endregion  成员方法
+        #region  MethodEx
+
+        #endregion  MethodEx
+    } 
 }

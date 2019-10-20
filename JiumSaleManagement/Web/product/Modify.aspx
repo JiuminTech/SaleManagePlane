@@ -9,61 +9,61 @@
 <table cellSpacing="0" cellPadding="0" width="100%" border="0">
 	<tr>
 	<td height="25" width="30%" align="right">
-		auto_increment
+		序号
 	：</td>
 	<td height="25" width="*" align="left">
 		<asp:label id="lblid" runat="server"></asp:label>
 	</td></tr>
 	<tr>
 	<td height="25" width="30%" align="right">
-		pcode
+		货号
 	：</td>
 	<td height="25" width="*" align="left">
 		<asp:TextBox id="txtpcode" runat="server" Width="200px"></asp:TextBox>
 	</td></tr>
 	<tr>
 	<td height="25" width="30%" align="right">
-		pname
+		名称
 	：</td>
 	<td height="25" width="*" align="left">
 		<asp:TextBox id="txtpname" runat="server" Width="200px"></asp:TextBox>
 	</td></tr>
 	<tr>
 	<td height="25" width="30%" align="right">
-		psaleprice
+		标价
 	：</td>
 	<td height="25" width="*" align="left">
 		<asp:TextBox id="txtpsaleprice" runat="server" Width="200px"></asp:TextBox>
 	</td></tr>
 	<tr>
 	<td height="25" width="30%" align="right">
-		prealprice
+		售价
 	：</td>
 	<td height="25" width="*" align="left">
 		<asp:TextBox id="txtprealprice" runat="server" Width="200px"></asp:TextBox>
 	</td></tr>
 	<tr>
 	<td height="25" width="30%" align="right">
-		ptype
+		分类
 	：</td>
 	<td height="25" width="*" align="left">
 		<asp:TextBox id="txtptype" runat="server" Width="200px"></asp:TextBox>
 	</td></tr>
 	<tr>
 	<td height="25" width="30%" align="right">
-		pisgroup
+		是否组合
 	：</td>
 	<td height="25" width="*" align="left">
 		<asp:TextBox id="txtpisgroup" runat="server" Width="200px"></asp:TextBox>
 	</td></tr>
 	<tr>
 	<td height="25" width="30%" align="right">
-		pdesc
+		描述
 	：</td>
 	<td height="25" width="*" align="left">
 		<asp:TextBox id="txtpdesc" runat="server" Width="200px"></asp:TextBox>
 	</td></tr>
-	<tr>
+	<!--<tr>
 	<td height="25" width="30%" align="right">
 		ps1
 	：</td>
@@ -153,7 +153,9 @@
 	：</td>
 	<td height="25" width="*" align="left">
 		<asp:TextBox id="txtpdc3" runat="server" Width="200px"></asp:TextBox>
-	</td></tr>
+	</td>-->
+
+	</tr>
 </table>
 
             </td>

@@ -68,11 +68,11 @@ namespace Jium.Web.product
 			{
 				strErr+="pname不能为空！\\n";	
 			}
-			if(!PageValidate.IsDecimal(txtpsaleprice.Text))
+			if(!PageValidate.IsNumber(txtpsaleprice.Text) && !PageValidate.IsDecimal(txtpsaleprice.Text))
 			{
 				strErr+="psaleprice格式错误！\\n";	
 			}
-			if(!PageValidate.IsDecimal(txtprealprice.Text))
+			if(!PageValidate.IsNumber(txtprealprice.Text) && !PageValidate.IsDecimal(txtprealprice.Text))
 			{
 				strErr+="prealprice格式错误！\\n";	
 			}
@@ -84,6 +84,7 @@ namespace Jium.Web.product
 			{
 				strErr+="pisgroup格式错误！\\n";	
 			}
+            /*
 			if(this.txtpdesc.Text.Trim().Length==0)
 			{
 				strErr+="pdesc不能为空！\\n";	
@@ -140,7 +141,7 @@ namespace Jium.Web.product
 			{
 				strErr+="pdc3格式错误！\\n";	
 			}
-
+            */
 			if(strErr!="")
 			{
 				MessageBox.Show(this,strErr);
@@ -159,14 +160,14 @@ namespace Jium.Web.product
 			string ps3=this.txtps3.Text;
 			string ps4=this.txtps4.Text;
 			string ps5=this.txtps5.Text;
-			int pd1=int.Parse(this.txtpd1.Text);
-			int pd2=int.Parse(this.txtpd2.Text);
-			int pd3=int.Parse(this.txtpd3.Text);
-			int pd4=int.Parse(this.txtpd4.Text);
-			int pd5=int.Parse(this.txtpd5.Text);
-			decimal pdc1=decimal.Parse(this.txtpdc1.Text);
-			decimal pdc2=decimal.Parse(this.txtpdc2.Text);
-			decimal pdc3=decimal.Parse(this.txtpdc3.Text);
+			int pd1=string.IsNullOrWhiteSpace(this.txtpd1.Text)? 0:int.Parse(this.txtpd1.Text);
+			int pd2= string.IsNullOrWhiteSpace(this.txtpd2.Text) ? 0 : int.Parse(this.txtpd2.Text);
+			int pd3= string.IsNullOrWhiteSpace(this.txtpd3.Text) ? 0 : int.Parse(this.txtpd3.Text);
+			int pd4= string.IsNullOrWhiteSpace(this.txtpd4.Text) ? 0 : int.Parse(this.txtpd4.Text);
+			int pd5= string.IsNullOrWhiteSpace(this.txtpd5.Text) ? 0 : int.Parse(this.txtpd5.Text);
+			decimal pdc1= string.IsNullOrWhiteSpace(this.txtpdc1.Text) ? 0 : decimal.Parse(this.txtpdc1.Text);
+			decimal pdc2= string.IsNullOrWhiteSpace(this.txtpdc2.Text) ? 0 : decimal.Parse(this.txtpdc2.Text);
+			decimal pdc3= string.IsNullOrWhiteSpace(this.txtpdc3.Text) ? 0 : decimal.Parse(this.txtpdc3.Text);
 
 
 			Jium.Model.product model=new Jium.Model.product();

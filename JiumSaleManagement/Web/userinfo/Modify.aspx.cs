@@ -38,10 +38,10 @@ namespace Jium.Web.userinfo
 		this.txtlevel.Text=model.level.ToString();
 		this.txtpwd.Text=model.pwd;
 		this.txtremark.Text=model.remark;
-		this.txtcreatetime.Text=model.createtime;
-		this.txttoken.Text=model.token;
-		this.txttokentime.Text=model.tokentime;
-		this.txtstatus.Text=model.status.ToString();
+		//this.txtcreatetime.Text=model.createtime;
+		//this.txttoken.Text=model.token;
+		//this.txttokentime.Text=model.tokentime;
+		//this.txtstatus.Text=model.status.ToString();
 
 	}
 
@@ -69,22 +69,22 @@ namespace Jium.Web.userinfo
 			{
 				strErr+="remark不能为空！\\n";	
 			}
-			if(this.txtcreatetime.Text.Trim().Length==0)
-			{
-				strErr+="createtime不能为空！\\n";	
-			}
-			if(this.txttoken.Text.Trim().Length==0)
-			{
-				strErr+="token不能为空！\\n";	
-			}
-			if(this.txttokentime.Text.Trim().Length==0)
-			{
-				strErr+="tokentime不能为空！\\n";	
-			}
-			if(!PageValidate.IsNumber(txtstatus.Text))
-			{
-				strErr+="status格式错误！\\n";	
-			}
+			//if(this.txtcreatetime.Text.Trim().Length==0)
+			//{
+			//	strErr+="createtime不能为空！\\n";	
+			//}
+			//if(this.txttoken.Text.Trim().Length==0)
+			//{
+			//	strErr+="token不能为空！\\n";	
+			//}
+			//if(this.txttokentime.Text.Trim().Length==0)
+			//{
+			//	strErr+="tokentime不能为空！\\n";	
+			//}
+			//if(!PageValidate.IsNumber(txtstatus.Text))
+			//{
+			//	strErr+="status格式错误！\\n";	
+			//}
 
 			if(strErr!="")
 			{
@@ -97,10 +97,10 @@ namespace Jium.Web.userinfo
 			int level=int.Parse(this.txtlevel.Text);
 			string pwd=this.txtpwd.Text;
 			string remark=this.txtremark.Text;
-			string createtime=this.txtcreatetime.Text;
-			string token=this.txttoken.Text;
-			string tokentime=this.txttokentime.Text;
-			int status=int.Parse(this.txtstatus.Text);
+			string createtime = DateTime.Now.ToString("yyyyMMddHHmmss"); //this.txtcreatetime.Text;
+			//string token=this.txttoken.Text;
+			//string tokentime=this.txttokentime.Text;
+			//int status=int.Parse(this.txtstatus.Text);
 
 
 			Jium.Model.userinfo model=new Jium.Model.userinfo();
@@ -111,9 +111,9 @@ namespace Jium.Web.userinfo
 			model.pwd=pwd;
 			model.remark=remark;
 			model.createtime=createtime;
-			model.token=token;
-			model.tokentime=tokentime;
-			model.status=status;
+			//model.token=token;
+			//model.tokentime=tokentime;
+			//model.status=status;
 
 			Jium.BLL.userinfo bll=new Jium.BLL.userinfo();
 			bll.Update(model);

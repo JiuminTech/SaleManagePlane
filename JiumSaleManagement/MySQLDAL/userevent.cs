@@ -24,7 +24,7 @@ namespace Jium.MySQLDAL
 			strSql.Append("select count(1) from userevent");
 			strSql.Append(" where id=@id");
 			MySqlParameter[] parameters = {
-					new MySqlParameter("@id", MySqlDbType.bigint)
+					new MySqlParameter("@id", MySqlDbType.Int64)
 			};
 			parameters[0].Value = id;
 
@@ -44,7 +44,7 @@ namespace Jium.MySQLDAL
 			strSql.Append("@userid,@eventid,@eventtime,@remark)");
 			MySqlParameter[] parameters = {
 					new MySqlParameter("@userid", MySqlDbType.Int32,11),
-					new MySqlParameter("@eventid", MySqlDbType.bigint,20),
+					new MySqlParameter("@eventid", MySqlDbType.Int64,20),
 					new MySqlParameter("@eventtime", MySqlDbType.VarChar,20),
 					new MySqlParameter("@remark", MySqlDbType.VarChar,100)};
 			parameters[0].Value = model.userid;
@@ -76,10 +76,10 @@ namespace Jium.MySQLDAL
 			strSql.Append(" where id=@id");
 			MySqlParameter[] parameters = {
 					new MySqlParameter("@userid", MySqlDbType.Int32,11),
-					new MySqlParameter("@eventid", MySqlDbType.bigint,20),
+					new MySqlParameter("@eventid", MySqlDbType.Int64,20),
 					new MySqlParameter("@eventtime", MySqlDbType.VarChar,20),
 					new MySqlParameter("@remark", MySqlDbType.VarChar,100),
-					new MySqlParameter("@id", MySqlDbType.bigint,20)};
+					new MySqlParameter("@id", MySqlDbType.Int64,20)};
 			parameters[0].Value = model.userid;
 			parameters[1].Value = model.eventid;
 			parameters[2].Value = model.eventtime;
@@ -107,7 +107,7 @@ namespace Jium.MySQLDAL
 			strSql.Append("delete from userevent ");
 			strSql.Append(" where id=@id");
 			MySqlParameter[] parameters = {
-					new MySqlParameter("@id", MySqlDbType.bigint)
+					new MySqlParameter("@id", MySqlDbType.Int64)
 			};
 			parameters[0].Value = id;
 
@@ -151,7 +151,7 @@ namespace Jium.MySQLDAL
 			strSql.Append("select id,userid,eventid,eventtime,remark from userevent ");
 			strSql.Append(" where id=@id");
 			MySqlParameter[] parameters = {
-					new MySqlParameter("@id", MySqlDbType.bigint)
+					new MySqlParameter("@id", MySqlDbType.Int64)
 			};
 			parameters[0].Value = id;
 

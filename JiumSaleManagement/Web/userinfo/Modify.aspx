@@ -9,14 +9,14 @@
 <table cellSpacing="0" cellPadding="0" width="100%" border="0">
 	<tr>
 	<td height="25" width="30%" align="right">
-		auto_increment
+		序号
 	：</td>
 	<td height="25" width="*" align="left">
 		<asp:label id="lblid" runat="server"></asp:label>
 	</td></tr>
 	<tr>
 	<td height="25" width="30%" align="right">
-		tagname
+		姓名
 	：</td>
 	<td height="25" width="*" align="left">
 		<asp:TextBox id="txttagname" runat="server" Width="200px"></asp:TextBox>
@@ -30,26 +30,26 @@
 	</td></tr>
 	<tr>
 	<td height="25" width="30%" align="right">
-		level
+		级别
 	：</td>
 	<td height="25" width="*" align="left">
 		<asp:TextBox id="txtlevel" runat="server" Width="200px"></asp:TextBox>
 	</td></tr>
 	<tr>
 	<td height="25" width="30%" align="right">
-		pwd
+		密码
 	：</td>
 	<td height="25" width="*" align="left">
 		<asp:TextBox id="txtpwd" runat="server" Width="200px"></asp:TextBox>
 	</td></tr>
 	<tr>
 	<td height="25" width="30%" align="right">
-		remark
+		备注
 	：</td>
 	<td height="25" width="*" align="left">
 		<asp:TextBox id="txtremark" runat="server" Width="200px"></asp:TextBox>
 	</td></tr>
-	<tr>
+	<!--<tr>
 	<td height="25" width="30%" align="right">
 		createtime
 	：</td>
@@ -76,7 +76,7 @@
 	：</td>
 	<td height="25" width="*" align="left">
 		<asp:TextBox id="txtstatus" runat="server" Width="200px"></asp:TextBox>
-	</td></tr>
+	</td></tr>-->
 </table>
 
             </td>

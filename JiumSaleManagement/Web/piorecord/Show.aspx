@@ -9,96 +9,96 @@
 <table cellSpacing="0" cellPadding="0" width="100%" border="0">
 	<tr>
 	<td height="25" width="30%" align="right">
-		auto_increment
+		序号
 	：</td>
 	<td height="25" width="*" align="left">
 		<asp:Label id="lblid" runat="server"></asp:Label>
 	</td></tr>
 	<tr>
 	<td height="25" width="30%" align="right">
-		ptime
+		日期
 	：</td>
 	<td height="25" width="*" align="left">
 		<asp:Label id="lblptime" runat="server"></asp:Label>
 	</td></tr>
 	<tr>
 	<td height="25" width="30%" align="right">
-		pcode
+		货号
 	：</td>
 	<td height="25" width="*" align="left">
 		<asp:Label id="lblpcode" runat="server"></asp:Label>
 	</td></tr>
 	<tr>
 	<td height="25" width="30%" align="right">
-		pcnt
+		数量
 	：</td>
 	<td height="25" width="*" align="left">
 		<asp:Label id="lblpcnt" runat="server"></asp:Label>
 	</td></tr>
 	<tr>
 	<td height="25" width="30%" align="right">
-		psaleprice
+		标价
 	：</td>
 	<td height="25" width="*" align="left">
 		<asp:Label id="lblpsaleprice" runat="server"></asp:Label>
 	</td></tr>
 	<tr>
 	<td height="25" width="30%" align="right">
-		prealprice
+		售价
 	：</td>
 	<td height="25" width="*" align="left">
 		<asp:Label id="lblprealprice" runat="server"></asp:Label>
 	</td></tr>
 	<tr>
 	<td height="25" width="30%" align="right">
-		ptype
+		分类
 	：</td>
 	<td height="25" width="*" align="left">
 		<asp:Label id="lblptype" runat="server"></asp:Label>
 	</td></tr>
 	<tr>
 	<td height="25" width="30%" align="right">
-		pzekou
+		折扣系数
 	：</td>
 	<td height="25" width="*" align="left">
 		<asp:Label id="lblpzekou" runat="server"></asp:Label>
 	</td></tr>
 	<tr>
 	<td height="25" width="30%" align="right">
-		premark
+		备注
 	：</td>
 	<td height="25" width="*" align="left">
 		<asp:Label id="lblpremark" runat="server"></asp:Label>
 	</td></tr>
 	<tr>
 	<td height="25" width="30%" align="right">
-		pguestid
+		顾客ID
 	：</td>
 	<td height="25" width="*" align="left">
 		<asp:Label id="lblpguestid" runat="server"></asp:Label>
 	</td></tr>
 	<tr>
 	<td height="25" width="30%" align="right">
-		psalerid
+		售货员ID
 	：</td>
 	<td height="25" width="*" align="left">
 		<asp:Label id="lblpsalerid" runat="server"></asp:Label>
 	</td></tr>
 	<tr>
 	<td height="25" width="30%" align="right">
-		pios1
+		来源
 	：</td>
 	<td height="25" width="*" align="left">
 		<asp:Label id="lblpios1" runat="server"></asp:Label>
 	</td></tr>
 	<tr>
 	<td height="25" width="30%" align="right">
-		pios2
+		存放点
 	：</td>
 	<td height="25" width="*" align="left">
 		<asp:Label id="lblpios2" runat="server"></asp:Label>
 	</td></tr>
-	<tr>
+	<!--<tr>
 	<td height="25" width="30%" align="right">
 		pios3
 	：</td>
@@ -188,7 +188,7 @@
 	：</td>
 	<td height="25" width="*" align="left">
 		<asp:Label id="lblpiodc5" runat="server"></asp:Label>
-	</td></tr>
+	</td></tr>-->
 </table>
 
                     </td>

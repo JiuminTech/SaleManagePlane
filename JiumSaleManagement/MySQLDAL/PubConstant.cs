@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Configuration;
-namespace Xwsw.MySQLDAL
+namespace Jium.MySQLDAL
 {
 
     public class PubConstant
