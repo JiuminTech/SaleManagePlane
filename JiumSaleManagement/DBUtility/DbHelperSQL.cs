@@ -10,7 +10,7 @@ namespace Maticsoft.DBUtility
 {
     /// <summary>
     /// 数据访问抽象基础类
-    /// Copyright (C) Maticsoft 
+    /// Copyright (C) Maticsoft
     /// </summary>
     public abstract class DbHelperSQL
     {
@@ -60,7 +60,7 @@ namespace Maticsoft.DBUtility
             }
             else
             {
-                cmdresult = int.Parse(obj.ToString()); //也可能=0
+                cmdresult = int.Parse(obj.ToString());
             }
             if (cmdresult == 0)
             {

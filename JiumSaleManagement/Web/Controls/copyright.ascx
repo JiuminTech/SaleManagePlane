@@ -1,4 +1,4 @@
-﻿<%@ Control Language="c#" AutoEventWireup="True" Codebehind="CopyRight.ascx.cs" Inherits="Maticsoft.Web.Controls.CopyRight1" TargetSchema="http://schemas.microsoft.com/intellisense/ie5" %>
+﻿<%@ Control Language="c#" AutoEventWireup="True" Codebehind="CopyRight.ascx.cs" Inherits="Jium.Web.Controls.CopyRight1" TargetSchema="http://schemas.microsoft.com/intellisense/ie5" %>
 <table width="100%" border="0" align="center" cellpadding="0" cellspacing="0">
 	<tr>
 		<td>&nbsp;</td>

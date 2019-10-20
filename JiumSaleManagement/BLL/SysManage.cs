@@ -1,20 +1,22 @@
 ﻿using System.Data;
-using Maticsoft.Model;
-namespace Maticsoft.BLL
+using Jium.IDAL;
+using Jium.Model;
+namespace Jium.BLL
 {
 	/// <summary>
-	/// 系统菜单管理。
+	/// SysManage 的摘要说明。
 	/// </summary>
 	public class SysManage
 	{
-		Maticsoft.DAL.SysManage dal=new Maticsoft.DAL.SysManage();
+        //从工厂里面创建产品类的数据访问对象        
+        ISysManage dal = DALFactory.DataAccess.CreateSysManage();
 
-        
 		public SysManage()
-		{			
-		}
-		
-		public int AddTreeNode(SysNode node)
+		{
+        }
+
+        #region 基本方法
+        public int AddTreeNode(SysNode node)
 		{			
 			return dal.AddTreeNode(node);
 		}
@@ -26,21 +28,16 @@ namespace Maticsoft.BLL
 		{			
 			dal.DelTreeNode(nodeid);
 		}
-
 		public DataSet GetTreeList(string strWhere)
 		{			
 			return dal.GetTreeList(strWhere);
 		}
-
 		public SysNode GetNode(int NodeID)
 		{			
 			return dal.GetNode(NodeID);
-		}
-
-        public int GetPermissionCatalogID(int permissionID)
-        {
-            return dal.GetPermissionCatalogID(permissionID);
         }
+
+        #endregion
 
         #region 日志管理
         public void AddLog(string time,string loginfo,string Particular)

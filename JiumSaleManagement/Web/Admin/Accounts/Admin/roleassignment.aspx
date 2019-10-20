@@ -6,13 +6,17 @@
 <HTML>
 	<HEAD>
 		<title>Index</title>
-		<META http-equiv="Content-Type" content="text/html; charset=gb2312">		
+		<META http-equiv="Content-Type" content="text/html; charset=gb2312">
+		
+		
+		
+		
 		<LINK href="../style/style.css" type="text/css" rel="stylesheet">
 	</HEAD>
 	<body text="#000000" bgColor="#ffffff" marginheight="0" marginwidth="0">
 		<form id="Form1" method="post" runat="server">
 			<div align="center">
-				<table id="Table1" cellSpacing="0" cellPadding="0" width="90%" align="center" border="0">
+				<table id="Table1" cellSpacing="0" cellPadding="0" width="600" align="center" border="0">
 					<tr>
 						<td vAlign="top" bgColor="#ffffff">
 							<table cellSpacing="0" cellPadding="5" width="100%" border="0">
@@ -39,11 +43,6 @@
 													<asp:ImageButton id="BtnOk" runat="server" ImageUrl="../images/button_ok.gif"></asp:ImageButton>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 													<asp:ImageButton id="Btnback" runat="server" ImageUrl="../images/button_back.gif"></asp:ImageButton>
 												</td>
-											</tr>
-											<tr>
-											<td>
-											<asp:Label ID="RoleList" Visible="False" runat="server"></asp:Label>
-											</td>
 											</tr>
 										</table>
 									</td>

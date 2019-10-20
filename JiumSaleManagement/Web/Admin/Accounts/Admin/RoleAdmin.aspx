@@ -6,13 +6,17 @@
 <HTML>
   <HEAD>
 		<title>Index</title>
-		<META http-equiv="Content-Type" content="text/html; charset=gb2312">		
+		<META http-equiv="Content-Type" content="text/html; charset=gb2312">
+		
+		
+		
+		
 		<LINK href="../style/style.css" type="text/css" rel="stylesheet">
   </HEAD>
 	<body text="#000000" bgColor="#ffffff" >
 		<form id="Form1" method="post" runat="server">
 			<div align="center">
-				<table id="Table1" cellSpacing="0" cellPadding="0" width="90%" align="center" border="0">
+				<table id="Table1" cellSpacing="0" cellPadding="0" width="600" align="center" border="0">
 					<tr>
 						<td vAlign="top" bgColor='<%=Application[Session["Style"].ToString()+"xtable_bgcolor"]%>' >
 							<table cellSpacing="0" cellPadding="5" width="100%" align="center" border="0">
@@ -33,7 +37,7 @@
 													<P><asp:label id="Label1" runat="server">新增角色名：</asp:label><asp:textbox id="TextBox1" runat="server" MaxLength="30" Columns="20" BorderStyle="Groove"></asp:textbox>&nbsp;&nbsp;
 														<asp:ImageButton id="BtnAdd" runat="server" ImageUrl="../images/button_add.gif"></asp:ImageButton>&nbsp;
 														<asp:requiredfieldvalidator id="RequiredFieldValidator1" runat="server" ControlToValidate="TextBox1" Display="Dynamic"
-															ErrorMessage="请指定角色名称"></asp:requiredfieldvalidator></P>													
+															ErrorMessage="请指定角色名称"></asp:requiredfieldvalidator></P>
 												</td>
 											</tr>
 											<tr>

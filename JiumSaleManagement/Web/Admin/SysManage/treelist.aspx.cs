@@ -38,64 +38,12 @@ namespace Maticsoft.Web.SysManage
 						Session["Modulepagesys"]=1;
 					}
 				}
-                BiudTree();	
+
 				dataBind(pageIndex);
 			}
 		}
-        private void BiudTree()
-        {
-            Maticsoft.BLL.SysManage sm = new Maticsoft.BLL.SysManage();
-            DataTable dt = sm.GetTreeList("").Tables[0];
-            
-            this.listTarget.Items.Clear();
-            //加载树
-            this.listTarget.Items.Add(new ListItem("根目录", "0"));
-            DataRow[] drs = dt.Select("ParentID= " + 0);
-            
-            foreach (DataRow r in drs)
-            {
-                string nodeid = r["NodeID"].ToString();
-                string text = r["Text"].ToString();
-                string parentid = r["ParentID"].ToString();
-                string permissionid = r["PermissionID"].ToString();
-                text = "╋" + text;
-                this.listTarget.Items.Add(new ListItem(text, nodeid));
-                int sonparentid = int.Parse(nodeid);
-                string blank = "├";
-
-                BindNode(sonparentid, dt, blank);
-
-            }
-            this.listTarget.DataBind();
-
-        }
-        private void BindNode(int parentid, DataTable dt, string blank)
-        {
-            DataRow[] drs = dt.Select("ParentID= " + parentid);
-
-            foreach (DataRow r in drs)
-            {
-                string nodeid = r["NodeID"].ToString();
-                string text = r["Text"].ToString();
-                string permissionid = r["PermissionID"].ToString();
-                text = blank + "『" + text + "』";
-
-                this.listTarget.Items.Add(new ListItem(text, nodeid));
-                int sonparentid = int.Parse(nodeid);
-                string blank2 = blank + "─";
 
 
-                BindNode(sonparentid, dt, blank2);
-            }
-        }
-
-        protected void listTarget_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            if (listTarget.SelectedItem != null)
-            { 
-                dataBind(1);
-            }
-        }
 		private void dataBind(int pageIndex)
 		{
 			pageIndex--;
@@ -105,16 +53,6 @@ namespace Maticsoft.Web.SysManage
 			{
 				strWhere=Session["strWheresys"].ToString();
 			}
-            if (listTarget.SelectedItem != null)
-            {
-                string nodeid = listTarget.SelectedValue;
-                if (strWhere.Trim() != "")
-                {
-                    strWhere = strWhere + " and ";
-                }
-                strWhere+="ParentID= " + nodeid;
-            }
-            
 			DataSet ds=new DataSet(); 
 			ds=sm.GetTreeList(strWhere);
 			grid.DataSource=ds.Tables[0].DefaultView;
@@ -183,8 +121,6 @@ namespace Maticsoft.Web.SysManage
 
 		}
 		#endregion
-
-        
 
 	
 	}

@@ -1,4 +1,4 @@
-﻿namespace Maticsoft.Web.Controls
+﻿namespace Jium.Web.Controls
 {
 	using System;
 	using System.Data;

@@ -21,24 +21,26 @@ namespace Maticsoft.Web.Accounts.Admin
 		protected void Page_Load(object sender, System.EventArgs e)
 		{
 			if(!Page.IsPostBack)
-			{				
+			{
+				this.TabEdit.Visible=false;
 				SetStyle();
+
+
 				ImageButton btn = (ImageButton)Page.FindControl("BtnDelCategory");
 				btn.Attributes.Add("onclick", "return confirm('你是否确定删除这条记录？');");
+
 				CategoriesDatabind();
 				if(this.ClassList.SelectedItem!=null)
 				{
 					PermissionsDatabind();
 				}
+
 			}
-        }
-
-
-        #region 初始化
-        private void SetStyle()
+		}
+		private void SetStyle()
 		{
 			DataGrid1.BorderWidth=Unit.Pixel(1);
-			DataGrid1.CellPadding=4;
+			DataGrid1.CellPadding=2;
 			DataGrid1.CellSpacing=0;
 			DataGrid1.BorderColor=ColorTranslator.FromHtml(Application[Session["Style"].ToString()+"xtable_bordercolorlight"].ToString());
 			DataGrid1.HeaderStyle.BackColor=ColorTranslator.FromHtml(Application[Session["Style"].ToString()+"xtable_titlebgcolor"].ToString());
@@ -60,12 +62,12 @@ namespace Maticsoft.Web.Accounts.Admin
 			DataSet PermissionsList=AccountsTool.GetPermissionsByCategory(CategoryId);
 			this.DataGrid1.DataSource=PermissionsList;
 			this.DataGrid1.DataBind();
-        }
+		}
 
-        #endregion
 
-        #region Web 窗体设计器生成的代码
-        override protected void OnInit(EventArgs e)
+
+		#region Web 窗体设计器生成的代码
+		override protected void OnInit(EventArgs e)
 		{
 			//
 			// CODEGEN: 该调用是 ASP.NET Web 窗体设计器所必需的。
@@ -85,39 +87,36 @@ namespace Maticsoft.Web.Accounts.Admin
 			this.BtnAddPermissions.Click += new System.Web.UI.ImageClickEventHandler(this.BtnAddPermissions_Click);
 			this.DataGrid1.ItemCommand += new System.Web.UI.WebControls.DataGridCommandEventHandler(this.DataGrid1_ItemCommand);
 			this.DataGrid1.ItemDataBound += new System.Web.UI.WebControls.DataGridItemEventHandler(this.DataGrid1_ItemDataBound);
-            this.DataGrid1.CancelCommand += new System.Web.UI.WebControls.DataGridCommandEventHandler(this.DataGrid1_CancelCommand);
-            this.DataGrid1.UpdateCommand += new System.Web.UI.WebControls.DataGridCommandEventHandler(this.DataGrid1_UpdateCommand);
-            this.DataGrid1.EditCommand += new System.Web.UI.WebControls.DataGridCommandEventHandler(this.DataGrid1_EditCommand);
-			
+			this.btnupSave.Click += new System.Web.UI.ImageClickEventHandler(this.btnupSave_Click);
+			this.btnCancel.Click += new System.Web.UI.ImageClickEventHandler(this.btnCancel_Click);
 
 		}
 		#endregion
 
 		protected void ClassList_SelectedIndexChanged(object sender, System.EventArgs e)
 		{
-			PermissionsDatabind();
-        }
-
-        #region 按钮事件
-private void BtnAddCategory_Click(object sender, System.Web.UI.ImageClickEventArgs e)
-{
-	string Category=this.CategoriesName.Text.Trim();
-	if(Category!="")
-	{
-		PermissionCategories c=new PermissionCategories();
-		c.Create(Category);
-		CategoriesDatabind();
-		if(this.ClassList.SelectedItem!=null)
-		{
-			PermissionsDatabind();
+			PermissionsDatabind();		
 		}
-		this.CategoriesName.Text="";
-	}
-	else
-	{
-		this.lbltip1.Text="名称不能为空！";
-	}
-}
+
+		private void BtnAddCategory_Click(object sender, System.Web.UI.ImageClickEventArgs e)
+		{
+			string Category=this.CategoriesName.Text.Trim();
+			if(Category!="")
+			{
+				PermissionCategories c=new PermissionCategories();
+				c.Create(Category);
+				CategoriesDatabind();
+				if(this.ClassList.SelectedItem!=null)
+				{
+					PermissionsDatabind();
+				}
+				this.CategoriesName.Text="";
+			}
+			else
+			{
+				this.lbltip1.Text="名称不能为空！";
+			}
+		}
 
 		private void BtnDelCategory_Click(object sender, System.Web.UI.ImageClickEventArgs e)
 		{
@@ -151,12 +150,9 @@ private void BtnAddCategory_Click(object sender, System.Web.UI.ImageClickEventAr
 				this.lbltip2.Text="名称不能为空！";
 			}
 
-        }
+		}
 
-        #endregion
-
-        #region DataGrid事件
-        private void DataGrid1_ItemDataBound(object sender, System.Web.UI.WebControls.DataGridItemEventArgs e)
+		private void DataGrid1_ItemDataBound(object sender, System.Web.UI.WebControls.DataGridItemEventArgs e)
 		{
 			switch(e.Item.ItemType)
 			{
@@ -191,42 +187,35 @@ private void BtnAddCategory_Click(object sender, System.Web.UI.ImageClickEventAr
 					}
 					break;
 				case "Edit":
-                    //this.TabEdit.Visible=true;
-                    //this.lblPermId.Text=PermissionsID.ToString();
-                    //this.txtNewName.Text=Permissions;
+					this.TabEdit.Visible=true;
+					this.lblPermId.Text=PermissionsID.ToString();
+					this.txtNewName.Text=Permissions;
 					break;
  
 			}
 
 		}
 
-        private void DataGrid1_UpdateCommand(object source, System.Web.UI.WebControls.DataGridCommandEventArgs e)
-        {
-            string id = e.Item.Cells[0].Text;
-            TextBox bTextBox = (TextBox)(e.Item.Cells[1].Controls[0]);
-            string Permissions = bTextBox.Text.Trim();
-            if ((Permissions != "") && (id != ""))
-            {                 
-                Permissions p = new Permissions();
-                p.Update(int.Parse(id), Permissions);                
-            }
-            //恢复状态
-            DataGrid1.EditItemIndex = -1;
-            PermissionsDatabind();
-        }
-        private void DataGrid1_EditCommand(object source, System.Web.UI.WebControls.DataGridCommandEventArgs e)
-        {
-            DataGrid1.EditItemIndex = e.Item.ItemIndex;
-            PermissionsDatabind();
-        }
+		private void btnupSave_Click(object sender, System.Web.UI.ImageClickEventArgs e)
+		{
+			if(this.txtNewName.Text.Trim()!="")
+			{		
+				Permissions p=new Permissions();
+				p.Update(int.Parse(this.lblPermId.Text),this.txtNewName.Text.Trim());
+				this.TabEdit.Visible=false;
+				PermissionsDatabind();
+			}
+			else
+			{
+				this.lbltip3.Text="名称不能为空！";
+			}
+		}
 
-        private void DataGrid1_CancelCommand(object source, System.Web.UI.WebControls.DataGridCommandEventArgs e)
-        {
-            DataGrid1.EditItemIndex = -1;
-            PermissionsDatabind();
+		private void btnCancel_Click(object sender, System.Web.UI.ImageClickEventArgs e)
+		{
+			this.TabEdit.Visible=false;		
+		}
 
-        }
-        #endregion
-
-    }
+		
+	}
 }

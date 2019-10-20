@@ -239,8 +239,8 @@ namespace Maticsoft.Web.Admin
 		/// 此方法的内容。
 		/// </summary>
 		private void InitializeComponent()
-		{
-            //this.TreeView1.Attributes.Add("DefaultStyle", "font-family:宋体;font-size:9pt;color:white;");
+		{    
+
 		}
 		#endregion
 	}

@@ -54,7 +54,7 @@
     <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <OutputPath>bin\Debug\</OutputPath>
+    <OutputPath>..\..\bin\</OutputPath>
     <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
     <BaseAddress>285212672</BaseAddress>
     <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
@@ -78,7 +78,7 @@
     <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <OutputPath>bin\Release\</OutputPath>
+    <OutputPath>..\..\bin\</OutputPath>
     <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
     <BaseAddress>285212672</BaseAddress>
     <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
@@ -105,10 +105,6 @@
     <Reference Include="COM.Excel, Version=1.1.1606.17082, Culture=neutral">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\Lib\COM.Excel.dll</HintPath>
-    </Reference>
-    <Reference Include="Excel, Version=1.5.0.0, Culture=neutral">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\Lib\Excel.dll</HintPath>
     </Reference>
     <Reference Include="OpenSmtp, Version=1.11.0.34196, Culture=neutral">
       <SpecificVersion>False</SpecificVersion>
@@ -146,9 +142,6 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="DataCache.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="DataToExcel.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="DEncrypt\DEncrypt.cs">

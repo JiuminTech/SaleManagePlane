@@ -146,7 +146,7 @@ namespace Maticsoft.DBUtility
         }
       
         /// <summary>
-        /// 执行MySql和Oracle滴混合事务
+        /// 执行Sql和Oracle滴混合事务
         /// </summary>
         /// <param name="list">SQL命令行列表</param>
         /// <param name="oracleCmdSqlList">Oracle命令行列表</param>

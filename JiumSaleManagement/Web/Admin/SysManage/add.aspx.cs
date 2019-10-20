@@ -21,27 +21,11 @@ namespace Maticsoft.Web.SysManage
 				BiudTree();	           
 				//得到所有权限
 				BiudPermTree();
-				BindImages();
-
-                if (Request["nodeid"] != null)
-                {
-                    string nodeid = Request.Params["nodeid"];
-                    if (nodeid.Trim() != "")
-                    {
-                        for (int m = 0; m < this.listTarget.Items.Count; m++)
-                        {
-                            if (this.listTarget.Items[m].Value == nodeid)
-                            {
-                                this.listTarget.Items[m].Selected = true;
-                            }
-                        }
-                    }
-                }
+				BindImages();		
 			}
 			
 		}
 
-       
 	
 		#region 
 		
@@ -230,23 +214,23 @@ namespace Maticsoft.Web.SysManage
 			node.KeShiDM=keshidm;
 			node.KeshiPublic=keshipublic;
             Maticsoft.BLL.SysManage sm = new Maticsoft.BLL.SysManage();
-            if (CheckBox1.Checked)
-            {
-                LTP.Accounts.Bus.Permissions p = new LTP.Accounts.Bus.Permissions();
-                string permissionName = node.Text;
-                int parentID = node.ParentID;
-                if (parentID == 0)
-                {
-                    //根目录下不能选择同步创建权限
-                    Maticsoft.Common.MessageBox.Show(this.Page, "根目录不能选择同步创建权限，请您手动创建！");
-                    return;
-                }
-                SysNode parentNode = new SysNode();
-                parentNode = sm.GetNode(parentID);
-                int catalogID = sm.GetPermissionCatalogID(parentNode.PermissionID);
-                int permissionID = p.Create(catalogID, permissionName);
-                node.PermissionID = permissionID;
-            }			
+            //if (CheckBox1.Checked)
+            //{
+            //    LTP.Accounts.Bus.Permissions p = new LTP.Accounts.Bus.Permissions();
+            //    string permissionName = node.Text;
+            //    int parentID = node.ParentID;
+            //    if (parentID == 0)
+            //    {
+            //        //根目录下不能选择同步创建权限
+            //        Maticsoft.Common.MessageBox.Show(this.Page, "根目录不能选择同步创建权限，请您手动创建！");
+            //        return;
+            //    }
+            //    SysNode parentNode = new SysNode();
+            //    parentNode = sm.GetNode(parentID);
+            //    int catalogID = sm.GetPermissionCatalogID(parentNode.PermissionID);
+            //    int permissionID = p.Create(catalogID, permissionName);
+            //    node.PermissionID = permissionID;
+            //}			
 			sm.AddTreeNode(node);
 
 			if(chkAddContinue.Checked)

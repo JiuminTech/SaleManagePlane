@@ -341,7 +341,7 @@ namespace Maticsoft.Common
             if (text.Trim().Length < 1) 
                 return defaultValue.ToString(CultureInfo.InvariantCulture);
             string[] tmpSplit = text.Split(new[] { split }, StringSplitOptions.RemoveEmptyEntries);
-            if (tmpSplit.Length < 1) 
+            if (tmpSplit.Length < 1)
                 return defaultValue.ToString(CultureInfo.InvariantCulture);
 
             long tmp;
@@ -354,6 +354,5 @@ namespace Maticsoft.Common
             }
             return string.Join(split.ToString(CultureInfo.InvariantCulture), tmpSplit);
         }
-
     }
 }

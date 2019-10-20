@@ -78,15 +78,13 @@ namespace Maticsoft.Web.Accounts
 					{
 						this.lblMsg.ForeColor=Color.Red;
 						this.lblMsg.Text = "更新用户信息发生错误！";
-                        //日志
-                        //UserLog.AddLog(currentUser.UserName, currentUser.UserType, Request.UserHostAddress, Request.Url.AbsoluteUri, "用户密码更新失败");
+                        
 					}
 					else 
 					{
 						this.lblMsg.ForeColor=Color.Blue;
 						this.lblMsg.Text = "用户信息更新成功！";
-                        //日志
-                        //UserLog.AddLog(currentUser.UserName, currentUser.UserType, Request.UserHostAddress, Request.Url.AbsoluteUri, "用户密码更新成功");
+                        
 					}
                     
 				}

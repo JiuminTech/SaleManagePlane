@@ -3,6 +3,8 @@ using System.Data;
 using System.Collections.Generic;
 using Maticsoft.Common;
 using Jium.Model;
+using Jium.DALFactory;
+using Jium.IDAL;
 namespace Jium.BLL
 {
 	/// <summary>
@@ -10,7 +12,7 @@ namespace Jium.BLL
 	/// </summary>
 	public partial class userevent
 	{
-		private readonly Jium.DAL.userevent dal=new Jium.DAL.userevent();
+		private readonly Iuserevent dal=DataAccess.Createuserevent();
 		public userevent()
 		{}
 		#region  BasicMethod

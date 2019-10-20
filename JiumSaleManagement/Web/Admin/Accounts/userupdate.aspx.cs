@@ -120,10 +120,7 @@ namespace Maticsoft.Web.Accounts
 
 			currentUser.UserName=username;
 			currentUser.TrueName=txtTrueName.Text.Trim();
-            if (txtPassword.Text.Trim() != "")
-            {
-                currentUser.Password = AccountsPrincipal.EncryptPassword(txtPassword.Text.Trim());
-            }
+			currentUser.Password=AccountsPrincipal.EncryptPassword(txtPassword.Text);
 			if(RadioButton1.Checked)
 				currentUser.Sex="男";
 			else

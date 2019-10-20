@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Maticsoft.Web.Controls {
+namespace Jium.Web.Controls {
     
     
     /// <summary>

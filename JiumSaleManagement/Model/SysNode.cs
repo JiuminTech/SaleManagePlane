@@ -1,5 +1,5 @@
 ﻿using System;
-namespace Maticsoft.Model
+namespace Jium.Model
 {
 	
 	/// <summary>

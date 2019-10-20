@@ -3,6 +3,8 @@ using System.Data;
 using System.Collections.Generic;
 using Maticsoft.Common;
 using Jium.Model;
+using Jium.DALFactory;
+using Jium.IDAL;
 namespace Jium.BLL
 {
 	/// <summary>
@@ -10,7 +12,7 @@ namespace Jium.BLL
 	/// </summary>
 	public partial class clerk
 	{
-		private readonly Jium.DAL.clerk dal=new Jium.DAL.clerk();
+		private readonly Iclerk dal=DataAccess.Createclerk();
 		public clerk()
 		{}
 		#region  BasicMethod
@@ -163,18 +165,18 @@ namespace Jium.BLL
 		{
 			return dal.GetListByPage( strWhere,  orderby,  startIndex,  endIndex);
 		}
-		/// <summary>
-		/// 分页获取数据列表
-		/// </summary>
-		//public DataSet GetList(int PageSize,int PageIndex,string strWhere)
-		//{
-			//return dal.GetList(PageSize,PageIndex,strWhere);
-		//}
+        /// <summary>
+        /// 分页获取数据列表
+        /// </summary>
+        public DataSet GetList(int PageSize, int PageIndex, string strWhere)
+        {
+            return dal.GetList(PageSize, PageIndex, strWhere);
+        }
 
-		#endregion  BasicMethod
-		#region  ExtensionMethod
+        #endregion  BasicMethod
+        #region  ExtensionMethod
 
-		#endregion  ExtensionMethod
-	}
+        #endregion  ExtensionMethod
+    }
 }
 

@@ -8,8 +8,7 @@ using System.Configuration;
 namespace Maticsoft.DBUtility
 {
     /// <summary>
-    /// Copyright (C) Maticsoft
-    /// 数据访问基础类(基于OleDb)
+    /// 数据访问基础类(基于OleDb) Copyright (C) Maticsoft
     /// 可以用户可以修改满足自己项目的需要。
     /// </summary>
     public abstract class DbHelperOleDb

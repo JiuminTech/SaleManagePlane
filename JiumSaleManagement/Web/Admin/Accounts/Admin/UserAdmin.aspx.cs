@@ -16,11 +16,11 @@ namespace Maticsoft.Web.Accounts.Admin
 	/// <summary>
 	/// UserAdmin 的摘要说明。
 	/// </summary>
-	public partial class UserAdmin : System.Web.UI.Page//Maticsoft.Web.Accounts.MoviePage//MmyeeAd.Web.Accounts.MoviePage
+	public partial class UserAdmin : System.Web.UI.Page//Maticsoft.Web.Accounts.MoviePage
 	{
 		protected System.Web.UI.WebControls.ImageButton ImageButton1;
-
-        //MmyeeAd.BLL.ADManage.AdSupplier supp=new MmyeeAd.BLL.ADManage.AdSupplier();
+//		protected int currentPage;
+        //Maticsoft.BLL.ADManage.AdSupplier supp=new Maticsoft.BLL.ADManage.AdSupplier();
 	
 		protected void Page_Load(object sender, System.EventArgs e)
 		{
@@ -28,20 +28,11 @@ namespace Maticsoft.Web.Accounts.Admin
 			if(!Page.IsPostBack)
 			{
 				DataGrid1.BorderWidth=Unit.Pixel(1);
-				DataGrid1.CellPadding=4;
+				DataGrid1.CellPadding=3;
 				DataGrid1.CellSpacing=0;
 				DataGrid1.BorderColor=ColorTranslator.FromHtml(Application[Session["Style"].ToString()+"xtable_bordercolorlight"].ToString());
 				DataGrid1.HeaderStyle.BackColor=ColorTranslator.FromHtml(Application[Session["Style"].ToString()+"xtable_titlebgcolor"].ToString());
 						
-			    
-                if (Session["AccountsAdminKey"] != null && Session["AccountsAdminKey"].ToString() != "")
-                {
-                    TextBox1.Text = Session["AccountsAdminKey"].ToString();
-                }
-                if (Session["AccountsAdminPage"] != null && Session["AccountsAdminPage"].ToString() != "")
-                {
-                    DataGrid1.CurrentPageIndex = Convert.ToInt32(Session["AccountsAdminPage"]);
-                }
 				
 				dataBind();
 			}
@@ -50,7 +41,6 @@ namespace Maticsoft.Web.Accounts.Admin
 		{
             string usertype = DropUserType.SelectedValue;
 			string key=this.TextBox1.Text.Trim();
-		    Session["AccountsAdminKey"] = key;
 			User userAdmin=new User();
 			DataSet ds=new DataSet();
             if (usertype != "")
@@ -59,10 +49,9 @@ namespace Maticsoft.Web.Accounts.Admin
             }
             else
             {
-                ds = userAdmin.GetUserList(key);
+                ds = userAdmin.GetAllUsers(key);
             }
 			int pageIndex=this.DataGrid1.CurrentPageIndex;
-            Session["AccountsAdminPage"] = pageIndex;
 			DataGrid1.DataSource=ds.Tables[0].DefaultView;
 			int record_Count=ds.Tables[0].Rows.Count;
 			int page_Size=DataGrid1.PageSize;
@@ -77,87 +66,9 @@ namespace Maticsoft.Web.Accounts.Admin
 				pageIndex=0;
 			}
 			DataGrid1.CurrentPageIndex=pageIndex;
-			DataGrid1.DataBind();
-
-            //显示数量
-            if (this.DataGrid1.CurrentPageIndex == 0)
-            {
-                btnFirst.Enabled = false;
-                btnPrev.Enabled = false;
-                if (this.DataGrid1.PageCount == 1)
-                {
-                    btnLast.Enabled = false;
-                    btnNext.Enabled = false;
-                }
-            }
-            else if (this.DataGrid1.CurrentPageIndex == this.DataGrid1.PageCount - 1)
-            {
-                btnLast.Enabled = false;
-                btnNext.Enabled = false;
-            }
-            this.lblpagesum.Text = totalPages.ToString();
-            this.lblpage.Text = (pageIndex + 1).ToString();
-            this.lblrowscount.Text = record_Count.ToString();
+			DataGrid1.DataBind();						
 		}
-        #region NavigateToPage
-        protected string FormatString(string str)
-        {
-            if (str.Length > 10)
-            {
-                str = str.Substring(0, 9) + "...";
-            }
-            return str;
-        }
-        //导航按钮事件
-        public void NavigateToPage(object sender, CommandEventArgs e)
-        {
-            btnFirst.Enabled = true;
-            btnPrev.Enabled = true;
-            btnNext.Enabled = true;
-            btnLast.Enabled = true;
-            string pageinfo = e.CommandArgument.ToString();
-            switch (pageinfo)
-            {
-                case "Prev":
-                    if (this.DataGrid1.CurrentPageIndex > 0)
-                    {
-                        this.DataGrid1.CurrentPageIndex -= 1;
 
-                    }
-                    break;
-                case "Next":
-                    if (this.DataGrid1.CurrentPageIndex < (this.DataGrid1.PageCount - 1))
-                    {
-                        this.DataGrid1.CurrentPageIndex += 1;
-
-                    }
-                    break;
-                case "First":
-                    this.DataGrid1.CurrentPageIndex = 0;
-                    break;
-                case "Last":
-                    this.DataGrid1.CurrentPageIndex = this.DataGrid1.PageCount - 1;
-                    break;
-            }
-            if (this.DataGrid1.CurrentPageIndex == 0)
-            {
-                btnFirst.Enabled = false;
-                btnPrev.Enabled = false;
-                if (this.DataGrid1.PageCount == 1)
-                {
-                    btnLast.Enabled = false;
-                    btnNext.Enabled = false;
-                }
-            }
-            else if (this.DataGrid1.CurrentPageIndex == this.DataGrid1.PageCount - 1)
-            {
-                btnLast.Enabled = false;
-                btnNext.Enabled = false;
-            }
-            dataBind();
-        }
-      
-        #endregion
 		
 		#region Web 窗体设计器生成的代码
 		override protected void OnInit(EventArgs e)
@@ -193,52 +104,19 @@ namespace Maticsoft.Web.Accounts.Admin
 				case ListItemType.AlternatingItem:
 					ImageButton btn = (ImageButton)e.Item.FindControl("BtnDel");
 					btn.Attributes.Add("onclick", "return confirm('你是否确定删除这条记录？');");
-					string DepartmentID = (string)DataBinder.Eval(e.Item.DataItem, "DepartmentID");
-                    string UserType = (string)DataBinder.Eval(e.Item.DataItem, "UserType");
-					if(DepartmentID=="-1")
-					{
-                        string managename = "管理员";
-                        e.Item.Cells[6].Text = managename;
-					}
-					else
-					{
-                        switch (UserType)
-                        {
-                            case "AA":                               
-                                break;
-                            case "SU":
-                            case "SC":
-                            case "PP":
-                                {
-                                    //if (Maticsoft.Common.PageValidate.IsNumber(DepartmentID))
-                                    //{
-                                    //    e.Item.Cells[6].Text = supp.GetName(int.Parse(DepartmentID));
-                                    //}
-                                }                    
-                                                           
-                                break;
-                            case "AG":
-                            case "PG":
-                                {
-                                    
-                                }
-                                break;
-                            case "WG":
-                                {
-                                    
-                                }
-                                break;
-                            case "WS":
-                                {
-                                    
-                                }
-                                break;
-                            default:
-                                UserType = "其他";
-                                break;
-                        }
-											
-					}
+                    string DepartmentID = (string)DataBinder.Eval(e.Item.DataItem, "DepartmentID");
+                    if (DepartmentID == "-1")
+                    {
+                        string herosoftmana = Maticsoft.Common.ConfigHelper.GetConfigString("AdManager");
+                        e.Item.Cells[6].Text = herosoftmana;
+                    }
+                    else
+                    {
+                        //if (Maticsoft.Common.PageValidate.IsNumber(DepartmentID))
+                        //{
+                        //    e.Item.Cells[6].Text = supp.GetName(int.Parse(DepartmentID));
+                        //}
+                    }
 					break;    
 			}
 			
@@ -295,14 +173,6 @@ namespace Maticsoft.Web.Accounts.Admin
 				
 			}
 		}
-
-        protected void DropUserType_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            if (DropUserType.SelectedItem != null)
-            {
-                dataBind();
-            }
-        }
 
        
 
