@@ -45,7 +45,7 @@ namespace Jium.IDAL
 		/// <summary>
 		/// 根据分页获得数据列表
 		/// </summary>
-		DataSet GetList(int PageSize,int PageIndex,string strWhere);
+		//DataSet GetList(int PageSize,int PageIndex,string strWhere);
 
         /// <summary>
         /// 分页获取数据数量

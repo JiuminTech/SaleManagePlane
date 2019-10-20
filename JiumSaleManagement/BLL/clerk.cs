@@ -170,7 +170,7 @@ namespace Jium.BLL
         /// </summary>
         public DataSet GetList(int PageSize, int PageIndex, string strWhere)
         {
-            return dal.GetList(PageSize, PageIndex, strWhere);
+            return dal.GetListByPage(strWhere,"", PageIndex*PageSize, (PageIndex+1) * PageSize);
         }
 
         #endregion  BasicMethod
