@@ -16,61 +16,68 @@
 	</td></tr>
 	<tr>
 	<td height="25" width="30%" align="right">
-		pcode
+		货号
 	：</td>
 	<td height="25" width="*" align="left">
 		<asp:label id="lblpcode" runat="server"></asp:label>
 	</td></tr>
 	<tr>
 	<td height="25" width="30%" align="right">
-		pname
+		名称
 	：</td>
 	<td height="25" width="*" align="left">
 		<asp:TextBox id="txtpname" runat="server" Width="200px"></asp:TextBox>
 	</td></tr>
 	<tr>
 	<td height="25" width="30%" align="right">
-		pdesc
+		描述
 	：</td>
 	<td height="25" width="*" align="left">
 		<asp:TextBox id="txtpdesc" runat="server" Width="200px"></asp:TextBox>
 	</td></tr>
 	<tr>
 	<td height="25" width="30%" align="right">
-		pleftcnt
+		余量
 	：</td>
 	<td height="25" width="*" align="left">
 		<asp:TextBox id="txtpleftcnt" runat="server" Width="200px"></asp:TextBox>
 	</td></tr>
 	<tr>
 	<td height="25" width="30%" align="right">
-		plupdatetime
+		更新时间
 	：</td>
 	<td height="25" width="*" align="left">
 		<asp:TextBox id="txtplupdatetime" runat="server" Width="200px"></asp:TextBox>
 	</td></tr>
 	<tr>
 	<td height="25" width="30%" align="right">
-		psumcnt
+		总量
 	：</td>
 	<td height="25" width="*" align="left">
 		<asp:TextBox id="txtpsumcnt" runat="server" Width="200px"></asp:TextBox>
 	</td></tr>
 	<tr>
 	<td height="25" width="30%" align="right">
-		psalecnt
+		销量
 	：</td>
 	<td height="25" width="*" align="left">
 		<asp:TextBox id="txtpsalecnt" runat="server" Width="200px"></asp:TextBox>
 	</td></tr>
 	<tr>
 	<td height="25" width="30%" align="right">
-		pls1
+		位置
 	：</td>
 	<td height="25" width="*" align="left">
 		<asp:TextBox id="txtpls1" runat="server" Width="200px"></asp:TextBox>
 	</td></tr>
-	<tr>
+    <tr>
+	<td height="25" width="30%" align="right">
+		订货量
+	：</td>
+	<td height="25" width="*" align="left">
+		<asp:TextBox id="txtpld1" runat="server" Width="200px"></asp:TextBox>
+	</td></tr>
+	<%--<tr>
 	<td height="25" width="30%" align="right">
 		pls2
 	：</td>
@@ -98,13 +105,7 @@
 	<td height="25" width="*" align="left">
 		<asp:TextBox id="txtpls5" runat="server" Width="200px"></asp:TextBox>
 	</td></tr>
-	<tr>
-	<td height="25" width="30%" align="right">
-		pld1
-	：</td>
-	<td height="25" width="*" align="left">
-		<asp:TextBox id="txtpld1" runat="server" Width="200px"></asp:TextBox>
-	</td></tr>
+	
 	<tr>
 	<td height="25" width="30%" align="right">
 		pld2
@@ -132,7 +133,7 @@
 	：</td>
 	<td height="25" width="*" align="left">
 		<asp:TextBox id="txtpld5" runat="server" Width="200px"></asp:TextBox>
-	</td></tr>
+	</td></tr>--%>
 </table>
 
             </td>

@@ -38,8 +38,9 @@ namespace Jium.Web.piorecord
 		this.txtpcnt.Text=model.pcnt.ToString();
 		this.txtpsaleprice.Text=model.psaleprice.ToString();
 		this.txtprealprice.Text=model.prealprice.ToString();
-		this.txtptype.Text=model.ptype.ToString();
-		this.txtpzekou.Text=model.pzekou.ToString();
+		//this.txtptype.Text=model.ptype.ToString();
+            this.dropptype.SelectedValue= model.ptype.ToString();
+            this.txtpzekou.Text=model.pzekou.ToString();
 		this.txtpremark.Text=model.premark;
 		this.txtpguestid.Text=model.pguestid.ToString();
 		this.txtpsalerid.Text=model.psalerid.ToString();
@@ -85,7 +86,7 @@ namespace Jium.Web.piorecord
             {
                 strErr += "prealprice格式错误！\\n";
             }
-            if (!PageValidate.IsNumber(txtptype.Text))
+            if (!PageValidate.IsNumber(/*txtptype.Text*/ dropptype.SelectedValue))
             {
                 strErr += "ptype格式错误！\\n";
             }
@@ -180,7 +181,7 @@ namespace Jium.Web.piorecord
 			int pcnt=int.Parse(this.txtpcnt.Text);
 			decimal psaleprice=decimal.Parse(this.txtpsaleprice.Text);
 			decimal prealprice=decimal.Parse(this.txtprealprice.Text);
-			int ptype=int.Parse(this.txtptype.Text);
+			int ptype=int.Parse(/*txtptype.Text*/ dropptype.SelectedValue);
 			decimal pzekou=decimal.Parse(this.txtpzekou.Text);
 			string premark=this.txtpremark.Text;
 			int pguestid=int.Parse(this.txtpguestid.Text);

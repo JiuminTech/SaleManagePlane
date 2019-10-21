@@ -54,7 +54,14 @@
 		类型
 	：</td>
 	<td height="25" width="*" align="left">
-		<asp:TextBox id="txtptype" runat="server" Width="200px"></asp:TextBox>
+		<%--<asp:TextBox id="txtptype" runat="server" Width="200px"></asp:TextBox>--%>
+        <asp:DropDownList ID="dropptype" runat="server">
+            <asp:ListItem Selected="True" Value="0"> 销售</asp:ListItem>
+            <asp:ListItem Value="1">进货</asp:ListItem>
+            <asp:ListItem Value="2">订单</asp:ListItem>
+            <asp:ListItem Value="3">盘点</asp:ListItem>
+            <asp:ListItem Value="4">退货</asp:ListItem>
+        </asp:DropDownList>
 	</td></tr>
 	<tr>
 	<td height="25" width="30%" align="right">

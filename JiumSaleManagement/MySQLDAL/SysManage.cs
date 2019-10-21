@@ -10,7 +10,7 @@ namespace Jium.MySQLDAL
     public class SysManage : ISysManage
 	{
         //在这里可以更换数据库,支持多数据库，支持采用加密方式实现
-        //DbHelperSQLP DbHelperSQL = new DbHelperSQLP(PubConstant.GetConnectionString("ConnectionString2"));
+        //DbHelperMySQLP DbHelperMySQL = new DbHelperMySQLP(PubConstant.GetConnectionString("ConnectionString2"));
 		public SysManage()
 		{            
 		}
@@ -18,7 +18,7 @@ namespace Jium.MySQLDAL
 		public int GetMaxId()
 		{
 			string strsql="select max(NodeID)+1 from S_Tree";
-			object obj=DbHelperSQL.GetSingle(strsql);
+			object obj=DbHelperMySQL.GetSingle(strsql);
 			if(obj==null)
 			{
 				return 1;
@@ -47,7 +47,7 @@ namespace Jium.MySQLDAL
 			strSql.Append(""+node.PermissionID+",");
 			strSql.Append("'"+node.ImageUrl+"'");
 			strSql.Append(")");						
-			DbHelperSQL.ExecuteSql(strSql.ToString());
+			DbHelperMySQL.ExecuteSql(strSql.ToString());
 			return node.NodeID;
 
 		}
@@ -65,7 +65,7 @@ namespace Jium.MySQLDAL
 			strSql.Append("PermissionID="+node.PermissionID+",");
 			strSql.Append("ImageUrl='"+node.ImageUrl+"'");
 			strSql.Append(" where NodeID="+node.NodeID);
-			DbHelperSQL.ExecuteSql(strSql.ToString());
+			DbHelperMySQL.ExecuteSql(strSql.ToString());
 
 		}
 
@@ -74,7 +74,7 @@ namespace Jium.MySQLDAL
 			StringBuilder strSql=new StringBuilder();
 			strSql.Append("delete S_Tree ");
 			strSql.Append(" where NodeID="+nodeid);					
-			DbHelperSQL.ExecuteSql(strSql.ToString());
+			DbHelperMySQL.ExecuteSql(strSql.ToString());
 		}
 
 
@@ -88,7 +88,7 @@ namespace Jium.MySQLDAL
 			}
 			strSql.Append(" order by parentid,orderid ");
 
-			return DbHelperSQL.Query(strSql.ToString());
+			return DbHelperMySQL.Query(strSql.ToString());
 		}
 
 
@@ -103,7 +103,7 @@ namespace Jium.MySQLDAL
 			strSql.Append("select * from S_Tree ");	
 			strSql.Append(" where NodeID="+NodeID);
             Jium.Model.SysNode node = new Jium.Model.SysNode();
-            DataSet ds=DbHelperSQL.Query(strSql.ToString());
+            DataSet ds=DbHelperMySQL.Query(strSql.ToString());
 			if(ds.Tables[0].Rows.Count>0)
 			{
 				node.NodeID=int.Parse(ds.Tables[0].Rows[0]["NodeID"].ToString());
@@ -149,14 +149,14 @@ namespace Jium.MySQLDAL
 			strSql.Append("'"+loginfo+"',");	
 			strSql.Append("'"+Particular+"'");	
 			strSql.Append(")");						
-			DbHelperSQL.ExecuteSql(strSql.ToString());			
+			DbHelperMySQL.ExecuteSql(strSql.ToString());			
 		}
 		public void DeleteLog(int ID)
 		{
 			StringBuilder strSql=new StringBuilder();
 			strSql.Append("delete S_Log ");	
 			strSql.Append(" where ID= "+ID);
-			DbHelperSQL.ExecuteSql(strSql.ToString());
+			DbHelperMySQL.ExecuteSql(strSql.ToString());
 		}
 		public void DelOverdueLog(int days)
 		{			
@@ -171,7 +171,7 @@ namespace Jium.MySQLDAL
 			{
 				strSql.Append(" where "+strWhere);
 			}
-			DbHelperSQL.ExecuteSql(strSql.ToString());
+			DbHelperMySQL.ExecuteSql(strSql.ToString());
 		}
 		public DataSet GetLogs(string strWhere)
 		{
@@ -182,14 +182,14 @@ namespace Jium.MySQLDAL
 				strSql.Append(" where "+strWhere);
 			}
 			strSql.Append(" order by ID DESC");
-			return DbHelperSQL.Query(strSql.ToString());
+			return DbHelperMySQL.Query(strSql.ToString());
 		}
 		public DataRow GetLog(string ID)
 		{
 			StringBuilder strSql=new StringBuilder();
 			strSql.Append("select * from S_Log ");				
 			strSql.Append(" where ID= "+ID);
-			return DbHelperSQL.Query(strSql.ToString()).Tables[0].Rows[0];
+			return DbHelperMySQL.Query(strSql.ToString()).Tables[0].Rows[0];
 		}
 		#endregion
 		

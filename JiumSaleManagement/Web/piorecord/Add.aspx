@@ -46,10 +46,21 @@
 	</td></tr>
 	<tr>
 	<td height="25" width="30%" align="right">
-		分类
+		类型
 	：</td>
 	<td height="25" width="*" align="left">
-		<asp:TextBox id="txtptype" runat="server" Width="200px"></asp:TextBox>
+		<%--<asp:TextBox id="txtptype" runat="server" Width="200px"></asp:TextBox>--%>
+        <asp:DropDownList ID="dropptype" runat="server">
+            <asp:ListItem Selected="True" Value="0"> 销售</asp:ListItem>
+            <asp:ListItem Value="1">进货</asp:ListItem>
+            <asp:ListItem Value="2">订单</asp:ListItem>
+            <asp:ListItem Value="3">盘赢</asp:ListItem>
+            <asp:ListItem Value="4">盘亏</asp:ListItem>
+            <asp:ListItem Value="5">退货</asp:ListItem>
+            <asp:ListItem Value="6">换货进</asp:ListItem>
+            <asp:ListItem Value="7">换货出</asp:ListItem>
+            <asp:ListItem Value="8">退回厂家</asp:ListItem>
+        </asp:DropDownList>
 	</td></tr>
 	<tr>
 	<td height="25" width="30%" align="right">
@@ -93,14 +104,14 @@
 	<td height="25" width="*" align="left">
 		<asp:TextBox id="txtpios2" runat="server" Width="200px"></asp:TextBox>
 	</td></tr>
-	<!--<tr>
+	<tr>
 	<td height="25" width="30%" align="right">
-		pios3
+		名称
 	：</td>
 	<td height="25" width="*" align="left">
 		<asp:TextBox id="txtpios3" runat="server" Width="200px"></asp:TextBox>
 	</td></tr>
-	<tr>
+	<!--<tr>
 	<td height="25" width="30%" align="right">
 		pios4
 	：</td>

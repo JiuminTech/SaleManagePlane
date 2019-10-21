@@ -26,3 +26,15 @@
 /JiumSaleManagement/MySQLDAL/obj/Debug
 /lib
 /JiumSaleManagement/Web/obj/Debug
+/JiumSaleManagement/BLL/bin/Release
+/JiumSaleManagement/BLL/obj/Release
+/JiumSaleManagement/Common/obj/Release
+/JiumSaleManagement/DALFactory/obj/Release
+/JiumSaleManagement/ConsoleTest/obj/Release
+/JiumSaleManagement/DBUtility/obj/Release
+/JiumSaleManagement/IDAL/obj/Release
+/JiumSaleManagement/Model/obj/Release
+/JiumSaleManagement/MySQLDAL/obj/Release
+/JiumSaleManagement/OracleDAL/obj/Release
+/JiumSaleManagement/SQLServerDAL/obj/Release
+/JiumSaleManagement/Web/obj/Release

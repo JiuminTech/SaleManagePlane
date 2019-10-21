@@ -329,7 +329,7 @@ namespace Jium.MySQLDAL
 			{
 				strSql.Append(" where "+strWhere);
 			}
-			object obj = DbHelperSQL.GetSingle(strSql.ToString());
+			object obj = DbHelperMySQL.GetSingle(strSql.ToString());
 			if (obj == null)
 			{
 				return 0;

@@ -698,6 +698,7 @@
     <Content Include="App_Themes\RedTheme\Control.skin" />
     <Content Include="Default.aspx" />
     <Content Include="MasterPage.master" />
+    <None Include="Properties\PublishProfiles\jiumnms.pubxml" />
     <None Include="webctrl_client\1_0\Images\vssver2.scc" />
     <None Include="webctrl_client\1_0\TreeImages\rtl\vssver2.scc" />
     <None Include="webctrl_client\1_0\TreeImages\vssver2.scc" />

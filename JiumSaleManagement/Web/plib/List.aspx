@@ -44,23 +44,24 @@
                             </asp:TemplateField> 
                             
 		<asp:BoundField DataField="id" HeaderText="id" SortExpression="id" ItemStyle-HorizontalAlign="Center"  /> 
-		<asp:BoundField DataField="pcode" HeaderText="pcode" SortExpression="pcode" ItemStyle-HorizontalAlign="Center"  /> 
-		<asp:BoundField DataField="pname" HeaderText="pname" SortExpression="pname" ItemStyle-HorizontalAlign="Center"  /> 
-		<asp:BoundField DataField="pdesc" HeaderText="pdesc" SortExpression="pdesc" ItemStyle-HorizontalAlign="Center"  /> 
-		<asp:BoundField DataField="pleftcnt" HeaderText="pleftcnt" SortExpression="pleftcnt" ItemStyle-HorizontalAlign="Center"  /> 
-		<asp:BoundField DataField="plupdatetime" HeaderText="plupdatetime" SortExpression="plupdatetime" ItemStyle-HorizontalAlign="Center"  /> 
-		<asp:BoundField DataField="psumcnt" HeaderText="psumcnt" SortExpression="psumcnt" ItemStyle-HorizontalAlign="Center"  /> 
-		<asp:BoundField DataField="psalecnt" HeaderText="psalecnt" SortExpression="psalecnt" ItemStyle-HorizontalAlign="Center"  /> 
-		<asp:BoundField DataField="pls1" HeaderText="pls1" SortExpression="pls1" ItemStyle-HorizontalAlign="Center"  /> 
-		<asp:BoundField DataField="pls2" HeaderText="pls2" SortExpression="pls2" ItemStyle-HorizontalAlign="Center"  /> 
+		<asp:BoundField DataField="pcode" HeaderText="货号" SortExpression="pcode" ItemStyle-HorizontalAlign="Center"  /> 
+		<asp:BoundField DataField="pname" HeaderText="名称" SortExpression="pname" ItemStyle-HorizontalAlign="Center"  /> 
+		<asp:BoundField DataField="pdesc" HeaderText="描述" SortExpression="pdesc" ItemStyle-HorizontalAlign="Center"  /> 
+		<asp:BoundField DataField="pleftcnt" HeaderText="余量" SortExpression="pleftcnt" ItemStyle-HorizontalAlign="Center"  /> 
+		<asp:BoundField DataField="plupdatetime" HeaderText="更新时间" SortExpression="plupdatetime" ItemStyle-HorizontalAlign="Center"  /> 
+		<asp:BoundField DataField="psumcnt" HeaderText="进货量" SortExpression="psumcnt" ItemStyle-HorizontalAlign="Center"  /> 
+		<asp:BoundField DataField="psalecnt" HeaderText="销量" SortExpression="psalecnt" ItemStyle-HorizontalAlign="Center"  /> 
+		<asp:BoundField DataField="pls1" HeaderText="位置" SortExpression="pls1" ItemStyle-HorizontalAlign="Center"  /> 
+         <asp:BoundField DataField="pld1" HeaderText="订货量" SortExpression="pld1" ItemStyle-HorizontalAlign="Center"  /> 
+		<%--<asp:BoundField DataField="pls2" HeaderText="pls2" SortExpression="pls2" ItemStyle-HorizontalAlign="Center"  /> 
 		<asp:BoundField DataField="pls3" HeaderText="pls3" SortExpression="pls3" ItemStyle-HorizontalAlign="Center"  /> 
 		<asp:BoundField DataField="pls4" HeaderText="pls4" SortExpression="pls4" ItemStyle-HorizontalAlign="Center"  /> 
 		<asp:BoundField DataField="pls5" HeaderText="pls5" SortExpression="pls5" ItemStyle-HorizontalAlign="Center"  /> 
-		<asp:BoundField DataField="pld1" HeaderText="pld1" SortExpression="pld1" ItemStyle-HorizontalAlign="Center"  /> 
+		
 		<asp:BoundField DataField="pld2" HeaderText="pld2" SortExpression="pld2" ItemStyle-HorizontalAlign="Center"  /> 
 		<asp:BoundField DataField="pld3" HeaderText="pld3" SortExpression="pld3" ItemStyle-HorizontalAlign="Center"  /> 
 		<asp:BoundField DataField="pld4" HeaderText="pld4" SortExpression="pld4" ItemStyle-HorizontalAlign="Center"  /> 
-		<asp:BoundField DataField="pld5" HeaderText="pld5" SortExpression="pld5" ItemStyle-HorizontalAlign="Center"  /> 
+		<asp:BoundField DataField="pld5" HeaderText="pld5" SortExpression="pld5" ItemStyle-HorizontalAlign="Center"  /> --%>
                             
                             <asp:HyperLinkField HeaderText="详细" ControlStyle-Width="50" DataNavigateUrlFields="id,pcode" DataNavigateUrlFormatString="Show.aspx?id0={0}&id1={1}"
                                 Text="详细"  />

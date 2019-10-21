@@ -1,0 +1,430 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+您 Web 项目的发布/打包进程将使用此文件。您可以通过编辑此 MSBuild 文件
+来自定义该进程的行为。若要了解与此相关的详细信息，请访问 http://go.microsoft.com/fwlink/?LinkID=208121。
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <_PublishTargetUrl>C:\work\JMNms</_PublishTargetUrl>
+  </PropertyGroup>
+  <ItemGroup>
+    <File Include="alarmevent/Add.aspx">
+      <publishTime>10/20/2019 15:56:30</publishTime>
+    </File>
+    <File Include="alarmevent/delete.aspx">
+      <publishTime>10/20/2019 15:56:30</publishTime>
+    </File>
+    <File Include="alarmevent/List.aspx">
+      <publishTime>10/20/2019 15:56:30</publishTime>
+    </File>
+    <File Include="alarmevent/Modify.aspx">
+      <publishTime>10/20/2019 15:56:30</publishTime>
+    </File>
+    <File Include="alarmevent/Show.aspx">
+      <publishTime>10/20/2019 15:56:30</publishTime>
+    </File>
+    <File Include="App_Themes/BlueTheme/Control.skin">
+      <publishTime>03/06/2014 18:33:02</publishTime>
+    </File>
+    <File Include="App_Themes/BlueTheme/Default.css">
+      <publishTime>03/06/2014 18:33:00</publishTime>
+    </File>
+    <File Include="App_Themes/Green2Theme/Control.skin">
+      <publishTime>03/06/2014 18:33:00</publishTime>
+    </File>
+    <File Include="App_Themes/Green2Theme/Default.css">
+      <publishTime>03/06/2014 18:33:02</publishTime>
+    </File>
+    <File Include="App_Themes/GreenTheme/Control.skin">
+      <publishTime>03/06/2014 18:33:02</publishTime>
+    </File>
+    <File Include="App_Themes/GreenTheme/Default.css">
+      <publishTime>03/06/2014 18:33:02</publishTime>
+    </File>
+    <File Include="App_Themes/PurpleTheme/Control.skin">
+      <publishTime>03/06/2014 18:33:02</publishTime>
+    </File>
+    <File Include="App_Themes/PurpleTheme/Default.css">
+      <publishTime>03/06/2014 18:33:00</publishTime>
+    </File>
+    <File Include="App_Themes/RedTheme/Control.skin">
+      <publishTime>03/06/2014 18:33:00</publishTime>
+    </File>
+    <File Include="App_Themes/RedTheme/Default.css">
+      <publishTime>03/06/2014 18:32:56</publishTime>
+    </File>
+    <File Include="bin/Jium.BLL.dll">
+      <publishTime>10/21/2019 23:01:24</publishTime>
+    </File>
+    <File Include="bin/Jium.Common.dll">
+      <publishTime>10/21/2019 23:01:21</publishTime>
+    </File>
+    <File Include="bin/Jium.DALFactory.dll">
+      <publishTime>10/21/2019 23:01:24</publishTime>
+    </File>
+    <File Include="bin/Jium.DBUtility.dll">
+      <publishTime>10/21/2019 23:01:21</publishTime>
+    </File>
+    <File Include="bin/Jium.IDAL.dll">
+      <publishTime>10/21/2019 23:01:19</publishTime>
+    </File>
+    <File Include="bin/Jium.Model.dll">
+      <publishTime>10/21/2019 23:01:17</publishTime>
+    </File>
+    <File Include="bin/Jium.MySQLDAL.dll">
+      <publishTime>10/21/2019 23:01:23</publishTime>
+    </File>
+    <File Include="bin/Jium.Web.dll">
+      <publishTime>10/21/2019 23:01:25</publishTime>
+    </File>
+    <File Include="bin/LTP.Accounts.dll">
+      <publishTime>03/06/2014 18:32:58</publishTime>
+    </File>
+    <File Include="bin/LtpPageControl.dll">
+      <publishTime>03/06/2014 18:33:00</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Web.UI.WebControls.dll">
+      <publishTime>03/06/2014 18:33:02</publishTime>
+    </File>
+    <File Include="bin/MySql.Data.dll">
+      <publishTime>03/06/2014 18:32:58</publishTime>
+    </File>
+    <File Include="bin/OpenSmtp.dll">
+      <publishTime>03/06/2014 18:33:04</publishTime>
+    </File>
+    <File Include="bin/System.Data.SQLite.dll">
+      <publishTime>03/06/2014 18:33:04</publishTime>
+    </File>
+    <File Include="consumer/Add.aspx">
+      <publishTime>10/20/2019 15:56:30</publishTime>
+    </File>
+    <File Include="consumer/delete.aspx">
+      <publishTime>10/20/2019 15:56:30</publishTime>
+    </File>
+    <File Include="consumer/List.aspx">
+      <publishTime>10/21/2019 00:24:42</publishTime>
+    </File>
+    <File Include="consumer/Modify.aspx">
+      <publishTime>10/20/2019 15:56:30</publishTime>
+    </File>
+    <File Include="consumer/Show.aspx">
+      <publishTime>10/20/2019 15:56:30</publishTime>
+    </File>
+    <File Include="Controls/checkright.ascx">
+      <publishTime>10/20/2019 15:56:30</publishTime>
+    </File>
+    <File Include="Controls/copyright.ascx">
+      <publishTime>10/20/2019 15:56:30</publishTime>
+    </File>
+    <File Include="currentalarm/Add.aspx">
+      <publishTime>10/20/2019 15:56:30</publishTime>
+    </File>
+    <File Include="currentalarm/delete.aspx">
+      <publishTime>10/20/2019 15:56:30</publishTime>
+    </File>
+    <File Include="currentalarm/List.aspx">
+      <publishTime>10/20/2019 15:56:30</publishTime>
+    </File>
+    <File Include="currentalarm/Modify.aspx">
+      <publishTime>10/20/2019 15:56:30</publishTime>
+    </File>
+    <File Include="currentalarm/Show.aspx">
+      <publishTime>10/20/2019 15:56:30</publishTime>
+    </File>
+    <File Include="Default.aspx">
+      <publishTime>10/20/2019 15:56:29</publishTime>
+    </File>
+    <File Include="eventtype/Add.aspx">
+      <publishTime>10/20/2019 15:56:30</publishTime>
+    </File>
+    <File Include="eventtype/delete.aspx">
+      <publishTime>10/20/2019 15:56:30</publishTime>
+    </File>
+    <File Include="eventtype/List.aspx">
+      <publishTime>10/20/2019 15:56:30</publishTime>
+    </File>
+    <File Include="eventtype/Modify.aspx">
+      <publishTime>10/20/2019 15:56:30</publishTime>
+    </File>
+    <File Include="eventtype/Show.aspx">
+      <publishTime>10/20/2019 15:56:30</publishTime>
+    </File>
+    <File Include="Global.asax">
+      <publishTime>10/20/2019 15:56:29</publishTime>
+    </File>
+    <File Include="historyalarm/Add.aspx">
+      <publishTime>10/20/2019 15:56:30</publishTime>
+    </File>
+    <File Include="historyalarm/delete.aspx">
+      <publishTime>10/20/2019 15:56:30</publishTime>
+    </File>
+    <File Include="historyalarm/List.aspx">
+      <publishTime>10/20/2019 15:56:30</publishTime>
+    </File>
+    <File Include="historyalarm/Modify.aspx">
+      <publishTime>10/20/2019 15:56:30</publishTime>
+    </File>
+    <File Include="historyalarm/Show.aspx">
+      <publishTime>10/20/2019 15:56:30</publishTime>
+    </File>
+    <File Include="js/calendar1.js">
+      <publishTime>03/06/2014 18:32:58</publishTime>
+    </File>
+    <File Include="js/CheckBox.js">
+      <publishTime>03/06/2014 18:33:04</publishTime>
+    </File>
+    <File Include="MasterPage.master">
+      <publishTime>10/20/2019 15:56:29</publishTime>
+    </File>
+    <File Include="pgroup/Add.aspx">
+      <publishTime>10/20/2019 15:56:30</publishTime>
+    </File>
+    <File Include="pgroup/delete.aspx">
+      <publishTime>10/20/2019 15:56:30</publishTime>
+    </File>
+    <File Include="pgroup/List.aspx">
+      <publishTime>10/21/2019 00:25:12</publishTime>
+    </File>
+    <File Include="pgroup/Modify.aspx">
+      <publishTime>10/20/2019 15:56:31</publishTime>
+    </File>
+    <File Include="pgroup/Show.aspx">
+      <publishTime>10/20/2019 15:56:31</publishTime>
+    </File>
+    <File Include="piorecord/Add.aspx">
+      <publishTime>10/21/2019 22:50:51</publishTime>
+    </File>
+    <File Include="piorecord/delete.aspx">
+      <publishTime>10/20/2019 15:56:31</publishTime>
+    </File>
+    <File Include="piorecord/List.aspx">
+      <publishTime>10/21/2019 00:15:33</publishTime>
+    </File>
+    <File Include="piorecord/Modify.aspx">
+      <publishTime>10/21/2019 22:58:42</publishTime>
+    </File>
+    <File Include="piorecord/Show.aspx">
+      <publishTime>10/21/2019 00:07:57</publishTime>
+    </File>
+    <File Include="plib/Add.aspx">
+      <publishTime>10/21/2019 22:20:36</publishTime>
+    </File>
+    <File Include="plib/delete.aspx">
+      <publishTime>10/20/2019 15:56:31</publishTime>
+    </File>
+    <File Include="plib/List.aspx">
+      <publishTime>10/21/2019 22:18:49</publishTime>
+    </File>
+    <File Include="plib/Modify.aspx">
+      <publishTime>10/21/2019 22:16:37</publishTime>
+    </File>
+    <File Include="plib/Show.aspx">
+      <publishTime>10/20/2019 15:56:31</publishTime>
+    </File>
+    <File Include="product/Add.aspx">
+      <publishTime>10/20/2019 23:10:39</publishTime>
+    </File>
+    <File Include="product/delete.aspx">
+      <publishTime>10/20/2019 15:56:31</publishTime>
+    </File>
+    <File Include="product/List.aspx">
+      <publishTime>10/21/2019 00:11:50</publishTime>
+    </File>
+    <File Include="product/Modify.aspx">
+      <publishTime>10/20/2019 23:19:48</publishTime>
+    </File>
+    <File Include="product/Show.aspx">
+      <publishTime>10/20/2019 23:29:18</publishTime>
+    </File>
+    <File Include="Style.css">
+      <publishTime>03/06/2014 18:32:58</publishTime>
+    </File>
+    <File Include="systemparams/Add.aspx">
+      <publishTime>10/20/2019 15:56:31</publishTime>
+    </File>
+    <File Include="systemparams/delete.aspx">
+      <publishTime>10/20/2019 15:56:31</publishTime>
+    </File>
+    <File Include="systemparams/List.aspx">
+      <publishTime>10/21/2019 00:26:11</publishTime>
+    </File>
+    <File Include="systemparams/Modify.aspx">
+      <publishTime>10/20/2019 15:56:31</publishTime>
+    </File>
+    <File Include="systemparams/Show.aspx">
+      <publishTime>10/20/2019 15:56:31</publishTime>
+    </File>
+    <File Include="userevent/Add.aspx">
+      <publishTime>10/20/2019 15:56:31</publishTime>
+    </File>
+    <File Include="userevent/delete.aspx">
+      <publishTime>10/20/2019 15:56:31</publishTime>
+    </File>
+    <File Include="userevent/List.aspx">
+      <publishTime>10/20/2019 15:56:31</publishTime>
+    </File>
+    <File Include="userevent/Modify.aspx">
+      <publishTime>10/20/2019 15:56:31</publishTime>
+    </File>
+    <File Include="userevent/Show.aspx">
+      <publishTime>10/20/2019 15:56:31</publishTime>
+    </File>
+    <File Include="userinfo/Add.aspx">
+      <publishTime>10/21/2019 00:33:59</publishTime>
+    </File>
+    <File Include="userinfo/delete.aspx">
+      <publishTime>10/20/2019 15:56:31</publishTime>
+    </File>
+    <File Include="userinfo/List.aspx">
+      <publishTime>10/21/2019 00:26:53</publishTime>
+    </File>
+    <File Include="userinfo/Modify.aspx">
+      <publishTime>10/21/2019 00:33:32</publishTime>
+    </File>
+    <File Include="userinfo/Show.aspx">
+      <publishTime>10/20/2019 15:56:31</publishTime>
+    </File>
+    <File Include="usertype/Add.aspx">
+      <publishTime>10/20/2019 15:56:31</publishTime>
+    </File>
+    <File Include="usertype/delete.aspx">
+      <publishTime>10/20/2019 15:56:31</publishTime>
+    </File>
+    <File Include="usertype/List.aspx">
+      <publishTime>10/20/2019 15:56:31</publishTime>
+    </File>
+    <File Include="usertype/Modify.aspx">
+      <publishTime>10/20/2019 15:56:31</publishTime>
+    </File>
+    <File Include="usertype/Show.aspx">
+      <publishTime>10/20/2019 15:56:31</publishTime>
+    </File>
+    <File Include="ValidateCode.aspx">
+      <publishTime>10/20/2019 15:56:29</publishTime>
+    </File>
+    <File Include="Web.config">
+      <publishTime>10/20/2019 17:36:00</publishTime>
+    </File>
+    <File Include="webctrl_client/1_0/Images/folder.gif">
+      <publishTime>03/06/2014 18:33:04</publishTime>
+    </File>
+    <File Include="webctrl_client/1_0/Images/folderopen.gif">
+      <publishTime>03/06/2014 18:33:02</publishTime>
+    </File>
+    <File Include="webctrl_client/1_0/Images/html.gif">
+      <publishTime>03/06/2014 18:33:02</publishTime>
+    </File>
+    <File Include="webctrl_client/1_0/Images/root.gif">
+      <publishTime>03/06/2014 18:33:04</publishTime>
+    </File>
+    <File Include="webctrl_client/1_0/MultiPage.htc">
+      <publishTime>03/06/2014 18:33:02</publishTime>
+    </File>
+    <File Include="webctrl_client/1_0/TabStrip.htc">
+      <publishTime>03/06/2014 18:33:04</publishTime>
+    </File>
+    <File Include="webctrl_client/1_0/toolbar.htc">
+      <publishTime>03/06/2014 18:33:04</publishTime>
+    </File>
+    <File Include="webctrl_client/1_0/TreeImages/f.gif">
+      <publishTime>03/06/2014 18:33:00</publishTime>
+    </File>
+    <File Include="webctrl_client/1_0/TreeImages/fminus.gif">
+      <publishTime>03/06/2014 18:32:58</publishTime>
+    </File>
+    <File Include="webctrl_client/1_0/TreeImages/fplus.gif">
+      <publishTime>03/06/2014 18:32:58</publishTime>
+    </File>
+    <File Include="webctrl_client/1_0/TreeImages/i.gif">
+      <publishTime>03/06/2014 18:32:56</publishTime>
+    </File>
+    <File Include="webctrl_client/1_0/TreeImages/L.gif">
+      <publishTime>03/06/2014 18:33:00</publishTime>
+    </File>
+    <File Include="webctrl_client/1_0/TreeImages/Lminus.gif">
+      <publishTime>03/06/2014 18:33:04</publishTime>
+    </File>
+    <File Include="webctrl_client/1_0/TreeImages/Lplus.gif">
+      <publishTime>03/06/2014 18:33:02</publishTime>
+    </File>
+    <File Include="webctrl_client/1_0/TreeImages/minus.gif">
+      <publishTime>03/06/2014 18:33:06</publishTime>
+    </File>
+    <File Include="webctrl_client/1_0/TreeImages/plus.gif">
+      <publishTime>03/06/2014 18:32:58</publishTime>
+    </File>
+    <File Include="webctrl_client/1_0/TreeImages/r.gif">
+      <publishTime>03/06/2014 18:33:02</publishTime>
+    </File>
+    <File Include="webctrl_client/1_0/TreeImages/Rminus.gif">
+      <publishTime>03/06/2014 18:33:02</publishTime>
+    </File>
+    <File Include="webctrl_client/1_0/TreeImages/Rplus.gif">
+      <publishTime>03/06/2014 18:32:56</publishTime>
+    </File>
+    <File Include="webctrl_client/1_0/TreeImages/rtl/F.gif">
+      <publishTime>03/06/2014 18:33:06</publishTime>
+    </File>
+    <File Include="webctrl_client/1_0/TreeImages/rtl/Fminus.gif">
+      <publishTime>03/06/2014 18:32:58</publishTime>
+    </File>
+    <File Include="webctrl_client/1_0/TreeImages/rtl/Fplus.gif">
+      <publishTime>03/06/2014 18:33:04</publishTime>
+    </File>
+    <File Include="webctrl_client/1_0/TreeImages/rtl/I.gif">
+      <publishTime>03/06/2014 18:33:00</publishTime>
+    </File>
+    <File Include="webctrl_client/1_0/TreeImages/rtl/L.gif">
+      <publishTime>03/06/2014 18:33:04</publishTime>
+    </File>
+    <File Include="webctrl_client/1_0/TreeImages/rtl/Lminus.gif">
+      <publishTime>03/06/2014 18:32:58</publishTime>
+    </File>
+    <File Include="webctrl_client/1_0/TreeImages/rtl/Lplus.gif">
+      <publishTime>03/06/2014 18:33:02</publishTime>
+    </File>
+    <File Include="webctrl_client/1_0/TreeImages/rtl/minus.gif">
+      <publishTime>03/06/2014 18:32:56</publishTime>
+    </File>
+    <File Include="webctrl_client/1_0/TreeImages/rtl/plus.gif">
+      <publishTime>03/06/2014 18:33:00</publishTime>
+    </File>
+    <File Include="webctrl_client/1_0/TreeImages/rtl/r.gif">
+      <publishTime>03/06/2014 18:33:06</publishTime>
+    </File>
+    <File Include="webctrl_client/1_0/TreeImages/rtl/Rminus.gif">
+      <publishTime>03/06/2014 18:33:00</publishTime>
+    </File>
+    <File Include="webctrl_client/1_0/TreeImages/rtl/Rplus.gif">
+      <publishTime>03/06/2014 18:33:06</publishTime>
+    </File>
+    <File Include="webctrl_client/1_0/TreeImages/rtl/T.gif">
+      <publishTime>03/06/2014 18:33:02</publishTime>
+    </File>
+    <File Include="webctrl_client/1_0/TreeImages/rtl/Tminus.gif">
+      <publishTime>03/06/2014 18:32:56</publishTime>
+    </File>
+    <File Include="webctrl_client/1_0/TreeImages/rtl/Tplus.gif">
+      <publishTime>03/06/2014 18:33:02</publishTime>
+    </File>
+    <File Include="webctrl_client/1_0/TreeImages/rtl/white.gif">
+      <publishTime>03/06/2014 18:33:00</publishTime>
+    </File>
+    <File Include="webctrl_client/1_0/TreeImages/T.gif">
+      <publishTime>03/06/2014 18:32:56</publishTime>
+    </File>
+    <File Include="webctrl_client/1_0/TreeImages/Tminus.gif">
+      <publishTime>03/06/2014 18:33:02</publishTime>
+    </File>
+    <File Include="webctrl_client/1_0/TreeImages/Tplus.gif">
+      <publishTime>03/06/2014 18:33:00</publishTime>
+    </File>
+    <File Include="webctrl_client/1_0/TreeImages/white.gif">
+      <publishTime>03/06/2014 18:33:06</publishTime>
+    </File>
+    <File Include="webctrl_client/1_0/treeview.htc">
+      <publishTime>03/06/2014 18:33:04</publishTime>
+    </File>
+  </ItemGroup>
+</Project>
