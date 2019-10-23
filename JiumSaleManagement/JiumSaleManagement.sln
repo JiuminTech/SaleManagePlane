@@ -24,6 +24,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MySQLDAL", "MySQLDAL\MySQLD
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleTest", "ConsoleTest\ConsoleTest.csproj", "{60A8DEED-4BD4-4A69-9FF6-4C6BDB088A2E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ctrl", "Ctrl\Ctrl.csproj", "{F494A828-3290-4F25-B7BC-BB748C99260F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|.NET = Debug|.NET
@@ -148,6 +150,18 @@ Global
 		{60A8DEED-4BD4-4A69-9FF6-4C6BDB088A2E}.Release|Any CPU.Build.0 = Release|Any CPU
 		{60A8DEED-4BD4-4A69-9FF6-4C6BDB088A2E}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
 		{60A8DEED-4BD4-4A69-9FF6-4C6BDB088A2E}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{F494A828-3290-4F25-B7BC-BB748C99260F}.Debug|.NET.ActiveCfg = Debug|Any CPU
+		{F494A828-3290-4F25-B7BC-BB748C99260F}.Debug|.NET.Build.0 = Debug|Any CPU
+		{F494A828-3290-4F25-B7BC-BB748C99260F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F494A828-3290-4F25-B7BC-BB748C99260F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F494A828-3290-4F25-B7BC-BB748C99260F}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{F494A828-3290-4F25-B7BC-BB748C99260F}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{F494A828-3290-4F25-B7BC-BB748C99260F}.Release|.NET.ActiveCfg = Release|Any CPU
+		{F494A828-3290-4F25-B7BC-BB748C99260F}.Release|.NET.Build.0 = Release|Any CPU
+		{F494A828-3290-4F25-B7BC-BB748C99260F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F494A828-3290-4F25-B7BC-BB748C99260F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F494A828-3290-4F25-B7BC-BB748C99260F}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{F494A828-3290-4F25-B7BC-BB748C99260F}.Release|Mixed Platforms.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

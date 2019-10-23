@@ -38,3 +38,6 @@
 /JiumSaleManagement/OracleDAL/obj/Release
 /JiumSaleManagement/SQLServerDAL/obj/Release
 /JiumSaleManagement/Web/obj/Release
+/JiumSaleManagement/Ctrl/bin/Debug
+/JiumSaleManagement/Ctrl/obj
+/JiumSaleManagement/Lib
