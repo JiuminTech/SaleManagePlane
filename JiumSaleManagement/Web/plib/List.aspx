@@ -22,7 +22,10 @@
                     <asp:TextBox ID="txtKeyword" runat="server"></asp:TextBox>
                     &nbsp;&nbsp;&nbsp;&nbsp;
                     <asp:Button ID="btnSearch" runat="server" Text="查询"  OnClick="btnSearch_Click" >
-                    </asp:Button>                    
+                    </asp:Button>  
+                        &nbsp;&nbsp;&nbsp;&nbsp;
+                    <asp:Button ID="btnLack" runat="server" Text="未到货查询"  OnClick="btnLackSearch_Click" >
+                    </asp:Button>                  
                         
                     </td>
                     <td><asp:LinkButton ID="LinkButtonAdd" runat="server"   Text="新增" PostBackUrl="Add.aspx"></asp:LinkButton>

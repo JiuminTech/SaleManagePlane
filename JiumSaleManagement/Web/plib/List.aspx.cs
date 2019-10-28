@@ -32,7 +32,11 @@ namespace Jium.Web.plib
         {
             BindData();
         }
-        
+        protected void btnLackSearch_Click(object sender, EventArgs e)
+        {
+            BindDataEx(1);
+        }
+
         protected void btnDelete_Click(object sender, EventArgs e)
         {
             string idlist = GetSelIDlist();
@@ -65,11 +69,44 @@ namespace Jium.Web.plib
             DataSet ds = new DataSet();
             StringBuilder strWhere = new StringBuilder();
             if (txtKeyword.Text.Trim() != "")
-            {      
-                #warning 代码生成警告：请修改 keywordField 为需要匹配查询的真实字段名称
-                //strWhere.AppendFormat("keywordField like '%{0}%'", txtKeyword.Text.Trim());
+            {
+#warning 代码生成警告：请修改 keywordField 为需要匹配查询的真实字段名称
+                strWhere.AppendFormat(" pname like '%{0}%'", txtKeyword.Text.Trim());
             }            
             ds = bll.GetList(strWhere.ToString());            
+            gridView.DataSource = ds;
+            gridView.DataBind();
+        }
+
+        public void BindDataEx(int type)
+        {
+            #region
+            //if (!Context.User.Identity.IsAuthenticated)
+            //{
+            //    return;
+            //}
+            //AccountsPrincipal user = new AccountsPrincipal(Context.User.Identity.Name);
+            //if (user.HasPermissionID(PermId_Modify))
+            //{
+            //    gridView.Columns[6].Visible = true;
+            //}
+            //if (user.HasPermissionID(PermId_Delete))
+            //{
+            //    gridView.Columns[7].Visible = true;
+            //}
+            #endregion
+
+            DataSet ds = new DataSet();
+            StringBuilder strWhere = new StringBuilder();
+            strWhere.Append("1 = 1 ");
+            if (type == 1) strWhere.Append(" and psumcnt < pld1 ");
+            if (txtKeyword.Text.Trim() != "")
+            {
+#warning 代码生成警告：请修改 keywordField 为需要匹配查询的真实字段名称
+
+                strWhere.AppendFormat(" and pname like '%{0}%'", txtKeyword.Text.Trim());
+            }
+            ds = bll.GetList(strWhere.ToString());
             gridView.DataSource = ds;
             gridView.DataBind();
         }

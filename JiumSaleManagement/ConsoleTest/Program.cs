@@ -10,8 +10,10 @@ namespace ConsoleTest
     {
         static void Main(string[] args)
         {
-            var filePath = "C:\\work\\111\\fwhorder11.xlsx";
-            Ctrl.piorecord.BactchImportOrderData(filePath);
+            //var filePath = "C:\\WORK\\111\\SaleManagePlane\\fwhorder11.xlsx";
+            //Ctrl.piorecord.BactchImportOrderData(filePath);
+            var filePath = "C:\\WORK\\111\\SaleManagePlane\\出货报表导出结果_20191028140910.xlsx";
+            Ctrl.piorecord.BactchImportOrderInData(filePath);
             Console.ReadLine();
 
         }

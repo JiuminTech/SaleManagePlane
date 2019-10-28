@@ -35,7 +35,7 @@ namespace Ctrl
                     }
                     var lstModel = new List<Jium.Model.piorecord>();
                     Workbook workbook = new Workbook(excelFilePath);
-                    for (int n = 0; n < workbook.Worksheets.Count; n++)
+                    for (int n = 0; n <1/* workbook.Worksheets.Count*/; n++)
                     {
                         Cells cells = workbook.Worksheets[n].Cells;
                         var tabname = workbook.Worksheets[n].Name;// CodeName;
@@ -54,9 +54,15 @@ namespace Ctrl
                             var sCnt = cells[i, 4].StringValue.Trim();
                             if (string.IsNullOrWhiteSpace(sCnt) || sCnt.Trim() == "-" || sCnt.Trim() == "0") continue;
                             model.pcnt = int.Parse(sCnt);
-                            model.psaleprice = decimal.Parse(cells[i, 5].StringValue.Trim());
-                            model.pzekou = decimal.Parse(cells[i, 7].StringValue.Trim());
-                            model.prealprice = decimal.Parse(cells[i, 5].StringValue.Trim());
+                            decimal saleprice = 0;
+                            if (cells[i, 5].StringValue.Trim() != "") saleprice = decimal.Parse(cells[i, 5].StringValue.Trim());
+                            model.psaleprice = saleprice;
+                            decimal zekou = 0;
+                            if (cells[i, 7].StringValue.Trim() != "") zekou = decimal.Parse(cells[i, 7].StringValue.Trim());
+                            model.pzekou = zekou;
+                            //decimal realprice = 0;
+                            //if (cells[i, 5].StringValue.Trim() != "") realprice = decimal.Parse(cells[i, 5].StringValue.Trim());
+                            model.prealprice = saleprice;
                             model.ptype = (int)PRODUCT_IO_TYPE.ORDERPLAN;
                             model.pios4 = cells[i, 3].StringValue.Trim();//单位
                             model.pios5 = cells[i, 0].StringValue.Trim();//系列
@@ -120,19 +126,19 @@ namespace Ctrl
                     for (int i = 1; i < cells.MaxDataRow + 1; i++)
                     {
                         var model = new Jium.Model.piorecord();
-                        model.pcode = cells[i, 1].StringValue.Trim();
+                        model.pcode = cells[i, 10].StringValue.Trim();
                         model.pguestid = 0;
                         model.psalerid = 0;
                         model.ptime = DateTime.Now.ToString("yyyyMMddHHmmss");
-                        model.pios3 = cells[i, 2].StringValue.Trim();
-                        model.premark = cells[i, 3].StringValue.Trim();
-                        model.pcnt = int.Parse(cells[i, 4].StringValue.Trim());
-                        model.psaleprice = decimal.Parse(cells[i, 5].StringValue.Trim());
-                        model.pzekou = decimal.Parse(cells[i, 6].StringValue.Trim());
-                        model.prealprice = decimal.Parse(cells[i, 7].StringValue.Trim());
+                        model.pios3 = cells[i, 11].StringValue.Trim();
+                        model.premark = cells[i, 12].StringValue.Trim();
+                        model.pcnt = int.Parse(cells[i, 13].StringValue.Trim());
+                        model.psaleprice = decimal.Parse(cells[i, 14].StringValue.Trim());
+                        model.pzekou = decimal.Parse(cells[i, 16].StringValue.Trim());
+                        model.prealprice = decimal.Parse(cells[i, 17].StringValue.Trim());
                         model.ptype = (int)PRODUCT_IO_TYPE.ORDERIN;
-                        model.pios4 = cells[i, 3].StringValue.Trim();//单位
-                        model.pios5 = cells[i, 3].StringValue.Trim();//系列
+                        model.pios4 = "1";//cells[i, 3].StringValue.Trim();//单位
+                        model.pios5 = cells[i, 21].StringValue.Trim();//系列
                         model.pios1 = orderid.ToString();
                         model.pios2 = "";
                         lstModel.Add(model);
