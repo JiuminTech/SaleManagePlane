@@ -43,15 +43,15 @@
                                 </ItemTemplate>
                             </asp:TemplateField> 
                             
-		<asp:BoundField DataField="cname" HeaderText="cname" SortExpression="cname" ItemStyle-HorizontalAlign="Center"  /> 
-		<asp:BoundField DataField="ccode" HeaderText="ccode" SortExpression="ccode" ItemStyle-HorizontalAlign="Center"  /> 
-		<asp:BoundField DataField="cphone" HeaderText="cphone" SortExpression="cphone" ItemStyle-HorizontalAlign="Center"  /> 
-		<asp:BoundField DataField="cemail" HeaderText="cemail" SortExpression="cemail" ItemStyle-HorizontalAlign="Center"  /> 
-		<asp:BoundField DataField="clevel" HeaderText="clevel" SortExpression="clevel" ItemStyle-HorizontalAlign="Center"  /> 
-		<asp:BoundField DataField="csum" HeaderText="csum" SortExpression="csum" ItemStyle-HorizontalAlign="Center"  /> 
-		<asp:BoundField DataField="csex" HeaderText="csex" SortExpression="csex" ItemStyle-HorizontalAlign="Center"  /> 
-		<asp:BoundField DataField="cremark" HeaderText="cremark" SortExpression="cremark" ItemStyle-HorizontalAlign="Center"  /> 
-		<asp:BoundField DataField="css1" HeaderText="css1" SortExpression="css1" ItemStyle-HorizontalAlign="Center"  /> 
+		<asp:BoundField DataField="姓名" HeaderText="cname" SortExpression="cname" ItemStyle-HorizontalAlign="Center"  /> 
+		<asp:BoundField DataField="顾客ID" HeaderText="ccode" SortExpression="ccode" ItemStyle-HorizontalAlign="Center"  /> 
+		<asp:BoundField DataField="手机号码" HeaderText="cphone" SortExpression="cphone" ItemStyle-HorizontalAlign="Center"  /> 
+		<asp:BoundField DataField="Email" HeaderText="cemail" SortExpression="cemail" ItemStyle-HorizontalAlign="Center"  /> 
+		<asp:BoundField DataField="等级" HeaderText="clevel" SortExpression="clevel" ItemStyle-HorizontalAlign="Center"  /> 
+		<asp:BoundField DataField="总消费额" HeaderText="csum" SortExpression="csum" ItemStyle-HorizontalAlign="Center"  /> 
+		<asp:BoundField DataField="性别" HeaderText="csex" SortExpression="csex" ItemStyle-HorizontalAlign="Center"  /> 
+		<asp:BoundField DataField="备注" HeaderText="cremark" SortExpression="cremark" ItemStyle-HorizontalAlign="Center"  /> 
+		<%--<asp:BoundField DataField="css1" HeaderText="css1" SortExpression="css1" ItemStyle-HorizontalAlign="Center"  /> 
 		<asp:BoundField DataField="css2" HeaderText="css2" SortExpression="css2" ItemStyle-HorizontalAlign="Center"  /> 
 		<asp:BoundField DataField="css3" HeaderText="css3" SortExpression="css3" ItemStyle-HorizontalAlign="Center"  /> 
 		<asp:BoundField DataField="css4" HeaderText="css4" SortExpression="css4" ItemStyle-HorizontalAlign="Center"  /> 
@@ -65,7 +65,7 @@
 		<asp:BoundField DataField="csdc2" HeaderText="csdc2" SortExpression="csdc2" ItemStyle-HorizontalAlign="Center"  /> 
 		<asp:BoundField DataField="csdc3" HeaderText="csdc3" SortExpression="csdc3" ItemStyle-HorizontalAlign="Center"  /> 
 		<asp:BoundField DataField="csdc4" HeaderText="csdc4" SortExpression="csdc4" ItemStyle-HorizontalAlign="Center"  /> 
-		<asp:BoundField DataField="csdc5" HeaderText="csdc5" SortExpression="csdc5" ItemStyle-HorizontalAlign="Center"  /> 
+		<asp:BoundField DataField="csdc5" HeaderText="csdc5" SortExpression="csdc5" ItemStyle-HorizontalAlign="Center"  /> --%>
                             
                             <asp:HyperLinkField HeaderText="详细" ControlStyle-Width="50" DataNavigateUrlFields="id" DataNavigateUrlFormatString="Show.aspx?id={0}"
                                 Text="详细"  />

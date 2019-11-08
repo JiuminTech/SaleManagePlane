@@ -11,61 +11,61 @@
 <table cellSpacing="0" cellPadding="0" width="100%" border="0">
 	<tr>
 	<td height="25" width="30%" align="right">
-		cname
+		姓名
 	：</td>
 	<td height="25" width="*" align="left">
 		<asp:TextBox id="txtcname" runat="server" Width="200px"></asp:TextBox>
 	</td></tr>
 	<tr>
 	<td height="25" width="30%" align="right">
-		ccode
+		顾客ID
 	：</td>
 	<td height="25" width="*" align="left">
 		<asp:TextBox id="txtccode" runat="server" Width="200px"></asp:TextBox>
 	</td></tr>
 	<tr>
 	<td height="25" width="30%" align="right">
-		cphone
+		手机号码
 	：</td>
 	<td height="25" width="*" align="left">
 		<asp:TextBox id="txtcphone" runat="server" Width="200px"></asp:TextBox>
 	</td></tr>
 	<tr>
 	<td height="25" width="30%" align="right">
-		cemail
+		Email
 	：</td>
 	<td height="25" width="*" align="left">
 		<asp:TextBox id="txtcemail" runat="server" Width="200px"></asp:TextBox>
 	</td></tr>
 	<tr>
 	<td height="25" width="30%" align="right">
-		clevel
+		等级
 	：</td>
 	<td height="25" width="*" align="left">
 		<asp:TextBox id="txtclevel" runat="server" Width="200px"></asp:TextBox>
 	</td></tr>
 	<tr>
 	<td height="25" width="30%" align="right">
-		csum
+		消费总额
 	：</td>
 	<td height="25" width="*" align="left">
 		<asp:TextBox id="txtcsum" runat="server" Width="200px"></asp:TextBox>
 	</td></tr>
 	<tr>
 	<td height="25" width="30%" align="right">
-		csex
+		性别
 	：</td>
 	<td height="25" width="*" align="left">
 		<asp:TextBox id="txtcsex" runat="server" Width="200px"></asp:TextBox>
 	</td></tr>
 	<tr>
 	<td height="25" width="30%" align="right">
-		cremark
+		备注
 	：</td>
 	<td height="25" width="*" align="left">
 		<asp:TextBox id="txtcremark" runat="server" Width="200px"></asp:TextBox>
 	</td></tr>
-	<tr>
+	<%--<tr>
 	<td height="25" width="30%" align="right">
 		css1
 	：</td>
@@ -169,7 +169,7 @@
 	：</td>
 	<td height="25" width="*" align="left">
 		<asp:TextBox id="txtcsdc5" runat="server" Width="200px"></asp:TextBox>
-	</td></tr>
+	</td></tr>--%>
 </table>
 
             </td>

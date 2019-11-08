@@ -26,7 +26,7 @@ dL(e);
 //CheckBox—°‘ÒœÓ
 function CCA(CB)
 {
-var frm=document.Form1;
+    var frm = document.Form1;
 if (CB.checked)
 hL(CB);
 else
@@ -44,6 +44,25 @@ TO++;
 }
 }
 frm.allbox.checked=(TO==TB)?true:false;
+}
+
+function CCAB(CB) {
+    var frm = document.forms[0];
+    if (CB.checked)
+        hL(CB);
+    else
+        dL(CB);
+
+    var TB = TO = 0;
+    for (var i = 0; i < frm.elements.length; i++) {
+        var e = frm.elements[i];
+        if ((e.name != 'allbox') && (e.type == 'checkbox')) {
+            TB++;
+            if (e.checked)
+                TO++;
+        }
+    }
+    frm.allbox.checked = (TO == TB) ? true : false;
 }
 
 

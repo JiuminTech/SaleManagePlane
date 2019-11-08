@@ -11,11 +11,9 @@ using LTP.Accounts.Bus;
 namespace Jium.Web.plib
 {
     public partial class List : Page
-    {
-        
-        
-        
+    {         
 		Jium.BLL.plib bll = new Jium.BLL.plib();
+        private static int itype = 0;
 
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -30,11 +28,18 @@ namespace Jium.Web.plib
         
         protected void btnSearch_Click(object sender, EventArgs e)
         {
+            itype = 0;
             BindData();
         }
         protected void btnLackSearch_Click(object sender, EventArgs e)
         {
+            itype = 1;
             BindDataEx(1);
+        }
+        protected void btnMoreSearch_Click(object sender, EventArgs e)
+        {
+            itype = 2;
+            BindDataEx(itype);
         }
 
         protected void btnDelete_Click(object sender, EventArgs e)
@@ -42,7 +47,8 @@ namespace Jium.Web.plib
             string idlist = GetSelIDlist();
             if (idlist.Trim().Length == 0) 
                 return;
-            #warning 代码生成警告：多主键情况无法生成批量删除，请手工修改代码. //bll.DeleteList(idlist);
+            #warning 代码生成警告：多主键情况无法生成批量删除，请手工修改代码. 
+            //bll.DeleteList(idlist);
             BindData();
         }
         
@@ -50,6 +56,8 @@ namespace Jium.Web.plib
                         
         public void BindData()
         {
+            BindDataEx(itype);
+            return;
             #region
             //if (!Context.User.Identity.IsAuthenticated)
             //{
@@ -71,7 +79,7 @@ namespace Jium.Web.plib
             if (txtKeyword.Text.Trim() != "")
             {
 #warning 代码生成警告：请修改 keywordField 为需要匹配查询的真实字段名称
-                strWhere.AppendFormat(" pname like '%{0}%'", txtKeyword.Text.Trim());
+                strWhere.AppendFormat(" (pname like '%{0}%' or pcode like '%{0}%' or pdesc like '%{0}%' or pls1 like '%{0}%')", txtKeyword.Text.Trim());
             }            
             ds = bll.GetList(strWhere.ToString());            
             gridView.DataSource = ds;
@@ -99,12 +107,21 @@ namespace Jium.Web.plib
             DataSet ds = new DataSet();
             StringBuilder strWhere = new StringBuilder();
             strWhere.Append("1 = 1 ");
-            if (type == 1) strWhere.Append(" and psumcnt < pld1 ");
+            switch (type)
+            {
+                case 1:
+                    strWhere.Append(" and psumcnt < pld1 ");
+                    break;
+                case 2:
+                    strWhere.Append(" and psumcnt > pld1 ");
+                    break;
+            }
+            
             if (txtKeyword.Text.Trim() != "")
             {
 #warning 代码生成警告：请修改 keywordField 为需要匹配查询的真实字段名称
 
-                strWhere.AppendFormat(" and pname like '%{0}%'", txtKeyword.Text.Trim());
+                strWhere.AppendFormat(" and  (pname like '%{0}%' or pcode like '%{0}%' or pdesc like '%{0}%' or pls1 like '%{0}%')", txtKeyword.Text.Trim());
             }
             ds = bll.GetList(strWhere.ToString());
             gridView.DataSource = ds;

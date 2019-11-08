@@ -119,6 +119,7 @@
     <Content Include="piorecord\delete.aspx" />
     <Content Include="piorecord\List.aspx" />
     <Content Include="piorecord\Modify.aspx" />
+    <Content Include="piorecord\Sale.aspx" />
     <Content Include="piorecord\Show.aspx" />
     <Content Include="plib\Add.aspx" />
     <Content Include="plib\delete.aspx" />
@@ -463,6 +464,13 @@
     </Compile>
     <Compile Include="piorecord\Modify.aspx.designer.cs">
       <DependentUpon>Modify.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="piorecord\Sale.aspx.cs">
+      <DependentUpon>Sale.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="piorecord\Sale.aspx.designer.cs">
+      <DependentUpon>Sale.aspx</DependentUpon>
     </Compile>
     <Compile Include="piorecord\Show.aspx.cs">
       <DependentUpon>Show.aspx</DependentUpon>

@@ -16,16 +16,18 @@
             <table style="width: 100%;" cellpadding="2" cellspacing="1" class="border">
                 <tr>
                     <td style="width: 80px" align="right" class="tdbg">
-                         <b>关键字：</b>
+                         <b>关键字模糊查询：</b>
                     </td>
                     <td class="tdbg">                       
-                    <asp:TextBox ID="txtKeyword" runat="server"></asp:TextBox>
+                    <asp:TextBox ID="txtKeyword" runat="server" PlaceHolder="货号/名称/描述"></asp:TextBox>
                     &nbsp;&nbsp;&nbsp;&nbsp;
                     <asp:Button ID="btnSearch" runat="server" Text="查询"  OnClick="btnSearch_Click" >
                     </asp:Button>  
                         &nbsp;&nbsp;&nbsp;&nbsp;
                     <asp:Button ID="btnLack" runat="server" Text="未到货查询"  OnClick="btnLackSearch_Click" >
-                    </asp:Button>                  
+                    </asp:Button>
+                        <asp:Button ID="btnMore" runat="server" Text="未录单查询"  OnClick="btnMoreSearch_Click" >
+                    </asp:Button>                   
                         
                     </td>
                     <td><asp:LinkButton ID="LinkButtonAdd" runat="server"   Text="新增" PostBackUrl="Add.aspx"></asp:LinkButton>
@@ -49,13 +51,14 @@
 		<asp:BoundField DataField="id" HeaderText="id" SortExpression="id" ItemStyle-HorizontalAlign="Center"  /> 
 		<asp:BoundField DataField="pcode" HeaderText="货号" SortExpression="pcode" ItemStyle-HorizontalAlign="Center"  /> 
 		<asp:BoundField DataField="pname" HeaderText="名称" SortExpression="pname" ItemStyle-HorizontalAlign="Center"  /> 
-		<asp:BoundField DataField="pdesc" HeaderText="描述" SortExpression="pdesc" ItemStyle-HorizontalAlign="Center"  /> 
-		<asp:BoundField DataField="pleftcnt" HeaderText="余量" SortExpression="pleftcnt" ItemStyle-HorizontalAlign="Center"  /> 
-		<asp:BoundField DataField="plupdatetime" HeaderText="更新时间" SortExpression="plupdatetime" ItemStyle-HorizontalAlign="Center"  /> 
-		<asp:BoundField DataField="psumcnt" HeaderText="进货量" SortExpression="psumcnt" ItemStyle-HorizontalAlign="Center"  /> 
+		<asp:BoundField DataField="pdesc" HeaderText="描述" SortExpression="pdesc" ItemStyle-HorizontalAlign="Center"  /> 		
+                         <asp:BoundField DataField="pld1" HeaderText="订货量" SortExpression="pld1" ItemStyle-HorizontalAlign="Center"  /> 
+		<asp:BoundField DataField="psumcnt" HeaderText="到货量" SortExpression="psumcnt" ItemStyle-HorizontalAlign="Center"  /> 
 		<asp:BoundField DataField="psalecnt" HeaderText="销量" SortExpression="psalecnt" ItemStyle-HorizontalAlign="Center"  /> 
+                        <asp:BoundField DataField="pleftcnt" HeaderText="库存量" SortExpression="pleftcnt" ItemStyle-HorizontalAlign="Center"  /> 
+		<asp:BoundField DataField="plupdatetime" HeaderText="更新时间" SortExpression="plupdatetime" ItemStyle-HorizontalAlign="Center"  /> 
 		<asp:BoundField DataField="pls1" HeaderText="位置" SortExpression="pls1" ItemStyle-HorizontalAlign="Center"  /> 
-         <asp:BoundField DataField="pld1" HeaderText="订货量" SortExpression="pld1" ItemStyle-HorizontalAlign="Center"  /> 
+        
 		<%--<asp:BoundField DataField="pls2" HeaderText="pls2" SortExpression="pls2" ItemStyle-HorizontalAlign="Center"  /> 
 		<asp:BoundField DataField="pls3" HeaderText="pls3" SortExpression="pls3" ItemStyle-HorizontalAlign="Center"  /> 
 		<asp:BoundField DataField="pls4" HeaderText="pls4" SortExpression="pls4" ItemStyle-HorizontalAlign="Center"  /> 
@@ -67,7 +70,7 @@
 		<asp:BoundField DataField="pld5" HeaderText="pld5" SortExpression="pld5" ItemStyle-HorizontalAlign="Center"  /> --%>
                             
                             <asp:HyperLinkField HeaderText="详细" ControlStyle-Width="50" DataNavigateUrlFields="id,pcode" DataNavigateUrlFormatString="Show.aspx?id0={0}&id1={1}"
-                                Text="详细"  />
+                                Text="详细"  />                        
                             <asp:HyperLinkField HeaderText="编辑" ControlStyle-Width="50" DataNavigateUrlFields="id,pcode" DataNavigateUrlFormatString="Modify.aspx?id0={0}&id1={1}"
                                 Text="编辑"  />
                             <asp:TemplateField ControlStyle-Width="50" HeaderText="删除"   Visible="false"  >
