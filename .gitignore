@@ -41,3 +41,5 @@
 /JiumSaleManagement/Ctrl/bin/Debug
 /JiumSaleManagement/Ctrl/obj
 /JiumSaleManagement/Lib
+/JiumSaleManagement/.vs/JiumSaleManagement/v15
+/JiumSaleManagement/DAL/obj/Release
