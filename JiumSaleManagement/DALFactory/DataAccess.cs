@@ -67,7 +67,7 @@ namespace Jium.DALFactory
         public static Jium.IDAL.ISysManage CreateSysManage()
 		{
 			//方式1			
-			//return (Jium.IDAL.ISysManage)Assembly.Load(AssemblyPath).CreateInstance(AssemblyPath+".SysManage");
+			//return (Xwsw.IDAL.ISysManage)Assembly.Load(AssemblyPath).CreateInstance(AssemblyPath+".SysManage");
 
 			//方式2 			
 			string classNamespace = AssemblyPath+".SysManage";	
@@ -84,150 +84,187 @@ namespace Jium.DALFactory
 		public static Jium.IDAL.Ialarmevent Createalarmevent()
 		{
 
-			string ClassNamespace = AssemblyPath +".alarmevent";
+			string ClassNamespace = AssemblyPath +".NMS.alarmevent";
 			object objType=CreateObject(AssemblyPath,ClassNamespace);
 			return (Jium.IDAL.Ialarmevent)objType;
 		}
-
+
+
 		/// <summary>
 		/// 创建clerk数据层接口。
 		/// </summary>
 		public static Jium.IDAL.Iclerk Createclerk()
 		{
 
-			string ClassNamespace = AssemblyPath +".clerk";
+			string ClassNamespace = AssemblyPath +".NMS.clerk";
 			object objType=CreateObject(AssemblyPath,ClassNamespace);
 			return (Jium.IDAL.Iclerk)objType;
 		}
-
+
+
 		/// <summary>
 		/// 创建consumer数据层接口。
 		/// </summary>
 		public static Jium.IDAL.Iconsumer Createconsumer()
 		{
 
-			string ClassNamespace = AssemblyPath +".consumer";
+			string ClassNamespace = AssemblyPath +".NMS.consumer";
 			object objType=CreateObject(AssemblyPath,ClassNamespace);
 			return (Jium.IDAL.Iconsumer)objType;
 		}
-
+
+
+		/// <summary>
+		/// 创建consumerservice数据层接口。
+		/// </summary>
+		public static Jium.IDAL.Iconsumerservice Createconsumerservice()
+		{
+
+			string ClassNamespace = AssemblyPath +".NMS.consumerservice";
+			object objType=CreateObject(AssemblyPath,ClassNamespace);
+			return (Jium.IDAL.Iconsumerservice)objType;
+		}
+
+
 		/// <summary>
 		/// 创建currentalarm数据层接口。
 		/// </summary>
 		public static Jium.IDAL.Icurrentalarm Createcurrentalarm()
 		{
 
-			string ClassNamespace = AssemblyPath +".currentalarm";
+			string ClassNamespace = AssemblyPath +".NMS.currentalarm";
 			object objType=CreateObject(AssemblyPath,ClassNamespace);
 			return (Jium.IDAL.Icurrentalarm)objType;
 		}
-
+
+
 		/// <summary>
 		/// 创建eventtype数据层接口。
 		/// </summary>
 		public static Jium.IDAL.Ieventtype Createeventtype()
 		{
 
-			string ClassNamespace = AssemblyPath +".eventtype";
+			string ClassNamespace = AssemblyPath +".NMS.eventtype";
 			object objType=CreateObject(AssemblyPath,ClassNamespace);
 			return (Jium.IDAL.Ieventtype)objType;
 		}
-
+
+
 		/// <summary>
 		/// 创建historyalarm数据层接口。
 		/// </summary>
 		public static Jium.IDAL.Ihistoryalarm Createhistoryalarm()
 		{
 
-			string ClassNamespace = AssemblyPath +".historyalarm";
+			string ClassNamespace = AssemblyPath +".NMS.historyalarm";
 			object objType=CreateObject(AssemblyPath,ClassNamespace);
 			return (Jium.IDAL.Ihistoryalarm)objType;
 		}
-
+
+
 		/// <summary>
 		/// 创建pgroup数据层接口。
 		/// </summary>
 		public static Jium.IDAL.Ipgroup Createpgroup()
 		{
 
-			string ClassNamespace = AssemblyPath +".pgroup";
+			string ClassNamespace = AssemblyPath +".NMS.pgroup";
 			object objType=CreateObject(AssemblyPath,ClassNamespace);
 			return (Jium.IDAL.Ipgroup)objType;
 		}
-
+
+
 		/// <summary>
 		/// 创建piorecord数据层接口。
 		/// </summary>
 		public static Jium.IDAL.Ipiorecord Createpiorecord()
 		{
 
-			string ClassNamespace = AssemblyPath +".piorecord";
+			string ClassNamespace = AssemblyPath +".NMS.piorecord";
 			object objType=CreateObject(AssemblyPath,ClassNamespace);
 			return (Jium.IDAL.Ipiorecord)objType;
 		}
-
+
+
 		/// <summary>
 		/// 创建plib数据层接口。
 		/// </summary>
 		public static Jium.IDAL.Iplib Createplib()
 		{
 
-			string ClassNamespace = AssemblyPath +".plib";
+			string ClassNamespace = AssemblyPath +".NMS.plib";
 			object objType=CreateObject(AssemblyPath,ClassNamespace);
 			return (Jium.IDAL.Iplib)objType;
 		}
-
+
+
 		/// <summary>
 		/// 创建product数据层接口。
 		/// </summary>
 		public static Jium.IDAL.Iproduct Createproduct()
 		{
 
-			string ClassNamespace = AssemblyPath +".product";
+			string ClassNamespace = AssemblyPath +".NMS.product";
 			object objType=CreateObject(AssemblyPath,ClassNamespace);
 			return (Jium.IDAL.Iproduct)objType;
 		}
-
+
+
+		/// <summary>
+		/// 创建servicetype数据层接口。
+		/// </summary>
+		public static Jium.IDAL.Iservicetype Createservicetype()
+		{
+
+			string ClassNamespace = AssemblyPath +".NMS.servicetype";
+			object objType=CreateObject(AssemblyPath,ClassNamespace);
+			return (Jium.IDAL.Iservicetype)objType;
+		}
+
+
 		/// <summary>
 		/// 创建systemparams数据层接口。
 		/// </summary>
 		public static Jium.IDAL.Isystemparams Createsystemparams()
 		{
 
-			string ClassNamespace = AssemblyPath +".systemparams";
+			string ClassNamespace = AssemblyPath +".NMS.systemparams";
 			object objType=CreateObject(AssemblyPath,ClassNamespace);
 			return (Jium.IDAL.Isystemparams)objType;
 		}
-
+
+
 		/// <summary>
 		/// 创建userevent数据层接口。
 		/// </summary>
 		public static Jium.IDAL.Iuserevent Createuserevent()
 		{
 
-			string ClassNamespace = AssemblyPath +".userevent";
+			string ClassNamespace = AssemblyPath +".NMS.userevent";
 			object objType=CreateObject(AssemblyPath,ClassNamespace);
 			return (Jium.IDAL.Iuserevent)objType;
 		}
-
+
+
 		/// <summary>
 		/// 创建userinfo数据层接口。
 		/// </summary>
 		public static Jium.IDAL.Iuserinfo Createuserinfo()
 		{
 
-			string ClassNamespace = AssemblyPath +".userinfo";
+			string ClassNamespace = AssemblyPath +".NMS.userinfo";
 			object objType=CreateObject(AssemblyPath,ClassNamespace);
 			return (Jium.IDAL.Iuserinfo)objType;
 		}
-
+
+
 		/// <summary>
 		/// 创建usertype数据层接口。
 		/// </summary>
 		public static Jium.IDAL.Iusertype Createusertype()
 		{
 
-			string ClassNamespace = AssemblyPath +".usertype";
+			string ClassNamespace = AssemblyPath +".NMS.usertype";
 			object objType=CreateObject(AssemblyPath,ClassNamespace);
 			return (Jium.IDAL.Iusertype)objType;
 		}

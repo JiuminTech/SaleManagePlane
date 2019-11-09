@@ -147,6 +147,7 @@
     </Compile>
     <Compile Include="clerk.cs" />
     <Compile Include="consumer.cs" />
+    <Compile Include="consumerservice.cs" />
     <Compile Include="currentalarm.cs" />
     <Compile Include="eventtype.cs" />
     <Compile Include="historyalarm.cs" />
@@ -155,6 +156,7 @@
     <Compile Include="plib.cs" />
     <Compile Include="product.cs" />
     <Compile Include="PubConstant.cs" />
+    <Compile Include="servicetype.cs" />
     <Compile Include="SysManage.cs">
       <SubType>Code</SubType>
     </Compile>

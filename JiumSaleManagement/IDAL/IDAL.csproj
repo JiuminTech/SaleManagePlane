@@ -120,6 +120,8 @@
     <Compile Include="AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="Iconsumerservice.cs" />
+    <Compile Include="Iservicetype.cs" />
     <Compile Include="ISysManage.cs">
       <SubType>Code</SubType>
     </Compile>

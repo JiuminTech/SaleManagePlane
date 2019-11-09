@@ -4,6 +4,7 @@
     <ProjectView>ShowAllFiles</ProjectView>
     <UseIISExpress>false</UseIISExpress>
     <NameOfLastUsedPublishProfile>jiumnms</NameOfLastUsedPublishProfile>
+    <LastActiveSolutionConfig>Debug|Any CPU</LastActiveSolutionConfig>
   </PropertyGroup>
   <ProjectExtensions>
     <VisualStudio>
