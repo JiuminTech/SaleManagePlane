@@ -10,12 +10,12 @@ using System.Web.UI.WebControls;
 using System.Web.UI.HtmlControls;
 using LTP.Accounts.Bus;
 
-namespace Maticsoft.Web.Accounts.Admin
+namespace Jium.Web.Accounts.Admin
 {
 	/// <summary>
 	/// RoleAssignment 的摘要说明。
 	/// </summary>
-	public partial class RoleAssignment : System.Web.UI.Page  //Maticsoft.Web.Accounts.MoviePage
+	public partial class RoleAssignment : System.Web.UI.Page  //Jium.Web.Accounts.MoviePage
 	{
 		private int userID;
 		User currentUser;

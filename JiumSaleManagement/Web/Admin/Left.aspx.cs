@@ -5,7 +5,7 @@ using Microsoft.Web.UI.WebControls;
 using LTP.Accounts.Bus;
 using System.Configuration;
 
-namespace Maticsoft.Web.Admin
+namespace Jium.Web.Admin
 {
 	/// <summary>
 	/// Left 的摘要说明。
@@ -29,7 +29,7 @@ namespace Maticsoft.Web.Admin
 					return ;				
 				}
 				currentUser=(LTP.Accounts.Bus.User)Session["UserInfo"];
-				Maticsoft.BLL.SysManage sm=new Maticsoft.BLL.SysManage();
+				Jium.BLL.SysManage sm=new Jium.BLL.SysManage();
 				DataSet ds;			
 				ds=sm.GetTreeList("");
 				BindTreeView("mainFrame",ds.Tables[0]);

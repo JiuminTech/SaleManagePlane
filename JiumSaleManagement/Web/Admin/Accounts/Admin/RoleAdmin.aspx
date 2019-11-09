@@ -1,4 +1,4 @@
-ï»¿<%@ Page language="c#" Codebehind="RoleAdmin.aspx.cs" AutoEventWireup="True" Inherits="Maticsoft.Web.Accounts.Admin.RoleAdmin" %>
+<%@ Page language="c#" Codebehind="RoleAdmin.aspx.cs" AutoEventWireup="True" Inherits="Jium.Web.Accounts.Admin.RoleAdmin" %>
 
 <%@ Register Src="../../../Controls/copyright.ascx" TagName="copyright" TagPrefix="uc2" %>
 <%@ Register TagPrefix="uc1" TagName="CheckRight" Src="../../../Controls/CheckRight.ascx" %>
@@ -30,18 +30,18 @@
 											<tr>
 												<td align="center" height="25" bgColor='<%=Application[Session["Style"].ToString()+"xtable_titlebgcolor"]%>'>
 													<STRONG>
-														<asp:label id="LoginResult" runat="server">è§’è‰²ç®¡ç†</asp:label></STRONG></td>
+														<asp:label id="LoginResult" runat="server">½ÇÉ«¹ÜÀí</asp:label></STRONG></td>
 											</tr>
 											<tr>
 												<td height="26" style="HEIGHT: 26px">
-													<P><asp:label id="Label1" runat="server">æ–°å¢žè§’è‰²åï¼š</asp:label><asp:textbox id="TextBox1" runat="server" MaxLength="30" Columns="20" BorderStyle="Groove"></asp:textbox>&nbsp;&nbsp;
+													<P><asp:label id="Label1" runat="server">ÐÂÔö½ÇÉ«Ãû£º</asp:label><asp:textbox id="TextBox1" runat="server" MaxLength="30" Columns="20" BorderStyle="Groove"></asp:textbox>&nbsp;&nbsp;
 														<asp:ImageButton id="BtnAdd" runat="server" ImageUrl="../images/button_add.gif"></asp:ImageButton>&nbsp;
 														<asp:requiredfieldvalidator id="RequiredFieldValidator1" runat="server" ControlToValidate="TextBox1" Display="Dynamic"
-															ErrorMessage="è¯·æŒ‡å®šè§’è‰²åç§°"></asp:requiredfieldvalidator></P>
+															ErrorMessage="ÇëÖ¸¶¨½ÇÉ«Ãû³Æ"></asp:requiredfieldvalidator></P>
 												</td>
 											</tr>
 											<tr>
-												<td bgColor='<%=Application[Session["Style"].ToString()+"xtable_titlebgcolor"]%>'><STRONG>ç‚¹å‡»è§’è‰²è¿›è¡Œæƒé™ç¼–è¾‘ï¼š</STRONG></td>
+												<td bgColor='<%=Application[Session["Style"].ToString()+"xtable_titlebgcolor"]%>'><STRONG>µã»÷½ÇÉ«½øÐÐÈ¨ÏÞ±à¼­£º</STRONG></td>
 											</tr>
 											<tr>
 												<td>
@@ -51,7 +51,7 @@
 															<td>
 																<asp:DataList id="RoleList" runat="server" RepeatColumns="3" CellPadding="1" Width="100%">
 																	<ItemTemplate>
-																		ã€<a href='EditRole.aspx?RoleID=<%# DataBinder.Eval(Container.DataItem, "RoleID") %>'><%# DataBinder.Eval(Container.DataItem, "Description") %></a>ã€‘<br />
+																		¡¾<a href='EditRole.aspx?RoleID=<%# DataBinder.Eval(Container.DataItem, "RoleID") %>'><%# DataBinder.Eval(Container.DataItem, "Description") %></a>¡¿<br />
 																	</ItemTemplate>
 																</asp:DataList>
 															</td>

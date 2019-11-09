@@ -16,9 +16,19 @@ namespace Jium.Web.piorecord
         
         
 		Jium.BLL.piorecord bll = new Jium.BLL.piorecord();
+        public string keyword = "";
 
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (PreviousPage != null)
+            {
+                if (PreviousPage.IsCrossPagePostBack)
+                {
+                    var pp_Textbox1 = (TextBox)PreviousPage.FindControl("txtCcode");
+                    keyword = "8001";// pp_Textbox1.Text;
+                }
+            }
+
             if (!Page.IsPostBack)
             {
                 gridView.BorderColor = ColorTranslator.FromHtml(Application[Session["Style"].ToString() + "xtable_bordercolorlight"].ToString());
@@ -64,7 +74,8 @@ namespace Jium.Web.piorecord
 
             DataSet ds = new DataSet();
             StringBuilder strWhere = new StringBuilder();
-            if (txtKeyword.Text.Trim() != "")
+            if(!string.IsNullOrWhiteSpace(keyword)) strWhere.AppendFormat("pguestid = {0}", keyword);
+            if (txtKeyword.Text.Trim() != "") 
             {      
                 #warning 代码生成警告：请修改 keywordField 为需要匹配查询的真实字段名称
                 //strWhere.AppendFormat("keywordField like '%{0}%'", txtKeyword.Text.Trim());

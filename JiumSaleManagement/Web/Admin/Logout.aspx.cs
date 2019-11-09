@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Web.Security;
-namespace Maticsoft.Web.Admin
+namespace Jium.Web.Admin
 {
 	/// <summary>
 	/// Logout 的摘要说明。

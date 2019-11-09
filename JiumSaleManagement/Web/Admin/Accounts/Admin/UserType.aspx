@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="UserType.aspx.cs" Inherits="Maticsoft.Web.Accounts.Admin.UserType" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="UserType.aspx.cs" Inherits="Jium.Web.Accounts.Admin.UserType" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <%@ Register Src="../../../Controls/checkright.ascx" TagName="checkright" TagPrefix="uc2" %>
 <%@ Register Src="../../../Controls/copyright.ascx" TagName="copyright" TagPrefix="uc1" %>

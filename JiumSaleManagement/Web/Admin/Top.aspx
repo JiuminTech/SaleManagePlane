@@ -1,5 +1,5 @@
 ﻿<%@ Register TagPrefix="uc1" TagName="CheckRight" Src="../Controls/CheckRight.ascx" %>
-<%@ Page language="c#" Codebehind="Top.aspx.cs" AutoEventWireup="True" Inherits="Maticsoft.Web.Admin.Top" %>
+<%@ Page language="c#" Codebehind="Top.aspx.cs" AutoEventWireup="True" Inherits="Jium.Web.Admin.Top" %>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" >
 <HTML>
 	<HEAD>

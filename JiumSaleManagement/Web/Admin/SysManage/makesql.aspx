@@ -1,4 +1,4 @@
-﻿<%@ Page language="c#" Codebehind="makesql.aspx.cs" AutoEventWireup="True" Inherits="Maticsoft.Web.SysManage.makesql" %>
+﻿<%@ Page language="c#" Codebehind="makesql.aspx.cs" AutoEventWireup="True" Inherits="Jium.Web.SysManage.makesql" %>
 
 <%@ Register Src="../../Controls/checkright.ascx" TagName="checkright" TagPrefix="uc1" %>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" > 

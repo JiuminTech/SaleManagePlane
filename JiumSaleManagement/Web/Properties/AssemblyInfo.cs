@@ -6,11 +6,11 @@ using System.Runtime.InteropServices;
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
 
-[assembly: AssemblyTitle("Maticsoft.Web 三层结构示例源码")]
-[assembly: AssemblyDescription("Maticsoft.Web 三层结构示例源码")]
+[assembly: AssemblyTitle("Jium.Web 三层结构示例源码")]
+[assembly: AssemblyDescription("Jium.Web 三层结构示例源码")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("动软卓越")]
-[assembly: AssemblyProduct("Maticsoft.Web 三层结构示例源码")]
+[assembly: AssemblyProduct("Jium.Web 三层结构示例源码")]
 [assembly: AssemblyCopyright("Copyright (C) Maticsoft 2004-2012")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]

@@ -1,6 +1,6 @@
 ﻿using System;
 using Maticsoft.Common;
-namespace Maticsoft.Web.Admin
+namespace Jium.Web.Admin
 {
 	/// <summary>
 	/// Main 的摘要说明。
@@ -12,7 +12,7 @@ namespace Maticsoft.Web.Admin
 		{			
 			if(!Page.IsPostBack)
 			{
-				if (!Context.User.Identity.IsAuthenticated )
+				if (false &&!Context.User.Identity.IsAuthenticated )
 				{					
 					Response.Clear();
 					Response.Write("<script language=javascript>window.alert('您没有权限进入本页！\\n请登录或与管理员联系！');history.back();</script>");

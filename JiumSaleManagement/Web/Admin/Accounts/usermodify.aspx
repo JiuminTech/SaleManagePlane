@@ -1,4 +1,4 @@
-﻿<%@ Page language="c#" Codebehind="usermodify.aspx.cs" AutoEventWireup="True" Inherits="Maticsoft.Web.Accounts.usermodify" %>
+﻿<%@ Page language="c#" Codebehind="usermodify.aspx.cs" AutoEventWireup="True" Inherits="Jium.Web.Accounts.usermodify" %>
 
 <%@ Register Src="../../Controls/copyright.ascx" TagName="copyright" TagPrefix="uc2" %>
 <%@ Register TagPrefix="uc1" TagName="CheckRight" Src="../../Controls/CheckRight.ascx" %>

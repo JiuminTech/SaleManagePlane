@@ -3,7 +3,7 @@ using System.Data;
 using System.Drawing;
 using System.Web.UI.WebControls;
 
-namespace Maticsoft.Web.SysManage
+namespace Jium.Web.SysManage
 {
 	/// <summary>
 	/// treelist 的摘要说明。
@@ -47,7 +47,7 @@ namespace Maticsoft.Web.SysManage
 		private void dataBind(int pageIndex)
 		{
 			pageIndex--;
-			Maticsoft.BLL.SysManage sm=new Maticsoft.BLL.SysManage();	
+            Jium.BLL.SysManage sm=new Jium.BLL.SysManage();	
 			string strWhere="";
 			if(Session["strWheresys"]!=null && Session["strWheresys"].ToString()!="")
 			{

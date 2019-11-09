@@ -9,7 +9,7 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Web.UI.HtmlControls;
 using LTP.Accounts.Bus;
-namespace Maticsoft.Web.Accounts.Admin
+namespace Jium.Web.Accounts.Admin
 {
 	/// <summary>
 	/// EditRole 的摘要说明。

@@ -1,6 +1,6 @@
 ﻿<%@ Register TagPrefix="cc1" Namespace="LtpPageControl" Assembly="LtpPageControl" %>
 <%@ Register TagPrefix="uc1" TagName="CheckRight" Src="../../Controls/CheckRight.ascx" %>
-<%@ Page language="c#"  ValidateRequest="false" Codebehind="add.aspx.cs" AutoEventWireup="True" Inherits="Maticsoft.Web.SysManage.add" %>
+<%@ Page language="c#"  ValidateRequest="false" Codebehind="add.aspx.cs" AutoEventWireup="True" Inherits="Jium.Web.SysManage.add" %>
 <%@ Register TagPrefix="uc1" TagName="CopyRight" Src="../../Controls/copyright.ascx" %>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" >
 <HTML>

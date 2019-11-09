@@ -1,4 +1,4 @@
-﻿<%@ Page language="c#" Codebehind="SetPass.aspx.cs" AutoEventWireup="True" Inherits="Maticsoft.Web.Accounts.SetPass" %>
+﻿<%@ Page language="c#" Codebehind="SetPass.aspx.cs" AutoEventWireup="True" Inherits="Jium.Web.Accounts.SetPass" %>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" >
 <HTML>
 	<HEAD>

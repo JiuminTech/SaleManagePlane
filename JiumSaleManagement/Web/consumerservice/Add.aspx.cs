@@ -197,7 +197,7 @@ namespace Xwsw.Web.NMS.consumerservice
 
 			Jium.BLL.consumerservice bll=new Jium.BLL.consumerservice();
 			bll.Add(model);
-			Maticsoft.Common.MessageBox.ShowAndRedirect(this,"保存成功！","add.aspx");
+            Maticsoft.Common.MessageBox.ShowAndRedirect(this,"保存成功！","add.aspx");
 
 		}
 

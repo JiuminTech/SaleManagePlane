@@ -12,9 +12,9 @@ using System.Data.SqlClient;
 using LTP.Accounts.Bus;
 
 
-namespace Maticsoft.Web.Accounts.Admin
+namespace Jium.Web.Accounts.Admin
 {
-    public partial class UserAdminList : System.Web.UI.Page//Maticsoft.Web.Accounts.MoviePage
+    public partial class UserAdminList : System.Web.UI.Page//Jium.Web.Accounts.MoviePage
     {
         
         protected System.Web.UI.WebControls.ImageButton ImageButton1;
@@ -58,7 +58,7 @@ namespace Maticsoft.Web.Accounts.Admin
             }
             else
             {
-                ds = userAdmin.GetUserList(key);
+                //ds = userAdmin.GetUserList(key);
             }
             int pageIndex = this.DataGrid1.CurrentPageIndex;
             Session["AccountsAdminPage"] = pageIndex;

@@ -1,11 +1,11 @@
-锘�<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="UserAssignmentRole.aspx.cs" Inherits="Maticsoft.Web.Accounts.Admin.UserAssignmentRole" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="UserAssignmentRole.aspx.cs" Inherits="Jium.Web.Accounts.Admin.UserAssignmentRole" %>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <%@ Register Src="../../../Controls/copyright.ascx" TagName="copyright" TagPrefix="uc2" %>
 <%@ Register TagPrefix="uc1" TagName="CheckRight" Src="../../../Controls/CheckRight.ascx" %>
 <html xmlns="http://www.w3.org/1999/xhtml" >
 <head runat="server">
-    <title>鏃犳爣棰橀〉</title>
+    <title>无标题页</title>
     <META http-equiv="Content-Type" content="text/html; charset=gb2312">		
 		<LINK href="../style/style.css" type="text/css" rel="stylesheet">
 </head>
@@ -26,12 +26,12 @@
 											<tr>
 												<td align="center" height="25" 
 												bgColor='<%=Application[Session["Style"].ToString()+"xtable_titlebgcolor"]%>' 
-												>涓虹敤鎴锋寚瀹氬彲浠ョ鐞嗗垎閰嶇殑瑙掕壊
+												>为用户指定可以管理分配的角色
 													<asp:label id="lblTitle" runat="server" Font-Bold="True"></asp:label></td>
 											</tr>
 											<tr>
 											<td align=left>
-											閫夋嫨鐢ㄦ埛锛�<asp:DropDownList ID="DropUserlist" runat="server" AutoPostBack="True" Width="201px" OnSelectedIndexChanged="DropUserlist_SelectedIndexChanged">
+											选择用户：<asp:DropDownList ID="DropUserlist" runat="server" AutoPostBack="True" Width="201px" OnSelectedIndexChanged="DropUserlist_SelectedIndexChanged">
                                                 </asp:DropDownList>
 											</td>
 											</tr>

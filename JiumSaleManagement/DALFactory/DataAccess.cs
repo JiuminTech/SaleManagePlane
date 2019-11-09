@@ -84,7 +84,7 @@ namespace Jium.DALFactory
 		public static Jium.IDAL.Ialarmevent Createalarmevent()
 		{
 
-			string ClassNamespace = AssemblyPath +".NMS.alarmevent";
+			string ClassNamespace = AssemblyPath +".alarmevent";
 			object objType=CreateObject(AssemblyPath,ClassNamespace);
 			return (Jium.IDAL.Ialarmevent)objType;
 		}
@@ -96,7 +96,7 @@ namespace Jium.DALFactory
 		public static Jium.IDAL.Iclerk Createclerk()
 		{
 
-			string ClassNamespace = AssemblyPath +".NMS.clerk";
+			string ClassNamespace = AssemblyPath +".clerk";
 			object objType=CreateObject(AssemblyPath,ClassNamespace);
 			return (Jium.IDAL.Iclerk)objType;
 		}
@@ -108,7 +108,7 @@ namespace Jium.DALFactory
 		public static Jium.IDAL.Iconsumer Createconsumer()
 		{
 
-			string ClassNamespace = AssemblyPath +".NMS.consumer";
+			string ClassNamespace = AssemblyPath +".consumer";
 			object objType=CreateObject(AssemblyPath,ClassNamespace);
 			return (Jium.IDAL.Iconsumer)objType;
 		}
@@ -120,7 +120,7 @@ namespace Jium.DALFactory
 		public static Jium.IDAL.Iconsumerservice Createconsumerservice()
 		{
 
-			string ClassNamespace = AssemblyPath +".NMS.consumerservice";
+			string ClassNamespace = AssemblyPath +".consumerservice";
 			object objType=CreateObject(AssemblyPath,ClassNamespace);
 			return (Jium.IDAL.Iconsumerservice)objType;
 		}
@@ -132,7 +132,7 @@ namespace Jium.DALFactory
 		public static Jium.IDAL.Icurrentalarm Createcurrentalarm()
 		{
 
-			string ClassNamespace = AssemblyPath +".NMS.currentalarm";
+			string ClassNamespace = AssemblyPath +".currentalarm";
 			object objType=CreateObject(AssemblyPath,ClassNamespace);
 			return (Jium.IDAL.Icurrentalarm)objType;
 		}
@@ -144,7 +144,7 @@ namespace Jium.DALFactory
 		public static Jium.IDAL.Ieventtype Createeventtype()
 		{
 
-			string ClassNamespace = AssemblyPath +".NMS.eventtype";
+			string ClassNamespace = AssemblyPath +".eventtype";
 			object objType=CreateObject(AssemblyPath,ClassNamespace);
 			return (Jium.IDAL.Ieventtype)objType;
 		}
@@ -156,7 +156,7 @@ namespace Jium.DALFactory
 		public static Jium.IDAL.Ihistoryalarm Createhistoryalarm()
 		{
 
-			string ClassNamespace = AssemblyPath +".NMS.historyalarm";
+			string ClassNamespace = AssemblyPath +".historyalarm";
 			object objType=CreateObject(AssemblyPath,ClassNamespace);
 			return (Jium.IDAL.Ihistoryalarm)objType;
 		}
@@ -168,7 +168,7 @@ namespace Jium.DALFactory
 		public static Jium.IDAL.Ipgroup Createpgroup()
 		{
 
-			string ClassNamespace = AssemblyPath +".NMS.pgroup";
+			string ClassNamespace = AssemblyPath +".pgroup";
 			object objType=CreateObject(AssemblyPath,ClassNamespace);
 			return (Jium.IDAL.Ipgroup)objType;
 		}
@@ -180,7 +180,7 @@ namespace Jium.DALFactory
 		public static Jium.IDAL.Ipiorecord Createpiorecord()
 		{
 
-			string ClassNamespace = AssemblyPath +".NMS.piorecord";
+			string ClassNamespace = AssemblyPath +".piorecord";
 			object objType=CreateObject(AssemblyPath,ClassNamespace);
 			return (Jium.IDAL.Ipiorecord)objType;
 		}
@@ -192,7 +192,7 @@ namespace Jium.DALFactory
 		public static Jium.IDAL.Iplib Createplib()
 		{
 
-			string ClassNamespace = AssemblyPath +".NMS.plib";
+			string ClassNamespace = AssemblyPath +".plib";
 			object objType=CreateObject(AssemblyPath,ClassNamespace);
 			return (Jium.IDAL.Iplib)objType;
 		}
@@ -204,7 +204,7 @@ namespace Jium.DALFactory
 		public static Jium.IDAL.Iproduct Createproduct()
 		{
 
-			string ClassNamespace = AssemblyPath +".NMS.product";
+			string ClassNamespace = AssemblyPath +".product";
 			object objType=CreateObject(AssemblyPath,ClassNamespace);
 			return (Jium.IDAL.Iproduct)objType;
 		}
@@ -216,7 +216,7 @@ namespace Jium.DALFactory
 		public static Jium.IDAL.Iservicetype Createservicetype()
 		{
 
-			string ClassNamespace = AssemblyPath +".NMS.servicetype";
+			string ClassNamespace = AssemblyPath +".servicetype";
 			object objType=CreateObject(AssemblyPath,ClassNamespace);
 			return (Jium.IDAL.Iservicetype)objType;
 		}
@@ -228,7 +228,7 @@ namespace Jium.DALFactory
 		public static Jium.IDAL.Isystemparams Createsystemparams()
 		{
 
-			string ClassNamespace = AssemblyPath +".NMS.systemparams";
+			string ClassNamespace = AssemblyPath +".systemparams";
 			object objType=CreateObject(AssemblyPath,ClassNamespace);
 			return (Jium.IDAL.Isystemparams)objType;
 		}
@@ -240,7 +240,7 @@ namespace Jium.DALFactory
 		public static Jium.IDAL.Iuserevent Createuserevent()
 		{
 
-			string ClassNamespace = AssemblyPath +".NMS.userevent";
+			string ClassNamespace = AssemblyPath +".userevent";
 			object objType=CreateObject(AssemblyPath,ClassNamespace);
 			return (Jium.IDAL.Iuserevent)objType;
 		}
@@ -252,7 +252,7 @@ namespace Jium.DALFactory
 		public static Jium.IDAL.Iuserinfo Createuserinfo()
 		{
 
-			string ClassNamespace = AssemblyPath +".NMS.userinfo";
+			string ClassNamespace = AssemblyPath +".userinfo";
 			object objType=CreateObject(AssemblyPath,ClassNamespace);
 			return (Jium.IDAL.Iuserinfo)objType;
 		}
@@ -264,7 +264,7 @@ namespace Jium.DALFactory
 		public static Jium.IDAL.Iusertype Createusertype()
 		{
 
-			string ClassNamespace = AssemblyPath +".NMS.usertype";
+			string ClassNamespace = AssemblyPath +".usertype";
 			object objType=CreateObject(AssemblyPath,ClassNamespace);
 			return (Jium.IDAL.Iusertype)objType;
 		}

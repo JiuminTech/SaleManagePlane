@@ -1,4 +1,4 @@
-﻿<%@ Page language="c#" Codebehind="show.aspx.cs" AutoEventWireup="True" Inherits="Maticsoft.Web.SysManage.show" %>
+﻿<%@ Page language="c#" Codebehind="show.aspx.cs" AutoEventWireup="True" Inherits="Jium.Web.SysManage.show" %>
 <%@ Register TagPrefix="uc1" TagName="CheckRight" Src="../../Controls/CheckRight.ascx" %>
 <%@ Register TagPrefix="uc1" TagName="CopyRight" Src="../../Controls/copyright.ascx" %>
 <%@ Register TagPrefix="cc1" Namespace="LtpPageControl" Assembly="LtpPageControl" %>

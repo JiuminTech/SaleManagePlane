@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Maticsoft.Web.Admin
+namespace Jium.Web.Admin
 {
 	/// <summary>
 	/// Top 的摘要说明。
@@ -32,8 +32,8 @@ namespace Maticsoft.Web.Admin
 					{
 						return ;
 					}
-					LTP.Accounts.Bus.User currentUser=(LTP.Accounts.Bus.User)Session["UserInfo"];
-					this.lblSignIn.Text=currentUser.TrueName;
+                    //LTP.Accounts.Bus.User currentUser=(LTP.Accounts.Bus.User)Session["UserInfo"];
+                    this.lblSignIn.Text = Session["UserInfo"].ToString();// currentUser.TrueName;
 				}
 
 			}

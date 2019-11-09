@@ -1,4 +1,4 @@
-﻿<%@ Page language="c#" Codebehind="EditRole.aspx.cs" AutoEventWireup="True" Inherits="Maticsoft.Web.Accounts.Admin.EditRole" %>
+﻿<%@ Page language="c#" Codebehind="EditRole.aspx.cs" AutoEventWireup="True" Inherits="Jium.Web.Accounts.Admin.EditRole" %>
 <%@ Register Src="../../../Controls/checkright.ascx" TagName="checkright" TagPrefix="uc2" %>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" >
 <HTML>

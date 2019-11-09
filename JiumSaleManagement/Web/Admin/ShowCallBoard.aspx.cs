@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Maticsoft.Web.Admin
+namespace Jium.Web.Admin
 {
 	/// <summary>
 	/// ShowCallBoard 的摘要说明。

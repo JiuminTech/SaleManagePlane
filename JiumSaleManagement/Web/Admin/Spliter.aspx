@@ -1,4 +1,4 @@
-﻿<%@ Page language="c#" Codebehind="Spliter.aspx.cs" AutoEventWireup="True" Inherits="Maticsoft.Web.Admin.Spliter" %>
+﻿<%@ Page language="c#" Codebehind="Spliter.aspx.cs" AutoEventWireup="True" Inherits="Jium.Web.Admin.Spliter" %>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" > 
 
 <html>

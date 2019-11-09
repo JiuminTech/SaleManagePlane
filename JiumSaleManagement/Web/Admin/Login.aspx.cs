@@ -2,7 +2,7 @@
 using LTP.Accounts.Bus;
 using System.Web.Security;
 
-namespace Maticsoft.Web.Admin
+namespace Jium.Web.Admin
 {
 	/// <summary>
 	/// Login 的摘要说明。
@@ -71,10 +71,11 @@ namespace Maticsoft.Web.Admin
             }
 
 			string userName=Maticsoft.Common.PageValidate.InputText(txtUsername.Value.Trim(),30);
-			string Password=Maticsoft.Common.PageValidate.InputText(txtPass.Value.Trim(),30);			
+			string Password=Maticsoft.Common.PageValidate.InputText(txtPass.Value.Trim(),30);
+            
 
-			AccountsPrincipal newUser = AccountsPrincipal.ValidateLogin(userName,Password);			
-			if (newUser == null)
+            //AccountsPrincipal newUser = AccountsPrincipal.ValidateLogin(userName,Password);			
+			if (false/*newUser == null*/)
 			{				
 				this.lblMsg.Text = "登陆失败： " + userName;
                 if ((Session["PassErrorCountAdmin"] != null) && (Session["PassErrorCountAdmin"].ToString() != ""))
@@ -89,34 +90,34 @@ namespace Maticsoft.Web.Admin
 			}
 			else 
 			{				
-				User currentUser=new LTP.Accounts.Bus.User(newUser);
+				//User currentUser=new LTP.Accounts.Bus.User(/*newUser*/);
                 //if (currentUser.UserType != "AA")
                 //{
                 //    this.lblMsg.Text = "你非管理员用户，你没有权限登录后台系统！";
                 //    return;
                 //}
-				Context.User = newUser;
-				if(((SiteIdentity)User.Identity).TestPassword( Password) == 0)
-				{
-					this.lblMsg.Text = "你的密码无效！";
-                    if ((Session["PassErrorCountAdmin"] != null) && (Session["PassErrorCountAdmin"].ToString() != ""))
-                    {
-                        int PassErroeCount = Convert.ToInt32(Session["PassErrorCountAdmin"]);
-                        Session["PassErrorCountAdmin"] = PassErroeCount + 1;
-                    }
-                    else
-                    {
-                        Session["PassErrorCountAdmin"] = 1;
-                    }
-				}
-				else
+    //            Context.User = currentUser;// newUser;
+				//if(((SiteIdentity)User.Identity).TestPassword( Password) == 0)
+				//{
+				//	this.lblMsg.Text = "你的密码无效！";
+    //                if ((Session["PassErrorCountAdmin"] != null) && (Session["PassErrorCountAdmin"].ToString() != ""))
+    //                {
+    //                    int PassErroeCount = Convert.ToInt32(Session["PassErrorCountAdmin"]);
+    //                    Session["PassErrorCountAdmin"] = PassErroeCount + 1;
+    //                }
+    //                else
+    //                {
+    //                    Session["PassErrorCountAdmin"] = 1;
+    //                }
+				//}
+				//else
 				{					
 					FormsAuthentication.SetAuthCookie( userName,false );
                     //日志
                     //UserLog.AddLog(currentUser.UserName, currentUser.UserType, Request.UserHostAddress, Request.Url.AbsoluteUri, "登录成功");
-					
-					Session["UserInfo"]=currentUser;
-					Session["Style"]=currentUser.Style;
+
+                    Session["UserInfo"] = userName;// currentUser;
+                    Session["Style"] = userName;// currentUser.Style;
 					if(Session["returnPage"]!=null)
 					{
 						string returnpage=Session["returnPage"].ToString();

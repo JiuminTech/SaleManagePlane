@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Data;
-namespace Maticsoft.Web.SysManage
+namespace Jium.Web.SysManage
 {
 	/// <summary>
 	/// LogShow 的摘要说明。
@@ -16,7 +16,7 @@ namespace Maticsoft.Web.SysManage
 				if(Request.Params["id"]!=null && Request.Params["id"].Trim()!="")
 				{
 					string id=Request.Params["id"];
-					Maticsoft.BLL.SysManage sm=new Maticsoft.BLL.SysManage();
+                    Jium.BLL.SysManage sm=new Jium.BLL.SysManage();
 					DataRow row=sm.GetLog(id);
 					strtime=row["datetime"].ToString();
 					errmsg=row["loginfo"].ToString();

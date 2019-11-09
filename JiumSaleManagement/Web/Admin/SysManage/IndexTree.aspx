@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="IndexTree.aspx.cs" Inherits="Maticsoft.Web.SysManage.IndexTree" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="IndexTree.aspx.cs" Inherits="Jium.Web.SysManage.IndexTree" %>
 
 <%@ Register Src="../../Controls/checkright.ascx" TagName="checkright" TagPrefix="uc2" %>
 <%@ Register Src="../../Controls/copyright.ascx" TagName="copyright" TagPrefix="uc1" %>

@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Maticsoft.Web.Admin
+namespace Jium.Web.Admin
 {
 	/// <summary>
 	/// Spliter 的摘要说明。

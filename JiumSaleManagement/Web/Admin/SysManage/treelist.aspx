@@ -1,5 +1,5 @@
 ﻿<%@ Register TagPrefix="uc1" TagName="CopyRight" Src="../../Controls/copyright.ascx" %>
-<%@ Page language="c#" Codebehind="treelist.aspx.cs" AutoEventWireup="True" Inherits="Maticsoft.Web.SysManage.treelist" %>
+<%@ Page language="c#" Codebehind="treelist.aspx.cs" AutoEventWireup="True" Inherits="Jium.Web.SysManage.treelist" %>
 <%@ Register TagPrefix="uc1" TagName="CheckRight" Src="../../Controls/CheckRight.ascx" %>
 <%@ Register TagPrefix="cc1" Namespace="LtpPageControl" Assembly="LtpPageControl" %>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" >

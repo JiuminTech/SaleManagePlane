@@ -1,4 +1,4 @@
-﻿<%@ Page language="c#" Codebehind="Login.aspx.cs" AutoEventWireup="True" Inherits="Maticsoft.Web.Admin.Login" %>
+﻿<%@ Page language="c#" Codebehind="Login.aspx.cs" AutoEventWireup="True" Inherits="Jium.Web.Admin.Login" %>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" >
 <HTML>
 	<HEAD>

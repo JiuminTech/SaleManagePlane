@@ -9,7 +9,7 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Web.UI.HtmlControls;
 using LTP.Accounts.Bus;
-namespace Maticsoft.Web.Accounts
+namespace Jium.Web.Accounts
 {
 	/// <summary>
 	/// Add 的摘要说明。
@@ -28,12 +28,12 @@ namespace Maticsoft.Web.Accounts
 		}
         //private void BindSuppData()
         //{
-        //    Maticsoft.BLL.ADManage.AdSupplier adsupp=new Maticsoft.BLL.ADManage.AdSupplier();
+        //    Jium.BLL.ADManage.AdSupplier adsupp=new Jium.BLL.ADManage.AdSupplier();
         //    this.Dropdepart.DataSource=adsupp.GetNameList();
         //    this.Dropdepart.DataTextField="SupplierName";
         //    this.Dropdepart.DataValueField="SupplierID";
         //    this.Dropdepart.DataBind();
-        //    adminname=Maticsoft.Common.ConfigHelper.GetConfigString("AdManager");
+        //    adminname=Jium.Common.ConfigHelper.GetConfigString("AdManager");
         //    this.Dropdepart.Items.Insert(0,new ListItem(adminname,"-1"));
         //}
 

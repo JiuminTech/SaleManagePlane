@@ -1,6 +1,6 @@
-Ôªø<%@ Register TagPrefix="cc1" Namespace="LtpPageControl" Assembly="LtpPageControl" %>
+<%@ Register TagPrefix="cc1" Namespace="LtpPageControl" Assembly="LtpPageControl" %>
 <%@ Register TagPrefix="uc1" TagName="CheckRight" Src="../../../Controls/CheckRight.ascx" %>
-<%@ Page language="c#" Codebehind="UserAdmin.aspx.cs" AutoEventWireup="True" Inherits="Maticsoft.Web.Accounts.Admin.UserAdmin" %>
+<%@ Page language="c#" Codebehind="UserAdmin.aspx.cs" AutoEventWireup="True" Inherits="Jium.Web.Accounts.Admin.UserAdmin" %>
 
 <%@ Register Src="../../../Controls/copyright.ascx" TagName="copyright" TagPrefix="uc2" %>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" >
@@ -25,18 +25,18 @@
       borderColorLight='<%=Application[Session["Style"].ToString()+"xtable_bordercolorlight"]%>' 
 										border="1" cellSpacing=0 >
 											<tr>
-												<td height="25" bgColor='<%=Application[Session["Style"].ToString()+"xtable_titlebgcolor"]%>' align="center"><b>Áî®Êà∑ÁÆ°ÁêÜ</b></td>
+												<td height="25" bgColor='<%=Application[Session["Style"].ToString()+"xtable_titlebgcolor"]%>' align="center"><b>”√ªßπ‹¿Ì</b></td>
 											</tr>
 											<tr>
 												<td height="22" valign="middle">
-												&nbsp;&nbsp; Âø´ÈÄüÊü•ËØ¢Ôºö<asp:DropDownList ID="DropUserType" runat="server">
-                            <asp:ListItem Value="">ÂÖ®ÈÉ®Áî®Êà∑</asp:ListItem>                           
-                            <asp:ListItem Value="AA" Selected="True">ÁÆ°ÁêÜ‰∫∫Âëò</asp:ListItem>
+												&nbsp;&nbsp; øÏÀŸ≤È—Ø£∫<asp:DropDownList ID="DropUserType" runat="server">
+                            <asp:ListItem Value="">»´≤ø”√ªß</asp:ListItem>                           
+                            <asp:ListItem Value="AA" Selected="True">π‹¿Ì»À‘±</asp:ListItem>
                         </asp:DropDownList>&nbsp;
-													<asp:Label id="Label1" runat="server">Áî®Êà∑ÂêçÂÖ≥ÈîÆÂ≠óÔºö</asp:Label>
+													<asp:Label id="Label1" runat="server">”√ªß√˚πÿº¸◊÷£∫</asp:Label>
 													<asp:TextBox id="TextBox1" runat="server" Width="100px" BorderStyle="Groove"></asp:TextBox>
 													<asp:ImageButton id="BtnSearch" runat="server" ImageUrl="..\images\button_search.GIF" OnClick="BtnSearch_Click"></asp:ImageButton>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
-													&nbsp;<a href="../add.aspx">„ÄêÊ∑ªÂä†Êñ∞Áî®Êà∑„Äë</a>
+													&nbsp;<a href="../add.aspx">°æÃÌº”–¬”√ªß°ø</a>
 												</td>
 											</tr>
 										</table>
@@ -48,40 +48,40 @@
 											HorizontalAlign="Center" PageSize="20">
 											<HeaderStyle HorizontalAlign="Center"></HeaderStyle>
 											<Columns>
-												<asp:TemplateColumn HeaderText="Â∫èÂè∑">
+												<asp:TemplateColumn HeaderText="–Ú∫≈">
 													<HeaderStyle HorizontalAlign="Center" Width="30px"></HeaderStyle>
 													<ItemStyle HorizontalAlign="Center"></ItemStyle>
 													<ItemTemplate>
 														<%# DataGrid1.CurrentPageIndex*DataGrid1.PageSize+DataGrid1.Items.Count+1 %>
 													</ItemTemplate>
 												</asp:TemplateColumn>
-												<asp:TemplateColumn SortExpression="UserID" HeaderText="Áî®Êà∑Âêç">
+												<asp:TemplateColumn SortExpression="UserID" HeaderText="”√ªß√˚">
 													<ItemTemplate>
 														<a href='RoleAssignment.aspx?UserID=<%# DataBinder.Eval(Container, "DataItem.UserID") %>&PageIndex=<%# DataGrid1.CurrentPageIndex %>'>
 															<%# DataBinder.Eval(Container, "DataItem.UserName") %>
 														</a>
 													</ItemTemplate>
 												</asp:TemplateColumn>
-												<asp:BoundColumn DataField="TrueName" SortExpression="TrueName" ReadOnly="True" HeaderText="ÁúüÂÆûÂßìÂêç"></asp:BoundColumn>
-												<asp:BoundColumn DataField="Sex" SortExpression="Sex" ReadOnly="True" HeaderText="ÊÄßÂà´">
+												<asp:BoundColumn DataField="TrueName" SortExpression="TrueName" ReadOnly="True" HeaderText="’Ê µ–’√˚"></asp:BoundColumn>
+												<asp:BoundColumn DataField="Sex" SortExpression="Sex" ReadOnly="True" HeaderText="–‘±">
 													<HeaderStyle Width="30px"></HeaderStyle>
 												</asp:BoundColumn>
-												<asp:BoundColumn DataField="Phone" ReadOnly="True" HeaderText="ËÅîÁ≥ªÁîµËØù"></asp:BoundColumn>
-												<asp:BoundColumn DataField="Email" ReadOnly="True" HeaderText="ÁîµÂ≠êÈÇÆ‰ª∂"></asp:BoundColumn>
-												<asp:BoundColumn DataField="DepartmentID" HeaderText="ÊâÄÂ±ûÂÖ¨Âè∏"></asp:BoundColumn>
-												<asp:TemplateColumn HeaderText="‰øÆÊîπ">
+												<asp:BoundColumn DataField="Phone" ReadOnly="True" HeaderText="¡™œµµÁª∞"></asp:BoundColumn>
+												<asp:BoundColumn DataField="Email" ReadOnly="True" HeaderText="µÁ◊”” º˛"></asp:BoundColumn>
+												<asp:BoundColumn DataField="DepartmentID" HeaderText="À˘ Ùπ´Àæ"></asp:BoundColumn>
+												<asp:TemplateColumn HeaderText="–ﬁ∏ƒ">
 													<HeaderStyle Width="30px"></HeaderStyle>
 													<ItemTemplate>
 														<asp:ImageButton id="BtnEdit" runat="server" ImageUrl="..\images\button_edit.gif" CommandName="BtnEdit"></asp:ImageButton>
 													</ItemTemplate>
 												</asp:TemplateColumn>
-												<asp:TemplateColumn HeaderText="Âà†Èô§">
+												<asp:TemplateColumn HeaderText="…æ≥˝">
 													<HeaderStyle Width="30px"></HeaderStyle>
 													<ItemTemplate>
 														<asp:ImageButton id="BtnDel" runat="server" ImageUrl="..\images\button_del.gif" CommandName="BtnDel"></asp:ImageButton>
 													</ItemTemplate>
 												</asp:TemplateColumn>
-												<asp:BoundColumn Visible="False" DataField="UserID" ReadOnly="True" HeaderText="Áî®Êà∑ID">
+												<asp:BoundColumn Visible="False" DataField="UserID" ReadOnly="True" HeaderText="”√ªßID">
 													<HeaderStyle Width="30px"></HeaderStyle>
 												</asp:BoundColumn>
 											</Columns>

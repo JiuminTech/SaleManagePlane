@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Data;
 using System.Web.UI.WebControls;
-namespace Maticsoft.Web.SysManage
+namespace Jium.Web.SysManage
 {
 	/// <summary>
 	/// search 的摘要说明。
@@ -26,29 +26,29 @@ namespace Maticsoft.Web.SysManage
 		
 		private void BiudTree()
 		{
-//			Maticsoft.BLL.SysManage sm=new Maticsoft.BLL.SysManage();			
-//			DataTable dt=sm.GetTreeList("").Tables[0];
-//
-//
-//			this.listTarget.Items.Clear();
-//			//加载树
-//			this.listTarget.Items.Add(new ListItem("根目录","0"));
-//			DataRow [] drs = dt.Select("ParentID= " + 0);			
-//			foreach( DataRow r in drs )
-//			{
-//				string nodeid=r["NodeID"].ToString();				
-//				string text=r["Text"].ToString();					
-//				string parentid=r["ParentID"].ToString();
-//				string permissionid=r["PermissionID"].ToString();
-//				text="╋"+text;				
-//				this.listTarget.Items.Add(new ListItem(text,nodeid));
-//				int sonparentid=int.Parse(nodeid);
-//				BindNode( sonparentid, dt);
-//
-//			}	
-//			this.listTarget.DataBind();		
-	
-			Maticsoft.BLL.SysManage sm=new Maticsoft.BLL.SysManage();			
+            //			Maticsoft.BLL.SysManage sm=new Maticsoft.BLL.SysManage();			
+            //			DataTable dt=sm.GetTreeList("").Tables[0];
+            //
+            //
+            //			this.listTarget.Items.Clear();
+            //			//加载树
+            //			this.listTarget.Items.Add(new ListItem("根目录","0"));
+            //			DataRow [] drs = dt.Select("ParentID= " + 0);			
+            //			foreach( DataRow r in drs )
+            //			{
+            //				string nodeid=r["NodeID"].ToString();				
+            //				string text=r["Text"].ToString();					
+            //				string parentid=r["ParentID"].ToString();
+            //				string permissionid=r["PermissionID"].ToString();
+            //				text="╋"+text;				
+            //				this.listTarget.Items.Add(new ListItem(text,nodeid));
+            //				int sonparentid=int.Parse(nodeid);
+            //				BindNode( sonparentid, dt);
+            //
+            //			}	
+            //			this.listTarget.DataBind();		
+
+            Jium.BLL.SysManage sm=new Jium.BLL.SysManage();			
 			DataTable dt=sm.GetTreeList("").Tables[0];
 
 

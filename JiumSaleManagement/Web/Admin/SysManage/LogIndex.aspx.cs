@@ -3,7 +3,7 @@ using System.Data;
 using System.Drawing;
 using System.Web.UI.WebControls;
 
-namespace Maticsoft.Web.SysManage
+namespace Jium.Web.SysManage
 {
 	/// <summary>
 	/// LogIndex 的摘要说明。
@@ -45,7 +45,7 @@ namespace Maticsoft.Web.SysManage
 		private void dataBind(int pageIndex)
 		{
 			pageIndex--;
-			Maticsoft.BLL.SysManage sm=new Maticsoft.BLL.SysManage();
+            Jium.BLL.SysManage sm=new Jium.BLL.SysManage();
 			DataSet ds=new DataSet(); 
 			ds=sm.GetLogs("");
 			grid.DataSource=ds.Tables[0].DefaultView;
@@ -118,7 +118,7 @@ namespace Maticsoft.Web.SysManage
 			if(BxsChkd)
 			{ 
 				dgIDs=dgIDs.Substring(0,dgIDs.LastIndexOf(","));
-				Maticsoft.BLL.SysManage sm=new Maticsoft.BLL.SysManage();
+                Jium.BLL.SysManage sm=new Jium.BLL.SysManage();
 				sm.DeleteLog(dgIDs);
 				Response.Redirect("logindex.aspx");
 			}			
@@ -126,7 +126,7 @@ namespace Maticsoft.Web.SysManage
 
 		protected void btnDelAll_Click(object sender, System.EventArgs e)
 		{
-			Maticsoft.BLL.SysManage sm=new Maticsoft.BLL.SysManage();
+            Jium.BLL.SysManage sm=new Jium.BLL.SysManage();
 			sm.DeleteLog("");
 			Response.Redirect("logindex.aspx");
 		}

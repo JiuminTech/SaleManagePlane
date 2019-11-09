@@ -1,4 +1,4 @@
-﻿<%@ Page language="c#" Codebehind="userPass.aspx.cs" AutoEventWireup="True" Inherits="Maticsoft.Web.Accounts.userPass" %>
+﻿<%@ Page language="c#" Codebehind="userPass.aspx.cs" AutoEventWireup="True" Inherits="Jium.Web.Accounts.userPass" %>
 
 <%@ Register Src="../../Controls/copyright.ascx" TagName="copyright" TagPrefix="uc2" %>
 <%@ Register TagPrefix="uc1" TagName="CheckRight" Src="../../Controls/CheckRight.ascx" %>

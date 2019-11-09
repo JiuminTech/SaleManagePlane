@@ -43,7 +43,7 @@
 		<asp:TextBox id="txtSumMoney" runat="server" Width="200px" Enabled="false"></asp:TextBox>
 	</td>
         <td height="25" width="20%" align="right">
-		 <asp:LinkButton ID="LinkButtonBuyHistory" runat="server" PostDataFileds="id"  Text="购买记录" PostBackUrl="~/consumer/Show.aspx?id={0}"></asp:LinkButton>
+		 <asp:LinkButton ID="LinkButtonBuyHistory" runat="server" PostDataFileds="id"  Text="购买记录" PostBackUrl="~/piorecord/list.aspx"></asp:LinkButton>
 	</td>
     </tr>
     <tr>
@@ -58,6 +58,9 @@
 	：</td>
 	<td height="25" width="*" align="left">
 		<asp:TextBox id="txtZekou" runat="server" Width="200px"></asp:TextBox>
+        <asp:Button ID="ButtonAllZekou" runat="server" Text="整单折扣"
+                    OnClick="ButtonAllZekou_Click" class="inputbutton" onmouseover="this.className='inputbutton_hover'"
+                    onmouseout="this.className='inputbutton'"></asp:Button>
 	</td>
     </tr>
    
@@ -118,15 +121,17 @@
                     <Columns>
 		<asp:BoundField DataField="pcode" HeaderText="货号" SortExpression="pcode" ItemStyle-HorizontalAlign="Center"  /> 
 		<asp:BoundField DataField="pios3" HeaderText="名称" SortExpression="pname" ItemStyle-HorizontalAlign="Center"  />
-       <asp:BoundField DataField="psaleprice" HeaderText="单价" SortExpression="psaleprice" ItemStyle-HorizontalAlign="Center"  />
-                        
+       <asp:BoundField DataField="pios4" HeaderText="单位"  ItemStyle-HorizontalAlign="Center"  />
+
+                        <asp:BoundField DataField="psaleprice" HeaderText="单价" SortExpression="psaleprice" ItemStyle-HorizontalAlign="Center"  />
+          <asp:BoundField DataField="piod1" HeaderText="售后次数"  ItemStyle-HorizontalAlign="Center"  />               
 		<asp:BoundField DataField="pcnt" HeaderText="购买量" SortExpression="psalecnt"  ItemStyle-HorizontalAlign="Center"  /> 
                         <asp:BoundField DataField="pzekou" HeaderText="折扣系数" SortExpression="pzekou" ItemStyle-HorizontalAlign="Center"  />
 
                             <asp:TemplateField ControlStyle-Width="50" HeaderText="增减"   Visible="true"  >
                                 <ItemTemplate>
-                                    <asp:LinkButton ID="LinkButtonAddCnt" runat="server" CausesValidation="False" CommandName="Add"
-                                         Text="增加"></asp:LinkButton>
+                                    <asp:Button ID="ButtonProductAdd" tag="pcode" runat="server" Text="增加"  OnClick="btnProductAdd_Click" >
+                    </asp:Button>
                                     <asp:Button ID="btnProductPlus" tag="pcode" runat="server" Text="减少"  OnClick="btnProductPlus_Click" >
                     </asp:Button>
                                 </ItemTemplate>

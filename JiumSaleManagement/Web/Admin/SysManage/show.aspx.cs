@@ -1,7 +1,7 @@
 ﻿using System;
-using Maticsoft.Model;
+using Jium.Model;
 
-namespace Maticsoft.Web.SysManage
+namespace Jium.Web.SysManage
 {
 	/// <summary>
 	/// show 的摘要说明。
@@ -24,7 +24,7 @@ namespace Maticsoft.Web.SysManage
 				}
 
 				Navigation011.Para_Str="id="+id;
-				Maticsoft.BLL.SysManage sm=new Maticsoft.BLL.SysManage();				
+				Jium.BLL.SysManage sm=new Jium.BLL.SysManage();				
 				SysNode node=sm.GetNode(int.Parse(id));
 				lblID.Text=id;
 				this.lblOrderid.Text=node.OrderID.ToString();
@@ -61,7 +61,7 @@ namespace Maticsoft.Web.SysManage
 //
 //				if(node.KeShiDM!=-1)
 //				{
-//					this.lblModuledept.Text=Maticsoft.BLL.PubConstant.GetKeshiName(node.KeShiDM);
+//					this.lblModuledept.Text=Jium.BLL.PubConstant.GetKeshiName(node.KeShiDM);
 //				}
 //				else
 //				{

@@ -1,4 +1,4 @@
-﻿<%@ Page language="c#" Codebehind="PermissionAdmin.aspx.cs" AutoEventWireup="True" Inherits="Maticsoft.Web.Accounts.Admin.PermissionAdmin" %>
+﻿<%@ Page language="c#" Codebehind="PermissionAdmin.aspx.cs" AutoEventWireup="True" Inherits="Jium.Web.Accounts.Admin.PermissionAdmin" %>
 
 <%@ Register Src="../../../Controls/checkright.ascx" TagName="checkright" TagPrefix="uc2" %>
 

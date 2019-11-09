@@ -1,4 +1,4 @@
-Ôªø<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="UserAdminList.aspx.cs" Inherits="Maticsoft.Web.Accounts.Admin.UserAdminList" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="UserAdminList.aspx.cs" Inherits="Jium.Web.Accounts.Admin.UserAdminList" %>
 <%@ Register TagPrefix="asp" Namespace="LtpPageControl" Assembly="LtpPageControl" %>
 <%@ Register TagPrefix="uc1" TagName="CheckRight" Src="../../../Controls/CheckRight.ascx" %>
 <%@ Register Src="../../../Controls/copyright.ascx" TagName="copyright" TagPrefix="uc2" %>
@@ -24,26 +24,26 @@
                                         <tr>
                                             <td height="25" bgcolor='<%=Application[Session["Style"].ToString()+"xtable_titlebgcolor"]%>'
                                                 align="center">
-                                                <b>Áî®Êà∑ÁÆ°ÁêÜ</b></td>
+                                                <b>”√ªßπ‹¿Ì</b></td>
                                         </tr>
                                         <tr>
                                             <td height="22" valign="middle">
-                                                &nbsp;&nbsp; Âø´ÈÄüÊü•ËØ¢Ôºö<asp:DropDownList ID="DropUserType" runat="server">
-                                                    <asp:ListItem Value="" Selected="True">ÂÖ®ÈÉ®Áî®Êà∑</asp:ListItem>
-                                                    <asp:ListItem Value="PP">PPCÁî®Êà∑</asp:ListItem>
-                                                    <asp:ListItem Value="SU">ÂπøÂëä‰∏ª</asp:ListItem>
-                                                    <asp:ListItem Value="WS">ÁΩëÁ´ô‰∏ª</asp:ListItem>
-                                                    <asp:ListItem Value="AG">ÂπøÂëä‰ª£ÁêÜÂïÜ</asp:ListItem>
-                                                    <asp:ListItem Value="WG">ÁΩëÁ´ô‰ª£ÁêÜÂïÜ</asp:ListItem>
-                                                    <asp:ListItem Value="PG">PPC‰ª£ÁêÜÂïÜ</asp:ListItem>
-                                                    <asp:ListItem Value="AA">ÁÆ°ÁêÜ‰∫∫Âëò</asp:ListItem>
-                                                    <asp:ListItem Value="SC">ÁîµËØùÁî®Êà∑</asp:ListItem>
+                                                &nbsp;&nbsp; øÏÀŸ≤È—Ø£∫<asp:DropDownList ID="DropUserType" runat="server">
+                                                    <asp:ListItem Value="" Selected="True">»´≤ø”√ªß</asp:ListItem>
+                                                    <asp:ListItem Value="PP">PPC”√ªß</asp:ListItem>
+                                                    <asp:ListItem Value="SU">π„∏Ê÷˜</asp:ListItem>
+                                                    <asp:ListItem Value="WS">Õ¯’æ÷˜</asp:ListItem>
+                                                    <asp:ListItem Value="AG">π„∏Ê¥˙¿Ì…Ã</asp:ListItem>
+                                                    <asp:ListItem Value="WG">Õ¯’æ¥˙¿Ì…Ã</asp:ListItem>
+                                                    <asp:ListItem Value="PG">PPC¥˙¿Ì…Ã</asp:ListItem>
+                                                    <asp:ListItem Value="AA">π‹¿Ì»À‘±</asp:ListItem>
+                                                    <asp:ListItem Value="SC">µÁª∞”√ªß</asp:ListItem>
                                                 </asp:DropDownList>&nbsp;
-                                                <asp:Label ID="Label1" runat="server">Áî®Êà∑ÂêçÂÖ≥ÈîÆÂ≠óÔºö</asp:Label>
+                                                <asp:Label ID="Label1" runat="server">”√ªß√˚πÿº¸◊÷£∫</asp:Label>
                                                 <asp:TextBox ID="TextBox1" runat="server" Width="100px" BorderStyle="Groove"></asp:TextBox>
                                                 <asp:ImageButton ID="BtnSearch" runat="server" ImageUrl="..\images\button_search.GIF"
                                                     OnClick="BtnSearch_Click"></asp:ImageButton>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                                &nbsp;<a href="../add.aspx?List=List">„ÄêÊ∑ªÂä†Êñ∞Áî®Êà∑„Äë</a>
+                                                &nbsp;<a href="../add.aspx?List=List">°æÃÌº”–¬”√ªß°ø</a>
                                             </td>
                                         </tr>
                                     </table>
@@ -53,13 +53,13 @@
                             <td>
                             	<table cellSpacing=0 cellPadding=0 width=100% align=center border=0>					
 					<tr id="TrGrid" runat="server">
-						<td align="left">‚óã È°µÊ¨°Ôºö<asp:label id="lblpage" runat="server" ForeColor="#E78A29"></asp:label>/
-							<asp:label id="lblpagesum" runat="server"></asp:label>ÔºåÂÖ±Ôºö<FONT color="#e78a29"><asp:label id="lblrowscount" runat="server"></asp:label></FONT>Êù°</td>
+						<td align="left">° “≥¥Œ£∫<asp:label id="lblpage" runat="server" ForeColor="#E78A29"></asp:label>/
+							<asp:label id="lblpagesum" runat="server"></asp:label>£¨π≤£∫<FONT color="#e78a29"><asp:label id="lblrowscount" runat="server"></asp:label></FONT>Ãı</td>
 						<td align="right"><asp:linkbutton id="btnFirst" runat="server" ForeColor="#E78A29" OnCommand="NavigateToPage" CommandArgument="First"
-								CommandName="Pager" Text="È¶ñ È°µ">[È¶ñ È°µ]</asp:linkbutton><asp:linkbutton id="btnPrev" runat="server" ForeColor="#E78A29" OnCommand="NavigateToPage" CommandArgument="Prev"
-								CommandName="Pager" Text="‰∏ä‰∏ÄÈ°µ">[‰∏ä‰∏ÄÈ°µ]</asp:linkbutton><asp:linkbutton id="btnNext" runat="server" ForeColor="#E78A29" OnCommand="NavigateToPage" CommandArgument="Next"
-								CommandName="Pager" Text="‰∏ã‰∏ÄÈ°µ">[‰∏ã‰∏ÄÈ°µ]</asp:linkbutton><asp:linkbutton id="btnLast" runat="server" ForeColor="#E78A29" OnCommand="NavigateToPage" CommandArgument="Last"
-								CommandName="Pager" Text="Â∞æ È°µ">[Â∞æ È°µ]</asp:linkbutton></td>
+								CommandName="Pager" Text=" ◊ “≥">[ ◊ “≥]</asp:linkbutton><asp:linkbutton id="btnPrev" runat="server" ForeColor="#E78A29" OnCommand="NavigateToPage" CommandArgument="Prev"
+								CommandName="Pager" Text="…œ“ª“≥">[…œ“ª“≥]</asp:linkbutton><asp:linkbutton id="btnNext" runat="server" ForeColor="#E78A29" OnCommand="NavigateToPage" CommandArgument="Next"
+								CommandName="Pager" Text="œ¬“ª“≥">[œ¬“ª“≥]</asp:linkbutton><asp:linkbutton id="btnLast" runat="server" ForeColor="#E78A29" OnCommand="NavigateToPage" CommandArgument="Last"
+								CommandName="Pager" Text="Œ≤ “≥">[Œ≤ “≥]</asp:linkbutton></td>
 					</tr>
 					</table>
                             
@@ -71,41 +71,41 @@
                                         AllowPaging="True" HorizontalAlign="Center" PageSize="20">
                                         <HeaderStyle HorizontalAlign="Center"></HeaderStyle>
                                         <Columns>
-                                            <asp:TemplateColumn HeaderText="ÁºñÂè∑">
+                                            <asp:TemplateColumn HeaderText="±‡∫≈">
                                                 <HeaderStyle HorizontalAlign="Center" Width="30px"></HeaderStyle>
                                                 <ItemStyle HorizontalAlign="Center"></ItemStyle>
                                                 <ItemTemplate>
                                                 <%# DataGrid1.CurrentPageIndex*DataGrid1.PageSize+DataGrid1.Items.Count+1 %>
                                                 </ItemTemplate>
                                             </asp:TemplateColumn>
-                                            <asp:TemplateColumn SortExpression="UserID" HeaderText="Áî®Êà∑Âêç">
+                                            <asp:TemplateColumn SortExpression="UserID" HeaderText="”√ªß√˚">
                                                 <ItemTemplate><a href='../../Agent/Role/RoleAssignment.aspx?UserID=<%# DataBinder.Eval(Container, "DataItem.UserID") %>&PageIndex=<%# DataGrid1.CurrentPageIndex %>'>
                                                     <%# DataBinder.Eval(Container, "DataItem.UserName") %>
                                                 </a></ItemTemplate>
                                             </asp:TemplateColumn>
-                                            <asp:BoundColumn DataField="TrueName" SortExpression="TrueName" ReadOnly="True" HeaderText="ÁúüÂÆûÂßìÂêç">
+                                            <asp:BoundColumn DataField="TrueName" SortExpression="TrueName" ReadOnly="True" HeaderText="’Ê µ–’√˚">
                                             </asp:BoundColumn>
-                                            <asp:BoundColumn DataField="Sex" SortExpression="Sex" ReadOnly="True" HeaderText="ÊÄßÂà´">
+                                            <asp:BoundColumn DataField="Sex" SortExpression="Sex" ReadOnly="True" HeaderText="–‘±">
                                                 <HeaderStyle Width="30px"></HeaderStyle>
                                             </asp:BoundColumn>
-                                            <asp:BoundColumn DataField="Phone" ReadOnly="True" HeaderText="ËÅîÁ≥ªÁîµËØù"></asp:BoundColumn>
-                                            <asp:BoundColumn DataField="Email" ReadOnly="True" HeaderText="ÁîµÂ≠êÈÇÆ‰ª∂"></asp:BoundColumn>
-                                            <asp:BoundColumn DataField="DepartmentID" HeaderText="ÊâÄÂ±ûÂÖ¨Âè∏"></asp:BoundColumn>
-                                            <asp:TemplateColumn HeaderText="‰øÆÊîπ">
+                                            <asp:BoundColumn DataField="Phone" ReadOnly="True" HeaderText="¡™œµµÁª∞"></asp:BoundColumn>
+                                            <asp:BoundColumn DataField="Email" ReadOnly="True" HeaderText="µÁ◊”” º˛"></asp:BoundColumn>
+                                            <asp:BoundColumn DataField="DepartmentID" HeaderText="À˘ Ùπ´Àæ"></asp:BoundColumn>
+                                            <asp:TemplateColumn HeaderText="–ﬁ∏ƒ">
                                                 <HeaderStyle Width="30px"></HeaderStyle>
                                                 <ItemTemplate>
                                                     <asp:ImageButton ID="BtnEdit" runat="server" ImageUrl="..\images\button_edit.gif"
                                                         CommandName="BtnEdit"></asp:ImageButton>
                                                 </ItemTemplate>
                                             </asp:TemplateColumn>
-                                            <asp:TemplateColumn HeaderText="Âà†Èô§">
+                                            <asp:TemplateColumn HeaderText="…æ≥˝">
                                                 <HeaderStyle Width="30px"></HeaderStyle>
                                                 <ItemTemplate>
                                                     <asp:ImageButton ID="BtnDel" runat="server" ImageUrl="..\images\button_del.gif" CommandName="BtnDel">
                                                     </asp:ImageButton>
                                                 </ItemTemplate>
                                             </asp:TemplateColumn>
-                                            <asp:BoundColumn Visible="False" DataField="UserID" ReadOnly="True" HeaderText="Áî®Êà∑ID">
+                                            <asp:BoundColumn Visible="False" DataField="UserID" ReadOnly="True" HeaderText="”√ªßID">
                                                 <HeaderStyle Width="30px"></HeaderStyle>
                                             </asp:BoundColumn>
                                         </Columns>

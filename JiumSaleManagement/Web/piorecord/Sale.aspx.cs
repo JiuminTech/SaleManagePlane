@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Jium.Ctrl;
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
@@ -37,15 +38,23 @@ namespace Jium.Web.piorecord
             }
             txtCcode.Text = consumers[0].ccode;
             txtCname.Text = consumers[0].cname;
+            txtSumMoney.Text = consumers[0].csum.ToString();
         }
 
         protected void btnCancle_Click(object sender, EventArgs e)
         {
         }
 
-        protected void btnConfirmSale_Click(object sender, EventArgs e)
+        protected void ButtonAllZekou_Click(object sender, EventArgs e)
         {
             
+            for (int i = 0; i < gridViewBuy.Rows.Count; i++)
+            {               
+                gridViewBuy.Rows[i].Cells[6].Text = txtZekou.Text;          ;
+                
+            }
+            decimal sum =  decimal.Parse(txtSumTotal.Text) * decimal.Parse(txtZekou.Text);
+            txtSumReal.Text = sum.ToString();
         }
 
         protected void btnAddProduct_Click(object sender, EventArgs e)
@@ -110,10 +119,15 @@ namespace Jium.Web.piorecord
                         model.pios3 = gridViewLib.Rows[i].Cells[2].Text;// gridViewLib.Rows[i].Cells[3].ToString();                        
                         model.pzekou = 1;
                         model.pcnt = 1;
+                        model.piod1 = 0;
                         string where = string.Format("pcode='{0}'", model.pcode);
                         var lstProduct = productBll.GetModelList(where);
                         if (lstProduct.Count > 0)
+                        {
                             model.psaleprice = lstProduct.FirstOrDefault().psaleprice;
+                            model.piod1 = lstProduct.FirstOrDefault().pd1;
+                            model.pios4 = lstProduct.FirstOrDefault().ps1;
+                        }
                         lst.Add(model);
                         idlist += gridViewLib.DataKeys[i].Value.ToString() + ",";
                     }
@@ -130,9 +144,9 @@ namespace Jium.Web.piorecord
                 var model = new Jium.Model.piorecord();
                 model.pcode = gridViewBuy.Rows[i].Cells[0].Text;
                 model.pios3= gridViewBuy.Rows[i].Cells[1].Text;
-                model.psaleprice = decimal.Parse(gridViewBuy.Rows[i].Cells[2].Text);
-                model.pcnt = int.Parse(gridViewBuy.Rows[i].Cells[3].Text);
-                model.pzekou = decimal.Parse(gridViewBuy.Rows[i].Cells[4].Text);
+                model.psaleprice = decimal.Parse(gridViewBuy.Rows[i].Cells[3].Text);
+                model.pcnt = int.Parse(gridViewBuy.Rows[i].Cells[5].Text);
+                model.pzekou = decimal.Parse(gridViewBuy.Rows[i].Cells[6].Text);
                 lst.Add(model);
             }
             //if (gridViewBuy.DataSource == null)
@@ -204,33 +218,96 @@ namespace Jium.Web.piorecord
             //bll.Delete(ID);
             //gridView.OnBind();
         }
-        protected void gridView_BuyAdd(object sender, GridViewRowEventArgs e)
+        //protected void gridView_BuyAdd(object sender, GridViewRowEventArgs e)
+         protected void btnProductAdd_Click(object sender, EventArgs e)
         {
             //#warning 代码生成警告：请检查确认真实主键的名称和类型是否正确
-            var sNum = e.Row.Cells[2].Text;
+            var btn = (Button)sender;
+            var index = ((GridViewRow)btn.Parent.Parent).RowIndex;
+            var sNum = gridViewBuy.Rows[index].Cells[5].Text;
             if (string.IsNullOrWhiteSpace(sNum))
-                e.Row.Cells[2].Text = "1";
+                gridViewBuy.Rows[index].Cells[5].Text = "1";
             else
             {
-                int cnt = int.Parse(e.Row.Cells[2].Text)+1;
-                e.Row.Cells[2].Text = cnt.ToString();
+                int cnt = int.Parse(gridViewBuy.Rows[index].Cells[5].Text)+1;
+                gridViewBuy.Rows[index].Cells[5].Text = cnt.ToString();
             }
         }
         protected void btnProductPlus_Click(object sender, EventArgs e)
         {
             //#warning 代码生成警告：请检查确认真实主键的名称和类型是否正确
             var btn = (Button)sender;
-
             var index = ((GridViewRow)btn.Parent.Parent).RowIndex;
 
-            //var sNum = e.Row.Cells[2].Text;
+            //var sNum = e.Row.Cells[3].Text;
             //if (string.IsNullOrWhiteSpace(sNum) || sNum.Trim() == "1")
-               gridViewBuy.DeleteRow(index);
+               //gridViewBuy.DeleteRow(index);
             //else
-            //{
-            //    int cnt = int.Parse(e.Row.Cells[2].Text) - 1;
-            //    e.Row.Cells[2].Text = cnt.ToString();
-            //}
+            {
+                int cnt = int.Parse(gridViewBuy.Rows[index].Cells[5].Text) - 1;
+                gridViewBuy.Rows[index].Cells[5].Text = cnt.ToString();
+            }
+        }
+        protected void btnConfirmSale_Click(object sender, EventArgs e)
+        {
+            //#warning 代码生成警告：请检查确认真实主键的名称和类型是否正确
+            string orderid = DateTime.Now.ToString("yyyyMMddHHmmss");
+            var lstModel = new List<Jium.Model.piorecord>();
+                        
+            for (int i = 0; i < gridViewBuy.Rows.Count; i++)
+            {
+                var model = new Jium.Model.piorecord();
+                model.pcode = gridViewBuy.Rows[i].Cells[0].Text;
+                model.pios3 = gridViewBuy.Rows[i].Cells[1].Text;
+                model.psaleprice = decimal.Parse(gridViewBuy.Rows[i].Cells[3].Text);
+                model.pcnt = int.Parse(gridViewBuy.Rows[i].Cells[5].Text);
+                model.pzekou = decimal.Parse(gridViewBuy.Rows[i].Cells[6].Text);
+                model.psalerid = 0;
+                model.ptype = (int)PRODUCT_IO_TYPE.SALE; ;
+                model.ptime = orderid;
+                model.pguestid = int.Parse(txtCcode.Text);
+                model.piod1 = 1;// int.Parse(gridViewBuy.Rows[i].Cells[4].Text);//服务
+                model.pios4 = gridViewBuy.Rows[i].Cells[2].Text;//单位
+                //model.pios5 = cells[i, 0].StringValue.Trim();//系列
+                model.pios1 = "销售";
+                lstModel.Add(model);
+            }
+            ERR_CODE iRes = ERR_CODE.SUCCESS;
+                ///事务回滚机制？？？
+            var bllCustomeService = new Jium.BLL.consumerservice();
+            foreach (var model in lstModel)
+            {
+                if (!Ctrl.piorecord.AddPiorecord(model))
+                {
+                    iRes = ERR_CODE.FAIL;
+                    break;
+                }
+                if(model.piod1>0)//add service for guset
+                {
+                    var consumerservice = new Jium.Model.consumerservice();
+                    consumerservice.ccode = model.pguestid.ToString();
+                    consumerservice.csnum = model.piod1??0;
+                    consumerservice.cstype = model.pios3;
+                    consumerservice.csleft = model.piod1 ?? 0;
+                    consumerservice.csiostatus = 0;
+                    consumerservice.cstime0 = orderid;
+                    bllCustomeService.Add(consumerservice);
+                }
+            }
+            //update guest info
+            var consumerBll = new Jium.BLL.consumer();
+            var lstConsumer = consumerBll.GetModelList(string.Format("ccode='{0}'" , txtCcode.Text.Trim()));
+            if(lstConsumer.Count==0)
+            {
+                ///error 
+                ///return;
+            }
+            lstConsumer[0].css1 = orderid;
+            lstConsumer[0].csum += decimal.Parse(txtSumReal.Text);
+            lstConsumer[0].clevel = lstConsumer[0].csum.ToString();//get from csum
+            consumerBll.Update(lstConsumer[0]);
+
+
         }
     }
 }

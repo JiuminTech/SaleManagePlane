@@ -12,11 +12,11 @@ using LTP.Accounts.Bus;
 
 namespace Jium.Web.Accounts.Admin
 {
-    public partial class UserRoleAssignment : System.Web.UI.Page//Maticsoft.Web.Accounts.MoviePage
+    public partial class UserRoleAssignment : System.Web.UI.Page//Jium.Web.Accounts.MoviePage
     {
 
         #region 初始化
-        Jium.BLL.Accounts_Users bll = new Maticsoft.BLL.Accounts_Users();
+        Jium.BLL.clerk bll = new Jium.BLL.clerk();
 
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -72,14 +72,14 @@ namespace Jium.Web.Accounts.Admin
         {
             this.SelectedRoleList.Items.Clear();
 
-            string strWhere = " UserID=" + userid;
+            string strWhere = " id=" + userid;
 
             DataSet ds = new DataSet();
-            ds = bll.GetRolesByUser(userid);
+            ds = bll.GetList(strWhere);
             for (int i = 0; i < ds.Tables[0].Rows.Count; i++)
             {
-                string roleid = ds.Tables[0].Rows[i]["Roleid"].ToString();
-                string description = ds.Tables[0].Rows[i]["Description"].ToString();
+                string roleid = ds.Tables[0].Rows[i]["id"].ToString();
+                string description = ds.Tables[0].Rows[i]["cname"].ToString();
 
                 ListItem li = new ListItem(description,roleid);
                 this.SelectedRoleList.Items.Add(li);
@@ -95,12 +95,12 @@ namespace Jium.Web.Accounts.Admin
             this.AllRoleList.Items.Clear();
            
             DataSet ds = new DataSet();
-            ds = bll.GetRolesByNoUser(userid);
+            ds = bll.GetAllList();
 
             for (int i = 0; i < ds.Tables[0].Rows.Count; i++)
             {
-                string roleid = ds.Tables[0].Rows[i]["Roleid"].ToString();
-                string description = ds.Tables[0].Rows[i]["Description"].ToString();
+                string roleid = ds.Tables[0].Rows[i]["id"].ToString();
+                string description = ds.Tables[0].Rows[i]["cname"].ToString();
 
                 ListItem li = new ListItem(description, roleid);
                 this.AllRoleList.Items.Add(li);
@@ -132,8 +132,8 @@ namespace Jium.Web.Accounts.Admin
                 {
                     int roleid = int.Parse(this.AllRoleList.Items[i].Value);
                     string description = this.AllRoleList.Items[i].Text;             
-
-                    bll.Add(userid,roleid);
+                    
+                    //bll.Add(userid,roleid);
                     Idlist += roleid + ",";
                  
                 }
@@ -149,11 +149,11 @@ namespace Jium.Web.Accounts.Admin
             try
             {
 
-                UserLog.AddLog(currentUser.UserName, currentUser.UserType, Request.UserHostAddress, Request.Url.AbsoluteUri, "管理员端  | 系统管理 | 用户角色权函数限设置 |  要关联的用户ID： " + userid + " , 被设置的角色ID： " + Idlist);
+                //UserLog.AddLog(currentUser.UserName, currentUser.UserType, Request.UserHostAddress, Request.Url.AbsoluteUri, "管理员端  | 系统管理 | 用户角色权函数限设置 |  要关联的用户ID： " + userid + " , 被设置的角色ID： " + Idlist);
             }
             catch
             {
-                UserLog.AddLog(currentUser.UserName, currentUser.UserType, Request.UserHostAddress, Request.Url.AbsoluteUri, "管理员端  |  系统管理 | 用户角色权函数限设置 | 要关联的用户ID： " + userid + " , 被设置的角色ID " + Idlist + ", 添加日志失败");
+                //UserLog.AddLog(currentUser.UserName, currentUser.UserType, Request.UserHostAddress, Request.Url.AbsoluteUri, "管理员端  |  系统管理 | 用户角色权函数限设置 | 要关联的用户ID： " + userid + " , 被设置的角色ID " + Idlist + ", 添加日志失败");
             }
 
 
@@ -175,7 +175,7 @@ namespace Jium.Web.Accounts.Admin
                 {
                     int roleid = int.Parse(this.SelectedRoleList.Items[i].Value);
                     string description = this.SelectedRoleList.Items[i].Text;
-                    bll.Delete(userid, roleid);
+                    //bll.Delete(userid, roleid);
                     Idlist += roleid + ",";
 
                 }
@@ -191,11 +191,11 @@ namespace Jium.Web.Accounts.Admin
             try
             {
 
-                UserLog.AddLog(currentUser.UserName, currentUser.UserType, Request.UserHostAddress, Request.Url.AbsoluteUri, "管理员端  |  系统管理 | 用户角色权函数限设置 | 要移除的用户ID： " + userid + " , 被移除的角色ID： " + Idlist);
+                //UserLog.AddLog(currentUser.UserName, currentUser.UserType, Request.UserHostAddress, Request.Url.AbsoluteUri, "管理员端  |  系统管理 | 用户角色权函数限设置 | 要移除的用户ID： " + userid + " , 被移除的角色ID： " + Idlist);
             }
             catch
             {
-                UserLog.AddLog(currentUser.UserName, currentUser.UserType, Request.UserHostAddress, Request.Url.AbsoluteUri, "管理员端  |  系统管理 | 用户角色权函数限设置 |  要移除的用户ID： " + userid + " , 被移除的角色ID： " + Idlist + ", 添加日志失败");
+                //UserLog.AddLog(currentUser.UserName, currentUser.UserType, Request.UserHostAddress, Request.Url.AbsoluteUri, "管理员端  |  系统管理 | 用户角色权函数限设置 |  要移除的用户ID： " + userid + " , 被移除的角色ID： " + Idlist + ", 添加日志失败");
             }
 
 

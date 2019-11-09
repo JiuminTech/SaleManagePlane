@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Maticsoft.Web.SysManage
+namespace Jium.Web.SysManage
 {
 	/// <summary>
 	/// delete 的摘要说明。
@@ -11,7 +11,7 @@ namespace Maticsoft.Web.SysManage
 		{
 			if(!Page.IsPostBack)
 			{
-				Maticsoft.BLL.SysManage sm=new Maticsoft.BLL.SysManage();
+                Jium.BLL.SysManage sm=new Jium.BLL.SysManage();
 				string id=Request.Params["id"];
 				sm.DelTreeNode(int.Parse(id));				
 				Response.Redirect("treelist.aspx");

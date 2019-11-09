@@ -1,5 +1,5 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" Codebehind="UserRoleAssignment.aspx.cs"
-    Inherits="Maticsoft.Web.Accounts.Admin.UserRoleAssignment" %>
+    Inherits="Jium.Web.Accounts.Admin.UserRoleAssignment" %>
 
 <%@ Register Src="../../../Controls/copyright.ascx" TagName="copyright" TagPrefix="uc1" %>
 <%@ Register Src="../../../Controls/checkright.ascx" TagName="checkright" TagPrefix="uc2" %>

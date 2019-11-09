@@ -3,7 +3,7 @@ using System.Data;
 using System.Web.UI.WebControls;
 using System.IO;
 using Jium.Model;
-namespace Maticsoft.Web.SysManage
+namespace Jium.Web.SysManage
 {
 	/// <summary>
 	/// modify 的摘要说明。

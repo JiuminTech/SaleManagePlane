@@ -1,6 +1,6 @@
 ﻿<%@ Register TagPrefix="uc1" TagName="CopyRight" Src="../Controls/copyright.ascx" %>
 
-<%@ Page Language="c#" Codebehind="Main.aspx.cs" AutoEventWireup="True" Inherits="Maticsoft.Web.Admin.Main" %>
+<%@ Page Language="c#" Codebehind="Main.aspx.cs" AutoEventWireup="True" Inherits="Jium.Web.Admin.Main" %>
 
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" >
 <html>

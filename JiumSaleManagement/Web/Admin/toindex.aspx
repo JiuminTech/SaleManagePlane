@@ -1,4 +1,4 @@
-﻿<%@ Page language="c#" Codebehind="toindex.aspx.cs" AutoEventWireup="True" Inherits="Maticsoft.Web.Admin.toindex" %>
+﻿<%@ Page language="c#" Codebehind="toindex.aspx.cs" AutoEventWireup="True" Inherits="Jium.Web.Admin.toindex" %>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" >
 <HTML>
 	<HEAD>

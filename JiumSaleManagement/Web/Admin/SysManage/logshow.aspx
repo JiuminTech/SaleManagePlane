@@ -1,4 +1,4 @@
-﻿<%@ Page language="c#" Codebehind="LogShow.aspx.cs" AutoEventWireup="True" Inherits="Maticsoft.Web.SysManage.LogShow" %>
+﻿<%@ Page language="c#" Codebehind="LogShow.aspx.cs" AutoEventWireup="True" Inherits="Jium.Web.SysManage.LogShow" %>
 <%@ Register TagPrefix="uc1" TagName="CheckRight" Src="../../Controls/CheckRight.ascx" %>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" >
 <HTML>

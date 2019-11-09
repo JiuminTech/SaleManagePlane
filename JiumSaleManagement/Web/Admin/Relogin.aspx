@@ -1,4 +1,4 @@
-﻿<%@ Page language="c#" Codebehind="Relogin.aspx.cs" AutoEventWireup="True" Inherits="Maticsoft.Web.Admin.Relogin" %>
+﻿<%@ Page language="c#" Codebehind="Relogin.aspx.cs" AutoEventWireup="True" Inherits="Jium.Web.Admin.Relogin" %>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" >
 <HTML>
 	<HEAD>

@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Maticsoft.Web.SysManage
+namespace Jium.Web.SysManage
 {
 	/// <summary>
 	/// makesql 的摘要说明。

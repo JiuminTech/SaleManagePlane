@@ -1,4 +1,4 @@
-﻿<%@ Page language="c#" Codebehind="LogIndex.aspx.cs" AutoEventWireup="True" Inherits="Maticsoft.Web.SysManage.LogIndex" %>
+﻿<%@ Page language="c#" Codebehind="LogIndex.aspx.cs" AutoEventWireup="True" Inherits="Jium.Web.SysManage.LogIndex" %>
 
 <%@ Register Src="../../Controls/copyright.ascx" TagName="copyright" TagPrefix="uc2" %>
 <%@ Register TagPrefix="uc1" TagName="CheckRight" Src="../../Controls/CheckRight.ascx" %>

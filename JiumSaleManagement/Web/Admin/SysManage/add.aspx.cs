@@ -1,10 +1,10 @@
 ﻿using System;
 using System.Data;
 using System.Web.UI.WebControls;
-using Maticsoft.Model;
+using Jium.Model;
 using System.IO;
 
-namespace Maticsoft.Web.SysManage
+namespace Jium.Web.SysManage
 {
 	/// <summary>
 	/// TreeAdd 的摘要说明。
@@ -31,7 +31,7 @@ namespace Maticsoft.Web.SysManage
 		
 		private void BiudTree()
 		{
-			Maticsoft.BLL.SysManage sm=new Maticsoft.BLL.SysManage();			
+			Jium.BLL.SysManage sm=new Jium.BLL.SysManage();			
 			DataTable dt=sm.GetTreeList("").Tables[0];
 
 
@@ -213,7 +213,7 @@ namespace Maticsoft.Web.SysManage
 			node.ModuleID=moduleid;
 			node.KeShiDM=keshidm;
 			node.KeshiPublic=keshipublic;
-            Maticsoft.BLL.SysManage sm = new Maticsoft.BLL.SysManage();
+            Jium.BLL.SysManage sm = new Jium.BLL.SysManage();
             //if (CheckBox1.Checked)
             //{
             //    LTP.Accounts.Bus.Permissions p = new LTP.Accounts.Bus.Permissions();

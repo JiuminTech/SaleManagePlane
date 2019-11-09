@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Ctrl
+namespace Jium.Ctrl
 {
     public class piorecord
     {
@@ -62,7 +62,7 @@ namespace Ctrl
                             model.pzekou = zekou;
                             //decimal realprice = 0;
                             //if (cells[i, 5].StringValue.Trim() != "") realprice = decimal.Parse(cells[i, 5].StringValue.Trim());
-                            model.prealprice = saleprice;
+                            model.prealprice = saleprice * zekou;
                             model.ptype = (int)PRODUCT_IO_TYPE.ORDERPLAN;
                             model.pios4 = cells[i, 3].StringValue.Trim();//单位
                             model.pios5 = cells[i, 0].StringValue.Trim();//系列
@@ -190,8 +190,8 @@ namespace Ctrl
                         pmodel.pdesc = model.premark;
                         pmodel.psaleprice = model.psaleprice;
                         pmodel.prealprice = model.prealprice;
-                        pmodel.ptype = model.pios5;
-                        pmodel.ps1 = model.pios4;
+                        pmodel.ptype = model.pios5;//系列
+                        pmodel.ps1 = model.pios4;//单位
                         pmodel.pisgroup = 0;
                         bres= bllProduct.Add(pmodel);
                         if (!bres) break;

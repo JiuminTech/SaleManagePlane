@@ -1,5 +1,5 @@
 ﻿
-<%@ Page language="c#" Codebehind="Index.aspx.cs" AutoEventWireup="True" Inherits="Maticsoft.Web.Accounts.Index" %>
+<%@ Page language="c#" Codebehind="Index.aspx.cs" AutoEventWireup="True" Inherits="Jium.Web.Accounts.Index" %>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" >
 <HTML>
 	<HEAD>

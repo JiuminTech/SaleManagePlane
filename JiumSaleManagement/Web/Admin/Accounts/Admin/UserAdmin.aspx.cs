@@ -11,12 +11,12 @@ using System.Web.UI.HtmlControls;
 using System.Data.SqlClient;
 using LTP.Accounts.Bus;
 
-namespace Maticsoft.Web.Accounts.Admin
+namespace Jium.Web.Accounts.Admin
 {
 	/// <summary>
 	/// UserAdmin 的摘要说明。
 	/// </summary>
-	public partial class UserAdmin : System.Web.UI.Page//Maticsoft.Web.Accounts.MoviePage
+	public partial class UserAdmin : System.Web.UI.Page//Jium.Web.Accounts.MoviePage
 	{
 		protected System.Web.UI.WebControls.ImageButton ImageButton1;
 //		protected int currentPage;

@@ -1,4 +1,4 @@
-﻿<%@ Page language="c#" Codebehind="search.aspx.cs" AutoEventWireup="True" Inherits="Maticsoft.Web.SysManage.search" %>
+﻿<%@ Page language="c#" Codebehind="search.aspx.cs" AutoEventWireup="True" Inherits="Jium.Web.SysManage.search" %>
 <%@ Register TagPrefix="uc1" TagName="CheckRight" Src="../../Controls/CheckRight.ascx" %>
 <%@ Register TagPrefix="uc1" TagName="CopyRight" Src="../../Controls/copyright.ascx" %>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" >

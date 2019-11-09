@@ -9,7 +9,7 @@ using System.Web.UI.WebControls;
 using System.Web.UI.WebControls.WebParts;
 using System.Web.UI.HtmlControls;
 using Microsoft.Web.UI.WebControls;
-namespace Maticsoft.Web.SysManage
+namespace Jium.Web.SysManage
 {
     public partial class IndexTree : System.Web.UI.Page
     {
@@ -29,7 +29,7 @@ namespace Maticsoft.Web.SysManage
         //邦定根节点
         public void BindTreeView()
         {
-            Maticsoft.BLL.SysManage bll = new Maticsoft.BLL.SysManage();
+            Jium.BLL.SysManage bll = new Jium.BLL.SysManage();
             DataTable dt = bll.GetTreeList("").Tables[0];
             DataRow[] drs = dt.Select("ParentID= " + 0);//选出所有子节点	
 

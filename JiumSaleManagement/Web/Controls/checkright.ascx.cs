@@ -41,20 +41,20 @@
                 string virtualPath = ConfigurationManager.AppSettings.Get("VirtualPath");
                 if (Context.User.Identity.IsAuthenticated)
                 {
-                    AccountsPrincipal user = new AccountsPrincipal(Context.User.Identity.Name);
-                    if (Session["UserInfo"] == null)
-                    {
-                        LTP.Accounts.Bus.User currentUser = new LTP.Accounts.Bus.User(user);
-                        Session["UserInfo"] = currentUser;
-                        Session["Style"] = currentUser.Style;
-                        Response.Write("<script defer>location.reload();</script>");
-                    }
-                    if ((PermissionID != -1) && (!user.HasPermissionID(PermissionID)))
-                    {
-                        Response.Clear();
-                        Response.Write("<script defer>window.alert('您没有权限进入本页！\\n请重新登录或与管理员联系');history.back();</script>");
-                        Response.End();
-                    }
+                    //AccountsPrincipal user = new AccountsPrincipal(Context.User.Identity.Name);
+                    //if (Session["UserInfo"] == null)
+                    //{
+                    //    LTP.Accounts.Bus.User currentUser = new LTP.Accounts.Bus.User(user);
+                    //    Session["UserInfo"] = currentUser;
+                    //    Session["Style"] = currentUser.Style;
+                    //    Response.Write("<script defer>location.reload();</script>");
+                    //}
+                    //if ((PermissionID != -1) && (!user.HasPermissionID(PermissionID)))
+                    //{
+                    //    Response.Clear();
+                    //    Response.Write("<script defer>window.alert('您没有权限进入本页！\\n请重新登录或与管理员联系');history.back();</script>");
+                    //    Response.End();
+                    //}
 
                 }
                 else

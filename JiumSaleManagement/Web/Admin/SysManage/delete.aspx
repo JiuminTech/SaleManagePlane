@@ -1,4 +1,4 @@
-﻿<%@ Page language="c#" Codebehind="delete.aspx.cs" AutoEventWireup="True" Inherits="Maticsoft.Web.SysManage.delete" %>
+﻿<%@ Page language="c#" Codebehind="delete.aspx.cs" AutoEventWireup="True" Inherits="Jium.Web.SysManage.delete" %>
 
 <%@ Register Src="../../Controls/checkright.ascx" TagName="checkright" TagPrefix="uc1" %>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" > 

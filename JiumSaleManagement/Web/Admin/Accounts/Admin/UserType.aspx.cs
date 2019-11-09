@@ -13,7 +13,7 @@ namespace Jium.Web.Accounts.Admin
 {
     public partial class UserType : System.Web.UI.Page
     {
-        LTP.Accounts.Bus.UserType ut = new LTP.Accounts.Bus.UserType();
+        //LTP.Accounts.Bus.UserType ut = new LTP.Accounts.Bus.UserType();
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!Page.IsPostBack)
@@ -33,7 +33,7 @@ namespace Jium.Web.Accounts.Admin
         }
         private void BindUserType()
         {
-            DataSet typelist = ut.GetAllList();
+            DataSet typelist = new DataSet();// ut.GetAllList();
             this.DataGrid1.DataSource = typelist;
             this.DataGrid1.DataBind();
         }
@@ -85,7 +85,7 @@ namespace Jium.Web.Accounts.Admin
             {
                 case "Delete":
                     {
-                        ut.Delete(UserType);
+                        //ut.Delete(UserType);
                         BindUserType();
                     }
                     break;
@@ -104,7 +104,7 @@ namespace Jium.Web.Accounts.Admin
             string desc = bTextBox.Text.Trim();
             if ((desc != "") && (usertype != ""))
             {
-                ut.Update(usertype, desc);
+               // ut.Update(usertype, desc);
             }
             //恢复状态
             DataGrid1.EditItemIndex = -1;
@@ -129,10 +129,15 @@ namespace Jium.Web.Accounts.Admin
             string usertype = txtUserType.Text.Trim();
             string desc = txtDescription.Text.Trim();
 
-            ut.Add(usertype,desc);
+            //ut.Add(usertype,desc);
             BindUserType();
         }
 
         
+    }
+
+    public class UserTypeBus
+    {
+
     }
 }

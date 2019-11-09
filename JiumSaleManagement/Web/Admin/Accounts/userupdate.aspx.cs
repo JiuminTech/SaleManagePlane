@@ -11,7 +11,7 @@ using System.Web.UI.HtmlControls;
 using LTP.Accounts.Bus;
 using System.Configuration;
 
-namespace Maticsoft.Web.Accounts
+namespace Jium.Web.Accounts
 {
 	/// <summary>
 	/// userupdate 的摘要说明。
