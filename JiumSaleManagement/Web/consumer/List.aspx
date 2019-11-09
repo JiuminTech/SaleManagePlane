@@ -69,6 +69,8 @@
                             
                             <asp:HyperLinkField HeaderText="详细" ControlStyle-Width="50" DataNavigateUrlFields="id" DataNavigateUrlFormatString="Show.aspx?id={0}"
                                 Text="详细"  />
+                        <asp:HyperLinkField HeaderText="消费详细" ControlStyle-Width="50" DataNavigateUrlFields="id" DataNavigateUrlFormatString="~/piorecord/Show.aspx?id={0}"
+                                Text="详细"  />
                             <asp:HyperLinkField HeaderText="编辑" ControlStyle-Width="50" DataNavigateUrlFields="id" DataNavigateUrlFormatString="Modify.aspx?id={0}"
                                 Text="编辑"  />
                             <asp:TemplateField ControlStyle-Width="50" HeaderText="删除"   Visible="false"  >
