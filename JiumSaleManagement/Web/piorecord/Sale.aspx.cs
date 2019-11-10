@@ -39,12 +39,13 @@ namespace Jium.Web.piorecord
             txtCcode.Text = consumers[0].ccode;
             txtCname.Text = consumers[0].cname;
             txtSumMoney.Text = consumers[0].csum.ToString();
+            LinkButtonBuyHistory.PostBackUrl = string.Format("~/piorecord/list.aspx?id={0}", consumers[0].ccode);
+            LinkButtonBuyHistory.Enabled = true;
+            LinkButtonServiceHistory.PostBackUrl = string.Format("~/consumerservice/list.aspx?id={0}", consumers[0].ccode);
+            LinkButtonServiceHistory.Enabled = true;
         }
 
-        protected void btnCancle_Click(object sender, EventArgs e)
-        {
-        }
-
+  
         protected void ButtonAllZekou_Click(object sender, EventArgs e)
         {
             
@@ -60,6 +61,60 @@ namespace Jium.Web.piorecord
         protected void btnAddProduct_Click(object sender, EventArgs e)
         {
             GetSelIDlist();
+
+        }
+        protected void btnPlibAdd_Click(object sender, EventArgs e)
+        {
+            var btn = (Button)sender;
+            var index = ((GridViewRow)btn.Parent.Parent).RowIndex;
+            var sNum = gridViewLib.Rows[index].Cells[5].Text;
+
+            var lst = new List<Jium.Model.piorecord>();            
+            //#warning 代码生成警告：请检查确认Cells的列索引是否正确
+            if (gridViewLib.DataKeys[index].Value != null)
+            {
+                var model = new Jium.Model.piorecord();
+                model.pcode = gridViewLib.Rows[index].Cells[1].Text;// i.ToString();
+                model.pios3 = gridViewLib.Rows[index].Cells[2].Text;// gridViewLib.Rows[i].Cells[3].ToString();                        
+                model.pzekou = 1;
+                model.pcnt = 1;
+                model.piod1 = 0;
+                string where = string.Format("pcode='{0}'", model.pcode);
+                var productBll = new Jium.BLL.product();
+                var lstProduct = productBll.GetModelList(where);
+                if (lstProduct.Count > 0)
+                {
+                    model.psaleprice = lstProduct.FirstOrDefault().psaleprice;
+                    model.piod1 = lstProduct.FirstOrDefault().pd1;
+                    model.pios4 = lstProduct.FirstOrDefault().ps1;
+                }
+                lst.Add(model);
+
+            }
+
+            for (int i = 0; i < gridViewBuy.Rows.Count; i++)
+            {
+                var model = new Jium.Model.piorecord();
+                model.pcode = gridViewBuy.Rows[i].Cells[0].Text;
+                model.pios3 = gridViewBuy.Rows[i].Cells[1].Text;
+                model.psaleprice = decimal.Parse(gridViewBuy.Rows[i].Cells[3].Text);
+                model.pcnt = int.Parse(gridViewBuy.Rows[i].Cells[5].Text);
+                model.pzekou = decimal.Parse(gridViewBuy.Rows[i].Cells[6].Text);
+                lst.Add(model);
+            }
+
+            gridViewBuy.DataSource = lst;
+            var sumTotal = lst.Sum(e1 => e1.pcnt * e1.psaleprice);
+            var sumReal = lst.Sum(e1 => e1.pcnt * e1.psaleprice * e1.pzekou);
+            var zekou = sumTotal == 0 ? 1 : sumReal / sumTotal;
+
+            txtSumTotal.Text = sumTotal.ToString();
+            txtSumReal.Text = sumReal.ToString();
+            txtZekou.Text = zekou.ToString();
+
+
+            gridViewBuy.DataBind();
+
 
         }
 
@@ -137,8 +192,7 @@ namespace Jium.Web.piorecord
             {
                 idlist = idlist.Substring(0, idlist.LastIndexOf(","));
             }
-
-            decimal sum = 0;
+            
             for(int i=0; i< gridViewBuy.Rows.Count; i++)
             {
                 var model = new Jium.Model.piorecord();
@@ -173,6 +227,8 @@ namespace Jium.Web.piorecord
         }
 
 
+
+
         protected void gridView_PageIndexChanging(object sender, GridViewPageEventArgs e)
         {
             gridViewLib.PageIndex = e.NewPageIndex;
@@ -190,8 +246,8 @@ namespace Jium.Web.piorecord
             e.Row.Attributes.Add("style", "background:#FFF");
             if (e.Row.RowType == DataControlRowType.DataRow)
             {
-                LinkButton linkbtnDel = (LinkButton)e.Row.FindControl("LinkButton1");
-                linkbtnDel.Attributes.Add("onclick", "return confirm(\"你确认要删除吗\")");
+                //LinkButton linkbtnDel = (LinkButton)e.Row.FindControl("LinkButton1");
+                //linkbtnDel.Attributes.Add("onclick", "return confirm(\"你确认要删除吗\")");
 
                 //object obj1 = DataBinder.Eval(e.Row.DataItem, "Levels");
                 //if ((obj1 != null) && ((obj1.ToString() != "")))
@@ -308,6 +364,48 @@ namespace Jium.Web.piorecord
             consumerBll.Update(lstConsumer[0]);
 
 
+        }
+        protected void btnProductZekou_Click(object sender, EventArgs e)
+        {
+            //#warning 代码生成警告：请检查确认真实主键的名称和类型是否正确
+            var btn = (Button)sender;
+            var index = ((GridViewRow)btn.Parent.Parent).RowIndex;
+
+            //var sNum = e.Row.Cells[3].Text;
+            //if (string.IsNullOrWhiteSpace(sNum) || sNum.Trim() == "1")
+            //gridViewBuy.DeleteRow(index);
+            //else
+            {
+                int cnt = int.Parse(gridViewBuy.Rows[index].Cells[5].Text) - 1;
+                gridViewBuy.Rows[index].Cells[5].Text = cnt.ToString();
+            }
+        }
+        protected void btnProductZekouUpdate_Click(object sender, EventArgs e)
+        {
+            //#warning 代码生成警告：请检查确认真实主键的名称和类型是否正确
+            var btn = (Button)sender;
+            var index = ((GridViewRow)btn.Parent.Parent).RowIndex;
+        }
+
+
+        protected void btnProductClear_Click(object sender, EventArgs e)
+        {
+            //#warning 代码生成警告：请检查确认真实主键的名称和类型是否正确
+            var btn = (Button)sender;
+            
+
+            gridViewBuy.DataSource = new List<Jium.Model.piorecord>();
+            txtSumTotal.Text = "";
+            txtSumReal.Text = "";
+            txtZekou.Text = "";
+            gridViewBuy.DataBind();
+        }
+        protected void btnProductHold_Click(object sender, EventArgs e)
+        {
+            //#warning 代码生成警告：请检查确认真实主键的名称和类型是否正确
+            var btn = (Button)sender;
+            
+                        
         }
     }
 }

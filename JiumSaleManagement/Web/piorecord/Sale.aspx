@@ -43,7 +43,8 @@
 		<asp:TextBox id="txtSumMoney" runat="server" Width="200px" Enabled="false"></asp:TextBox>
 	</td>
         <td height="25" width="20%" align="right">
-		 <asp:LinkButton ID="LinkButtonBuyHistory" runat="server" PostDataFileds="id"  Text="购买记录" PostBackUrl="~/piorecord/list.aspx"></asp:LinkButton>
+		 <asp:LinkButton ID="LinkButtonBuyHistory" runat="server" PostDataFileds="id" Enabled="false"  Text="消费记录" PostBackUrl="~/piorecord/list.aspx"></asp:LinkButton>
+         <asp:LinkButton ID="LinkButtonServiceHistory" runat="server" PostDataFileds="id"  Enabled="false" Text="服务记录" PostBackUrl="~/consumerservice/list.aspx"></asp:LinkButton>
 	</td>
     </tr>
     <tr>
@@ -108,8 +109,11 @@
                 <asp:Button ID="btnConfirmSale" runat="server" Text="销售确认"
                     OnClick="btnConfirmSale_Click" class="inputbutton" onmouseover="this.className='inputbutton_hover'"
                     onmouseout="this.className='inputbutton'"></asp:Button>
-                <asp:Button ID="btnCancle" runat="server" Text="取消"
-                    OnClick="btnCancle_Click" class="inputbutton" onmouseover="this.className='inputbutton_hover'"
+                <asp:Button ID="ButtonHold" runat="server" Text="挂起"
+                    OnClick="btnProductHold_Click" class="inputbutton" onmouseover="this.className='inputbutton_hover'"
+                    onmouseout="this.className='inputbutton'"></asp:Button>
+                <asp:Button ID="btnCLear" runat="server" Text="清空"
+                    OnClick="btnProductClear_Click" class="inputbutton" onmouseover="this.className='inputbutton_hover'"
                     onmouseout="this.className='inputbutton'"></asp:Button>
             </td>
         </tr>
@@ -126,23 +130,21 @@
                         <asp:BoundField DataField="psaleprice" HeaderText="单价" SortExpression="psaleprice" ItemStyle-HorizontalAlign="Center"  />
           <asp:BoundField DataField="piod1" HeaderText="售后次数"  ItemStyle-HorizontalAlign="Center"  />               
 		<asp:BoundField DataField="pcnt" HeaderText="购买量" SortExpression="psalecnt"  ItemStyle-HorizontalAlign="Center"  /> 
-                        <asp:BoundField DataField="pzekou" HeaderText="折扣系数" SortExpression="pzekou" ItemStyle-HorizontalAlign="Center"  />
+                        <asp:BoundField DataField="pzekou" HeaderText="折扣系数"  ItemStyle-HorizontalAlign="Center"  />
 
-                            <asp:TemplateField ControlStyle-Width="50" HeaderText="增减"   Visible="true"  >
+                            <asp:TemplateField ControlStyle-Width="100" HeaderText="操作"   Visible="true"  >
                                 <ItemTemplate>
+                                    <asp:Button ID="ButtonZekou" tag="pcode" runat="server" Text="调价"  OnClick="btnProductZekou_Click" >
+                    </asp:Button>
                                     <asp:Button ID="ButtonProductAdd" tag="pcode" runat="server" Text="增加"  OnClick="btnProductAdd_Click" >
                     </asp:Button>
                                     <asp:Button ID="btnProductPlus" tag="pcode" runat="server" Text="减少"  OnClick="btnProductPlus_Click" >
                     </asp:Button>
-                                </ItemTemplate>
-                            </asp:TemplateField>
-                         <asp:TemplateField ControlStyle-Width="50" HeaderText="删除"   Visible="true"  >
-                                <ItemTemplate>
                                     <asp:LinkButton ID="LinkButtonDelCur" runat="server" CausesValidation="False" CommandName="Delete"
-                                         Text="删除"></asp:LinkButton>
-
+                                         Text="移除"></asp:LinkButton>
                                 </ItemTemplate>
                             </asp:TemplateField>
+                         
                         </Columns>
                 </asp:GridView>
 
@@ -185,10 +187,12 @@
                         		<asp:BoundField DataField="pls1" HeaderText="位置" SortExpression="pls1" ItemStyle-HorizontalAlign="Center"  />                             
                             <asp:HyperLinkField HeaderText="详细" ControlStyle-Width="50" DataNavigateUrlFields="id,pcode" DataNavigateUrlFormatString="~/plib/Show.aspx?id0={0}&id1={1}"
                                 Text="详细"  /> 
-                        <asp:TemplateField ControlStyle-Width="50" HeaderText="删除"   Visible="true"  >
+                        <asp:TemplateField ControlStyle-Width="50" HeaderText="操作"   Visible="true"  >
                                 <ItemTemplate>
-                                    <asp:LinkButton ID="LinkButton1" runat="server" CausesValidation="False" CommandName="Delete"
-                                         Text="删除"></asp:LinkButton>
+                                     <asp:Button ID="ButtonPlibAdd" tag="pcode" runat="server" Text="添加"  OnClick="btnPlibAdd_Click" >
+                    </asp:Button>
+                                    <%--<asp:LinkButton ID="LinkButton1" runat="server" CausesValidation="False" CommandName="Delete"
+                                         Text="删除"></asp:LinkButton>--%>
                                 </ItemTemplate>
                             </asp:TemplateField>  
                         </Columns>
@@ -198,7 +202,7 @@
                     <td style="width: 1px;">                        
                     </td>
                     <td align="left">
-                        <asp:Button ID="btnAdd" runat="server" Text="添加" OnClick="btnAddProduct_Click"/>                       
+                        <asp:Button ID="btnAdd" runat="server" Text="批量添加" OnClick="btnAddProduct_Click"/>                       
                     </td>
                 </tr>
             </table>

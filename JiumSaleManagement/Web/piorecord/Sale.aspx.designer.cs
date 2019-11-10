@@ -76,6 +76,15 @@ namespace Jium.Web.piorecord {
         protected global::System.Web.UI.WebControls.LinkButton LinkButtonBuyHistory;
         
         /// <summary>
+        /// LinkButtonServiceHistory 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.LinkButton LinkButtonServiceHistory;
+        
+        /// <summary>
         /// txtSumTotal 控件。
         /// </summary>
         /// <remarks>
@@ -148,13 +157,22 @@ namespace Jium.Web.piorecord {
         protected global::System.Web.UI.WebControls.Button btnConfirmSale;
         
         /// <summary>
-        /// btnCancle 控件。
+        /// ButtonHold 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnCancle;
+        protected global::System.Web.UI.WebControls.Button ButtonHold;
+        
+        /// <summary>
+        /// btnCLear 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnCLear;
         
         /// <summary>
         /// gridViewBuy 控件。

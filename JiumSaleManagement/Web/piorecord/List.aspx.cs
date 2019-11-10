@@ -22,12 +22,16 @@ namespace Jium.Web.piorecord
         {
             if (PreviousPage != null)
             {
-                if (PreviousPage.IsCrossPagePostBack)
+                //if (PreviousPage.IsCrossPagePostBack)
+                //{
+                //    var pp_Textbox1 = (TextBox)PreviousPage.FindControl("txtCcode");
+                //    keyword = "8001";// pp_Textbox1.Text;
+                //}
+                if (Request.Params["id"] != null && Request.Params["id"].Trim() != "")
                 {
-                    var pp_Textbox1 = (TextBox)PreviousPage.FindControl("txtCcode");
-                    keyword = "8001";// pp_Textbox1.Text;
+                    keyword = Request.Params["id"];
                 }
-            }
+            } 
 
             if (!Page.IsPostBack)
             {
