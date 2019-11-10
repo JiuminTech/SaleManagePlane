@@ -41,24 +41,24 @@
                                 </ItemTemplate>
                             </asp:TemplateField> 
                             
-		<asp:BoundField DataField="ccode" HeaderText="ccode" SortExpression="ccode" ItemStyle-HorizontalAlign="Center"  /> 
-		<asp:BoundField DataField="cphone" HeaderText="cphone" SortExpression="cphone" ItemStyle-HorizontalAlign="Center"  /> 
-		<asp:BoundField DataField="cstype" HeaderText="cstype" SortExpression="cstype" ItemStyle-HorizontalAlign="Center"  /> 
-		<asp:BoundField DataField="csnum" HeaderText="csnum" SortExpression="csnum" ItemStyle-HorizontalAlign="Center"  /> 
-		<asp:BoundField DataField="csleft" HeaderText="csleft" SortExpression="csleft" ItemStyle-HorizontalAlign="Center"  /> 
-		<asp:BoundField DataField="csiostatus" HeaderText="csiostatus" SortExpression="csiostatus" ItemStyle-HorizontalAlign="Center"  /> 
-		<asp:BoundField DataField="cstime0" HeaderText="cstime0" SortExpression="cstime0" ItemStyle-HorizontalAlign="Center"  /> 
-		<asp:BoundField DataField="cstime1" HeaderText="cstime1" SortExpression="cstime1" ItemStyle-HorizontalAlign="Center"  /> 
-		<asp:BoundField DataField="cstime2" HeaderText="cstime2" SortExpression="cstime2" ItemStyle-HorizontalAlign="Center"  /> 
-		<asp:BoundField DataField="cstime3" HeaderText="cstime3" SortExpression="cstime3" ItemStyle-HorizontalAlign="Center"  /> 
-		<asp:BoundField DataField="cstime4" HeaderText="cstime4" SortExpression="cstime4" ItemStyle-HorizontalAlign="Center"  /> 
-		<asp:BoundField DataField="cstime5" HeaderText="cstime5" SortExpression="cstime5" ItemStyle-HorizontalAlign="Center"  /> 
-		<asp:BoundField DataField="cstime6" HeaderText="cstime6" SortExpression="cstime6" ItemStyle-HorizontalAlign="Center"  /> 
-		<asp:BoundField DataField="cstime7" HeaderText="cstime7" SortExpression="cstime7" ItemStyle-HorizontalAlign="Center"  /> 
-		<asp:BoundField DataField="cstime8" HeaderText="cstime8" SortExpression="cstime8" ItemStyle-HorizontalAlign="Center"  /> 
-		<asp:BoundField DataField="cstime9" HeaderText="cstime9" SortExpression="cstime9" ItemStyle-HorizontalAlign="Center"  /> 
-		<asp:BoundField DataField="cstime10" HeaderText="cstime10" SortExpression="cstime10" ItemStyle-HorizontalAlign="Center"  /> 
-		<asp:BoundField DataField="css1" HeaderText="css1" SortExpression="css1" ItemStyle-HorizontalAlign="Center"  /> 
+		<asp:BoundField DataField="ccode" HeaderText="顾客ID" SortExpression="ccode" ItemStyle-HorizontalAlign="Center"  /> 
+		<%--<asp:BoundField DataField="cphone" HeaderText="cphone" SortExpression="cphone" ItemStyle-HorizontalAlign="Center"  /> --%>
+		<asp:BoundField DataField="cstype" HeaderText="服务类型" SortExpression="cstype" ItemStyle-HorizontalAlign="Center"  /> 
+		<asp:BoundField DataField="csnum" HeaderText="总次数" SortExpression="csnum" ItemStyle-HorizontalAlign="Center"  /> 
+		<asp:BoundField DataField="csleft" HeaderText="剩余次数" SortExpression="csleft" ItemStyle-HorizontalAlign="Center"  /> 
+		<asp:BoundField DataField="csiostatus" HeaderText="状态" SortExpression="csiostatus" ItemStyle-HorizontalAlign="Center"  /> 
+		<asp:BoundField DataField="cstime0" HeaderText="订购日期" SortExpression="cstime0" ItemStyle-HorizontalAlign="Center"  /> 
+		<asp:BoundField DataField="cstime1" HeaderText="第一次" SortExpression="cstime1" ItemStyle-HorizontalAlign="Center"  /> 
+		<asp:BoundField DataField="cstime2" HeaderText="第二次" SortExpression="cstime2" ItemStyle-HorizontalAlign="Center"  /> 
+		<asp:BoundField DataField="cstime3" HeaderText="第三次" SortExpression="cstime3" ItemStyle-HorizontalAlign="Center"  /> 
+		<asp:BoundField DataField="cstime4" HeaderText="第四次" SortExpression="cstime4" ItemStyle-HorizontalAlign="Center"  /> 
+		<asp:BoundField DataField="cstime5" HeaderText="第五次" SortExpression="cstime5" ItemStyle-HorizontalAlign="Center"  /> 
+		<asp:BoundField DataField="cstime6" HeaderText="第六次" SortExpression="cstime6" ItemStyle-HorizontalAlign="Center"  /> 
+		<asp:BoundField DataField="cstime7" HeaderText="第七次" SortExpression="cstime7" ItemStyle-HorizontalAlign="Center"  /> 
+		<asp:BoundField DataField="cstime8" HeaderText="第八次" SortExpression="cstime8" ItemStyle-HorizontalAlign="Center"  /> 
+		<asp:BoundField DataField="cstime9" HeaderText="第九次" SortExpression="cstime9" ItemStyle-HorizontalAlign="Center"  /> 
+		<asp:BoundField DataField="cstime10" HeaderText="第十次" SortExpression="cstime10" ItemStyle-HorizontalAlign="Center"  /> 
+		<%--<asp:BoundField DataField="css1" HeaderText="css1" SortExpression="css1" ItemStyle-HorizontalAlign="Center"  /> 
 		<asp:BoundField DataField="css2" HeaderText="css2" SortExpression="css2" ItemStyle-HorizontalAlign="Center"  /> 
 		<asp:BoundField DataField="css3" HeaderText="css3" SortExpression="css3" ItemStyle-HorizontalAlign="Center"  /> 
 		<asp:BoundField DataField="css4" HeaderText="css4" SortExpression="css4" ItemStyle-HorizontalAlign="Center"  /> 
@@ -67,7 +67,7 @@
 		<asp:BoundField DataField="csd2" HeaderText="csd2" SortExpression="csd2" ItemStyle-HorizontalAlign="Center"  /> 
 		<asp:BoundField DataField="csd3" HeaderText="csd3" SortExpression="csd3" ItemStyle-HorizontalAlign="Center"  /> 
 		<asp:BoundField DataField="csd4" HeaderText="csd4" SortExpression="csd4" ItemStyle-HorizontalAlign="Center"  /> 
-		<asp:BoundField DataField="csd5" HeaderText="csd5" SortExpression="csd5" ItemStyle-HorizontalAlign="Center"  /> 
+		<asp:BoundField DataField="csd5" HeaderText="csd5" SortExpression="csd5" ItemStyle-HorizontalAlign="Center"  /> --%>
                             
                             <asp:HyperLinkField HeaderText="详细" ControlStyle-Width="50" DataNavigateUrlFields="id" DataNavigateUrlFormatString="Show.aspx?id={0}"
                                 Text="详细"  />

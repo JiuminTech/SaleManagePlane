@@ -43,17 +43,17 @@
                                 </ItemTemplate>
                             </asp:TemplateField> 
                             
-		<asp:BoundField DataField="姓名" HeaderText="cname" SortExpression="cname" ItemStyle-HorizontalAlign="Center"  /> 
-		<asp:BoundField DataField="顾客ID" HeaderText="ccode" SortExpression="ccode" ItemStyle-HorizontalAlign="Center"  /> 
-		<asp:BoundField DataField="手机号码" HeaderText="cphone" SortExpression="cphone" ItemStyle-HorizontalAlign="Center"  /> 
-		<asp:BoundField DataField="Email" HeaderText="cemail" SortExpression="cemail" ItemStyle-HorizontalAlign="Center"  /> 
-		<asp:BoundField DataField="等级" HeaderText="clevel" SortExpression="clevel" ItemStyle-HorizontalAlign="Center"  /> 
-		<asp:BoundField DataField="总消费额" HeaderText="csum" SortExpression="csum" ItemStyle-HorizontalAlign="Center"  /> 
-		<asp:BoundField DataField="性别" HeaderText="csex" SortExpression="csex" ItemStyle-HorizontalAlign="Center"  /> 
-		<asp:BoundField DataField="备注" HeaderText="cremark" SortExpression="cremark" ItemStyle-HorizontalAlign="Center"  /> 
-		<%--<asp:BoundField DataField="css1" HeaderText="css1" SortExpression="css1" ItemStyle-HorizontalAlign="Center"  /> 
-		<asp:BoundField DataField="css2" HeaderText="css2" SortExpression="css2" ItemStyle-HorizontalAlign="Center"  /> 
-		<asp:BoundField DataField="css3" HeaderText="css3" SortExpression="css3" ItemStyle-HorizontalAlign="Center"  /> 
+		<asp:BoundField DataField="cname" HeaderText="姓名" SortExpression="cname" ItemStyle-HorizontalAlign="Center"  /> 
+		<asp:BoundField DataField="ccode" HeaderText="顾客ID" SortExpression="ccode" ItemStyle-HorizontalAlign="Center"  /> 
+		<asp:BoundField DataField="cphone" HeaderText="手机号码" SortExpression="cphone" ItemStyle-HorizontalAlign="Center"  /> 
+		<asp:BoundField DataField="cemail" HeaderText="Email" SortExpression="cemail" ItemStyle-HorizontalAlign="Center"  /> 
+		<asp:BoundField DataField="clevel" HeaderText="等级" SortExpression="clevel" ItemStyle-HorizontalAlign="Center"  /> 
+		<asp:BoundField DataField="csum" HeaderText="总消费额" SortExpression="csum" ItemStyle-HorizontalAlign="Center"  /> 
+		<asp:BoundField DataField="csex" HeaderText="性别" SortExpression="csex" ItemStyle-HorizontalAlign="Center"  /> 
+		<asp:BoundField DataField="cremark" HeaderText="备注" SortExpression="cremark" ItemStyle-HorizontalAlign="Center"  /> 
+		<asp:BoundField DataField="css1" HeaderText="更新时间" SortExpression="css1" ItemStyle-HorizontalAlign="Center"  /> 
+		<asp:BoundField DataField="css2" HeaderText="服务工号" SortExpression="css2" ItemStyle-HorizontalAlign="Center"  /> 
+		<%--<asp:BoundField DataField="css3" HeaderText="css3" SortExpression="css3" ItemStyle-HorizontalAlign="Center"  /> 
 		<asp:BoundField DataField="css4" HeaderText="css4" SortExpression="css4" ItemStyle-HorizontalAlign="Center"  /> 
 		<asp:BoundField DataField="css5" HeaderText="css5" SortExpression="css5" ItemStyle-HorizontalAlign="Center"  /> 
 		<asp:BoundField DataField="csd1" HeaderText="csd1" SortExpression="csd1" ItemStyle-HorizontalAlign="Center"  /> 
@@ -67,10 +67,12 @@
 		<asp:BoundField DataField="csdc4" HeaderText="csdc4" SortExpression="csdc4" ItemStyle-HorizontalAlign="Center"  /> 
 		<asp:BoundField DataField="csdc5" HeaderText="csdc5" SortExpression="csdc5" ItemStyle-HorizontalAlign="Center"  /> --%>
                             
-                            <asp:HyperLinkField HeaderText="详细" ControlStyle-Width="50" DataNavigateUrlFields="id" DataNavigateUrlFormatString="Show.aspx?id={0}"
-                                Text="详细"  />
-                        <asp:HyperLinkField HeaderText="消费详细" ControlStyle-Width="50" DataNavigateUrlFields="id" DataNavigateUrlFormatString="~/piorecord/Show.aspx?id={0}"
-                                Text="详细"  />
+                            <%--<asp:HyperLinkField HeaderText="详细" ControlStyle-Width="50" DataNavigateUrlFields="id" DataNavigateUrlFormatString="Show.aspx?id={0}"
+                                Text="详细"  />--%>
+                        <asp:HyperLinkField HeaderText="消费详细" ControlStyle-Width="50" DataNavigateUrlFields="ccode" DataNavigateUrlFormatString="~/piorecord/List.aspx?id={0}"
+                                Text="消费详细"  />
+                        <asp:HyperLinkField HeaderText="服务详细" ControlStyle-Width="50" DataNavigateUrlFields="ccode" DataNavigateUrlFormatString="~/consumerservice/List.aspx?id={0}"
+                                Text="服务详细"  />
                             <asp:HyperLinkField HeaderText="编辑" ControlStyle-Width="50" DataNavigateUrlFields="id" DataNavigateUrlFormatString="Modify.aspx?id={0}"
                                 Text="编辑"  />
                             <asp:TemplateField ControlStyle-Width="50" HeaderText="删除"   Visible="false"  >

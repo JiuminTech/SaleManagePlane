@@ -16,9 +16,17 @@ namespace Xwsw.Web.NMS.consumerservice
         
         
 		Jium.BLL.consumerservice bll = new Jium.BLL.consumerservice();
-
+        public string keyword = "";
         protected void Page_Load(object sender, EventArgs e)
         {
+            //if (PreviousPage != null)
+            //{
+                
+                if (Request.Params["id"] != null && Request.Params["id"].Trim() != "")
+                {
+                    keyword = Request.Params["id"];
+                }
+            //}
             if (!Page.IsPostBack)
             {
                 gridView.BorderColor = ColorTranslator.FromHtml(Application[Session["Style"].ToString() + "xtable_bordercolorlight"].ToString());
@@ -64,6 +72,7 @@ namespace Xwsw.Web.NMS.consumerservice
 
             DataSet ds = new DataSet();
             StringBuilder strWhere = new StringBuilder();
+            if (!string.IsNullOrWhiteSpace(keyword)) strWhere.AppendFormat("ccode = {0}", keyword);
             if (txtKeyword.Text.Trim() != "")
             {      
                 #warning 代码生成警告：请修改 keywordField 为需要匹配查询的真实字段名称
