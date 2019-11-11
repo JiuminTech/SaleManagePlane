@@ -14,12 +14,16 @@
 		手机号码
 	：</td>
 	<td height="25" width="*" align="left">
-		<asp:TextBox id="txtCphone" runat="server" Width="200px"></asp:TextBox>
+		<asp:TextBox id="txtCphone" runat="server" Width="150px"></asp:TextBox>
+        <asp:Button ID="btnSearchConsumer" runat="server" Text="查询"  OnClick="btnSearchConsumer_Click" ></asp:Button>
 	</td>
         <td height="25" width="20%" align="right">
-		 <asp:Button ID="btnSearchConsumer" runat="server" Text="查询"  OnClick="btnSearchConsumer_Click" ></asp:Button> 
-         <asp:LinkButton ID="LinkButtonAdd" runat="server"   Text="新增" PostBackUrl="~/consumer/Add.aspx"></asp:LinkButton>
-        </td>	
+		姓名
+	：</td>
+	<td height="25" width="*" align="left">
+		<asp:TextBox id="txtCname" runat="server" Width="200px"  Enabled="false"></asp:TextBox>
+	</td>
+       
     </tr>
     <tr>
 	<td height="25" width="20%" align="right">
@@ -29,24 +33,13 @@
 		<asp:TextBox id="txtCcode" runat="server" Width="200px" Enabled="false"></asp:TextBox>
 	</td>
         <td height="25" width="20%" align="right">
-		姓名
-	：</td>
-	<td height="25" width="*" align="left">
-		<asp:TextBox id="txtCname" runat="server" Width="200px"  Enabled="false"></asp:TextBox>
-	</td>
-    </tr>
-    <tr>
-	<td height="25" width="20%" align="right">
 		总消费金额
 	：</td>
 	<td height="25" width="*" align="left">
 		<asp:TextBox id="txtSumMoney" runat="server" Width="200px" Enabled="false"></asp:TextBox>
-	</td>
-        <td height="25" width="20%" align="right">
-		 <asp:LinkButton ID="LinkButtonBuyHistory" runat="server" PostDataFileds="id" Enabled="false"  Text="消费记录" PostBackUrl="~/piorecord/list.aspx"></asp:LinkButton>
-         <asp:LinkButton ID="LinkButtonServiceHistory" runat="server" PostDataFileds="id"  Enabled="false" Text="服务记录" PostBackUrl="~/consumerservice/list.aspx"></asp:LinkButton>
-	</td>
+	</td>        
     </tr>
+
     <tr>
 	<td height="25" width="20%" align="right">
 		商品总价
@@ -58,8 +51,8 @@
 		折扣系数
 	：</td>
 	<td height="25" width="*" align="left">
-		<asp:TextBox id="txtZekou" runat="server" Width="200px"></asp:TextBox>
-        <asp:Button ID="ButtonAllZekou" runat="server" Text="整单折扣"
+		<asp:TextBox id="txtZekou" runat="server" Width="100px"></asp:TextBox>
+        <asp:Button ID="ButtonAllZekou" runat="server" Text="整单折扣"  
                     OnClick="ButtonAllZekou_Click" class="inputbutton" onmouseover="this.className='inputbutton_hover'"
                     onmouseout="this.className='inputbutton'"></asp:Button>
 	</td>
@@ -115,6 +108,10 @@
                 <asp:Button ID="btnCLear" runat="server" Text="清空"
                     OnClick="btnProductClear_Click" class="inputbutton" onmouseover="this.className='inputbutton_hover'"
                     onmouseout="this.className='inputbutton'"></asp:Button>
+                <asp:LinkButton ID="LinkButtonBuyHistory" runat="server" PostDataFileds="id" Enabled="false"  Text="消费记录" PostBackUrl="~/piorecord/list.aspx"></asp:LinkButton>
+         <asp:LinkButton ID="LinkButtonServiceHistory" runat="server" PostDataFileds="id"  Enabled="false" Text="服务记录" PostBackUrl="~/consumerservice/list.aspx"></asp:LinkButton>
+                <asp:LinkButton ID="LinkButton1" runat="server"   Text="新增会员" PostBackUrl="~/consumer/Add.aspx"></asp:LinkButton>
+
             </td>
         </tr>
                  <tr>
@@ -156,7 +153,7 @@
                 <table style="width: 100%;" cellpadding="2" cellspacing="1" class="border">
                 <tr>
                     <td style="width: 80px" align="right" class="tdbg">
-                         <b>关键字模糊查询：</b>
+                         <b>模糊查询：</b>
                     </td>
                     <td class="tdbg">                       
                     <asp:TextBox ID="txtKeyword" runat="server" PlaceHolder="货号/名称/描述"></asp:TextBox>

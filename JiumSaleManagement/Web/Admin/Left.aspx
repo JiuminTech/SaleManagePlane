@@ -1,5 +1,4 @@
-﻿<%@ Register TagPrefix="iewc" Namespace="Microsoft.Web.UI.WebControls" Assembly="Jium.Web.UI.WebControls, Version=1.0.2.226, Culture=neutral, PublicKeyToken=31bf3856ad364e35" %>
-<%@ Register TagPrefix="uc1" TagName="CheckRight" Src="../Controls/CheckRight.ascx" %>
+﻿<%@ Register TagPrefix="uc1" TagName="CheckRight" Src="../Controls/CheckRight.ascx" %>
 <%@ Page language="c#" Codebehind="Left.aspx.cs" AutoEventWireup="True" Inherits="Jium.Web.Admin.Left" %>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" >
 <HTML>
@@ -20,8 +19,7 @@
 					<td height="100%" valign="top" background='<%=Application[Session["Style"].ToString()+"xleftbj_bgimage"]%>'>
 						<div align="left"><font color="#314a72">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<%= strWelcome %></font></div>
 						<br>
-						&nbsp;
-						<iewc:treeview id="TreeView1" runat="server" SelectExpands="True"></iewc:treeview></td>
+						
 				</tr>
 				<tr>
 					<td height="19"><img src='<%=Application[Session["Style"].ToString()+"xleft2_bgimage"]%>' width="200" height="19"></td>

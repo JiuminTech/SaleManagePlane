@@ -16,7 +16,7 @@
             <table style="width: 100%;" cellpadding="2" cellspacing="1" class="border">
                 <tr>
                     <td style="width: 80px" align="right" class="tdbg">
-                         <b>关键字模糊查询：</b>
+                         <b>模糊查询：</b>
                     </td>
                     <td class="tdbg">                       
                     <asp:TextBox ID="txtKeyword" runat="server" PlaceHolder="货号/名称/描述"></asp:TextBox>

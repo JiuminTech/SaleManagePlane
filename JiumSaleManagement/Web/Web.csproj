@@ -365,6 +365,7 @@
     <Content Include="historyalarm\Show.aspx" />
     <Content Include="js\calendar1.js" />
     <Content Include="js\CheckBox.js" />
+    <Content Include="js\tabControl.js" />
     <Content Include="pgroup\Add.aspx" />
     <Content Include="pgroup\delete.aspx" />
     <Content Include="pgroup\List.aspx" />

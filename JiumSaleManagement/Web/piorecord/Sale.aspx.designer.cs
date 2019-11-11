@@ -31,13 +31,13 @@ namespace Jium.Web.piorecord {
         protected global::System.Web.UI.WebControls.Button btnSearchConsumer;
         
         /// <summary>
-        /// LinkButtonAdd 控件。
+        /// txtCname 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton LinkButtonAdd;
+        protected global::System.Web.UI.WebControls.TextBox txtCname;
         
         /// <summary>
         /// txtCcode 控件。
@@ -49,15 +49,6 @@ namespace Jium.Web.piorecord {
         protected global::System.Web.UI.WebControls.TextBox txtCcode;
         
         /// <summary>
-        /// txtCname 控件。
-        /// </summary>
-        /// <remarks>
-        /// 自动生成的字段。
-        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtCname;
-        
-        /// <summary>
         /// txtSumMoney 控件。
         /// </summary>
         /// <remarks>
@@ -65,24 +56,6 @@ namespace Jium.Web.piorecord {
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtSumMoney;
-        
-        /// <summary>
-        /// LinkButtonBuyHistory 控件。
-        /// </summary>
-        /// <remarks>
-        /// 自动生成的字段。
-        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton LinkButtonBuyHistory;
-        
-        /// <summary>
-        /// LinkButtonServiceHistory 控件。
-        /// </summary>
-        /// <remarks>
-        /// 自动生成的字段。
-        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton LinkButtonServiceHistory;
         
         /// <summary>
         /// txtSumTotal 控件。
@@ -173,6 +146,33 @@ namespace Jium.Web.piorecord {
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnCLear;
+        
+        /// <summary>
+        /// LinkButtonBuyHistory 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.LinkButton LinkButtonBuyHistory;
+        
+        /// <summary>
+        /// LinkButtonServiceHistory 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.LinkButton LinkButtonServiceHistory;
+        
+        /// <summary>
+        /// LinkButton1 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.LinkButton LinkButton1;
         
         /// <summary>
         /// gridViewBuy 控件。

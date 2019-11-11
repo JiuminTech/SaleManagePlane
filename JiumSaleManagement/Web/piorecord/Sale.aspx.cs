@@ -54,8 +54,11 @@ namespace Jium.Web.piorecord
                 gridViewBuy.Rows[i].Cells[6].Text = txtZekou.Text;          ;
                 
             }
-            decimal sum =  decimal.Parse(txtSumTotal.Text) * decimal.Parse(txtZekou.Text);
-            txtSumReal.Text = sum.ToString();
+            if (!string.IsNullOrWhiteSpace(txtSumTotal.Text) && !string.IsNullOrWhiteSpace(txtZekou.Text))
+            {
+                decimal sum = decimal.Parse(txtSumTotal.Text) * decimal.Parse(txtZekou.Text);
+                txtSumReal.Text = sum.ToString();
+            }
         }
 
         protected void btnAddProduct_Click(object sender, EventArgs e)

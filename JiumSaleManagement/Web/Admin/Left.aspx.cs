@@ -23,21 +23,21 @@ namespace Jium.Web.Admin
 				
 			if(!Page.IsPostBack)
 			{
-				user=new AccountsPrincipal(Context.User.Identity.Name);
-				if(Session["UserInfo"]==null)
-				{
-					return ;				
-				}
-				currentUser=(LTP.Accounts.Bus.User)Session["UserInfo"];
-				Jium.BLL.SysManage sm=new Jium.BLL.SysManage();
-				DataSet ds;			
-				ds=sm.GetTreeList("");
-				BindTreeView("mainFrame",ds.Tables[0]);
+				//user=new AccountsPrincipal(Context.User.Identity.Name);
+				//if(Session["UserInfo"]==null)
+				//{
+				//	return ;				
+				//}
+				//currentUser=(LTP.Accounts.Bus.User)Session["UserInfo"];
+				//Jium.BLL.SysManage sm=new Jium.BLL.SysManage();
+				//DataSet ds;			
+				//ds=sm.GetTreeList("");
+				//BindTreeView("mainFrame",ds.Tables[0]);
 
-				if(this.TreeView1.Nodes.Count==0)
-				{
-					strWelcome+="<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;但你没有任何模块的访问权";
-				}
+				//if(this.TreeView1.Nodes.Count==0)
+				//{
+				//	strWelcome+="<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;但你没有任何模块的访问权";
+				//}
 				
 			}
 		}
