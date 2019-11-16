@@ -85,6 +85,15 @@ namespace Jium.Web.product {
         protected global::System.Web.UI.WebControls.TextBox txtpdesc;
         
         /// <summary>
+        /// txtpd1 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtpd1;
+        
+        /// <summary>
         /// txtps1 控件。
         /// </summary>
         /// <remarks>
@@ -128,15 +137,6 @@ namespace Jium.Web.product {
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtps5;
-        
-        /// <summary>
-        /// txtpd1 控件。
-        /// </summary>
-        /// <remarks>
-        /// 自动生成的字段。
-        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtpd1;
         
         /// <summary>
         /// txtpd2 控件。

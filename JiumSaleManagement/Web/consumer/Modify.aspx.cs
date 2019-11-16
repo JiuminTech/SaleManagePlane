@@ -41,21 +41,21 @@ namespace Jium.Web.consumer
 		this.txtcsum.Text=model.csum.ToString();
 		this.txtcsex.Text=model.csex.ToString();
 		this.txtcremark.Text=model.cremark;
-		this.txtcss1.Text=model.css1;
-		this.txtcss2.Text=model.css2;
-		this.txtcss3.Text=model.css3;
-		this.txtcss4.Text=model.css4;
-		this.txtcss5.Text=model.css5;
-		this.txtcsd1.Text=model.csd1.ToString();
-		this.txtcsd2.Text=model.csd2.ToString();
-		this.txtcsd3.Text=model.csd3.ToString();
-		this.txtcsd4.Text=model.csd4.ToString();
-		this.txtcsd5.Text=model.csd5.ToString();
-		this.txtcsdc1.Text=model.csdc1.ToString();
-		this.txtcsdc2.Text=model.csdc2.ToString();
-		this.txtcsdc3.Text=model.csdc3.ToString();
-		this.txtcsdc4.Text=model.csdc4.ToString();
-		this.txtcsdc5.Text=model.csdc5.ToString();
+		//this.txtcss1.Text=model.css1;
+		//this.txtcss2.Text=model.css2;
+		//this.txtcss3.Text=model.css3;
+		//this.txtcss4.Text=model.css4;
+		//this.txtcss5.Text=model.css5;
+		//this.txtcsd1.Text=model.csd1.ToString();
+		//this.txtcsd2.Text=model.csd2.ToString();
+		//this.txtcsd3.Text=model.csd3.ToString();
+		//this.txtcsd4.Text=model.csd4.ToString();
+		//this.txtcsd5.Text=model.csd5.ToString();
+		//this.txtcsdc1.Text=model.csdc1.ToString();
+		//this.txtcsdc2.Text=model.csdc2.ToString();
+		//this.txtcsdc3.Text=model.csdc3.ToString();
+		//this.txtcsdc4.Text=model.csdc4.ToString();
+		//this.txtcsdc5.Text=model.csdc5.ToString();
 
 	}
 
@@ -198,7 +198,7 @@ namespace Jium.Web.consumer
 			model.csum=csum;
 			model.csex=csex;
 			model.cremark=cremark;
-			//model.css1=css1;
+			model.css1=DateTime.Now.ToString("yyyyMMddHHmmss");
 			//model.css2=css2;
 			//model.css3=css3;
 			//model.css4=css4;

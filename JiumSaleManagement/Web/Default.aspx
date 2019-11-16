@@ -4,6 +4,31 @@
 <head runat="server">
     <title>门店销售管理系统1</title>
     <link href="~/css/weixincss" type="text/css" rel="stylesheet" />
+    <style type="text/css"> 
+.Tab
+{
+display:block;
+white-space:nowrap;
+width:800px;
+overflow:auto;
+}
+.Tab li
+{
+width:80px;
+height:30px;
+margin:1px;
+background:green;
+display:inline-block;
+}
+.Tab li .Selected
+{
+width:80px;
+height:30px;
+margin:1px;
+background:gray;
+display:inline-block;
+}
+</style>
     <script language="javascript" src="/js/tabControl.js" type="text/javascript"></script>
 </head>
 <body>
@@ -13,11 +38,13 @@
             <div class="WeChatNews">
                 <div class="Tab">
                     <ul>
-                        <li><a id="T1" onclick="setTab('T',1,4)" href="javascript:void(0)" class="Selected">销售</a></li>
-                        <li><a id="T2" onclick="setTab('T',2,4)" href="javascript:void(0)">库存</a></li>
-                        <li><a id="T3" onclick="setTab('T',3,4)" href="javascript:void(0)">产品</a></li>
-                        <li><a id="T4" onclick="setTab('T',4,4)" href="javascript:void(0)">会员</a></li>
-                        
+                        <li><a id="T4" onclick="setTab('T',4,7)" href="javascript:void(0)">会员</a></li>
+                        <li><a id="T1" onclick="setTab('T',1,7)" href="javascript:void(0)" class="Selected">销售</a></li>
+                        <li><a id="T2" onclick="setTab('T',2,7)" href="javascript:void(0)">库存</a></li>
+                        <li><a id="T3" onclick="setTab('T',3,7)" href="javascript:void(0)">产品</a></li>                        
+                        <li><a id="T5" onclick="setTab('T',5,7)" href="javascript:void(0)">产品组合</a></li>
+                        <li><a id="T6" onclick="setTab('T',6,7)" href="javascript:void(0)">服务类型</a></li> 
+                        <li><a id="T7" onclick="setTab('T',7,7)" href="javascript:void(0)">销售记录</a></li>
                     </ul>
                 </div>
                 <div class="TabCon">
@@ -45,6 +72,21 @@
                     </div>
                     <div id="conT4" style="display: none;">
                         <iframe class="mainIframe" id="mainIframd" name="iframe_m" src='consumer/list.aspx' allowtransparency="true" style="background-color:lightgray; width:100%; height:500px" title="weibo" frameborder="1" scrolling="yes">
+                            您的浏览器不支持嵌入式框架，或者当前配置为不显示嵌入式框架。
+                        </iframe>
+                    </div>
+                    <div id="conT5" style="display: none;">
+                        <iframe class="mainIframe" id="mainIframe" name="iframe_m" src='pgroup/list.aspx' allowtransparency="true" style="background-color:lightgray; width:100%; height:500px" title="weibo" frameborder="1" scrolling="yes">
+                            您的浏览器不支持嵌入式框架，或者当前配置为不显示嵌入式框架。
+                        </iframe>
+                    </div>
+                    <div id="conT6" style="display: none;">
+                        <iframe class="mainIframe" id="mainIframf" name="iframe_m" src='servicetype/list.aspx' allowtransparency="true" style="background-color:lightgray; width:100%; height:500px" title="weibo" frameborder="1" scrolling="yes">
+                            您的浏览器不支持嵌入式框架，或者当前配置为不显示嵌入式框架。
+                        </iframe>
+                    </div>
+                    <div id="conT7" style="display: none;">
+                        <iframe class="mainIframe" id="mainIframg" name="iframe_m" src='piorecord/list.aspx' allowtransparency="true" style="background-color:lightgray; width:100%; height:500px" title="weibo" frameborder="1" scrolling="yes">
                             您的浏览器不支持嵌入式框架，或者当前配置为不显示嵌入式框架。
                         </iframe>
                     </div>

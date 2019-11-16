@@ -37,21 +37,21 @@ namespace Jium.Web.pgroup
 		this.lblgpid.Text=model.gpid.ToString();
 		this.lblgpcnt.Text=model.gpcnt.ToString();
 		this.lblgdesc.Text=model.gdesc;
-		this.lblgs1.Text=model.gs1;
-		this.lblgs2.Text=model.gs2;
-		this.lblgs3.Text=model.gs3;
-		this.lblgs4.Text=model.gs4;
-		this.lblgs5.Text=model.gs5;
-		this.lblgd1.Text=model.gd1.ToString();
-		this.lblgd2.Text=model.gd2.ToString();
-		this.lblgd3.Text=model.gd3.ToString();
-		this.lblgd4.Text=model.gd4.ToString();
-		this.lblgd5.Text=model.gd5.ToString();
-		this.lblgdc1.Text=model.gdc1.ToString();
-		this.lblgdc2.Text=model.gdc2.ToString();
-		this.lblgdc3.Text=model.gdc3.ToString();
-		this.lblgdc4.Text=model.gdc4.ToString();
-		this.lblgdc5.Text=model.gdc5.ToString();
+		//this.lblgs1.Text=model.gs1;
+		//this.lblgs2.Text=model.gs2;
+		//this.lblgs3.Text=model.gs3;
+		//this.lblgs4.Text=model.gs4;
+		//this.lblgs5.Text=model.gs5;
+		//this.lblgd1.Text=model.gd1.ToString();
+		//this.lblgd2.Text=model.gd2.ToString();
+		//this.lblgd3.Text=model.gd3.ToString();
+		//this.lblgd4.Text=model.gd4.ToString();
+		//this.lblgd5.Text=model.gd5.ToString();
+		//this.lblgdc1.Text=model.gdc1.ToString();
+		//this.lblgdc2.Text=model.gdc2.ToString();
+		//this.lblgdc3.Text=model.gdc3.ToString();
+		//this.lblgdc4.Text=model.gdc4.ToString();
+		//this.lblgdc5.Text=model.gdc5.ToString();
 
 	}
 

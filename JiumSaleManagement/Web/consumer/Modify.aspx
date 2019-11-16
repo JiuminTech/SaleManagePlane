@@ -12,7 +12,7 @@
 		auto_increment
 	：</td>
 	<td height="25" width="*" align="left">
-		<asp:label id="lblid" runat="server" ></asp:label>
+		<asp:label id="lblid" runat="server"  disabled="disabled"></asp:label>
 	</td></tr>
 	<tr>
 	<td height="25" width="30%" align="right">
@@ -70,7 +70,7 @@
 	<td height="25" width="*" align="left">
 		<asp:TextBox id="txtcremark" runat="server" Width="200px"></asp:TextBox>
 	</td></tr>
-	<tr>
+	<%--<tr>
 	<td height="25" width="30%" align="right">
 		更新日期
 	：</td>
@@ -174,7 +174,7 @@
 	：</td>
 	<td height="25" width="*" align="left">
 		<asp:TextBox id="txtcsdc5" runat="server" Width="200px"></asp:TextBox>
-	</td></tr>
+	</td></tr>--%>
 </table>
 
             </td>

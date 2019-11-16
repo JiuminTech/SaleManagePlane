@@ -8,7 +8,7 @@
         <tr>
             <td class="tdbg">
                 
-<table cellSpacing="0" cellPadding="0" width="100%" border="0">
+<table cellspacing="0" cellpadding="0" width="100%" border="0">
 	<tr>
 	<td height="25" width="30%" align="right">
 		id
@@ -18,40 +18,40 @@
 	</td></tr>
 	<tr>
 	<td height="25" width="30%" align="right">
-		gid
+		产品组合ID
 	：</td>
 	<td height="25" width="*" align="left">
 		<asp:TextBox id="txtgid" runat="server" Width="200px"></asp:TextBox>
 	</td></tr>
 	<tr>
 	<td height="25" width="30%" align="right">
-		gindex
+		序号
 	：</td>
 	<td height="25" width="*" align="left">
 		<asp:TextBox id="txtgindex" runat="server" Width="200px"></asp:TextBox>
 	</td></tr>
 	<tr>
 	<td height="25" width="30%" align="right">
-		gpid
+		子产品ID
 	：</td>
 	<td height="25" width="*" align="left">
 		<asp:TextBox id="txtgpid" runat="server" Width="200px"></asp:TextBox>
 	</td></tr>
 	<tr>
 	<td height="25" width="30%" align="right">
-		gpcnt
+		子产品数量
 	：</td>
 	<td height="25" width="*" align="left">
 		<asp:TextBox id="txtgpcnt" runat="server" Width="200px"></asp:TextBox>
 	</td></tr>
 	<tr>
 	<td height="25" width="30%" align="right">
-		gdesc
+		描述
 	：</td>
 	<td height="25" width="*" align="left">
 		<asp:TextBox id="txtgdesc" runat="server" Width="200px"></asp:TextBox>
 	</td></tr>
-	<tr>
+	<%--<tr>
 	<td height="25" width="30%" align="right">
 		gs1
 	：</td>
@@ -155,7 +155,7 @@
 	：</td>
 	<td height="25" width="*" align="left">
 		<asp:TextBox id="txtgdc5" runat="server" Width="200px"></asp:TextBox>
-	</td></tr>
+	</td></tr>--%>
 </table>
 
             </td>

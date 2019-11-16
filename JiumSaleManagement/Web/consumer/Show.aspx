@@ -7,51 +7,51 @@
                     <td class="tdbg">
                                
 <table cellSpacing="0" cellPadding="0" width="100%" border="0">
-	<tr>
+	<%--<tr>
 	<td height="25" width="30%" align="right">
 		auto_increment
 	：</td>
 	<td height="25" width="*" align="left">
 		<asp:Label id="lblid" runat="server"></asp:Label>
-	</td></tr>
+	</td></tr>--%>
 	<tr>
 	<td height="25" width="30%" align="right">
-		cname
+		姓名
 	：</td>
 	<td height="25" width="*" align="left">
 		<asp:Label id="lblcname" runat="server"></asp:Label>
 	</td></tr>
 	<tr>
 	<td height="25" width="30%" align="right">
-		ccode
+		会员ID
 	：</td>
 	<td height="25" width="*" align="left">
 		<asp:Label id="lblccode" runat="server"></asp:Label>
 	</td></tr>
 	<tr>
 	<td height="25" width="30%" align="right">
-		cphone
+		手机号
 	：</td>
 	<td height="25" width="*" align="left">
 		<asp:Label id="lblcphone" runat="server"></asp:Label>
 	</td></tr>
 	<tr>
 	<td height="25" width="30%" align="right">
-		cemail
+		Email
 	：</td>
 	<td height="25" width="*" align="left">
 		<asp:Label id="lblcemail" runat="server"></asp:Label>
 	</td></tr>
 	<tr>
 	<td height="25" width="30%" align="right">
-		clevel
+		等级
 	：</td>
 	<td height="25" width="*" align="left">
 		<asp:Label id="lblclevel" runat="server"></asp:Label>
 	</td></tr>
 	<tr>
 	<td height="25" width="30%" align="right">
-		csum
+		消费总额
 	：</td>
 	<td height="25" width="*" align="left">
 		<asp:Label id="lblcsum" runat="server"></asp:Label>
@@ -65,19 +65,19 @@
 	</td></tr>
 	<tr>
 	<td height="25" width="30%" align="right">
-		cremark
+		备注
 	：</td>
 	<td height="25" width="*" align="left">
 		<asp:Label id="lblcremark" runat="server"></asp:Label>
 	</td></tr>
 	<tr>
 	<td height="25" width="30%" align="right">
-		css1
+		更新日期
 	：</td>
 	<td height="25" width="*" align="left">
 		<asp:Label id="lblcss1" runat="server"></asp:Label>
 	</td></tr>
-	<tr>
+	<%--<tr>
 	<td height="25" width="30%" align="right">
 		css2
 	：</td>
@@ -174,7 +174,7 @@
 	：</td>
 	<td height="25" width="*" align="left">
 		<asp:Label id="lblcsdc5" runat="server"></asp:Label>
-	</td></tr>
+	</td></tr>--%>
 </table>
 
                     </td>

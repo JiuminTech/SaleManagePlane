@@ -44,12 +44,12 @@
                             </asp:TemplateField> 
                             
 		<asp:BoundField DataField="id" HeaderText="id" SortExpression="id" ItemStyle-HorizontalAlign="Center"  /> 
-		<asp:BoundField DataField="gid" HeaderText="gid" SortExpression="gid" ItemStyle-HorizontalAlign="Center"  /> 
-		<asp:BoundField DataField="gindex" HeaderText="gindex" SortExpression="gindex" ItemStyle-HorizontalAlign="Center"  /> 
-		<asp:BoundField DataField="gpid" HeaderText="gpid" SortExpression="gpid" ItemStyle-HorizontalAlign="Center"  /> 
-		<asp:BoundField DataField="gpcnt" HeaderText="gpcnt" SortExpression="gpcnt" ItemStyle-HorizontalAlign="Center"  /> 
-		<asp:BoundField DataField="gdesc" HeaderText="gdesc" SortExpression="gdesc" ItemStyle-HorizontalAlign="Center"  /> 
-		<asp:BoundField DataField="gs1" HeaderText="gs1" SortExpression="gs1" ItemStyle-HorizontalAlign="Center"  /> 
+		<asp:BoundField DataField="gid" HeaderText="产品组合ID" SortExpression="gid" ItemStyle-HorizontalAlign="Center"  /> 
+		<asp:BoundField DataField="gindex" HeaderText="内部序号" SortExpression="gindex" ItemStyle-HorizontalAlign="Center"  /> 
+		<asp:BoundField DataField="gpid" HeaderText="子产品ID" SortExpression="gpid" ItemStyle-HorizontalAlign="Center"  /> 
+		<asp:BoundField DataField="gpcnt" HeaderText="子产品数量" SortExpression="gpcnt" ItemStyle-HorizontalAlign="Center"  /> 
+		<asp:BoundField DataField="gdesc" HeaderText="描述" SortExpression="gdesc" ItemStyle-HorizontalAlign="Center"  /> 
+		<%--<asp:BoundField DataField="gs1" HeaderText="gs1" SortExpression="gs1" ItemStyle-HorizontalAlign="Center"  /> 
 		<asp:BoundField DataField="gs2" HeaderText="gs2" SortExpression="gs2" ItemStyle-HorizontalAlign="Center"  /> 
 		<asp:BoundField DataField="gs3" HeaderText="gs3" SortExpression="gs3" ItemStyle-HorizontalAlign="Center"  /> 
 		<asp:BoundField DataField="gs4" HeaderText="gs4" SortExpression="gs4" ItemStyle-HorizontalAlign="Center"  /> 
@@ -63,7 +63,7 @@
 		<asp:BoundField DataField="gdc2" HeaderText="gdc2" SortExpression="gdc2" ItemStyle-HorizontalAlign="Center"  /> 
 		<asp:BoundField DataField="gdc3" HeaderText="gdc3" SortExpression="gdc3" ItemStyle-HorizontalAlign="Center"  /> 
 		<asp:BoundField DataField="gdc4" HeaderText="gdc4" SortExpression="gdc4" ItemStyle-HorizontalAlign="Center"  /> 
-		<asp:BoundField DataField="gdc5" HeaderText="gdc5" SortExpression="gdc5" ItemStyle-HorizontalAlign="Center"  /> 
+		<asp:BoundField DataField="gdc5" HeaderText="gdc5" SortExpression="gdc5" ItemStyle-HorizontalAlign="Center"  /> --%>
                             
                             <asp:HyperLinkField HeaderText="详细" ControlStyle-Width="50" DataNavigateUrlFields="id" DataNavigateUrlFormatString="Show.aspx?id={0}"
                                 Text="详细"  />
@@ -82,7 +82,7 @@
                     <td style="width: 1px;">                        
                     </td>
                     <td align="left">
-                        <asp:Button ID="btnDelete" runat="server" Text="删除" OnClick="btnDelete_Click"/>                       
+                        <asp:Button ID="btnDelete" runat="server" Text="删除" disabled="disabled" OnClick="btnDelete_Click"/>                       
                     </td>
                 </tr>
             </table>

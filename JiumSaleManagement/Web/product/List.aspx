@@ -50,6 +50,7 @@
 		<asp:BoundField DataField="ptype" HeaderText="分类" SortExpression="ptype" ItemStyle-HorizontalAlign="Center"  /> 
 		<asp:BoundField DataField="pisgroup" HeaderText="组合" SortExpression="pisgroup" ItemStyle-HorizontalAlign="Center"  /> 
 		<asp:BoundField DataField="pdesc" HeaderText="描述" SortExpression="pdesc" ItemStyle-HorizontalAlign="Center"  /> 
+                        <asp:BoundField DataField="pd1" HeaderText="服务次数" SortExpression="pd1" ItemStyle-HorizontalAlign="Center"  /> 
 		
                             
                             <asp:HyperLinkField HeaderText="详细" ControlStyle-Width="50" DataNavigateUrlFields="id" DataNavigateUrlFormatString="Show.aspx?id={0}"
@@ -69,7 +70,7 @@
                     <td style="width: 1px;">                        
                     </td>
                     <td align="left">
-                        <asp:Button ID="btnDelete" runat="server" Text="删除" OnClick="btnDelete_Click"/>   
+                        <asp:Button ID="btnDelete" runat="server" Text="删除" disabled="disabled" OnClick="btnDelete_Click"/>   
                         <%--<asp:LinkButton ID="btnAdd" runat="server" Text="添加"  PostBackUrl="Add.aspx"/> --%>                    
                     </td>
                 </tr>

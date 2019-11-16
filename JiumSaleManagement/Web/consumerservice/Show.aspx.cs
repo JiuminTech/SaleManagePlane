@@ -49,16 +49,16 @@ namespace Xwsw.Web.NMS.consumerservice
 		this.lblcstime8.Text=model.cstime8;
 		this.lblcstime9.Text=model.cstime9;
 		this.lblcstime10.Text=model.cstime10;
-		this.lblcss1.Text=model.css1;
-		this.lblcss2.Text=model.css2;
-		this.lblcss3.Text=model.css3;
-		this.lblcss4.Text=model.css4;
-		this.lblcss5.Text=model.css5;
-		this.lblcsd1.Text=model.csd1;
-		this.lblcsd2.Text=model.csd2;
-		this.lblcsd3.Text=model.csd3;
-		this.lblcsd4.Text=model.csd4;
-		this.lblcsd5.Text=model.csd5;
+		//this.lblcss1.Text=model.css1;
+		//this.lblcss2.Text=model.css2;
+		//this.lblcss3.Text=model.css3;
+		//this.lblcss4.Text=model.css4;
+		//this.lblcss5.Text=model.css5;
+		//this.lblcsd1.Text=model.csd1;
+		//this.lblcsd2.Text=model.csd2;
+		//this.lblcsd3.Text=model.csd3;
+		//this.lblcsd4.Text=model.csd4;
+		//this.lblcsd5.Text=model.csd5;
 
 	}
 

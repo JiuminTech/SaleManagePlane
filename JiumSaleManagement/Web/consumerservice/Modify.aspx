@@ -16,124 +16,124 @@
 	</td></tr>
 	<tr>
 	<td height="25" width="30%" align="right">
-		ccode
+		会员ID
 	：</td>
 	<td height="25" width="*" align="left">
-		<asp:TextBox id="txtccode" runat="server" Width="200px"></asp:TextBox>
+		<asp:TextBox id="txtccode" runat="server" disabled="disabled" Width="200px"></asp:TextBox>
 	</td></tr>
 	<tr>
 	<td height="25" width="30%" align="right">
-		cphone
+		手机号
 	：</td>
 	<td height="25" width="*" align="left">
 		<asp:TextBox id="txtcphone" runat="server" Width="200px"></asp:TextBox>
 	</td></tr>
 	<tr>
 	<td height="25" width="30%" align="right">
-		cstype
+		服务类型
 	：</td>
 	<td height="25" width="*" align="left">
 		<asp:TextBox id="txtcstype" runat="server" Width="200px"></asp:TextBox>
 	</td></tr>
 	<tr>
 	<td height="25" width="30%" align="right">
-		csnum
+		总次数
 	：</td>
 	<td height="25" width="*" align="left">
 		<asp:TextBox id="txtcsnum" runat="server" Width="200px"></asp:TextBox>
 	</td></tr>
 	<tr>
 	<td height="25" width="30%" align="right">
-		csleft
+		剩余次数
 	：</td>
 	<td height="25" width="*" align="left">
 		<asp:TextBox id="txtcsleft" runat="server" Width="200px"></asp:TextBox>
 	</td></tr>
 	<tr>
 	<td height="25" width="30%" align="right">
-		csiostatus
+		状态
 	：</td>
 	<td height="25" width="*" align="left">
 		<asp:TextBox id="txtcsiostatus" runat="server" Width="200px"></asp:TextBox>
 	</td></tr>
 	<tr>
 	<td height="25" width="30%" align="right">
-		cstime0
+		订购日期
 	：</td>
 	<td height="25" width="*" align="left">
-		<asp:TextBox id="txtcstime0" runat="server" Width="200px"></asp:TextBox>
+		<asp:TextBox id="txtcstime0" runat="server" disabled="disabled" Width="200px"></asp:TextBox>
 	</td></tr>
 	<tr>
 	<td height="25" width="30%" align="right">
-		cstime1
+		第一次
 	：</td>
 	<td height="25" width="*" align="left">
 		<asp:TextBox id="txtcstime1" runat="server" Width="200px"></asp:TextBox>
 	</td></tr>
 	<tr>
 	<td height="25" width="30%" align="right">
-		cstime2
+		第二次
 	：</td>
 	<td height="25" width="*" align="left">
 		<asp:TextBox id="txtcstime2" runat="server" Width="200px"></asp:TextBox>
 	</td></tr>
 	<tr>
 	<td height="25" width="30%" align="right">
-		cstime3
+		第三次
 	：</td>
 	<td height="25" width="*" align="left">
 		<asp:TextBox id="txtcstime3" runat="server" Width="200px"></asp:TextBox>
 	</td></tr>
 	<tr>
 	<td height="25" width="30%" align="right">
-		cstime4
+		第四次
 	：</td>
 	<td height="25" width="*" align="left">
 		<asp:TextBox id="txtcstime4" runat="server" Width="200px"></asp:TextBox>
 	</td></tr>
 	<tr>
 	<td height="25" width="30%" align="right">
-		cstime5
+		第五次
 	：</td>
 	<td height="25" width="*" align="left">
 		<asp:TextBox id="txtcstime5" runat="server" Width="200px"></asp:TextBox>
 	</td></tr>
 	<tr>
 	<td height="25" width="30%" align="right">
-		cstime6
+		第六次
 	：</td>
 	<td height="25" width="*" align="left">
 		<asp:TextBox id="txtcstime6" runat="server" Width="200px"></asp:TextBox>
 	</td></tr>
 	<tr>
 	<td height="25" width="30%" align="right">
-		cstime7
+		第七次
 	：</td>
 	<td height="25" width="*" align="left">
 		<asp:TextBox id="txtcstime7" runat="server" Width="200px"></asp:TextBox>
 	</td></tr>
 	<tr>
 	<td height="25" width="30%" align="right">
-		cstime8
+		第八次
 	：</td>
 	<td height="25" width="*" align="left">
 		<asp:TextBox id="txtcstime8" runat="server" Width="200px"></asp:TextBox>
 	</td></tr>
 	<tr>
 	<td height="25" width="30%" align="right">
-		cstime9
+		第九次
 	：</td>
 	<td height="25" width="*" align="left">
 		<asp:TextBox id="txtcstime9" runat="server" Width="200px"></asp:TextBox>
 	</td></tr>
 	<tr>
 	<td height="25" width="30%" align="right">
-		cstime10
+		第十次
 	：</td>
 	<td height="25" width="*" align="left">
 		<asp:TextBox id="txtcstime10" runat="server" Width="200px"></asp:TextBox>
 	</td></tr>
-	<tr>
+	<%--<tr>
 	<td height="25" width="30%" align="right">
 		css1
 	：</td>
@@ -202,7 +202,7 @@
 	：</td>
 	<td height="25" width="*" align="left">
 		<asp:TextBox id="txtcsd5" runat="server" Width="200px"></asp:TextBox>
-	</td></tr>
+	</td></tr>--%>
 </table>
 
             </td>

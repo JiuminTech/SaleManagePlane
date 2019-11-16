@@ -23,7 +23,8 @@
                     &nbsp;&nbsp;&nbsp;&nbsp;
                     <asp:Button ID="btnSearch" runat="server" Text="查询"  OnClick="btnSearch_Click" >
                     </asp:Button>                    
-                        
+                    <td><asp:LinkButton ID="LinkButtonAdd" runat="server"   Text="新增" PostBackUrl="Add.aspx"></asp:LinkButton>
+                        </td>    
                     </td>
                     <td class="tdbg">
                     </td>
@@ -41,9 +42,9 @@
                                 </ItemTemplate>
                             </asp:TemplateField> 
                             
-		<asp:BoundField DataField="sname" HeaderText="sname" SortExpression="sname" ItemStyle-HorizontalAlign="Center"  /> 
-		<asp:BoundField DataField="sminutes" HeaderText="sminutes" SortExpression="sminutes" ItemStyle-HorizontalAlign="Center"  /> 
-		<asp:BoundField DataField="sdesc" HeaderText="sdesc" SortExpression="sdesc" ItemStyle-HorizontalAlign="Center"  /> 
+		<asp:BoundField DataField="sname" HeaderText="名称" SortExpression="sname" ItemStyle-HorizontalAlign="Center"  /> 
+		<asp:BoundField DataField="sminutes" HeaderText="时长" SortExpression="sminutes" ItemStyle-HorizontalAlign="Center"  /> 
+		<asp:BoundField DataField="sdesc" HeaderText="描述" SortExpression="sdesc" ItemStyle-HorizontalAlign="Center"  /> 
                             
                             <asp:HyperLinkField HeaderText="详细" ControlStyle-Width="50" DataNavigateUrlFields="id" DataNavigateUrlFormatString="Show.aspx?id={0}"
                                 Text="详细"  />
@@ -62,7 +63,7 @@
                     <td style="width: 1px;">                        
                     </td>
                     <td align="left">
-                        <asp:Button ID="btnDelete" runat="server" Text="删除" OnClick="btnDelete_Click"/>                       
+                        <asp:Button ID="btnDelete" runat="server" Text="删除" disabled="disabled" OnClick="btnDelete_Click"/>                       
                     </td>
                 </tr>
             </table>

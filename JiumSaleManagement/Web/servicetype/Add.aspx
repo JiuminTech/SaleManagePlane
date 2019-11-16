@@ -11,21 +11,21 @@
 <table cellSpacing="0" cellPadding="0" width="100%" border="0">
 	<tr>
 	<td height="25" width="30%" align="right">
-		sname
+		名称
 	：</td>
 	<td height="25" width="*" align="left">
 		<asp:TextBox id="txtsname" runat="server" Width="200px"></asp:TextBox>
 	</td></tr>
 	<tr>
 	<td height="25" width="30%" align="right">
-		sminutes
+		时长（分钟）
 	：</td>
 	<td height="25" width="*" align="left">
 		<asp:TextBox id="txtsminutes" runat="server" Width="200px"></asp:TextBox>
 	</td></tr>
 	<tr>
 	<td height="25" width="30%" align="right">
-		sdesc
+		描述
 	：</td>
 	<td height="25" width="*" align="left">
 		<asp:TextBox id="txtsdesc" runat="server" Width="200px"></asp:TextBox>

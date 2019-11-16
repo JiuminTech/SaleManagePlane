@@ -58,6 +58,13 @@
 	<td height="25" width="*" align="left">
 		<asp:TextBox id="txtpdesc" runat="server" Width="200px"></asp:TextBox>
 	</td></tr>
+    <tr>
+	<td height="25" width="30%" align="right">
+		售后次数
+	：</td>
+	<td height="25" width="*" align="left">
+		<asp:TextBox id="txtpd1" runat="server" Width="200px"></asp:TextBox>
+	</td></tr>
 	<!--<tr>
 	<td height="25" width="30%" align="right">
 		ps1
@@ -93,13 +100,7 @@
 	<td height="25" width="*" align="left">
 		<asp:TextBox id="txtps5" runat="server" Width="200px"></asp:TextBox>
 	</td></tr>
-	<tr>
-	<td height="25" width="30%" align="right">
-		pd1
-	：</td>
-	<td height="25" width="*" align="left">
-		<asp:TextBox id="txtpd1" runat="server" Width="200px"></asp:TextBox>
-	</td></tr>
+	
 	<tr>
 	<td height="25" width="30%" align="right">
 		pd2

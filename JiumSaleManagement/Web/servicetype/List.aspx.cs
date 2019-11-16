@@ -64,6 +64,7 @@ namespace Xwsw.Web.NMS.servicetype
 
             DataSet ds = new DataSet();
             StringBuilder strWhere = new StringBuilder();
+            strWhere.Append("1=1");
             if (txtKeyword.Text.Trim() != "")
             {      
                 #warning 代码生成警告：请修改 keywordField 为需要匹配查询的真实字段名称

@@ -16,21 +16,21 @@
 	</td></tr>
 	<tr>
 	<td height="25" width="30%" align="right">
-		sname
+		名称
 	：</td>
 	<td height="25" width="*" align="left">
 		<asp:Label id="lblsname" runat="server"></asp:Label>
 	</td></tr>
 	<tr>
 	<td height="25" width="30%" align="right">
-		sminutes
+		时长（分钟）
 	：</td>
 	<td height="25" width="*" align="left">
 		<asp:Label id="lblsminutes" runat="server"></asp:Label>
 	</td></tr>
 	<tr>
 	<td height="25" width="30%" align="right">
-		sdesc
+		描述
 	：</td>
 	<td height="25" width="*" align="left">
 		<asp:Label id="lblsdesc" runat="server"></asp:Label>

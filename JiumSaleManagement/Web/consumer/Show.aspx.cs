@@ -31,7 +31,7 @@ namespace Jium.Web.consumer
 	{
 		Jium.BLL.consumer bll=new Jium.BLL.consumer();
 		Jium.Model.consumer model=bll.GetModel(id);
-		this.lblid.Text=model.id.ToString();
+		//this.lblid.Text=model.id.ToString();
 		this.lblcname.Text=model.cname;
 		this.lblccode.Text=model.ccode;
 		this.lblcphone.Text=model.cphone;
@@ -41,20 +41,20 @@ namespace Jium.Web.consumer
 		this.lblcsex.Text=model.csex.ToString();
 		this.lblcremark.Text=model.cremark;
 		this.lblcss1.Text=model.css1;
-		this.lblcss2.Text=model.css2;
-		this.lblcss3.Text=model.css3;
-		this.lblcss4.Text=model.css4;
-		this.lblcss5.Text=model.css5;
-		this.lblcsd1.Text=model.csd1.ToString();
-		this.lblcsd2.Text=model.csd2.ToString();
-		this.lblcsd3.Text=model.csd3.ToString();
-		this.lblcsd4.Text=model.csd4.ToString();
-		this.lblcsd5.Text=model.csd5.ToString();
-		this.lblcsdc1.Text=model.csdc1.ToString();
-		this.lblcsdc2.Text=model.csdc2.ToString();
-		this.lblcsdc3.Text=model.csdc3.ToString();
-		this.lblcsdc4.Text=model.csdc4.ToString();
-		this.lblcsdc5.Text=model.csdc5.ToString();
+		//this.lblcss2.Text=model.css2;
+		//this.lblcss3.Text=model.css3;
+		//this.lblcss4.Text=model.css4;
+		//this.lblcss5.Text=model.css5;
+		//this.lblcsd1.Text=model.csd1.ToString();
+		//this.lblcsd2.Text=model.csd2.ToString();
+		//this.lblcsd3.Text=model.csd3.ToString();
+		//this.lblcsd4.Text=model.csd4.ToString();
+		//this.lblcsd5.Text=model.csd5.ToString();
+		//this.lblcsdc1.Text=model.csdc1.ToString();
+		//this.lblcsdc2.Text=model.csdc2.ToString();
+		//this.lblcsdc3.Text=model.csdc3.ToString();
+		//this.lblcsdc4.Text=model.csdc4.ToString();
+		//this.lblcsdc5.Text=model.csdc5.ToString();
 
 	}
 

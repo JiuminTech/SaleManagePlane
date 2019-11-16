@@ -63,6 +63,13 @@
 	<td height="25" width="*" align="left">
 		<asp:TextBox id="txtpdesc" runat="server" Width="200px"></asp:TextBox>
 	</td></tr>
+    <tr>
+	<td height="25" width="30%" align="right">
+		服务次数
+	：</td>
+	<td height="25" width="*" align="left">
+		<asp:TextBox id="txtpd1" runat="server" Width="200px"></asp:TextBox>
+	</td></tr>
 	<!--<tr>
 	<td height="25" width="30%" align="right">
 		ps1
@@ -98,13 +105,7 @@
 	<td height="25" width="*" align="left">
 		<asp:TextBox id="txtps5" runat="server" Width="200px"></asp:TextBox>
 	</td></tr>
-	<tr>
-	<td height="25" width="30%" align="right">
-		pd1
-	：</td>
-	<td height="25" width="*" align="left">
-		<asp:TextBox id="txtpd1" runat="server" Width="200px"></asp:TextBox>
-	</td></tr>
+	
 	<tr>
 	<td height="25" width="30%" align="right">
 		pd2
@@ -153,13 +154,13 @@
 	：</td>
 	<td height="25" width="*" align="left">
 		<asp:TextBox id="txtpdc3" runat="server" Width="200px"></asp:TextBox>
-	</td>-->
+	</td>
 
-	</tr>
+	</tr>-->
 </table>
-
-            </td>
-        </tr>
+</td>
+            </tr>
+     
         <tr>
             <td class="tdbg" align="center" valign="bottom">
                 <asp:Button ID="btnSave" runat="server" Text="保存"

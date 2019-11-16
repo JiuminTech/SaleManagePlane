@@ -16,40 +16,40 @@
 	</td></tr>
 	<tr>
 	<td height="25" width="30%" align="right">
-		gid
+		产品组合ID
 	：</td>
 	<td height="25" width="*" align="left">
 		<asp:Label id="lblgid" runat="server"></asp:Label>
 	</td></tr>
 	<tr>
 	<td height="25" width="30%" align="right">
-		gindex
+		序号
 	：</td>
 	<td height="25" width="*" align="left">
 		<asp:Label id="lblgindex" runat="server"></asp:Label>
 	</td></tr>
 	<tr>
 	<td height="25" width="30%" align="right">
-		gpid
+		子产品ID
 	：</td>
 	<td height="25" width="*" align="left">
 		<asp:Label id="lblgpid" runat="server"></asp:Label>
 	</td></tr>
 	<tr>
 	<td height="25" width="30%" align="right">
-		gpcnt
+		子产品数量
 	：</td>
 	<td height="25" width="*" align="left">
 		<asp:Label id="lblgpcnt" runat="server"></asp:Label>
 	</td></tr>
 	<tr>
 	<td height="25" width="30%" align="right">
-		gdesc
+		描述
 	：</td>
 	<td height="25" width="*" align="left">
 		<asp:Label id="lblgdesc" runat="server"></asp:Label>
 	</td></tr>
-	<tr>
+	<%--<tr>
 	<td height="25" width="30%" align="right">
 		gs1
 	：</td>
@@ -153,7 +153,7 @@
 	：</td>
 	<td height="25" width="*" align="left">
 		<asp:Label id="lblgdc5" runat="server"></asp:Label>
-	</td></tr>
+	</td></tr>--%>
 </table>
 
                     </td>

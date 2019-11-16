@@ -325,8 +325,9 @@ namespace Jium.Web.piorecord
                 model.ptype = (int)PRODUCT_IO_TYPE.SALE; ;
                 model.ptime = orderid;
                 model.pguestid = int.Parse(txtCcode.Text);
-                model.piod1 = 1;// int.Parse(gridViewBuy.Rows[i].Cells[4].Text);//服务
-                model.pios4 = gridViewBuy.Rows[i].Cells[2].Text;//单位
+                var txtNum = gridViewBuy.Rows[i].Cells[4].Text.Trim();
+                    model.piod1 = string.IsNullOrWhiteSpace(txtNum.Replace("&nbsp;","")) ? 0: int.Parse(gridViewBuy.Rows[i].Cells[4].Text);//服务
+                model.pios4 = gridViewBuy.Rows[i].Cells[2].Text.Replace("&nbsp;", "");//单位
                 //model.pios5 = cells[i, 0].StringValue.Trim();//系列
                 model.pios1 = "销售";
                 lstModel.Add(model);

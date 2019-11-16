@@ -4,7 +4,7 @@ using System.Text;
 using MySql.Data.MySqlClient;
 using Jium.IDAL;
 using Maticsoft.DBUtility;//Please add references
-namespace Xwsw.MySQLDAL.NMS
+namespace Jium.MySQLDAL
 {
 	/// <summary>
 	/// 数据访问类:servicetype

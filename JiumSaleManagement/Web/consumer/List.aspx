@@ -19,7 +19,7 @@
                          <b>关键字：</b>
                     </td>
                     <td class="tdbg">                       
-                    <asp:TextBox ID="txtKeyword" runat="server"></asp:TextBox>
+                    <asp:TextBox ID="txtKeyword" PlaceHolder="姓名/ID/手机号" runat="server"></asp:TextBox>
                     &nbsp;&nbsp;&nbsp;&nbsp;
                     <asp:Button ID="btnSearch" runat="server" Text="查询"  OnClick="btnSearch_Click" >
                     </asp:Button>                    
@@ -78,7 +78,7 @@
                             <asp:TemplateField ControlStyle-Width="50" HeaderText="删除"   Visible="false"  >
                                 <ItemTemplate>
                                     <asp:LinkButton ID="LinkButton1" runat="server" CausesValidation="False" CommandName="Delete"
-                                         Text="删除"></asp:LinkButton>
+                                         Text="删除" ></asp:LinkButton>
                                 </ItemTemplate>
                             </asp:TemplateField>
                         </Columns>
@@ -88,7 +88,7 @@
                     <td style="width: 1px;">                        
                     </td>
                     <td align="left">
-                        <asp:Button ID="btnDelete" runat="server" Text="删除" OnClick="btnDelete_Click"/>                       
+                        <asp:Button ID="btnDelete" runat="server" Text="删除" disabled="disabled" OnClick="btnDelete_Click"/>                       
                     </td>
                 </tr>
             </table>

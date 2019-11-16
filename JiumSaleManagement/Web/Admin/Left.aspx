@@ -1,5 +1,7 @@
 ﻿<%@ Register TagPrefix="uc1" TagName="CheckRight" Src="../Controls/CheckRight.ascx" %>
 <%@ Page language="c#" Codebehind="Left.aspx.cs" AutoEventWireup="True" Inherits="Jium.Web.Admin.Left" %>
+<%@ Register TagPrefix="iewc" Namespace="Microsoft.Web.UI.WebControls" Assembly="Microsoft.Web.UI.WebControls, Version=1.0.2.226, Culture=neutral, PublicKeyToken=31bf3856ad364e35" %>
+
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" >
 <HTML>
 	<HEAD>
@@ -24,6 +26,12 @@
 				<tr>
 					<td height="19"><img src='<%=Application[Session["Style"].ToString()+"xleft2_bgimage"]%>' width="200" height="19"></td>
 				</tr>
+                <tr>
+                                <td align="left">
+                        <iewc:treeview id="TreeView1" runat="server" SelectExpands="True" SelectedStyle="color:#000000;background:Transparent;" HoverStyle="color:#000000;background:Transparent;"></iewc:treeview>
+                        <asp:Label ID="lblTip" runat="server" Visible="False" ForeColor="Red">没有任何分类数据！！</asp:Label>
+                        </td>
+                        </tr>
 			</table>
 			<uc1:CheckRight id="CheckRight1" runat="server"></uc1:CheckRight>
 		</form>
