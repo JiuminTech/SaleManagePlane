@@ -126,6 +126,8 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Iconsumerservice.cs" />
+    <Compile Include="Iserviceplan.cs" />
+    <Compile Include="Iservicerorder.cs" />
     <Compile Include="Iservicetype.cs" />
     <Compile Include="ISysManage.cs">
       <SubType>Code</SubType>
@@ -143,6 +145,7 @@
     <Compile Include="Isystemparams.cs" />
     <Compile Include="Iuserevent.cs" />
     <Compile Include="Iuserinfo.cs" />
+    <Compile Include="Iuserlog.cs" />
     <Compile Include="Iusertype.cs" />
   </ItemGroup>
   <ItemGroup>

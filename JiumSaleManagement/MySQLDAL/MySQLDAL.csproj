@@ -156,6 +156,8 @@
     <Compile Include="plib.cs" />
     <Compile Include="product.cs" />
     <Compile Include="PubConstant.cs" />
+    <Compile Include="serviceplan.cs" />
+    <Compile Include="servicerorder.cs" />
     <Compile Include="servicetype.cs" />
     <Compile Include="SysManage.cs">
       <SubType>Code</SubType>
@@ -166,6 +168,7 @@
     <Compile Include="systemparams.cs" />
     <Compile Include="userevent.cs" />
     <Compile Include="userinfo.cs" />
+    <Compile Include="userlog.cs" />
     <Compile Include="usertype.cs" />
   </ItemGroup>
   <ItemGroup>

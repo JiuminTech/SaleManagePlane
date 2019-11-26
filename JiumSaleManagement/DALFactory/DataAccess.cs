@@ -268,6 +268,40 @@ namespace Jium.DALFactory
 			object objType=CreateObject(AssemblyPath,ClassNamespace);
 			return (Jium.IDAL.Iusertype)objType;
 		}
+        /// <summary>
+		/// 创建serviceplan数据层接口。
+		/// </summary>
+		public static Jium.IDAL.Iserviceplan Createserviceplan()
+        {
 
-}
+            string ClassNamespace = AssemblyPath + ".serviceplan";
+            object objType = CreateObject(AssemblyPath, ClassNamespace);
+            return (Jium.IDAL.Iserviceplan)objType;
+        }
+
+
+        /// <summary>
+        /// 创建servicerorder数据层接口。
+        /// </summary>
+        public static Jium.IDAL.Iservicerorder Createservicerorder()
+        {
+
+            string ClassNamespace = AssemblyPath + ".servicerorder";
+            object objType = CreateObject(AssemblyPath, ClassNamespace);
+            return (Jium.IDAL.Iservicerorder)objType;
+        }
+
+
+        /// <summary>
+        /// 创建userlog数据层接口。
+        /// </summary>
+        public static Jium.IDAL.Iuserlog Createuserlog()
+        {
+
+            string ClassNamespace = AssemblyPath + ".userlog";
+            object objType = CreateObject(AssemblyPath, ClassNamespace);
+            return (Jium.IDAL.Iuserlog)objType;
+        }
+
+    }
 }
