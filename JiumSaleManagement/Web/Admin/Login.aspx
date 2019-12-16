@@ -88,7 +88,7 @@
 									<td><table width="100%" border="0" cellspacing="0" cellpadding="0">
 											<tr>
 												<td height="70" align="center">
-													Copyright(C) 2004-2008 Maticsoft All Rights Reserved.
+													Copyright(C) 2016-2020 XwSoftware All Rights Reserved.
 												</td>
 											</tr>
 										</table>

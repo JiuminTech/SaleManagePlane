@@ -9,68 +9,68 @@
 <table cellSpacing="0" cellPadding="0" width="100%" border="0">
 	<tr>
 	<td height="25" width="30%" align="right">
-		id
+		编号
 	：</td>
 	<td height="25" width="*" align="left">
 		<asp:Label id="lblid" runat="server"></asp:Label>
 	</td></tr>
 	<tr>
 	<td height="25" width="30%" align="right">
-		plandate
+		日期
 	：</td>
 	<td height="25" width="*" align="left">
 		<asp:Label id="lblplandate" runat="server"></asp:Label>
 	</td></tr>
 	<tr>
 	<td height="25" width="30%" align="right">
-		plantime
+		时段
 	：</td>
 	<td height="25" width="*" align="left">
 		<asp:Label id="lblplantime" runat="server"></asp:Label>
 	</td></tr>
 	<tr>
 	<td height="25" width="30%" align="right">
-		totalnum
+		总容量
 	：</td>
 	<td height="25" width="*" align="left">
 		<asp:Label id="lbltotalnum" runat="server"></asp:Label>
 	</td></tr>
 	<tr>
 	<td height="25" width="30%" align="right">
-		leftnum
+		余量
 	：</td>
 	<td height="25" width="*" align="left">
 		<asp:Label id="lblleftnum" runat="server"></asp:Label>
 	</td></tr>
 	<tr>
 	<td height="25" width="30%" align="right">
-		nexttotal
+		下时段总容量
 	：</td>
 	<td height="25" width="*" align="left">
 		<asp:Label id="lblnexttotal" runat="server"></asp:Label>
 	</td></tr>
 	<tr>
 	<td height="25" width="30%" align="right">
-		nextleft
+		下时段余量
 	：</td>
 	<td height="25" width="*" align="left">
 		<asp:Label id="lblnextleft" runat="server"></asp:Label>
 	</td></tr>
 	<tr>
 	<td height="25" width="30%" align="right">
-		nextid
+		下时段编号
 	：</td>
 	<td height="25" width="*" align="left">
 		<asp:Label id="lblnextid" runat="server"></asp:Label>
 	</td></tr>
 	<tr>
 	<td height="25" width="30%" align="right">
-		pss1
+		下时段
 	：</td>
 	<td height="25" width="*" align="left">
 		<asp:Label id="lblpss1" runat="server"></asp:Label>
 	</td></tr>
-	<tr>
+	<%--<tr>
 	<td height="25" width="30%" align="right">
 		pss2
 	：</td>
@@ -132,7 +132,7 @@
 	：</td>
 	<td height="25" width="*" align="left">
 		<asp:Label id="lblpsd5" runat="server"></asp:Label>
-	</td></tr>
+	</td></tr>--%>
 </table>
 
                     </td>

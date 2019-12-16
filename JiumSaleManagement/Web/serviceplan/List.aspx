@@ -22,9 +22,15 @@
                     <asp:TextBox ID="txtKeyword" runat="server"></asp:TextBox>
                     &nbsp;&nbsp;&nbsp;&nbsp;
                     <asp:Button ID="btnSearch" runat="server" Text="查询"  OnClick="btnSearch_Click" >
-                    </asp:Button>                    
-                        
-                    </td>
+                    </asp:Button>                        
+                    </td>                    
+                       
+                    <td><asp:LinkButton ID="LinkButtonAdd" runat="server"   Text="新增" PostBackUrl="Add.aspx"></asp:LinkButton>
+                        </td>
+                    <td>
+                    <asp:Button ID="btnBatchAdd" runat="server" Text="批量新增"  OnClick="btnBatchAdd_Click" >
+                    </asp:Button>
+                        </td>
                     <td class="tdbg">
                     </td>
                 </tr>
@@ -41,16 +47,16 @@
                                 </ItemTemplate>
                             </asp:TemplateField> 
                             
-		<asp:BoundField DataField="id" HeaderText="id" SortExpression="id" ItemStyle-HorizontalAlign="Center"  /> 
-		<asp:BoundField DataField="plandate" HeaderText="plandate" SortExpression="plandate" ItemStyle-HorizontalAlign="Center"  /> 
-		<asp:BoundField DataField="plantime" HeaderText="plantime" SortExpression="plantime" ItemStyle-HorizontalAlign="Center"  /> 
-		<asp:BoundField DataField="totalnum" HeaderText="totalnum" SortExpression="totalnum" ItemStyle-HorizontalAlign="Center"  /> 
-		<asp:BoundField DataField="leftnum" HeaderText="leftnum" SortExpression="leftnum" ItemStyle-HorizontalAlign="Center"  /> 
-		<asp:BoundField DataField="nexttotal" HeaderText="nexttotal" SortExpression="nexttotal" ItemStyle-HorizontalAlign="Center"  /> 
-		<asp:BoundField DataField="nextleft" HeaderText="nextleft" SortExpression="nextleft" ItemStyle-HorizontalAlign="Center"  /> 
-		<asp:BoundField DataField="nextid" HeaderText="nextid" SortExpression="nextid" ItemStyle-HorizontalAlign="Center"  /> 
-		<asp:BoundField DataField="pss1" HeaderText="pss1" SortExpression="pss1" ItemStyle-HorizontalAlign="Center"  /> 
-		<asp:BoundField DataField="pss2" HeaderText="pss2" SortExpression="pss2" ItemStyle-HorizontalAlign="Center"  /> 
+		<asp:BoundField DataField="id" HeaderText="编号" SortExpression="id" ItemStyle-HorizontalAlign="Center"  /> 
+		<asp:BoundField DataField="plandate" HeaderText="日期" SortExpression="plandate" ItemStyle-HorizontalAlign="Center"  /> 
+		<asp:BoundField DataField="plantime" HeaderText="时段" SortExpression="plantime" ItemStyle-HorizontalAlign="Center"  /> 
+		<asp:BoundField DataField="totalnum" HeaderText="总容量" SortExpression="totalnum" ItemStyle-HorizontalAlign="Center"  /> 
+		<asp:BoundField DataField="leftnum" HeaderText="余量" SortExpression="leftnum" ItemStyle-HorizontalAlign="Center"  /> 
+		<asp:BoundField DataField="nexttotal" HeaderText="下时段总容量" SortExpression="nexttotal" ItemStyle-HorizontalAlign="Center"  /> 
+		<asp:BoundField DataField="nextleft" HeaderText="下时段余量" SortExpression="nextleft" ItemStyle-HorizontalAlign="Center"  /> 
+		<asp:BoundField DataField="nextid" HeaderText="下时段编号" SortExpression="nextid" ItemStyle-HorizontalAlign="Center"  /> 
+		<asp:BoundField DataField="pss1" HeaderText="下时段" SortExpression="pss1" ItemStyle-HorizontalAlign="Center"  /> 
+		<%--<asp:BoundField DataField="pss2" HeaderText="pss2" SortExpression="pss2" ItemStyle-HorizontalAlign="Center"  /> 
 		<asp:BoundField DataField="pss3" HeaderText="pss3" SortExpression="pss3" ItemStyle-HorizontalAlign="Center"  /> 
 		<asp:BoundField DataField="pss4" HeaderText="pss4" SortExpression="pss4" ItemStyle-HorizontalAlign="Center"  /> 
 		<asp:BoundField DataField="pss5" HeaderText="pss5" SortExpression="pss5" ItemStyle-HorizontalAlign="Center"  /> 
@@ -58,7 +64,7 @@
 		<asp:BoundField DataField="psd2" HeaderText="psd2" SortExpression="psd2" ItemStyle-HorizontalAlign="Center"  /> 
 		<asp:BoundField DataField="psd3" HeaderText="psd3" SortExpression="psd3" ItemStyle-HorizontalAlign="Center"  /> 
 		<asp:BoundField DataField="psd4" HeaderText="psd4" SortExpression="psd4" ItemStyle-HorizontalAlign="Center"  /> 
-		<asp:BoundField DataField="psd5" HeaderText="psd5" SortExpression="psd5" ItemStyle-HorizontalAlign="Center"  /> 
+		<asp:BoundField DataField="psd5" HeaderText="psd5" SortExpression="psd5" ItemStyle-HorizontalAlign="Center"  /> --%>
                             
                             <asp:HyperLinkField HeaderText="详细" ControlStyle-Width="50" DataNavigateUrlFields="id" DataNavigateUrlFormatString="Show.aspx?id={0}"
                                 Text="详细"  />

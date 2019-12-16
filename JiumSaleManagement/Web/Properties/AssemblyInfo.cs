@@ -6,12 +6,12 @@ using System.Runtime.InteropServices;
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
 
-[assembly: AssemblyTitle("Jium.Web 三层结构示例源码")]
-[assembly: AssemblyDescription("Jium.Web 三层结构示例源码")]
+[assembly: AssemblyTitle("Jium.Web ")]
+[assembly: AssemblyDescription("Jium.Web ")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("动软卓越")]
-[assembly: AssemblyProduct("Jium.Web 三层结构示例源码")]
-[assembly: AssemblyCopyright("Copyright (C) Maticsoft 2004-2012")]
+[assembly: AssemblyCompany("九旻网络")]
+[assembly: AssemblyProduct("Jium.Web ")]
+[assembly: AssemblyCopyright("Copyright (C) XwSoftware 2016-2020")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 [assembly: AssemblyVersion("2.0.0.0")]

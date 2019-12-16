@@ -40,15 +40,15 @@ namespace Jium.Web.serviceplan
 		this.lblnextleft.Text=model.nextleft.ToString();
 		this.lblnextid.Text=model.nextid;
 		this.lblpss1.Text=model.pss1;
-		this.lblpss2.Text=model.pss2;
-		this.lblpss3.Text=model.pss3;
-		this.lblpss4.Text=model.pss4;
-		this.lblpss5.Text=model.pss5;
-		this.lblpsd1.Text=model.psd1.ToString();
-		this.lblpsd2.Text=model.psd2.ToString();
-		this.lblpsd3.Text=model.psd3.ToString();
-		this.lblpsd4.Text=model.psd4.ToString();
-		this.lblpsd5.Text=model.psd5.ToString();
+		//this.lblpss2.Text=model.pss2;
+		//this.lblpss3.Text=model.pss3;
+		//this.lblpss4.Text=model.pss4;
+		//this.lblpss5.Text=model.pss5;
+		//this.lblpsd1.Text=model.psd1.ToString();
+		//this.lblpsd2.Text=model.psd2.ToString();
+		//this.lblpsd3.Text=model.psd3.ToString();
+		//this.lblpsd4.Text=model.psd4.ToString();
+		//this.lblpsd5.Text=model.psd5.ToString();
 
 	}
 

@@ -67,7 +67,7 @@ namespace Jium.Web.servicerorder
             if (txtKeyword.Text.Trim() != "")
             {      
                 #warning 代码生成警告：请修改 keywordField 为需要匹配查询的真实字段名称
-                //strWhere.AppendFormat("keywordField like '%{0}%'", txtKeyword.Text.Trim());
+                strWhere.AppendFormat("ccode like '%{0}%' or spid like  '%{0}%'", txtKeyword.Text.Trim());
             }            
             ds = bll.GetList(strWhere.ToString());            
             gridView.DataSource = ds;

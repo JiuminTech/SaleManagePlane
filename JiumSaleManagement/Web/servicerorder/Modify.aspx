@@ -9,68 +9,68 @@
 <table cellSpacing="0" cellPadding="0" width="100%" border="0">
 	<tr>
 	<td height="25" width="30%" align="right">
-		auto_increment
+		订单ID
 	：</td>
 	<td height="25" width="*" align="left">
 		<asp:label id="lblid" runat="server"></asp:label>
 	</td></tr>
 	<tr>
 	<td height="25" width="30%" align="right">
-		ccode
+		顾客ID
 	：</td>
 	<td height="25" width="*" align="left">
 		<asp:TextBox id="txtccode" runat="server" Width="200px"></asp:TextBox>
 	</td></tr>
 	<tr>
 	<td height="25" width="30%" align="right">
-		spid
+		预约ID
 	：</td>
 	<td height="25" width="*" align="left">
 		<asp:TextBox id="txtspid" runat="server" Width="200px"></asp:TextBox>
 	</td></tr>
 	<tr>
 	<td height="25" width="30%" align="right">
-		spnum
+		人数
 	：</td>
 	<td height="25" width="*" align="left">
 		<asp:TextBox id="txtspnum" runat="server" Width="200px"></asp:TextBox>
 	</td></tr>
 	<tr>
 	<td height="25" width="30%" align="right">
-		spspan
+		服务项数
 	：</td>
 	<td height="25" width="*" align="left">
 		<asp:TextBox id="txtspspan" runat="server" Width="200px"></asp:TextBox>
 	</td></tr>
 	<tr>
 	<td height="25" width="30%" align="right">
-		sostatus
+		状态
 	：</td>
 	<td height="25" width="*" align="left">
 		<asp:TextBox id="txtsostatus" runat="server" Width="200px"></asp:TextBox>
 	</td></tr>
 	<tr>
 	<td height="25" width="30%" align="right">
-		createtime
+		创建时间
 	：</td>
 	<td height="25" width="*" align="left">
-		<asp:TextBox id="txtcreatetime" runat="server" Width="200px"></asp:TextBox>
+		<asp:TextBox id="txtcreatetime" runat="server" Width="200px" Enabled="false"></asp:TextBox>
 	</td></tr>
-	<tr>
+	<%--<tr>
 	<td height="25" width="30%" align="right">
-		updatetime
+		更新日期
 	：</td>
 	<td height="25" width="*" align="left">
 		<asp:TextBox id="txtupdatetime" runat="server" Width="200px"></asp:TextBox>
 	</td></tr>
 	<tr>
 	<td height="25" width="30%" align="right">
-		updateby
+		更新人
 	：</td>
 	<td height="25" width="*" align="left">
 		<asp:TextBox id="txtupdateby" runat="server" Width="200px"></asp:TextBox>
-	</td></tr>
-	<tr>
+	</td></tr>--%>
+	<%--<tr>
 	<td height="25" width="30%" align="right">
 		sos1
 	：</td>
@@ -139,7 +139,7 @@
 	：</td>
 	<td height="25" width="*" align="left">
 		<asp:TextBox id="txtsod5" runat="server" Width="200px"></asp:TextBox>
-	</td></tr>
+	</td></tr>--%>
 </table>
 
             </td>

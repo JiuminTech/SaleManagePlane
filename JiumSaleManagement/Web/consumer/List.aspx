@@ -46,7 +46,7 @@
 		<asp:BoundField DataField="cname" HeaderText="姓名" SortExpression="cname" ItemStyle-HorizontalAlign="Center"  /> 
 		<asp:BoundField DataField="ccode" HeaderText="顾客ID" SortExpression="ccode" ItemStyle-HorizontalAlign="Center"  /> 
 		<asp:BoundField DataField="cphone" HeaderText="手机号码" SortExpression="cphone" ItemStyle-HorizontalAlign="Center"  /> 
-		<asp:BoundField DataField="cemail" HeaderText="Email" SortExpression="cemail" ItemStyle-HorizontalAlign="Center"  /> 
+		<asp:BoundField DataField="cemail" HeaderText="Wxcode" SortExpression="cemail" ItemStyle-HorizontalAlign="Center"  /> 
 		<asp:BoundField DataField="clevel" HeaderText="等级" SortExpression="clevel" ItemStyle-HorizontalAlign="Center"  /> 
 		<asp:BoundField DataField="csum" HeaderText="总消费额" SortExpression="csum" ItemStyle-HorizontalAlign="Center"  /> 
 		<asp:BoundField DataField="csex" HeaderText="性别" SortExpression="csex" ItemStyle-HorizontalAlign="Center"  /> 

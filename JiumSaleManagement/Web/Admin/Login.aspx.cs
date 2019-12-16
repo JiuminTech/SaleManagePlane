@@ -72,10 +72,12 @@ namespace Jium.Web.Admin
 
 			string userName=Maticsoft.Common.PageValidate.InputText(txtUsername.Value.Trim(),30);
 			string Password=Maticsoft.Common.PageValidate.InputText(txtPass.Value.Trim(),30);
-            
 
-            //AccountsPrincipal newUser = AccountsPrincipal.ValidateLogin(userName,Password);			
-			if (false/*newUser == null*/)
+
+            //AccountsPrincipal newUser = AccountsPrincipal.ValidateLogin(userName,Password);
+            var where = string.Format("tagname='{0}' and pwd= '{1}'",userName,Password );
+            var lstuser = new Jium.BLL.userinfo().GetModelList(where);
+			if (lstuser.Count==0/*newUser == null*/)
 			{				
 				this.lblMsg.Text = "登陆失败： " + userName;
                 if ((Session["PassErrorCountAdmin"] != null) && (Session["PassErrorCountAdmin"].ToString() != ""))

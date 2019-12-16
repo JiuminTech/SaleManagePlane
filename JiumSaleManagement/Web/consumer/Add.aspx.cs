@@ -36,10 +36,10 @@ namespace Jium.Web.consumer
 			{
 				strErr+="cphone不能为空！\\n";	
 			}
-			if(this.txtcemail.Text.Trim().Length==0)
-			{
-				strErr+="cemail不能为空！\\n";	
-			}
+			//if(this.txtcemail.Text.Trim().Length==0)
+			//{
+			//	strErr+="cemail不能为空！\\n";	
+			//}
 			if(this.txtclevel.Text.Trim().Length==0)
 			{
 				strErr+="clevel不能为空！\\n";	

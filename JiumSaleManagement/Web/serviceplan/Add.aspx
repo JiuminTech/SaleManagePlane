@@ -11,68 +11,68 @@
 <table cellSpacing="0" cellPadding="0" width="100%" border="0">
 	<tr>
 	<td height="25" width="30%" align="right">
-		id
+		编号
 	：</td>
 	<td height="25" width="*" align="left">
 		<asp:TextBox id="txtid" runat="server" Width="200px"></asp:TextBox>
 	</td></tr>
 	<tr>
 	<td height="25" width="30%" align="right">
-		plandate
+		日期
 	：</td>
 	<td height="25" width="*" align="left">
 		<asp:TextBox id="txtplandate" runat="server" Width="200px"></asp:TextBox>
 	</td></tr>
 	<tr>
 	<td height="25" width="30%" align="right">
-		plantime
+		时间
 	：</td>
 	<td height="25" width="*" align="left">
 		<asp:TextBox id="txtplantime" runat="server" Width="200px"></asp:TextBox>
 	</td></tr>
 	<tr>
 	<td height="25" width="30%" align="right">
-		totalnum
+		总容量
 	：</td>
 	<td height="25" width="*" align="left">
 		<asp:TextBox id="txttotalnum" runat="server" Width="200px"></asp:TextBox>
 	</td></tr>
 	<tr>
 	<td height="25" width="30%" align="right">
-		leftnum
+		剩余容量
 	：</td>
 	<td height="25" width="*" align="left">
 		<asp:TextBox id="txtleftnum" runat="server" Width="200px"></asp:TextBox>
 	</td></tr>
 	<tr>
 	<td height="25" width="30%" align="right">
-		nexttotal
+		下时段容量
 	：</td>
 	<td height="25" width="*" align="left">
 		<asp:TextBox id="txtnexttotal" runat="server" Width="200px"></asp:TextBox>
 	</td></tr>
 	<tr>
 	<td height="25" width="30%" align="right">
-		nextleft
+		下时段余量
 	：</td>
 	<td height="25" width="*" align="left">
 		<asp:TextBox id="txtnextleft" runat="server" Width="200px"></asp:TextBox>
 	</td></tr>
 	<tr>
 	<td height="25" width="30%" align="right">
-		nextid
+		下时段编号
 	：</td>
 	<td height="25" width="*" align="left">
 		<asp:TextBox id="txtnextid" runat="server" Width="200px"></asp:TextBox>
 	</td></tr>
 	<tr>
 	<td height="25" width="30%" align="right">
-		pss1
+		下时段
 	：</td>
 	<td height="25" width="*" align="left">
 		<asp:TextBox id="txtpss1" runat="server" Width="200px"></asp:TextBox>
 	</td></tr>
-	<tr>
+	<%--<tr>
 	<td height="25" width="30%" align="right">
 		pss2
 	：</td>
@@ -134,7 +134,7 @@
 	：</td>
 	<td height="25" width="*" align="left">
 		<asp:TextBox id="txtpsd5" runat="server" Width="200px"></asp:TextBox>
-	</td></tr>
+	</td></tr>--%>
 </table>
 
             </td>

@@ -32,7 +32,40 @@ namespace Jium.Web.serviceplan
         {
             BindData();
         }
-        
+
+        protected void btnBatchAdd_Click(object sender, EventArgs e)
+        {
+            if (txtKeyword.Text.Trim() == "" )
+            {
+                MessageBox.Show(this, "请输入要批量增加的日期数字，今天后第几日");
+                return;                
+            }
+            int index = int.Parse(txtKeyword.Text.Trim());
+
+            int times = 24;
+            int totalnum = 4;
+            int nexttotal = 4;
+            Jium.BLL.serviceplan bll = new Jium.BLL.serviceplan();
+            DateTime pdate = DateTime.Now.AddDays(index).Date.AddHours(8);
+            
+            for (int i=0;i< times; i++)
+            {
+                Jium.Model.serviceplan model = new Jium.Model.serviceplan();
+                model.id = pdate.AddMinutes(i*30).ToString("yyyyMMddHHmm");
+                model.plandate = pdate.AddMinutes(i * 30).ToString("yyyy-MM-dd");
+                model.plantime = pdate.AddMinutes(i * 30).ToString("HH:mm");
+                model.pss1= pdate.AddMinutes(i * 30 + 30).ToString("HH:mm");
+                model.totalnum = totalnum;
+                model.leftnum = totalnum;
+                model.nexttotal = nexttotal;
+                model.nextleft = nexttotal;
+                model.nextid = i==times-1?"0": pdate.AddMinutes(i * 30+30).ToString("yyyyMMddHHmm"); 
+                bll.Add(model);
+            }
+            txtKeyword.Text = "";
+            BindData();
+        }
+
         protected void btnDelete_Click(object sender, EventArgs e)
         {
             string idlist = GetSelIDlist();
@@ -67,7 +100,7 @@ namespace Jium.Web.serviceplan
             if (txtKeyword.Text.Trim() != "")
             {      
                 #warning 代码生成警告：请修改 keywordField 为需要匹配查询的真实字段名称
-                //strWhere.AppendFormat("keywordField like '%{0}%'", txtKeyword.Text.Trim());
+                strWhere.AppendFormat("id like '%{0}%'", txtKeyword.Text.Trim());
             }            
             ds = bll.GetList(strWhere.ToString());            
             gridView.DataSource = ds;

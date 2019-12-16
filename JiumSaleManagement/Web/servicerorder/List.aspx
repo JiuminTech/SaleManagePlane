@@ -41,15 +41,15 @@
                                 </ItemTemplate>
                             </asp:TemplateField> 
                             
-		<asp:BoundField DataField="ccode" HeaderText="ccode" SortExpression="ccode" ItemStyle-HorizontalAlign="Center"  /> 
-		<asp:BoundField DataField="spid" HeaderText="spid" SortExpression="spid" ItemStyle-HorizontalAlign="Center"  /> 
-		<asp:BoundField DataField="spnum" HeaderText="spnum" SortExpression="spnum" ItemStyle-HorizontalAlign="Center"  /> 
-		<asp:BoundField DataField="spspan" HeaderText="spspan" SortExpression="spspan" ItemStyle-HorizontalAlign="Center"  /> 
-		<asp:BoundField DataField="sostatus" HeaderText="sostatus" SortExpression="sostatus" ItemStyle-HorizontalAlign="Center"  /> 
-		<asp:BoundField DataField="createtime" HeaderText="createtime" SortExpression="createtime" ItemStyle-HorizontalAlign="Center"  /> 
-		<asp:BoundField DataField="updatetime" HeaderText="updatetime" SortExpression="updatetime" ItemStyle-HorizontalAlign="Center"  /> 
-		<asp:BoundField DataField="updateby" HeaderText="updateby" SortExpression="updateby" ItemStyle-HorizontalAlign="Center"  /> 
-		<asp:BoundField DataField="sos1" HeaderText="sos1" SortExpression="sos1" ItemStyle-HorizontalAlign="Center"  /> 
+		<asp:BoundField DataField="ccode" HeaderText="顾客ID" SortExpression="ccode" ItemStyle-HorizontalAlign="Center"  /> 
+		<asp:BoundField DataField="spid" HeaderText="预定编号" SortExpression="spid" ItemStyle-HorizontalAlign="Center"  /> 
+		<asp:BoundField DataField="spnum" HeaderText="人数" SortExpression="spnum" ItemStyle-HorizontalAlign="Center"  /> 
+		<asp:BoundField DataField="spspan" HeaderText="项数" SortExpression="spspan" ItemStyle-HorizontalAlign="Center"  /> 
+		<asp:BoundField DataField="sostatus" HeaderText="状态" SortExpression="sostatus" ItemStyle-HorizontalAlign="Center"  /> 
+		<asp:BoundField DataField="createtime" HeaderText="创建时间" SortExpression="createtime" ItemStyle-HorizontalAlign="Center"  /> 
+		<asp:BoundField DataField="updatetime" HeaderText="更新时间" SortExpression="updatetime" ItemStyle-HorizontalAlign="Center"  /> 
+		<asp:BoundField DataField="updateby" HeaderText="更新人" SortExpression="updateby" ItemStyle-HorizontalAlign="Center"  /> 
+		<%--<asp:BoundField DataField="sos1" HeaderText="sos1" SortExpression="sos1" ItemStyle-HorizontalAlign="Center"  /> 
 		<asp:BoundField DataField="sos2" HeaderText="sos2" SortExpression="sos2" ItemStyle-HorizontalAlign="Center"  /> 
 		<asp:BoundField DataField="sos3" HeaderText="sos3" SortExpression="sos3" ItemStyle-HorizontalAlign="Center"  /> 
 		<asp:BoundField DataField="sos4" HeaderText="sos4" SortExpression="sos4" ItemStyle-HorizontalAlign="Center"  /> 
@@ -58,7 +58,7 @@
 		<asp:BoundField DataField="sod2" HeaderText="sod2" SortExpression="sod2" ItemStyle-HorizontalAlign="Center"  /> 
 		<asp:BoundField DataField="sod3" HeaderText="sod3" SortExpression="sod3" ItemStyle-HorizontalAlign="Center"  /> 
 		<asp:BoundField DataField="sod4" HeaderText="sod4" SortExpression="sod4" ItemStyle-HorizontalAlign="Center"  /> 
-		<asp:BoundField DataField="sod5" HeaderText="sod5" SortExpression="sod5" ItemStyle-HorizontalAlign="Center"  /> 
+		<asp:BoundField DataField="sod5" HeaderText="sod5" SortExpression="sod5" ItemStyle-HorizontalAlign="Center"  /> --%>
                             
                             <asp:HyperLinkField HeaderText="详细" ControlStyle-Width="50" DataNavigateUrlFields="id" DataNavigateUrlFormatString="Show.aspx?id={0}"
                                 Text="详细"  />

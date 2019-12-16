@@ -12,7 +12,7 @@
 <body>
     <form id="form1" runat="server">
     <div align="center">
-        <table cellspacing="0" cellpadding="5" width="700" border="0">
+        <table cellspacing="0" cellpadding="5" width="100%" border="0">
             <tr>
                 <td bgcolor='<%=Application[Session["Style"].ToString()+"xtable_bgcolor"]%>'>
                     <table cellspacing="0" bordercolordark='<%=Application[Session["Style"].ToString()+"xtable_bordercolordark"]%>'
@@ -20,7 +20,7 @@
                         cellpadding="5" width="100%" border="1">
                         <tr bgcolor="#e4e4e4">
                             <td bgcolor='<%=Application[Session["Style"].ToString()+"xtable_titlebgcolor"]%>'
-                                height="22" align="left">
+                                height="22" align="center">
                                 <%=TabTitle%>
                             </td>
                         </tr>
