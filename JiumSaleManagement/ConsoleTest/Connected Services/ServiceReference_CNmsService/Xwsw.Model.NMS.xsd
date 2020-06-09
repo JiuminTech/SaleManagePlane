@@ -1,0 +1,213 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Xwsw.Model.NMS" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Xwsw.Model.NMS" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="ArrayOfaudiohistory">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="audiohistory" nillable="true" type="tns:audiohistory" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfaudiohistory" nillable="true" type="tns:ArrayOfaudiohistory" />
+  <xs:complexType name="audiohistory">
+    <xs:sequence>
+      <xs:element name="_clientid" type="xs:long" />
+      <xs:element name="_endtime" nillable="true" type="xs:string" />
+      <xs:element name="_filename" nillable="true" type="xs:string" />
+      <xs:element name="_filesize" type="xs:int" />
+      <xs:element name="_id" type="xs:long" />
+      <xs:element name="_pathname" nillable="true" type="xs:string" />
+      <xs:element name="_remark" nillable="true" type="xs:string" />
+      <xs:element name="_starttime" nillable="true" type="xs:string" />
+      <xs:element name="_statustag" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="audiohistory" nillable="true" type="tns:audiohistory" />
+  <xs:complexType name="ArrayOfgroupinfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="groupinfo" nillable="true" type="tns:groupinfo" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfgroupinfo" nillable="true" type="tns:ArrayOfgroupinfo" />
+  <xs:complexType name="groupinfo">
+    <xs:sequence>
+      <xs:element name="_createtime" nillable="true" type="xs:string" />
+      <xs:element name="_id" type="xs:int" />
+      <xs:element name="_ownerid" type="xs:int" />
+      <xs:element name="_remark" nillable="true" type="xs:string" />
+      <xs:element name="_status" type="xs:int" />
+      <xs:element name="_tagname" nillable="true" type="xs:string" />
+      <xs:element name="_updatetime" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="groupinfo" nillable="true" type="tns:groupinfo" />
+  <xs:complexType name="ArrayOfgroupterminal">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="groupterminal" nillable="true" type="tns:groupterminal" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfgroupterminal" nillable="true" type="tns:ArrayOfgroupterminal" />
+  <xs:complexType name="groupterminal">
+    <xs:sequence>
+      <xs:element name="_createtime" nillable="true" type="xs:string" />
+      <xs:element name="_deltime" nillable="true" type="xs:string" />
+      <xs:element name="_groupid" type="xs:int" />
+      <xs:element name="_id" type="xs:int" />
+      <xs:element name="_isdel" type="xs:boolean" />
+      <xs:element name="_status" type="xs:int" />
+      <xs:element name="_terminalid" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="groupterminal" nillable="true" type="tns:groupterminal" />
+  <xs:complexType name="userinfo">
+    <xs:sequence>
+      <xs:element name="_createtime" nillable="true" type="xs:string" />
+      <xs:element name="_email" nillable="true" type="xs:string" />
+      <xs:element name="_id" type="xs:int" />
+      <xs:element name="_level" type="xs:int" />
+      <xs:element name="_pwd" nillable="true" type="xs:string" />
+      <xs:element name="_remark" nillable="true" type="xs:string" />
+      <xs:element name="_status" type="xs:int" />
+      <xs:element name="_tagname" nillable="true" type="xs:string" />
+      <xs:element name="_token" nillable="true" type="xs:string" />
+      <xs:element name="_tokentime" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="userinfo" nillable="true" type="tns:userinfo" />
+  <xs:complexType name="ArrayOfuserinfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="userinfo" nillable="true" type="tns:userinfo" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfuserinfo" nillable="true" type="tns:ArrayOfuserinfo" />
+  <xs:complexType name="ArrayOfuserevent">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="userevent" nillable="true" type="tns:userevent" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfuserevent" nillable="true" type="tns:ArrayOfuserevent" />
+  <xs:complexType name="userevent">
+    <xs:sequence>
+      <xs:element name="_eventid" type="xs:long" />
+      <xs:element name="_eventtime" nillable="true" type="xs:string" />
+      <xs:element name="_id" type="xs:long" />
+      <xs:element name="_remark" nillable="true" type="xs:string" />
+      <xs:element name="_userid" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="userevent" nillable="true" type="tns:userevent" />
+  <xs:complexType name="ArrayOfterminalinfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="terminalinfo" nillable="true" type="tns:terminalinfo" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfterminalinfo" nillable="true" type="tns:ArrayOfterminalinfo" />
+  <xs:complexType name="terminalinfo">
+    <xs:sequence>
+      <xs:element name="_activestatus" nillable="true" type="xs:int" />
+      <xs:element name="_clientid" type="xs:long" />
+      <xs:element name="_createtime" nillable="true" type="xs:string" />
+      <xs:element name="_id" type="xs:int" />
+      <xs:element name="_remark" nillable="true" type="xs:string" />
+      <xs:element name="_remoteip" nillable="true" type="xs:string" />
+      <xs:element name="_status" type="xs:int" />
+      <xs:element name="_tagname" nillable="true" type="xs:string" />
+      <xs:element name="_updatetime" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="terminalinfo" nillable="true" type="tns:terminalinfo" />
+  <xs:complexType name="ArrayOfterminaluser">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="terminaluser" nillable="true" type="tns:terminaluser" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfterminaluser" nillable="true" type="tns:ArrayOfterminaluser" />
+  <xs:complexType name="terminaluser">
+    <xs:sequence>
+      <xs:element name="_createtime" nillable="true" type="xs:string" />
+      <xs:element name="_endtime" nillable="true" type="xs:string" />
+      <xs:element name="_id" type="xs:int" />
+      <xs:element name="_starttime" nillable="true" type="xs:string" />
+      <xs:element name="_terminalid" type="xs:int" />
+      <xs:element name="_userid" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="terminaluser" nillable="true" type="tns:terminaluser" />
+  <xs:complexType name="ArrayOfterminalevent">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="terminalevent" nillable="true" type="tns:terminalevent" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfterminalevent" nillable="true" type="tns:ArrayOfterminalevent" />
+  <xs:complexType name="terminalevent">
+    <xs:sequence>
+      <xs:element name="_clientid" type="xs:long" />
+      <xs:element name="_eventid" type="xs:long" />
+      <xs:element name="_eventtime" nillable="true" type="xs:string" />
+      <xs:element name="_id" type="xs:long" />
+      <xs:element name="_notifytag" type="xs:boolean" />
+      <xs:element name="_notifytime" nillable="true" type="xs:string" />
+      <xs:element name="_terminalid" type="xs:long" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="terminalevent" nillable="true" type="tns:terminalevent" />
+  <xs:complexType name="ArrayOfcurrentalarm">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="currentalarm" nillable="true" type="tns:currentalarm" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfcurrentalarm" nillable="true" type="tns:ArrayOfcurrentalarm" />
+  <xs:complexType name="currentalarm">
+    <xs:sequence>
+      <xs:element name="_alarmdesc" nillable="true" type="xs:string" />
+      <xs:element name="_alarmname" nillable="true" type="xs:string" />
+      <xs:element name="_alarmtype" type="xs:int" />
+      <xs:element name="_confirmtime" nillable="true" type="xs:string" />
+      <xs:element name="_createtime" nillable="true" type="xs:string" />
+      <xs:element name="_handledetail" nillable="true" type="xs:string" />
+      <xs:element name="_handlerid" type="xs:int" />
+      <xs:element name="_handlestatus" type="xs:int" />
+      <xs:element name="_id" type="xs:long" />
+      <xs:element name="_operateid" type="xs:long" />
+      <xs:element name="_ownerid" type="xs:int" />
+      <xs:element name="_updatetime" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="currentalarm" nillable="true" type="tns:currentalarm" />
+  <xs:complexType name="ArrayOfhistoryalarm">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="historyalarm" nillable="true" type="tns:historyalarm" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfhistoryalarm" nillable="true" type="tns:ArrayOfhistoryalarm" />
+  <xs:complexType name="historyalarm">
+    <xs:sequence>
+      <xs:element name="_alarmdesc" nillable="true" type="xs:string" />
+      <xs:element name="_alarmname" nillable="true" type="xs:string" />
+      <xs:element name="_alarmtype" type="xs:int" />
+      <xs:element name="_confirmtime" nillable="true" type="xs:string" />
+      <xs:element name="_createtime" nillable="true" type="xs:string" />
+      <xs:element name="_handledetail" nillable="true" type="xs:string" />
+      <xs:element name="_handlerid" type="xs:int" />
+      <xs:element name="_handlestatus" type="xs:int" />
+      <xs:element name="_id" type="xs:long" />
+      <xs:element name="_operateid" type="xs:long" />
+      <xs:element name="_ownerid" type="xs:int" />
+      <xs:element name="_updatetime" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="historyalarm" nillable="true" type="tns:historyalarm" />
+  <xs:complexType name="ArrayOfsystemparams">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="systemparams" nillable="true" type="tns:systemparams" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfsystemparams" nillable="true" type="tns:ArrayOfsystemparams" />
+  <xs:complexType name="systemparams">
+    <xs:sequence>
+      <xs:element name="_id" type="xs:int" />
+      <xs:element name="_paramname" nillable="true" type="xs:string" />
+      <xs:element name="_paramvalue" nillable="true" type="xs:string" />
+      <xs:element name="_remark" nillable="true" type="xs:string" />
+      <xs:element name="_status" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="systemparams" nillable="true" type="tns:systemparams" />
+</xs:schema>

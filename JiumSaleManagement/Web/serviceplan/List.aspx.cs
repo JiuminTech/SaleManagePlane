@@ -11,10 +11,7 @@ using LTP.Accounts.Bus;
 namespace Jium.Web.serviceplan
 {
     public partial class List : Page
-    {
-        
-        
-        
+    {  
 		Jium.BLL.serviceplan bll = new Jium.BLL.serviceplan();
 
         protected void Page_Load(object sender, EventArgs e)
@@ -32,7 +29,9 @@ namespace Jium.Web.serviceplan
         {
             BindData();
         }
-
+        private static int DAY_TIMES = 12;
+        private static int MINUTE_TIME_LEN = 60;
+        private static int WORKER_NUM = 4;
         protected void btnBatchAdd_Click(object sender, EventArgs e)
         {
             if (txtKeyword.Text.Trim() == "" )
@@ -42,24 +41,24 @@ namespace Jium.Web.serviceplan
             }
             int index = int.Parse(txtKeyword.Text.Trim());
 
-            int times = 24;
-            int totalnum = 4;
-            int nexttotal = 4;
+            int times = DAY_TIMES;
+            int totalnum = WORKER_NUM;
+            int nexttotal = WORKER_NUM;
             Jium.BLL.serviceplan bll = new Jium.BLL.serviceplan();
             DateTime pdate = DateTime.Now.AddDays(index).Date.AddHours(8);
             
             for (int i=0;i< times; i++)
             {
                 Jium.Model.serviceplan model = new Jium.Model.serviceplan();
-                model.id = pdate.AddMinutes(i*30).ToString("yyyyMMddHHmm");
-                model.plandate = pdate.AddMinutes(i * 30).ToString("yyyy-MM-dd");
-                model.plantime = pdate.AddMinutes(i * 30).ToString("HH:mm");
-                model.pss1= pdate.AddMinutes(i * 30 + 30).ToString("HH:mm");
+                model.id = pdate.AddMinutes(i* MINUTE_TIME_LEN).ToString("yyyyMMddHHmm");
+                model.plandate = pdate.AddMinutes(i * MINUTE_TIME_LEN).ToString("yyyy-MM-dd");
+                model.plantime = pdate.AddMinutes(i * MINUTE_TIME_LEN).ToString("HH:mm");
+                model.pss1= pdate.AddMinutes(i * MINUTE_TIME_LEN + MINUTE_TIME_LEN).ToString("HH:mm");
                 model.totalnum = totalnum;
                 model.leftnum = totalnum;
                 model.nexttotal = nexttotal;
                 model.nextleft = nexttotal;
-                model.nextid = i==times-1?"0": pdate.AddMinutes(i * 30+30).ToString("yyyyMMddHHmm"); 
+                model.nextid = i==times-1?"0": pdate.AddMinutes(i * MINUTE_TIME_LEN + MINUTE_TIME_LEN).ToString("yyyyMMddHHmm"); 
                 bll.Add(model);
             }
             txtKeyword.Text = "";

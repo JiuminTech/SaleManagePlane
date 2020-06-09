@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="033b5bbe-d4a5-4688-be7f-c54de679ecca" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://47.103.158.30:8088/CNmsService/mex" Protocol="mex" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="service.wsdl" MetadataType="Wsdl" ID="a8650f0c-7e5d-4075-a984-f04d4ec4dc76" SourceId="1" SourceUrl="http://47.103.158.30:8088/CNmsService/mex" />
+    <MetadataFile FileName="service.xsd" MetadataType="Schema" ID="f4557e01-3154-4b74-9dc0-8dae320b818f" SourceId="1" SourceUrl="http://47.103.158.30:8088/CNmsService/mex" />
+    <MetadataFile FileName="service1.xsd" MetadataType="Schema" ID="2deacdf1-da18-4b0d-bfa8-ad6cb1ceb592" SourceId="1" SourceUrl="http://47.103.158.30:8088/CNmsService/mex" />
+    <MetadataFile FileName="Xwsw.Model.NMS.xsd" MetadataType="Schema" ID="fc687085-b6c3-438d-b63f-b61b06cf3802" SourceId="1" SourceUrl="http://47.103.158.30:8088/CNmsService/mex" />
+    <MetadataFile FileName="service2.xsd" MetadataType="Schema" ID="a8ded9ae-7c11-4990-8b38-423db0943f02" SourceId="1" SourceUrl="http://47.103.158.30:8088/CNmsService/mex" />
+    <MetadataFile FileName="Xwsw.Model.xsd" MetadataType="Schema" ID="816b1f37-1fb1-40d2-8075-cbd13972a164" SourceId="1" SourceUrl="http://47.103.158.30:8088/CNmsService/mex" />
+    <MetadataFile FileName="Message.xsd" MetadataType="Schema" ID="133e2b36-0dfa-47cd-995e-8c1431f136e4" SourceId="1" SourceUrl="http://47.103.158.30:8088/CNmsService/mex" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

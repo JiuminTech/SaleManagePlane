@@ -171,25 +171,30 @@ namespace Jium.Web.consumer
 			decimal csum=decimal.Parse(this.txtcsum.Text);
 			int csex=int.Parse(this.txtcsex.Text);
 			string cremark=this.txtcremark.Text;
-			//string css1=this.txtcss1.Text;
-			//string css2=this.txtcss2.Text;
-			//string css3=this.txtcss3.Text;
-			//string css4=this.txtcss4.Text;
-			//string css5=this.txtcss5.Text;
-			//int csd1=int.Parse(this.txtcsd1.Text);
-			//int csd2=int.Parse(this.txtcsd2.Text);
-			//int csd3=int.Parse(this.txtcsd3.Text);
-			//int csd4=int.Parse(this.txtcsd4.Text);
-			//int csd5=int.Parse(this.txtcsd5.Text);
-			//decimal csdc1=decimal.Parse(this.txtcsdc1.Text);
-			//decimal csdc2=decimal.Parse(this.txtcsdc2.Text);
-			//decimal csdc3=decimal.Parse(this.txtcsdc3.Text);
-			//decimal csdc4=decimal.Parse(this.txtcsdc4.Text);
-			//decimal csdc5=decimal.Parse(this.txtcsdc5.Text);
+            //string css1=this.txtcss1.Text;
+            //string css2=this.txtcss2.Text;
+            //string css3=this.txtcss3.Text;
+            //string css4=this.txtcss4.Text;
+            //string css5=this.txtcss5.Text;
+            //int csd1=int.Parse(this.txtcsd1.Text);
+            //int csd2=int.Parse(this.txtcsd2.Text);
+            //int csd3=int.Parse(this.txtcsd3.Text);
+            //int csd4=int.Parse(this.txtcsd4.Text);
+            //int csd5=int.Parse(this.txtcsd5.Text);
+            //decimal csdc1=decimal.Parse(this.txtcsdc1.Text);
+            //decimal csdc2=decimal.Parse(this.txtcsdc2.Text);
+            //decimal csdc3=decimal.Parse(this.txtcsdc3.Text);
+            //decimal csdc4=decimal.Parse(this.txtcsdc4.Text);
+            //decimal csdc5=decimal.Parse(this.txtcsdc5.Text);
 
-
-			Jium.Model.consumer model=new Jium.Model.consumer();
-			model.id=id;
+            Jium.BLL.consumer bll = new Jium.BLL.consumer();
+            Jium.Model.consumer model= bll.GetModel(id);
+            if(model==null)
+            {
+                Maticsoft.Common.MessageBox.Show(this, "顾客 ID 错误");
+                return;
+            }
+			//model.id=id;
 			model.cname=cname;
 			model.ccode=ccode;
 			model.cphone=cphone;
@@ -213,8 +218,7 @@ namespace Jium.Web.consumer
 			//model.csdc3=csdc3;
 			//model.csdc4=csdc4;
 			//model.csdc5=csdc5;
-
-			Jium.BLL.consumer bll=new Jium.BLL.consumer();
+			
 			bll.Update(model);
 			Maticsoft.Common.MessageBox.ShowAndRedirect(this,"保存成功！","list.aspx");
 

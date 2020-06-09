@@ -1,0 +1,1267 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="CNmsService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import namespace="http://tempuri.org/" />
+      <xsd:import namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import namespace="http://schemas.datacontract.org/2004/07/Xwsw.Model.NMS" />
+      <xsd:import />
+      <xsd:import namespace="http://schemas.datacontract.org/2004/07/Xwsw.Model" />
+      <xsd:import namespace="http://schemas.microsoft.com/Message" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="CNmsService_AddAudiohistory_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddAudiohistory" />
+  </wsdl:message>
+  <wsdl:message name="CNmsService_AddAudiohistory_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddAudiohistoryResponse" />
+  </wsdl:message>
+  <wsdl:message name="CNmsService_UpdateAudiohistory_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateAudiohistory" />
+  </wsdl:message>
+  <wsdl:message name="CNmsService_UpdateAudiohistory_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateAudiohistoryResponse" />
+  </wsdl:message>
+  <wsdl:message name="CNmsService_DeleteAudiohistory_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteAudiohistory" />
+  </wsdl:message>
+  <wsdl:message name="CNmsService_DeleteAudiohistory_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteAudiohistoryResponse" />
+  </wsdl:message>
+  <wsdl:message name="CNmsService_GetAudiohistoryList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAudiohistoryList" />
+  </wsdl:message>
+  <wsdl:message name="CNmsService_GetAudiohistoryList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAudiohistoryListResponse" />
+  </wsdl:message>
+  <wsdl:message name="CNmsService_GetAudiohistory_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAudiohistory" />
+  </wsdl:message>
+  <wsdl:message name="CNmsService_GetAudiohistory_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAudiohistoryResponse" />
+  </wsdl:message>
+  <wsdl:message name="CNmsService_AddGroupinfo_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddGroupinfo" />
+  </wsdl:message>
+  <wsdl:message name="CNmsService_AddGroupinfo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddGroupinfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="CNmsService_UpdateGroupinfo_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateGroupinfo" />
+  </wsdl:message>
+  <wsdl:message name="CNmsService_UpdateGroupinfo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateGroupinfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="CNmsService_DeleteGroupinfo_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteGroupinfo" />
+  </wsdl:message>
+  <wsdl:message name="CNmsService_DeleteGroupinfo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteGroupinfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="CNmsService_GetGroupinfoList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetGroupinfoList" />
+  </wsdl:message>
+  <wsdl:message name="CNmsService_GetGroupinfoList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetGroupinfoListResponse" />
+  </wsdl:message>
+  <wsdl:message name="CNmsService_GetGroupinfo_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetGroupinfo" />
+  </wsdl:message>
+  <wsdl:message name="CNmsService_GetGroupinfo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetGroupinfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="CNmsService_AddGroupterminal_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddGroupterminal" />
+  </wsdl:message>
+  <wsdl:message name="CNmsService_AddGroupterminal_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddGroupterminalResponse" />
+  </wsdl:message>
+  <wsdl:message name="CNmsService_UpdateGroupterminal_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateGroupterminal" />
+  </wsdl:message>
+  <wsdl:message name="CNmsService_UpdateGroupterminal_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateGroupterminalResponse" />
+  </wsdl:message>
+  <wsdl:message name="CNmsService_DeleteGroupterminal_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteGroupterminal" />
+  </wsdl:message>
+  <wsdl:message name="CNmsService_DeleteGroupterminal_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteGroupterminalResponse" />
+  </wsdl:message>
+  <wsdl:message name="CNmsService_GetGroupterminalList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetGroupterminalList" />
+  </wsdl:message>
+  <wsdl:message name="CNmsService_GetGroupterminalList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetGroupterminalListResponse" />
+  </wsdl:message>
+  <wsdl:message name="CNmsService_GetGroupterminal_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetGroupterminal" />
+  </wsdl:message>
+  <wsdl:message name="CNmsService_GetGroupterminal_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetGroupterminalResponse" />
+  </wsdl:message>
+  <wsdl:message name="CNmsService_UserLogin_InputMessage">
+    <wsdl:part name="parameters" element="tns:UserLogin" />
+  </wsdl:message>
+  <wsdl:message name="CNmsService_UserLogin_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UserLoginResponse" />
+  </wsdl:message>
+  <wsdl:message name="CNmsService_UserLoginE_InputMessage">
+    <wsdl:part name="parameters" element="tns:UserLoginE" />
+  </wsdl:message>
+  <wsdl:message name="CNmsService_UserLoginE_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UserLoginEResponse" />
+  </wsdl:message>
+  <wsdl:message name="CNmsService_ModifyUserPwd_InputMessage">
+    <wsdl:part name="parameters" element="tns:ModifyUserPwd" />
+  </wsdl:message>
+  <wsdl:message name="CNmsService_ModifyUserPwd_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ModifyUserPwdResponse" />
+  </wsdl:message>
+  <wsdl:message name="CNmsService_AddUserinfo_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddUserinfo" />
+  </wsdl:message>
+  <wsdl:message name="CNmsService_AddUserinfo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddUserinfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="CNmsService_AddUserinfoModel_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddUserinfoModel" />
+  </wsdl:message>
+  <wsdl:message name="CNmsService_AddUserinfoModel_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddUserinfoModelResponse" />
+  </wsdl:message>
+  <wsdl:message name="CNmsService_UpdateUserinfo_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateUserinfo" />
+  </wsdl:message>
+  <wsdl:message name="CNmsService_UpdateUserinfo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateUserinfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="CNmsService_UpdateUserinfoModel_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateUserinfoModel" />
+  </wsdl:message>
+  <wsdl:message name="CNmsService_UpdateUserinfoModel_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateUserinfoModelResponse" />
+  </wsdl:message>
+  <wsdl:message name="CNmsService_DeleteUserinfo_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteUserinfo" />
+  </wsdl:message>
+  <wsdl:message name="CNmsService_DeleteUserinfo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteUserinfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="CNmsService_GetUserinfoList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserinfoList" />
+  </wsdl:message>
+  <wsdl:message name="CNmsService_GetUserinfoList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserinfoListResponse" />
+  </wsdl:message>
+  <wsdl:message name="CNmsService_GetUserinfoListModel_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserinfoListModel" />
+  </wsdl:message>
+  <wsdl:message name="CNmsService_GetUserinfoListModel_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserinfoListModelResponse" />
+  </wsdl:message>
+  <wsdl:message name="CNmsService_GetUserinfo_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserinfo" />
+  </wsdl:message>
+  <wsdl:message name="CNmsService_GetUserinfo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserinfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="CNmsService_GetUserinfoModel_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserinfoModel" />
+  </wsdl:message>
+  <wsdl:message name="CNmsService_GetUserinfoModel_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserinfoModelResponse" />
+  </wsdl:message>
+  <wsdl:message name="CNmsService_AddUserevent_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddUserevent" />
+  </wsdl:message>
+  <wsdl:message name="CNmsService_AddUserevent_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddUsereventResponse" />
+  </wsdl:message>
+  <wsdl:message name="CNmsService_UpdateUserevent_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateUserevent" />
+  </wsdl:message>
+  <wsdl:message name="CNmsService_UpdateUserevent_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateUsereventResponse" />
+  </wsdl:message>
+  <wsdl:message name="CNmsService_DeleteUserevent_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteUserevent" />
+  </wsdl:message>
+  <wsdl:message name="CNmsService_DeleteUserevent_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteUsereventResponse" />
+  </wsdl:message>
+  <wsdl:message name="CNmsService_GetUsereventList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetUsereventList" />
+  </wsdl:message>
+  <wsdl:message name="CNmsService_GetUsereventList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetUsereventListResponse" />
+  </wsdl:message>
+  <wsdl:message name="CNmsService_GetUserevent_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserevent" />
+  </wsdl:message>
+  <wsdl:message name="CNmsService_GetUserevent_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetUsereventResponse" />
+  </wsdl:message>
+  <wsdl:message name="CNmsService_AddTerminalinfo_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddTerminalinfo" />
+  </wsdl:message>
+  <wsdl:message name="CNmsService_AddTerminalinfo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddTerminalinfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="CNmsService_UpdateTerminalinfo_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateTerminalinfo" />
+  </wsdl:message>
+  <wsdl:message name="CNmsService_UpdateTerminalinfo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateTerminalinfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="CNmsService_DeleteTerminalinfo_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteTerminalinfo" />
+  </wsdl:message>
+  <wsdl:message name="CNmsService_DeleteTerminalinfo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteTerminalinfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="CNmsService_GetTerminalinfoList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetTerminalinfoList" />
+  </wsdl:message>
+  <wsdl:message name="CNmsService_GetTerminalinfoList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetTerminalinfoListResponse" />
+  </wsdl:message>
+  <wsdl:message name="CNmsService_GetTerminalinfo_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetTerminalinfo" />
+  </wsdl:message>
+  <wsdl:message name="CNmsService_GetTerminalinfo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetTerminalinfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="CNmsService_AddTerminaluser_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddTerminaluser" />
+  </wsdl:message>
+  <wsdl:message name="CNmsService_AddTerminaluser_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddTerminaluserResponse" />
+  </wsdl:message>
+  <wsdl:message name="CNmsService_UpdateTerminaluser_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateTerminaluser" />
+  </wsdl:message>
+  <wsdl:message name="CNmsService_UpdateTerminaluser_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateTerminaluserResponse" />
+  </wsdl:message>
+  <wsdl:message name="CNmsService_DeleteTerminaluser_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteTerminaluser" />
+  </wsdl:message>
+  <wsdl:message name="CNmsService_DeleteTerminaluser_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteTerminaluserResponse" />
+  </wsdl:message>
+  <wsdl:message name="CNmsService_GetTerminaluserList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetTerminaluserList" />
+  </wsdl:message>
+  <wsdl:message name="CNmsService_GetTerminaluserList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetTerminaluserListResponse" />
+  </wsdl:message>
+  <wsdl:message name="CNmsService_GetTerminaluser_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetTerminaluser" />
+  </wsdl:message>
+  <wsdl:message name="CNmsService_GetTerminaluser_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetTerminaluserResponse" />
+  </wsdl:message>
+  <wsdl:message name="CNmsService_AddTerminalevent_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddTerminalevent" />
+  </wsdl:message>
+  <wsdl:message name="CNmsService_AddTerminalevent_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddTerminaleventResponse" />
+  </wsdl:message>
+  <wsdl:message name="CNmsService_UpdateTerminalevent_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateTerminalevent" />
+  </wsdl:message>
+  <wsdl:message name="CNmsService_UpdateTerminalevent_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateTerminaleventResponse" />
+  </wsdl:message>
+  <wsdl:message name="CNmsService_DeleteTerminalevent_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteTerminalevent" />
+  </wsdl:message>
+  <wsdl:message name="CNmsService_DeleteTerminalevent_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteTerminaleventResponse" />
+  </wsdl:message>
+  <wsdl:message name="CNmsService_GetTerminaleventList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetTerminaleventList" />
+  </wsdl:message>
+  <wsdl:message name="CNmsService_GetTerminaleventList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetTerminaleventListResponse" />
+  </wsdl:message>
+  <wsdl:message name="CNmsService_GetTerminalevent_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetTerminalevent" />
+  </wsdl:message>
+  <wsdl:message name="CNmsService_GetTerminalevent_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetTerminaleventResponse" />
+  </wsdl:message>
+  <wsdl:message name="CNmsService_AddCurrentAlarm_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddCurrentAlarm" />
+  </wsdl:message>
+  <wsdl:message name="CNmsService_AddCurrentAlarm_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddCurrentAlarmResponse" />
+  </wsdl:message>
+  <wsdl:message name="CNmsService_UpdateCurrentAlarm_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateCurrentAlarm" />
+  </wsdl:message>
+  <wsdl:message name="CNmsService_UpdateCurrentAlarm_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateCurrentAlarmResponse" />
+  </wsdl:message>
+  <wsdl:message name="CNmsService_DeleteCurrentAlarm_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteCurrentAlarm" />
+  </wsdl:message>
+  <wsdl:message name="CNmsService_DeleteCurrentAlarm_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteCurrentAlarmResponse" />
+  </wsdl:message>
+  <wsdl:message name="CNmsService_GetCurrentAlarmList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCurrentAlarmList" />
+  </wsdl:message>
+  <wsdl:message name="CNmsService_GetCurrentAlarmList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCurrentAlarmListResponse" />
+  </wsdl:message>
+  <wsdl:message name="CNmsService_GetCurrentAlarm_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCurrentAlarm" />
+  </wsdl:message>
+  <wsdl:message name="CNmsService_GetCurrentAlarm_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCurrentAlarmResponse" />
+  </wsdl:message>
+  <wsdl:message name="CNmsService_AddHistoryAlarm_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddHistoryAlarm" />
+  </wsdl:message>
+  <wsdl:message name="CNmsService_AddHistoryAlarm_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddHistoryAlarmResponse" />
+  </wsdl:message>
+  <wsdl:message name="CNmsService_UpdateHistoryAlarm_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateHistoryAlarm" />
+  </wsdl:message>
+  <wsdl:message name="CNmsService_UpdateHistoryAlarm_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateHistoryAlarmResponse" />
+  </wsdl:message>
+  <wsdl:message name="CNmsService_DeleteHistoryAlarm_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteHistoryAlarm" />
+  </wsdl:message>
+  <wsdl:message name="CNmsService_DeleteHistoryAlarm_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteHistoryAlarmResponse" />
+  </wsdl:message>
+  <wsdl:message name="CNmsService_GetHistoryAlarmList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetHistoryAlarmList" />
+  </wsdl:message>
+  <wsdl:message name="CNmsService_GetHistoryAlarmList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetHistoryAlarmListResponse" />
+  </wsdl:message>
+  <wsdl:message name="CNmsService_GetHistoryAlarm_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetHistoryAlarm" />
+  </wsdl:message>
+  <wsdl:message name="CNmsService_GetHistoryAlarm_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetHistoryAlarmResponse" />
+  </wsdl:message>
+  <wsdl:message name="CNmsService_AddSystemparams_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddSystemparams" />
+  </wsdl:message>
+  <wsdl:message name="CNmsService_AddSystemparams_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddSystemparamsResponse" />
+  </wsdl:message>
+  <wsdl:message name="CNmsService_UpdateSystemparams_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateSystemparams" />
+  </wsdl:message>
+  <wsdl:message name="CNmsService_UpdateSystemparams_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateSystemparamsResponse" />
+  </wsdl:message>
+  <wsdl:message name="CNmsService_DeleteSystemparams_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteSystemparams" />
+  </wsdl:message>
+  <wsdl:message name="CNmsService_DeleteSystemparams_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteSystemparamsResponse" />
+  </wsdl:message>
+  <wsdl:message name="CNmsService_GetSystemparamsList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSystemparamsList" />
+  </wsdl:message>
+  <wsdl:message name="CNmsService_GetSystemparamsList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSystemparamsListResponse" />
+  </wsdl:message>
+  <wsdl:message name="CNmsService_GetSystemparams_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSystemparams" />
+  </wsdl:message>
+  <wsdl:message name="CNmsService_GetSystemparams_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSystemparamsResponse" />
+  </wsdl:message>
+  <wsdl:message name="UpFile">
+    <wsdl:part name="parameters" element="tns:UpFile" />
+  </wsdl:message>
+  <wsdl:message name="UpFile_Headers">
+    <wsdl:part name="FileName" element="tns:FileName" />
+    <wsdl:part name="FileSize" element="tns:FileSize" />
+  </wsdl:message>
+  <wsdl:message name="UpFileResult">
+    <wsdl:part name="parameters" element="tns:UpFileResult" />
+  </wsdl:message>
+  <wsdl:message name="UpFileResult_Headers">
+    <wsdl:part name="IsSuccess" element="tns:IsSuccess" />
+    <wsdl:part name="Message" element="tns:Message" />
+  </wsdl:message>
+  <wsdl:message name="DownFile">
+    <wsdl:part name="parameters" element="tns:DownFile" />
+  </wsdl:message>
+  <wsdl:message name="DownFile_Headers">
+    <wsdl:part name="FileID" element="tns:FileID" />
+    <wsdl:part name="FileName" element="tns:FileName" />
+    <wsdl:part name="StrAuth" element="tns:StrAuth" />
+  </wsdl:message>
+  <wsdl:message name="DownFileResult">
+    <wsdl:part name="parameters" element="tns:DownFileResult" />
+  </wsdl:message>
+  <wsdl:message name="DownFileResult_Headers">
+    <wsdl:part name="FileSize" element="tns:FileSize" />
+    <wsdl:part name="IsSuccess" element="tns:IsSuccess" />
+    <wsdl:part name="Message" element="tns:Message" />
+  </wsdl:message>
+  <wsdl:portType name="CNmsService">
+    <wsdl:operation name="AddAudiohistory">
+      <wsdl:input wsaw:Action="http://tempuri.org/CNmsService/AddAudiohistory" message="tns:CNmsService_AddAudiohistory_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/CNmsService/AddAudiohistoryResponse" message="tns:CNmsService_AddAudiohistory_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateAudiohistory">
+      <wsdl:input wsaw:Action="http://tempuri.org/CNmsService/UpdateAudiohistory" message="tns:CNmsService_UpdateAudiohistory_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/CNmsService/UpdateAudiohistoryResponse" message="tns:CNmsService_UpdateAudiohistory_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteAudiohistory">
+      <wsdl:input wsaw:Action="http://tempuri.org/CNmsService/DeleteAudiohistory" message="tns:CNmsService_DeleteAudiohistory_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/CNmsService/DeleteAudiohistoryResponse" message="tns:CNmsService_DeleteAudiohistory_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAudiohistoryList">
+      <wsdl:input wsaw:Action="http://tempuri.org/CNmsService/GetAudiohistoryList" message="tns:CNmsService_GetAudiohistoryList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/CNmsService/GetAudiohistoryListResponse" message="tns:CNmsService_GetAudiohistoryList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAudiohistory">
+      <wsdl:input wsaw:Action="http://tempuri.org/CNmsService/GetAudiohistory" message="tns:CNmsService_GetAudiohistory_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/CNmsService/GetAudiohistoryResponse" message="tns:CNmsService_GetAudiohistory_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddGroupinfo">
+      <wsdl:input wsaw:Action="http://tempuri.org/CNmsService/AddGroupinfo" message="tns:CNmsService_AddGroupinfo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/CNmsService/AddGroupinfoResponse" message="tns:CNmsService_AddGroupinfo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateGroupinfo">
+      <wsdl:input wsaw:Action="http://tempuri.org/CNmsService/UpdateGroupinfo" message="tns:CNmsService_UpdateGroupinfo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/CNmsService/UpdateGroupinfoResponse" message="tns:CNmsService_UpdateGroupinfo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteGroupinfo">
+      <wsdl:input wsaw:Action="http://tempuri.org/CNmsService/DeleteGroupinfo" message="tns:CNmsService_DeleteGroupinfo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/CNmsService/DeleteGroupinfoResponse" message="tns:CNmsService_DeleteGroupinfo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetGroupinfoList">
+      <wsdl:input wsaw:Action="http://tempuri.org/CNmsService/GetGroupinfoList" message="tns:CNmsService_GetGroupinfoList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/CNmsService/GetGroupinfoListResponse" message="tns:CNmsService_GetGroupinfoList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetGroupinfo">
+      <wsdl:input wsaw:Action="http://tempuri.org/CNmsService/GetGroupinfo" message="tns:CNmsService_GetGroupinfo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/CNmsService/GetGroupinfoResponse" message="tns:CNmsService_GetGroupinfo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddGroupterminal">
+      <wsdl:input wsaw:Action="http://tempuri.org/CNmsService/AddGroupterminal" message="tns:CNmsService_AddGroupterminal_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/CNmsService/AddGroupterminalResponse" message="tns:CNmsService_AddGroupterminal_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateGroupterminal">
+      <wsdl:input wsaw:Action="http://tempuri.org/CNmsService/UpdateGroupterminal" message="tns:CNmsService_UpdateGroupterminal_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/CNmsService/UpdateGroupterminalResponse" message="tns:CNmsService_UpdateGroupterminal_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteGroupterminal">
+      <wsdl:input wsaw:Action="http://tempuri.org/CNmsService/DeleteGroupterminal" message="tns:CNmsService_DeleteGroupterminal_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/CNmsService/DeleteGroupterminalResponse" message="tns:CNmsService_DeleteGroupterminal_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetGroupterminalList">
+      <wsdl:input wsaw:Action="http://tempuri.org/CNmsService/GetGroupterminalList" message="tns:CNmsService_GetGroupterminalList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/CNmsService/GetGroupterminalListResponse" message="tns:CNmsService_GetGroupterminalList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetGroupterminal">
+      <wsdl:input wsaw:Action="http://tempuri.org/CNmsService/GetGroupterminal" message="tns:CNmsService_GetGroupterminal_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/CNmsService/GetGroupterminalResponse" message="tns:CNmsService_GetGroupterminal_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UserLogin">
+      <wsdl:input wsaw:Action="http://tempuri.org/CNmsService/UserLogin" message="tns:CNmsService_UserLogin_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/CNmsService/UserLoginResponse" message="tns:CNmsService_UserLogin_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UserLoginE">
+      <wsdl:input wsaw:Action="http://tempuri.org/CNmsService/UserLoginE" message="tns:CNmsService_UserLoginE_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/CNmsService/UserLoginEResponse" message="tns:CNmsService_UserLoginE_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ModifyUserPwd">
+      <wsdl:input wsaw:Action="http://tempuri.org/CNmsService/ModifyUserPwd" message="tns:CNmsService_ModifyUserPwd_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/CNmsService/ModifyUserPwdResponse" message="tns:CNmsService_ModifyUserPwd_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddUserinfo">
+      <wsdl:input wsaw:Action="http://tempuri.org/CNmsService/AddUserinfo" message="tns:CNmsService_AddUserinfo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/CNmsService/AddUserinfoResponse" message="tns:CNmsService_AddUserinfo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddUserinfoModel">
+      <wsdl:input wsaw:Action="http://tempuri.org/CNmsService/AddUserinfoModel" message="tns:CNmsService_AddUserinfoModel_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/CNmsService/AddUserinfoModelResponse" message="tns:CNmsService_AddUserinfoModel_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateUserinfo">
+      <wsdl:input wsaw:Action="http://tempuri.org/CNmsService/UpdateUserinfo" message="tns:CNmsService_UpdateUserinfo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/CNmsService/UpdateUserinfoResponse" message="tns:CNmsService_UpdateUserinfo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateUserinfoModel">
+      <wsdl:input wsaw:Action="http://tempuri.org/CNmsService/UpdateUserinfoModel" message="tns:CNmsService_UpdateUserinfoModel_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/CNmsService/UpdateUserinfoModelResponse" message="tns:CNmsService_UpdateUserinfoModel_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteUserinfo">
+      <wsdl:input wsaw:Action="http://tempuri.org/CNmsService/DeleteUserinfo" message="tns:CNmsService_DeleteUserinfo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/CNmsService/DeleteUserinfoResponse" message="tns:CNmsService_DeleteUserinfo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUserinfoList">
+      <wsdl:input wsaw:Action="http://tempuri.org/CNmsService/GetUserinfoList" message="tns:CNmsService_GetUserinfoList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/CNmsService/GetUserinfoListResponse" message="tns:CNmsService_GetUserinfoList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUserinfoListModel">
+      <wsdl:input wsaw:Action="http://tempuri.org/CNmsService/GetUserinfoListModel" message="tns:CNmsService_GetUserinfoListModel_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/CNmsService/GetUserinfoListModelResponse" message="tns:CNmsService_GetUserinfoListModel_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUserinfo">
+      <wsdl:input wsaw:Action="http://tempuri.org/CNmsService/GetUserinfo" message="tns:CNmsService_GetUserinfo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/CNmsService/GetUserinfoResponse" message="tns:CNmsService_GetUserinfo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUserinfoModel">
+      <wsdl:input wsaw:Action="http://tempuri.org/CNmsService/GetUserinfoModel" message="tns:CNmsService_GetUserinfoModel_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/CNmsService/GetUserinfoModelResponse" message="tns:CNmsService_GetUserinfoModel_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddUserevent">
+      <wsdl:input wsaw:Action="http://tempuri.org/CNmsService/AddUserevent" message="tns:CNmsService_AddUserevent_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/CNmsService/AddUsereventResponse" message="tns:CNmsService_AddUserevent_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateUserevent">
+      <wsdl:input wsaw:Action="http://tempuri.org/CNmsService/UpdateUserevent" message="tns:CNmsService_UpdateUserevent_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/CNmsService/UpdateUsereventResponse" message="tns:CNmsService_UpdateUserevent_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteUserevent">
+      <wsdl:input wsaw:Action="http://tempuri.org/CNmsService/DeleteUserevent" message="tns:CNmsService_DeleteUserevent_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/CNmsService/DeleteUsereventResponse" message="tns:CNmsService_DeleteUserevent_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUsereventList">
+      <wsdl:input wsaw:Action="http://tempuri.org/CNmsService/GetUsereventList" message="tns:CNmsService_GetUsereventList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/CNmsService/GetUsereventListResponse" message="tns:CNmsService_GetUsereventList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUserevent">
+      <wsdl:input wsaw:Action="http://tempuri.org/CNmsService/GetUserevent" message="tns:CNmsService_GetUserevent_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/CNmsService/GetUsereventResponse" message="tns:CNmsService_GetUserevent_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddTerminalinfo">
+      <wsdl:input wsaw:Action="http://tempuri.org/CNmsService/AddTerminalinfo" message="tns:CNmsService_AddTerminalinfo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/CNmsService/AddTerminalinfoResponse" message="tns:CNmsService_AddTerminalinfo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateTerminalinfo">
+      <wsdl:input wsaw:Action="http://tempuri.org/CNmsService/UpdateTerminalinfo" message="tns:CNmsService_UpdateTerminalinfo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/CNmsService/UpdateTerminalinfoResponse" message="tns:CNmsService_UpdateTerminalinfo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteTerminalinfo">
+      <wsdl:input wsaw:Action="http://tempuri.org/CNmsService/DeleteTerminalinfo" message="tns:CNmsService_DeleteTerminalinfo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/CNmsService/DeleteTerminalinfoResponse" message="tns:CNmsService_DeleteTerminalinfo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTerminalinfoList">
+      <wsdl:input wsaw:Action="http://tempuri.org/CNmsService/GetTerminalinfoList" message="tns:CNmsService_GetTerminalinfoList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/CNmsService/GetTerminalinfoListResponse" message="tns:CNmsService_GetTerminalinfoList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTerminalinfo">
+      <wsdl:input wsaw:Action="http://tempuri.org/CNmsService/GetTerminalinfo" message="tns:CNmsService_GetTerminalinfo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/CNmsService/GetTerminalinfoResponse" message="tns:CNmsService_GetTerminalinfo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddTerminaluser">
+      <wsdl:input wsaw:Action="http://tempuri.org/CNmsService/AddTerminaluser" message="tns:CNmsService_AddTerminaluser_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/CNmsService/AddTerminaluserResponse" message="tns:CNmsService_AddTerminaluser_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateTerminaluser">
+      <wsdl:input wsaw:Action="http://tempuri.org/CNmsService/UpdateTerminaluser" message="tns:CNmsService_UpdateTerminaluser_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/CNmsService/UpdateTerminaluserResponse" message="tns:CNmsService_UpdateTerminaluser_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteTerminaluser">
+      <wsdl:input wsaw:Action="http://tempuri.org/CNmsService/DeleteTerminaluser" message="tns:CNmsService_DeleteTerminaluser_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/CNmsService/DeleteTerminaluserResponse" message="tns:CNmsService_DeleteTerminaluser_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTerminaluserList">
+      <wsdl:input wsaw:Action="http://tempuri.org/CNmsService/GetTerminaluserList" message="tns:CNmsService_GetTerminaluserList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/CNmsService/GetTerminaluserListResponse" message="tns:CNmsService_GetTerminaluserList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTerminaluser">
+      <wsdl:input wsaw:Action="http://tempuri.org/CNmsService/GetTerminaluser" message="tns:CNmsService_GetTerminaluser_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/CNmsService/GetTerminaluserResponse" message="tns:CNmsService_GetTerminaluser_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddTerminalevent">
+      <wsdl:input wsaw:Action="http://tempuri.org/CNmsService/AddTerminalevent" message="tns:CNmsService_AddTerminalevent_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/CNmsService/AddTerminaleventResponse" message="tns:CNmsService_AddTerminalevent_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateTerminalevent">
+      <wsdl:input wsaw:Action="http://tempuri.org/CNmsService/UpdateTerminalevent" message="tns:CNmsService_UpdateTerminalevent_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/CNmsService/UpdateTerminaleventResponse" message="tns:CNmsService_UpdateTerminalevent_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteTerminalevent">
+      <wsdl:input wsaw:Action="http://tempuri.org/CNmsService/DeleteTerminalevent" message="tns:CNmsService_DeleteTerminalevent_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/CNmsService/DeleteTerminaleventResponse" message="tns:CNmsService_DeleteTerminalevent_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTerminaleventList">
+      <wsdl:input wsaw:Action="http://tempuri.org/CNmsService/GetTerminaleventList" message="tns:CNmsService_GetTerminaleventList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/CNmsService/GetTerminaleventListResponse" message="tns:CNmsService_GetTerminaleventList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTerminalevent">
+      <wsdl:input wsaw:Action="http://tempuri.org/CNmsService/GetTerminalevent" message="tns:CNmsService_GetTerminalevent_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/CNmsService/GetTerminaleventResponse" message="tns:CNmsService_GetTerminalevent_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddCurrentAlarm">
+      <wsdl:input wsaw:Action="http://tempuri.org/CNmsService/AddCurrentAlarm" message="tns:CNmsService_AddCurrentAlarm_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/CNmsService/AddCurrentAlarmResponse" message="tns:CNmsService_AddCurrentAlarm_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateCurrentAlarm">
+      <wsdl:input wsaw:Action="http://tempuri.org/CNmsService/UpdateCurrentAlarm" message="tns:CNmsService_UpdateCurrentAlarm_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/CNmsService/UpdateCurrentAlarmResponse" message="tns:CNmsService_UpdateCurrentAlarm_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteCurrentAlarm">
+      <wsdl:input wsaw:Action="http://tempuri.org/CNmsService/DeleteCurrentAlarm" message="tns:CNmsService_DeleteCurrentAlarm_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/CNmsService/DeleteCurrentAlarmResponse" message="tns:CNmsService_DeleteCurrentAlarm_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCurrentAlarmList">
+      <wsdl:input wsaw:Action="http://tempuri.org/CNmsService/GetCurrentAlarmList" message="tns:CNmsService_GetCurrentAlarmList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/CNmsService/GetCurrentAlarmListResponse" message="tns:CNmsService_GetCurrentAlarmList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCurrentAlarm">
+      <wsdl:input wsaw:Action="http://tempuri.org/CNmsService/GetCurrentAlarm" message="tns:CNmsService_GetCurrentAlarm_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/CNmsService/GetCurrentAlarmResponse" message="tns:CNmsService_GetCurrentAlarm_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddHistoryAlarm">
+      <wsdl:input wsaw:Action="http://tempuri.org/CNmsService/AddHistoryAlarm" message="tns:CNmsService_AddHistoryAlarm_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/CNmsService/AddHistoryAlarmResponse" message="tns:CNmsService_AddHistoryAlarm_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateHistoryAlarm">
+      <wsdl:input wsaw:Action="http://tempuri.org/CNmsService/UpdateHistoryAlarm" message="tns:CNmsService_UpdateHistoryAlarm_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/CNmsService/UpdateHistoryAlarmResponse" message="tns:CNmsService_UpdateHistoryAlarm_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteHistoryAlarm">
+      <wsdl:input wsaw:Action="http://tempuri.org/CNmsService/DeleteHistoryAlarm" message="tns:CNmsService_DeleteHistoryAlarm_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/CNmsService/DeleteHistoryAlarmResponse" message="tns:CNmsService_DeleteHistoryAlarm_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetHistoryAlarmList">
+      <wsdl:input wsaw:Action="http://tempuri.org/CNmsService/GetHistoryAlarmList" message="tns:CNmsService_GetHistoryAlarmList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/CNmsService/GetHistoryAlarmListResponse" message="tns:CNmsService_GetHistoryAlarmList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetHistoryAlarm">
+      <wsdl:input wsaw:Action="http://tempuri.org/CNmsService/GetHistoryAlarm" message="tns:CNmsService_GetHistoryAlarm_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/CNmsService/GetHistoryAlarmResponse" message="tns:CNmsService_GetHistoryAlarm_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddSystemparams">
+      <wsdl:input wsaw:Action="http://tempuri.org/CNmsService/AddSystemparams" message="tns:CNmsService_AddSystemparams_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/CNmsService/AddSystemparamsResponse" message="tns:CNmsService_AddSystemparams_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateSystemparams">
+      <wsdl:input wsaw:Action="http://tempuri.org/CNmsService/UpdateSystemparams" message="tns:CNmsService_UpdateSystemparams_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/CNmsService/UpdateSystemparamsResponse" message="tns:CNmsService_UpdateSystemparams_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteSystemparams">
+      <wsdl:input wsaw:Action="http://tempuri.org/CNmsService/DeleteSystemparams" message="tns:CNmsService_DeleteSystemparams_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/CNmsService/DeleteSystemparamsResponse" message="tns:CNmsService_DeleteSystemparams_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSystemparamsList">
+      <wsdl:input wsaw:Action="http://tempuri.org/CNmsService/GetSystemparamsList" message="tns:CNmsService_GetSystemparamsList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/CNmsService/GetSystemparamsListResponse" message="tns:CNmsService_GetSystemparamsList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSystemparams">
+      <wsdl:input wsaw:Action="http://tempuri.org/CNmsService/GetSystemparams" message="tns:CNmsService_GetSystemparams_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/CNmsService/GetSystemparamsResponse" message="tns:CNmsService_GetSystemparams_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpLoadFile">
+      <wsdl:input wsaw:Action="http://tempuri.org/CNmsService/UpLoadFile" name="UpFile" message="tns:UpFile" />
+      <wsdl:output wsaw:Action="http://tempuri.org/CNmsService/UpLoadFileResponse" name="UpFileResult" message="tns:UpFileResult" />
+    </wsdl:operation>
+    <wsdl:operation name="DownLoadFile">
+      <wsdl:input wsaw:Action="http://tempuri.org/CNmsService/DownLoadFile" name="DownFile" message="tns:DownFile" />
+      <wsdl:output wsaw:Action="http://tempuri.org/CNmsService/DownLoadFileResponse" name="DownFileResult" message="tns:DownFileResult" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_CNmsService" type="tns:CNmsService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="AddAudiohistory">
+      <soap:operation soapAction="http://tempuri.org/CNmsService/AddAudiohistory" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateAudiohistory">
+      <soap:operation soapAction="http://tempuri.org/CNmsService/UpdateAudiohistory" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteAudiohistory">
+      <soap:operation soapAction="http://tempuri.org/CNmsService/DeleteAudiohistory" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAudiohistoryList">
+      <soap:operation soapAction="http://tempuri.org/CNmsService/GetAudiohistoryList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAudiohistory">
+      <soap:operation soapAction="http://tempuri.org/CNmsService/GetAudiohistory" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddGroupinfo">
+      <soap:operation soapAction="http://tempuri.org/CNmsService/AddGroupinfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateGroupinfo">
+      <soap:operation soapAction="http://tempuri.org/CNmsService/UpdateGroupinfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteGroupinfo">
+      <soap:operation soapAction="http://tempuri.org/CNmsService/DeleteGroupinfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetGroupinfoList">
+      <soap:operation soapAction="http://tempuri.org/CNmsService/GetGroupinfoList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetGroupinfo">
+      <soap:operation soapAction="http://tempuri.org/CNmsService/GetGroupinfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddGroupterminal">
+      <soap:operation soapAction="http://tempuri.org/CNmsService/AddGroupterminal" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateGroupterminal">
+      <soap:operation soapAction="http://tempuri.org/CNmsService/UpdateGroupterminal" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteGroupterminal">
+      <soap:operation soapAction="http://tempuri.org/CNmsService/DeleteGroupterminal" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetGroupterminalList">
+      <soap:operation soapAction="http://tempuri.org/CNmsService/GetGroupterminalList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetGroupterminal">
+      <soap:operation soapAction="http://tempuri.org/CNmsService/GetGroupterminal" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UserLogin">
+      <soap:operation soapAction="http://tempuri.org/CNmsService/UserLogin" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UserLoginE">
+      <soap:operation soapAction="http://tempuri.org/CNmsService/UserLoginE" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ModifyUserPwd">
+      <soap:operation soapAction="http://tempuri.org/CNmsService/ModifyUserPwd" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddUserinfo">
+      <soap:operation soapAction="http://tempuri.org/CNmsService/AddUserinfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddUserinfoModel">
+      <soap:operation soapAction="http://tempuri.org/CNmsService/AddUserinfoModel" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateUserinfo">
+      <soap:operation soapAction="http://tempuri.org/CNmsService/UpdateUserinfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateUserinfoModel">
+      <soap:operation soapAction="http://tempuri.org/CNmsService/UpdateUserinfoModel" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteUserinfo">
+      <soap:operation soapAction="http://tempuri.org/CNmsService/DeleteUserinfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUserinfoList">
+      <soap:operation soapAction="http://tempuri.org/CNmsService/GetUserinfoList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUserinfoListModel">
+      <soap:operation soapAction="http://tempuri.org/CNmsService/GetUserinfoListModel" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUserinfo">
+      <soap:operation soapAction="http://tempuri.org/CNmsService/GetUserinfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUserinfoModel">
+      <soap:operation soapAction="http://tempuri.org/CNmsService/GetUserinfoModel" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddUserevent">
+      <soap:operation soapAction="http://tempuri.org/CNmsService/AddUserevent" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateUserevent">
+      <soap:operation soapAction="http://tempuri.org/CNmsService/UpdateUserevent" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteUserevent">
+      <soap:operation soapAction="http://tempuri.org/CNmsService/DeleteUserevent" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUsereventList">
+      <soap:operation soapAction="http://tempuri.org/CNmsService/GetUsereventList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUserevent">
+      <soap:operation soapAction="http://tempuri.org/CNmsService/GetUserevent" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddTerminalinfo">
+      <soap:operation soapAction="http://tempuri.org/CNmsService/AddTerminalinfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateTerminalinfo">
+      <soap:operation soapAction="http://tempuri.org/CNmsService/UpdateTerminalinfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteTerminalinfo">
+      <soap:operation soapAction="http://tempuri.org/CNmsService/DeleteTerminalinfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTerminalinfoList">
+      <soap:operation soapAction="http://tempuri.org/CNmsService/GetTerminalinfoList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTerminalinfo">
+      <soap:operation soapAction="http://tempuri.org/CNmsService/GetTerminalinfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddTerminaluser">
+      <soap:operation soapAction="http://tempuri.org/CNmsService/AddTerminaluser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateTerminaluser">
+      <soap:operation soapAction="http://tempuri.org/CNmsService/UpdateTerminaluser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteTerminaluser">
+      <soap:operation soapAction="http://tempuri.org/CNmsService/DeleteTerminaluser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTerminaluserList">
+      <soap:operation soapAction="http://tempuri.org/CNmsService/GetTerminaluserList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTerminaluser">
+      <soap:operation soapAction="http://tempuri.org/CNmsService/GetTerminaluser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddTerminalevent">
+      <soap:operation soapAction="http://tempuri.org/CNmsService/AddTerminalevent" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateTerminalevent">
+      <soap:operation soapAction="http://tempuri.org/CNmsService/UpdateTerminalevent" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteTerminalevent">
+      <soap:operation soapAction="http://tempuri.org/CNmsService/DeleteTerminalevent" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTerminaleventList">
+      <soap:operation soapAction="http://tempuri.org/CNmsService/GetTerminaleventList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTerminalevent">
+      <soap:operation soapAction="http://tempuri.org/CNmsService/GetTerminalevent" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddCurrentAlarm">
+      <soap:operation soapAction="http://tempuri.org/CNmsService/AddCurrentAlarm" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateCurrentAlarm">
+      <soap:operation soapAction="http://tempuri.org/CNmsService/UpdateCurrentAlarm" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteCurrentAlarm">
+      <soap:operation soapAction="http://tempuri.org/CNmsService/DeleteCurrentAlarm" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCurrentAlarmList">
+      <soap:operation soapAction="http://tempuri.org/CNmsService/GetCurrentAlarmList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCurrentAlarm">
+      <soap:operation soapAction="http://tempuri.org/CNmsService/GetCurrentAlarm" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddHistoryAlarm">
+      <soap:operation soapAction="http://tempuri.org/CNmsService/AddHistoryAlarm" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateHistoryAlarm">
+      <soap:operation soapAction="http://tempuri.org/CNmsService/UpdateHistoryAlarm" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteHistoryAlarm">
+      <soap:operation soapAction="http://tempuri.org/CNmsService/DeleteHistoryAlarm" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetHistoryAlarmList">
+      <soap:operation soapAction="http://tempuri.org/CNmsService/GetHistoryAlarmList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetHistoryAlarm">
+      <soap:operation soapAction="http://tempuri.org/CNmsService/GetHistoryAlarm" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddSystemparams">
+      <soap:operation soapAction="http://tempuri.org/CNmsService/AddSystemparams" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateSystemparams">
+      <soap:operation soapAction="http://tempuri.org/CNmsService/UpdateSystemparams" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteSystemparams">
+      <soap:operation soapAction="http://tempuri.org/CNmsService/DeleteSystemparams" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSystemparamsList">
+      <soap:operation soapAction="http://tempuri.org/CNmsService/GetSystemparamsList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSystemparams">
+      <soap:operation soapAction="http://tempuri.org/CNmsService/GetSystemparams" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpLoadFile">
+      <soap:operation soapAction="http://tempuri.org/CNmsService/UpLoadFile" style="document" />
+      <wsdl:input name="UpFile">
+        <soap:header message="tns:UpFile_Headers" part="FileName" use="literal" />
+        <soap:header message="tns:UpFile_Headers" part="FileSize" use="literal" />
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="UpFileResult">
+        <soap:header message="tns:UpFileResult_Headers" part="IsSuccess" use="literal" />
+        <soap:header message="tns:UpFileResult_Headers" part="Message" use="literal" />
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DownLoadFile">
+      <soap:operation soapAction="http://tempuri.org/CNmsService/DownLoadFile" style="document" />
+      <wsdl:input name="DownFile">
+        <soap:header message="tns:DownFile_Headers" part="FileID" use="literal" />
+        <soap:header message="tns:DownFile_Headers" part="FileName" use="literal" />
+        <soap:header message="tns:DownFile_Headers" part="StrAuth" use="literal" />
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="DownFileResult">
+        <soap:header message="tns:DownFileResult_Headers" part="FileSize" use="literal" />
+        <soap:header message="tns:DownFileResult_Headers" part="IsSuccess" use="literal" />
+        <soap:header message="tns:DownFileResult_Headers" part="Message" use="literal" />
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="CNmsService">
+    <wsdl:port name="BasicHttpBinding_CNmsService" binding="tns:BasicHttpBinding_CNmsService">
+      <soap:address location="http://localhost:8088/CNmsService" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

@@ -157,6 +157,8 @@ namespace Jium.Web.consumer
 			model.csum=csum;
 			model.csex=csex;
 			model.cremark=cremark;
+            model.csd1 = 5;
+            model.csd5 = 5;
 			//model.css1=css1;
 			//model.css2=css2;
 			//model.css3=css3;

@@ -15,6 +15,27 @@ namespace Jium.BLL
 		private readonly Iconsumer dal=DataAccess.Createconsumer();
 		public consumer()
 		{}
+
+        public static int getLevelByConsume(decimal total)
+        {
+            int ilevel = 0;
+            if (total > 10000)
+            {
+                ilevel = 4;
+            }
+            else if(total>3000)
+            {
+                ilevel = 3;
+            }else if(total>1500)
+            {
+                ilevel = 2;
+            }
+            else if (total > 500)
+            {
+                ilevel = 1;
+            }
+            return ilevel;
+        }
 		#region  BasicMethod
 
 		/// <summary>

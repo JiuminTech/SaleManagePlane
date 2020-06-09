@@ -67,8 +67,12 @@ namespace Jium.Web.consumer
             if (txtKeyword.Text.Trim() != "")
             {      
                 #warning 代码生成警告：请修改 keywordField 为需要匹配查询的真实字段名称
-                strWhere.AppendFormat("cname like '%{0}%' or ccode like '%{0}%' or cphone like '%{0}%' ", txtKeyword.Text.Trim());
-            }            
+                strWhere.AppendFormat("csd5=5 and cname like '%{0}%' or ccode like '%{0}%' or cphone like '%{0}%' ", txtKeyword.Text.Trim());
+            }
+            else
+            {
+                strWhere.AppendFormat("csd5=5");
+            }
             var ds = bll.GetModelList(strWhere.ToString());            
             gridView.DataSource = ds;
             gridView.DataBind();

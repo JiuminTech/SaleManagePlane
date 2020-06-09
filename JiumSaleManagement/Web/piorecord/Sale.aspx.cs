@@ -31,9 +31,11 @@ namespace Jium.Web.piorecord
                 /// new user?
                 return;
             }
+            strWhere.Append(" and csd5=5 order by clevel desc");
             var consumers= bll.GetModelList(strWhere.ToString());
-            if(consumers.Count !=1)
+            if(consumers.Count ==0)
             {
+                Maticsoft.Common.MessageBox.Show(this, "账户信息不存在，请重新输入");
                 return;
             }
             txtCcode.Text = consumers[0].ccode;
@@ -290,7 +292,13 @@ namespace Jium.Web.piorecord
             {
                 int cnt = int.Parse(gridViewBuy.Rows[index].Cells[5].Text)+1;
                 gridViewBuy.Rows[index].Cells[5].Text = cnt.ToString();
+                var newsum = decimal.Parse(txtSumTotal.Text) + decimal.Parse(gridViewBuy.Rows[index].Cells[3].Text);
+                txtSumTotal.Text = newsum.ToString();
+                var realsum = decimal.Parse(txtSumReal.Text) +decimal.Parse(gridViewBuy.Rows[index].Cells[3].Text) * decimal.Parse(gridViewBuy.Rows[index].Cells[6].Text);
+                txtSumReal.Text = realsum.ToString();
             }
+
+            //gridViewBuy.DataBind();
         }
         protected void btnProductPlus_Click(object sender, EventArgs e)
         {
@@ -305,70 +313,85 @@ namespace Jium.Web.piorecord
             {
                 int cnt = int.Parse(gridViewBuy.Rows[index].Cells[5].Text) - 1;
                 gridViewBuy.Rows[index].Cells[5].Text = cnt.ToString();
+
+                var newsum = decimal.Parse(txtSumTotal.Text) - decimal.Parse(gridViewBuy.Rows[index].Cells[3].Text);
+                txtSumTotal.Text = newsum.ToString();
+                var realsum = decimal.Parse(txtSumReal.Text) - decimal.Parse(gridViewBuy.Rows[index].Cells[3].Text) * decimal.Parse(gridViewBuy.Rows[index].Cells[6].Text);
+                txtSumReal.Text = realsum.ToString();
             }
         }
         protected void btnConfirmSale_Click(object sender, EventArgs e)
         {
-            //#warning 代码生成警告：请检查确认真实主键的名称和类型是否正确
-            string orderid = DateTime.Now.ToString("yyyyMMddHHmmss");
-            var lstModel = new List<Jium.Model.piorecord>();
-                        
-            for (int i = 0; i < gridViewBuy.Rows.Count; i++)
+            try
             {
-                var model = new Jium.Model.piorecord();
-                model.pcode = gridViewBuy.Rows[i].Cells[0].Text;
-                model.pios3 = gridViewBuy.Rows[i].Cells[1].Text;
-                model.psaleprice = decimal.Parse(gridViewBuy.Rows[i].Cells[3].Text);
-                model.pcnt = int.Parse(gridViewBuy.Rows[i].Cells[5].Text);
-                model.pzekou = decimal.Parse(gridViewBuy.Rows[i].Cells[6].Text);
-                model.psalerid = 0;
-                model.ptype = (int)PRODUCT_IO_TYPE.SALE; ;
-                model.ptime = orderid;
-                model.pguestid = int.Parse(txtCcode.Text);
-                var txtNum = gridViewBuy.Rows[i].Cells[4].Text.Trim();
-                    model.piod1 = string.IsNullOrWhiteSpace(txtNum.Replace("&nbsp;","")) ? 0: int.Parse(gridViewBuy.Rows[i].Cells[4].Text);//服务
-                model.pios4 = gridViewBuy.Rows[i].Cells[2].Text.Replace("&nbsp;", "");//单位
-                //model.pios5 = cells[i, 0].StringValue.Trim();//系列
-                model.pios1 = "销售";
-                lstModel.Add(model);
-            }
-            ERR_CODE iRes = ERR_CODE.SUCCESS;
+                //#warning 代码生成警告：请检查确认真实主键的名称和类型是否正确
+                string orderid = DateTime.Now.ToString("yyyyMMddHHmmss");
+                var lstModel = new List<Jium.Model.piorecord>();
+
+                for (int i = 0; i < gridViewBuy.Rows.Count; i++)
+                {
+                    var model = new Jium.Model.piorecord();
+                    model.pcode = gridViewBuy.Rows[i].Cells[0].Text;
+                    model.pios3 = gridViewBuy.Rows[i].Cells[1].Text;
+                    model.psaleprice = decimal.Parse(gridViewBuy.Rows[i].Cells[3].Text);
+                    model.pcnt = int.Parse(gridViewBuy.Rows[i].Cells[5].Text);
+                    model.pzekou = decimal.Parse(gridViewBuy.Rows[i].Cells[6].Text);
+                    model.psalerid = 0;
+                    model.ptype = (int)PRODUCT_IO_TYPE.SALE; ;
+                    model.ptime = orderid;
+                    model.pguestid = int.Parse(txtCcode.Text);
+                    var txtNum = gridViewBuy.Rows[i].Cells[4].Text.Trim();
+                    model.piod1 = string.IsNullOrWhiteSpace(txtNum.Replace("&nbsp;", "")) ? 0 : int.Parse(gridViewBuy.Rows[i].Cells[4].Text);//服务
+                    model.pios4 = gridViewBuy.Rows[i].Cells[2].Text.Replace("&nbsp;", "");//单位
+                    model.piod5 = 5;                                                                      //model.pios5 = cells[i, 0].StringValue.Trim();//系列
+                    model.pios1 = "销售";
+                    lstModel.Add(model);
+                }
+                ERR_CODE iRes = ERR_CODE.SUCCESS;
                 ///事务回滚机制？？？
-            var bllCustomeService = new Jium.BLL.consumerservice();
-            foreach (var model in lstModel)
-            {
-                if (!Ctrl.piorecord.AddPiorecord(model))
+                var bllCustomeService = new Jium.BLL.consumerservice();
+                foreach (var model in lstModel)
                 {
-                    iRes = ERR_CODE.FAIL;
-                    break;
+                    if (!Ctrl.piorecord.AddPiorecord(model))
+                    {
+                        iRes = ERR_CODE.FAIL;
+                        break;
+                    }
+                    if (model.piod1 > 0)//add service for guset
+                    {
+                        var consumerservice = new Jium.Model.consumerservice();
+                        consumerservice.ccode = model.pguestid.ToString();
+                        consumerservice.csnum = model.piod1 ?? 0;
+                        consumerservice.cstype = model.pios3;
+                        consumerservice.csleft = model.piod1 ?? 0;
+                        consumerservice.csiostatus = 0;
+                        consumerservice.cstime0 = orderid;
+                        consumerservice.csd5 = "5";
+                        bllCustomeService.Add(consumerservice);
+                    }
                 }
-                if(model.piod1>0)//add service for guset
+                //update guest info
+                var consumerBll = new Jium.BLL.consumer();
+                var lstConsumer = consumerBll.GetModelList(string.Format("ccode='{0}' and csd5=5", txtCcode.Text.Trim()));
+                if (lstConsumer.Count == 0)
                 {
-                    var consumerservice = new Jium.Model.consumerservice();
-                    consumerservice.ccode = model.pguestid.ToString();
-                    consumerservice.csnum = model.piod1??0;
-                    consumerservice.cstype = model.pios3;
-                    consumerservice.csleft = model.piod1 ?? 0;
-                    consumerservice.csiostatus = 0;
-                    consumerservice.cstime0 = orderid;
-                    bllCustomeService.Add(consumerservice);
+                    ///error 
+                    ///return;
                 }
+                lstConsumer[0].css1 = orderid;
+                lstConsumer[0].csum += decimal.Parse(txtSumReal.Text);
+                lstConsumer[0].clevel = Jium.BLL.consumer.getLevelByConsume(lstConsumer[0].csum).ToString();//get from csum
+                consumerBll.Update(lstConsumer[0]);
+
+                Maticsoft.Common.MessageBox.ShowAndRedirects(this, "操作完成！", "/default.aspx");
             }
-            //update guest info
-            var consumerBll = new Jium.BLL.consumer();
-            var lstConsumer = consumerBll.GetModelList(string.Format("ccode='{0}'" , txtCcode.Text.Trim()));
-            if(lstConsumer.Count==0)
+            catch(Exception ex)
             {
-                ///error 
-                ///return;
+                Maticsoft.Common.MessageBox.Show(this, "系统错误："+ex.Message);
+                return;
             }
-            lstConsumer[0].css1 = orderid;
-            lstConsumer[0].csum += decimal.Parse(txtSumReal.Text);
-            lstConsumer[0].clevel = lstConsumer[0].csum.ToString();//get from csum
-            consumerBll.Update(lstConsumer[0]);
-
-
         }
+        
         protected void btnProductZekou_Click(object sender, EventArgs e)
         {
             //#warning 代码生成警告：请检查确认真实主键的名称和类型是否正确
